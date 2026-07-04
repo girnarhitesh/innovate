@@ -1,0 +1,295 @@
+/* Newsletter Container */
+
+.NewsletterContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Newsletter Subtitle */
+.NewsletterSubtitle {
+    /* color: #666; */
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Input Container */
+.NewsletterInputContainer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.InputWrapper {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.EmailIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.NewsletterInput {
+    width: 90%;
+    padding: 15px 0px;
+    padding-left: 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.NewsletterInput:focus {
+    border-color: var(--brand-color);
+    box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.1);
+}
+
+.NewsletterInput.error {
+    border-color: #ff4d4f;
+    box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.1);
+}
+
+.NewsletterInput.error:focus {
+    border-color: #ff4d4f;
+    box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.2);
+}
+
+.NewsletterInput::placeholder {
+    color: #999;
+}
+
+/* Newsletter Button */
+.NewsletterButton {
+    background: var(--brand-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.NewsletterButton:hover {
+    background: #001a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 33, 71, 0.3);
+}
+
+.NewsletterButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.NewsletterButton.loading {
+    background: #666;
+    cursor: wait;
+}
+
+/* Expert Section */
+.ExpertSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.ExpertText {
+    /* color: #666; */
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.ExpertProfiles {
+    display: flex;
+    align-items: center;
+}
+
+.ExpertProfile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.444);
+    margin-left: -8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.ExpertProfile:first-child {
+    margin-left: 0;
+}
+
+.ExpertProfile:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.ExpertProfile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.NewsLetterMainContainer .Container {
+    min-height: 100% !important;
+    background-image: url("https://plus.unsplash.com/premium_photo-1679923813998-6603ee2466c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    padding: 80px 0px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.NewsLetterMainContainer .Container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.605);
+}
+
+.NewsLetterMainContainer .paddingSide {
+    position: sticky;
+    z-index: 10;
+}
+
+/* Error Message */
+.ErrorMessage {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Ant Design Notification Styling */
+.ant-notification-notice {
+    font-family: "Work Sans", sans-serif !important;
+}
+
+.ant-notification-notice-message {
+    color: var(--brand-color) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+.ant-notification-notice-description {
+    color: #666 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.ant-notification-notice-success .ant-notification-notice-message {
+    color: var(--brand-color) !important;
+}
+
+.ant-notification-notice-error .ant-notification-notice-message {
+    color: #ff4d4f !important;
+}
+
+.ant-notification-notice-icon {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.ant-notification-notice-icon img {
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .NewsletterContainer {
+        padding: 40px 15px;
+    }
+
+    .NewsletterInputContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .InputWrapper {
+        min-width: auto;
+        max-width: none;
+    }
+
+    .NewsletterButton {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .ExpertSection {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ExpertText {
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .NewsletterContainer {
+        padding: 30px 0px;
+    }
+
+    .NewsletterInput {
+        padding: 12px 12px 12px 40px;
+        font-size: 14px;
+    }
+
+    .EmailIcon {
+        font-size: 16px;
+        left: 12px;
+    }
+
+    .NewsletterButton {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .ExpertProfile {
+        width: 35px;
+        height: 35px;
+    }
+}

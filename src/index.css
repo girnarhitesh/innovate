@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: white;
+  --stroke-color: #e9e9e9;
+  --brand-color: #002147;
+  /* --navbar-height: 80px; */
+  font-family: "Work Sans", sans-serif;
+  /* height: 600vh; */
+}
+
+a{
+  text-decoration: none;
+}
+
+.Container {
+  max-width: 1200px;
+  height: 100%;
+  border-right: 1px solid var(--stroke-color);
+  border-left: 1px solid var(--stroke-color);
+  min-height: 400px;
+  /* padding: 0px 40px; */
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+h1 {
+  letter-spacing: -.14rem;
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 66px;
+  transform-style: preserve-3d;
+  font-family: "Work Sans", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h2 {
+  letter-spacing: -.14rem;
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 50px;
+  transform-style: preserve-3d;
+  font-family: "Work Sans", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: perspective(1000px) rotateX(0deg) translateZ(0);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+/* Animation Classes for h2 */
+h2.animate-blur-3d {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(15deg) translateZ(-50px);
+  filter: blur(8px);
+}
+
+h2.animate-blur-3d.animate-in {
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0deg) translateZ(0);
+  filter: blur(0px);
+}
+
+/* Additional 3D Animation Variants */
+h2.animate-3d-slide {
+  opacity: 0;
+  transform: perspective(1000px) rotateY(-20deg) translateX(-100px) translateZ(-50px);
+  filter: blur(5px);
+}
+
+h2.animate-3d-slide.animate-in {
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0deg) translateX(0) translateZ(0);
+  filter: blur(0px);
+}
+
+h2.animate-3d-zoom {
+  opacity: 0;
+  transform: perspective(1000px) scale(0.8) translateZ(-100px);
+  filter: blur(10px);
+}
+
+h2.animate-3d-zoom.animate-in {
+  opacity: 1;
+  transform: perspective(1000px) scale(1) translateZ(0);
+  filter: blur(0px);
+}
+
+h2.animate-3d-flip {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(90deg) translateZ(-50px);
+  filter: blur(6px);
+}
+
+h2.animate-3d-flip.animate-in {
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0deg) translateZ(0);
+  filter: blur(0px);
+}
+
+h3 {
+  letter-spacing: -.4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+p {
+  letter-spacing: -.16px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  color: #4d4d4d;
+}
+
+.flexVertically {
+  display: flex;
+  align-items: center;
+}
+
+.MainContainer {
+  display: flex;
+  justify-content: center;
+  /* padding-top: 80px; */
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.SectionTagLabelContainer {
+  background-color: transparent;
+  display: flex;
+
+}
+
+.SectionTagLabelContainer>div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--stroke-color);
+  padding: 5px 10px;
+  border-radius: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.SectionTagLabelContainer>div img {
+  width: 15px;
+  height: 15px;
+}
+
+.SectionTagLabelContainer p {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: black !important;
+}
+
+.BtnContainer {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.BtnContainer button {
+  border: none;
+  /* padding: 10px 20px; */
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  padding: 0px;
+  transition: .5s;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+.BtnContainerWhite button {
+  border: none;
+  /* padding: 10px 20px; */
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  padding: 0px;
+  transition: .5s;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+.BtnContainerWhite button::before {
+  /* position: absolute; */
+  content: "";
+  width: 0px;
+  height: 10px;
+  background-color: white;
+  transition: .5s;
+  /* left: 0px; */
+}
+
+.BtnContainer button::before {
+  /* position: absolute; */
+  content: "";
+  width: 0px;
+  height: 10px;
+  background-color: black;
+  transition: .5s;
+  /* left: 0px; */
+}
+
+.BtnContainerWhite button:hover {
+  border: none;
+  /* padding: 10px 20px; */
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: .5s;
+  /* left: 0px; */
+  padding: 0px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+}
+
+.BtnContainerw button:hover {
+  border: none;
+  /* padding: 10px 20px; */
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: .5s;
+  /* left: 0px; */
+  padding: 0px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+}
+
+.BtnContainer button:hover {
+  border: none;
+  /* padding: 10px 20px; */
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: .5s;
+  /* left: 0px; */
+  padding: 0px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+.BtnContainerWhite button:hover::before {
+  /* position: absolute; */
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  transition: .5s;
+  /* left: 0px; */
+}
+
+.BtnContainer button:hover::before {
+  /* position: absolute; */
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  transition: .5s;
+  /* left: 0px; */
+}
+
+.paddingSide {
+  padding: 0px 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.CommonHeader {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.marginTop {
+  margin-top: 50px;
+}
+
+.marginBottom {
+  margin-bottom: 50px;
+}
+
+.white {
+  color: white;
+}
+
+b {
+  font-weight: 500;
+  /* color:  black !important; */
+}
+
+@media (min-width: 1500px) and (max-width: 3000px) {
+  .Container {
+    max-width: 1500px;
+    height: 100%;
+    border-right: 1px solid var(--stroke-color);
+    border-left: 1px solid var(--stroke-color);
+    min-height: 400px;
+    /* padding: 0px 40px; */
+    width: 100%;
+  }
+
+}
+
+@media (max-width:900px) {
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .paddingSide {
+    padding: 0px 10px;
+  }
+
+  .MainContainer {
+    padding-top: 80px;
+  }
+}

@@ -1,0 +1,59 @@
+.HomeSplash {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.HomeSplash .HeroHomeSection {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.HomeSplash .HeroHomeSection .MainContainer {
+  padding-top: 0 !important;
+}
+
+.HomeSplash .HeroHomeSection .Container,
+.HomeSplash .HeroHomeSection .FlexContainer,
+.HomeSplash .HeroHomeSection .LayerImage {
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  flex: none;
+  display: block;
+}
+
+.HomeSplash .HeroHomeSection .Container {
+  min-height: 0 !important;
+  border-left: none;
+  border-right: none;
+}
+
+.HomeSplash .HeroHomeSection .FlexContainer {
+  gap: 0;
+}
+
+.HomeSplash .HeroHomeSection .VideoWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: none;
+  overflow: hidden;
+}
+
+.HomeSplash .HeroHomeSection .VideoWrapper video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.HomeSplash .HeroHomeSection .VideoWrapper::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

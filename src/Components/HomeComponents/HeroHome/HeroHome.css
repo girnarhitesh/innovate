@@ -1,0 +1,319 @@
+/* Override global Container height:100% so the ticker isn't clipped */
+.HeroHomeSection .Container {
+  height: auto;
+  min-height: unset;
+}
+
+.FlexContainer {
+  /* height: 1400px; */
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* .LeftSideContentContainer {
+    position: absolute;
+    width: 100%;
+} */
+.LeftSideContentContainer {
+  max-width: 800px;
+}
+
+.LeftSideContentContainer > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.RightSideVideoContainer {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  justify-content: end;
+  margin-left: auto;
+  /* transition: width 0.3s ease-out; */
+}
+
+.VideoWrapper {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  height: 400px;
+  overflow: hidden;
+  max-height: 500px;
+  /* border-radius: 12px; */
+}
+
+.VideoWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.VideoWrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+
+/* .VideoWrapper:hover .PlayPauseButton {
+    opacity: 1;
+} */
+
+.PlayPauseButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.PlayPauseButton.visible {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.PlayPauseButton:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: 0.5s;
+}
+
+.PlayPauseButton.playing {
+  animation: pulse 2s infinite;
+}
+
+.PlayPauseButton.paused {
+  animation: none;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.ButtonIcon {
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.AnimatedBannerImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.AnimatedBannerImageContainer img {
+  position: absolute;
+  top: 450px;
+  width: 92.6%;
+  max-width: 100%;
+  /* left: 0px; */
+  z-index: -1;
+}
+
+/* Taglines Overlay Styles */
+.TaglinesOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.TaglineText {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  max-width: 80%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.6s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.TaglineText.hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+}
+
+.TaglineText.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.VerticalSwiperContainer {
+  height: 120px;
+  min-height: 120px;
+  overflow: hidden;
+  display: flex;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.VerticalSwiperContainer .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.VerticalSwiperContainer .swiper-slide {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.VerticalSwiperContainer .swiper-wrapper {
+  height: 100px;
+}
+
+.VerticalSwiperContainer .mySwiper {
+  height: 100px;
+  overflow: hidden;
+}
+
+.ContentContainerInThisSWiper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ContentContainerInThisSWiper h3 {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+  width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+}
+
+/* Responsive styles for taglines */
+@media (max-width: 768px) {
+  .VerticalSwiperContainer {
+    height: 100px;
+    min-height: 100px;
+  }
+
+  .TaglineText {
+    font-size: 1.8rem;
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .TaglineText {
+    font-size: 1.4rem;
+    max-width: 95%;
+    padding: 12px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+  .BackgroundImage img {
+    width: 500px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+@media (min-width: 1450px) and (max-width: 2000px) {
+  .BackgroundImage img {
+    width: 900px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 900px) {
+  .BackgroundImage {
+    display: none;
+  }
+
+  .LeftSideContentContainer {
+    position: static !important;
+    width: 100%;
+  }
+
+  .RightSideVideoContainer {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  .AnimatedBannerImageContainer {
+    display: none !important;
+  }
+
+  .FlexContainer {
+    height: auto;
+  }
+}

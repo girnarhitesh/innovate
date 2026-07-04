@@ -1,0 +1,113 @@
+.LayerImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.LayerImage::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: white;
+  z-index: 2;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: bottom;
+  transform: scaleY(1);
+}
+
+.LayerImage.reveal-image::before {
+  transform: scaleY(0);
+}
+
+/* Additional smooth animations for the container */
+.LayerImage {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.LayerImage.reveal-image {
+  opacity: 1;
+  transform: translateY(0);
+  width: 100%;
+}
+
+/* Optional: Add a subtle animation to the image itself */
+.LayerImage img {
+  transition: transform 1.5s ease-out;
+  transform: scale(1.1);
+}
+
+.LayerImage.reveal-image img {
+  transform: scale(1);
+}
+
+.BoxDesigns {
+  position: relative;
+}
+
+/* .BoxDesigns::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: var(--brand-color);
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  border-radius: 0px 10px 0px 10px;
+} */
+
+.BoxDesigns .LogoIcon {
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  z-index: 3;
+}
+
+.paddingRight {
+  padding-right: 40px;
+}
+
+.paddingLeft {
+  padding-left: 40px;
+}
+
+.Nopadding {
+  padding: 0px;
+}
+
+@media (max-width:900px) {
+
+  /* .BoxDesigns::after,
+  .BoxDesigns .LogoIcon {
+    display: none !important;
+  } */
+
+  .paddingRight {
+    padding-right: 0px;
+  }
+  .centerContainer{
+    display: flex;
+    justify-content: center;
+  }
+  .ant-col {
+  padding: 0px !important;
+}
+.marginAuto{
+  margin: auto;
+}
+}
+
+/* .ant-col {
+  padding: 0px !important;
+} */
+
+.ant-row {
+  width: 100%;
+  margin: auto;
+}

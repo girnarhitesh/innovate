@@ -1,0 +1,85 @@
+.padding30{
+    padding-top: 30px;
+}
+.danger {
+    color: #e53935;
+    font-weight: 700;
+}
+
+.advisiory-title {
+    /* margin-bottom: 0.45rem; */
+    padding-left: 210px;
+    margin-top: 40px;
+}
+
+.advisiory-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* padding: 20px 0; */
+}
+
+.advisiory-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.advisiory-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+    color: #4d4d4d;
+    line-height: 1.8;
+    text-align: justify;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    letter-spacing: -.16px;
+}
+
+.advisiory-list li::before {
+    content: "➔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.advisiory-list a {
+    color: black;
+    text-decoration: none;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.advisiory-list a:hover {
+    text-decoration: underline;
+    color: gray;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .text-center{
+        margin-top: 30px;
+    }
+    .advisiory-title{
+        padding-left: 15px;
+    }
+    .padding-side{
+        padding: 0px 15px;
+    }
+    .advisiory-content {
+        padding: 1rem 0;
+    }
+
+    .advisiory-list li {
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .advisiory-list li::before {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,135 @@
+.bank-details-container {
+  background-color: #f9f9f9;
+}
+
+.bank-details-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.bank-details-title {
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.bank-table-wrapper {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bank-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+}
+
+.bank-table thead {
+  background-color: #1e3a5f;
+}
+
+.bank-table thead th {
+  padding: 18px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bank-table thead th:last-child {
+  border-right: none;
+}
+
+.bank-table tbody tr {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.bank-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.bank-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.bank-table tbody td {
+  padding: 16px 20px;
+  font-size: 15px;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.16px;
+  line-height: 1.6;
+}
+
+.bank-table tbody td:first-child {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bank-details-title {
+    font-size: 42px;
+  }
+
+  .bank-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .bank-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bank-details-wrapper {
+    padding: 30px 0;
+  }
+
+  .bank-details-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    line-height: 1.3;
+    word-wrap: break-word;
+  }
+
+  .bank-table {
+    min-width: 700px;
+  }
+
+  .bank-table thead th,
+  .bank-table tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bank-details-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+
+  .bank-table {
+    min-width: 650px;
+    font-size: 12px;
+  }
+
+  .bank-table thead th,
+  .bank-table tbody td {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}

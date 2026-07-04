@@ -1,0 +1,173 @@
+/* Animation Classes */
+.CommonHeader.animate-blur-3d {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(15deg) translateZ(-50px);
+    filter: blur(8px);
+    transition: all 0.8s ease-out;
+}
+
+.CommonHeader.animate-blur-3d.animate-in {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateZ(0);
+    filter: blur(0px);
+}
+
+.OnlineDeskGrid.animate-3d-zoom {
+    opacity: 0;
+    transform: perspective(1000px) scale(0.8) translateZ(-100px);
+    filter: blur(10px);
+    transition: all 0.8s ease-out;
+}
+
+.OnlineDeskGrid.animate-3d-zoom.animate-in {
+    opacity: 1;
+    transform: perspective(1000px) scale(1) translateZ(0);
+    filter: blur(0px);
+}
+
+.DeskCard {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    min-width: 0;
+}
+
+.DeskCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.OnlineDeskGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: start;
+}
+
+@media (max-width: 1200px) {
+    .OnlineDeskGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .OnlineDeskGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.DeskCardInner {
+    height: 100%;
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.DeskCardInner > div {
+    gap: 20px;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    column-gap: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.DeskCardInner:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+/* SCORES card: single cell, disclosure nested inside */
+.DeskCard--withDisclosure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 100%;
+}
+
+.DeskCard--withDisclosure:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.DeskCardTop {
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.ScoresDisclosure--card {
+    margin: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    text-align: left;
+    flex: 1;
+}
+
+.ScoresDisclosureTitle {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 6px 0;
+}
+
+.ScoresDisclosureList {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.ScoresDisclosureList li {
+    margin-bottom: 3px;
+}
+
+.ScoresDisclosureList li:last-child {
+    margin-bottom: 0;
+}
+
+.DeskLogoWrap {
+    height: 60px;
+    width: 60px;
+    min-width: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.DeskLogoWrap img {
+    max-height: 100%;
+    max-width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.DeskContent p {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0 0 6px 0;
+}
+
+.DeskLink {
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.DeskContent .DeskLink span {
+    font-size: 10px;
+    font-weight: 400;
+}

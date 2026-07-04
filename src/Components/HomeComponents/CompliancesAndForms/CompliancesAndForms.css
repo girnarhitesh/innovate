@@ -1,0 +1,312 @@
+/* Animation Classes */
+.CommonHeader.animate-blur-3d {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(15deg) translateZ(-50px);
+    filter: blur(8px);
+    transition: all 0.8s ease-out;
+}
+
+.CommonHeader.animate-blur-3d.animate-in {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateZ(0);
+    filter: blur(0px);
+}
+
+.TabsContainer.animate-3d-slide {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-20deg) translateX(-100px) translateZ(-50px);
+    filter: blur(5px);
+    transition: all 0.8s ease-out;
+}
+
+.TabsContainer.animate-3d-slide.animate-in {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg) translateX(0) translateZ(0);
+    filter: blur(0px);
+}
+
+/* Document cards will have subtle hover animations instead of initial animations */
+.DocumentCard {
+    transition: all 0.3s ease;
+}
+
+.DocumentCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.TabsContainer {
+    margin-top: 40px;
+}
+
+.CustomTabs .ant-tabs-nav {
+    margin-bottom: 32px;
+}
+
+.CustomTabs .ant-tabs-tab {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.CustomTabs .ant-tabs-tab:hover {
+    color: #1890ff;
+    background-color: rgba(24, 144, 255, 0.05);
+}
+
+.CustomTabs .ant-tabs-tab-active {
+    background-color: #fff;
+    border-color: #e8e8e8 #e8e8e8 #fff;
+    color: #1890ff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.CustomTabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #1890ff;
+}
+
+.CustomTabs .ant-tabs-content-holder {
+    background-color: #fff;
+    border-radius: 0 8px 8px 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.DocumentsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.DocumentCard {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.DocumentCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--brand-color), var(--brand-color));
+    transition: width 0.3s ease;
+}
+
+.DocumentCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--brand-color);
+}
+
+.DocumentCard:hover::before {
+    width: 8px;
+}
+
+.DocumentIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+    min-width: 60px;
+}
+
+.DocumentIcon svg {
+    margin-bottom: 4px;
+}
+
+.PDFLabel {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--brand-color);
+    background: rgba(220, 38, 38, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.DocumentContent {
+    flex: 1;
+    margin-right: 16px;
+}
+
+.DocumentTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+    line-height: 1.4;
+}
+
+.DocumentSize {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.ViewButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #64748b;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.ViewButton:hover {
+    background: var(--brand-color);
+    color: #fff;
+    border-color: var(--brand-color);
+    transform: scale(1.05);
+}
+
+.ViewButton svg {
+    transition: transform 0.3s ease;
+}
+
+.ViewButton:hover svg {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .DocumentsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .DocumentCard {
+        padding: 16px;
+    }
+    
+    .DocumentTitle {
+        font-size: 15px;
+    }
+    
+    .CustomTabs .ant-tabs-tab {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .CustomTabs .ant-tabs-content-holder {
+        padding: 16px;
+    }
+}
+
+/* ...existing code... */
+
+/* ── Landing Cards ── */
+.LandingCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.LandingCard {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 36px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background: #fff;
+}
+
+.LandingCard:hover {
+    border-color: var(--brand-color);
+    box-shadow: 0 6px 24px rgba(0, 53, 102, 0.12);
+    transform: translateY(-4px);
+}
+
+.LandingCardIcon {
+    font-size: 40px;
+    color: var(--brand-color);
+    margin-bottom: 16px;
+}
+
+.LandingCardTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.LandingCardDesc {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* ── Sub-page header ── */
+.SubPageHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.BackButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--brand-color);
+    color: var(--brand-color);
+    padding: 7px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.BackButton:hover {
+    background: var(--brand-color);
+    color: #fff;
+}
+
+.SubPageTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .LandingCardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .LandingCardsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.margin-top {
+    padding-top: 20px;
+}
+
+.bottom-margin {
+    margin-bottom: 20px
+}

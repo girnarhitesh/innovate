@@ -1,0 +1,59 @@
+.AppDownloadSection--home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 16px 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  width: 100%;
+}
+
+.AppDownloadSection--home .AppDownload__label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.AppDownloadSection--home .AppDownload__subtitle {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4d4d4d;
+  text-align: center !important;
+}
+
+.AppDownloadSection--home .AppStoreButtons {
+  margin-top: 4px;
+  padding-top: 4px;
+}
+
+.HomeSplash > .AppDownloadSection--home {
+  padding-top: 16px !important;
+  padding-bottom: 20px !important;
+}
+
+@media (max-width: 640px) {
+  .AppDownloadSection--home {
+    gap: 14px;
+    padding: 12px 12px 0;
+  }
+
+  .AppDownloadSection--home .AppDownload__subtitle {
+    font-size: 13px;
+    padding: 0 4px;
+  }
+
+  .HomeSplash > .AppDownloadSection--home {
+    padding-top: 12px !important;
+    padding-bottom: 0 !important;
+  }
+}

@@ -1,0 +1,280 @@
+.FooterMainContainer .Container {
+  min-height: 100% !important;
+  background-color: #0021470a;
+}
+
+.FooterMainContainer {
+  padding-top: 0px !important;
+}
+
+.SocialMediaContainer ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.SocialMediaContainer ul li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.SocialMediaContainer ul li svg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.SocialMediaContainer ul li a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: black;
+}
+
+.SocialLinkstAndAdress > div ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  list-style: none;
+  gap: 10px;
+}
+
+.SocialLinkstAndAdress > div ul li {
+  position: relative;
+  padding-left: 0px;
+  transition: 0.5s;
+}
+
+.SocialLinkstAndAdress > div ul li a {
+  color: black;
+}
+
+.SocialLinkstAndAdress div ul li::before {
+  width: 0px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  background-color: var(--brand-color);
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.SocialLinkstAndAdress div ul li:hover {
+  transform: translateX(10px);
+  transition: 0.5s;
+  padding-left: 20px;
+}
+
+.SocialLinkstAndAdress div ul li:hover::before {
+  width: 15px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  background-color: var(--brand-color);
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.CopyRightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CopyRightContainer p {
+  font-size: 14px;
+}
+
+.FooterMainContainer .marginBottom {
+  margin-bottom: 20px !important;
+}
+
+@media (max-width: 900px) {
+  .FooterMainContainer .ant-row {
+    margin: auto !important;
+    padding-top: 20px;
+  }
+  .CopyRightContainer {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .SocialLinkstAndAdress > div ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.RegistrationCodeContainer p {
+  font-size: 14px !important;
+}
+.RegistrationCodeContainer > div {
+  margin: 10px 0px;
+}
+.RegistrationCodeContainer > div p:nth-child(2) {
+  color: black !important;
+  font-weight: 800 !important;
+}
+
+/* Map Container Styles */
+.MapContainer {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  /* margin-top: 20px; */
+}
+
+.MapContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Responsive Map Styles */
+@media (max-width: 768px) {
+  .MapContainer {
+    height: 300px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MapContainer {
+    height: 250px;
+    margin-top: 10px;
+  }
+}
+
+/* QR Code Container Styles */
+.QRCodeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.QRCodeContainer h3 {
+  margin-bottom: 20px;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.QRCodeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.QRCodeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.QRCodeImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.QRCodeImage:hover {
+  transform: scale(1.05);
+}
+
+.QRCodeLabel {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  background-color: #f8f9fa;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #e9ecef;
+}
+
+/* Responsive QR Code Styles */
+@media (max-width: 768px) {
+  .QRCodeContainer {
+    justify-content: center;
+  }
+
+  .QRCodeSection {
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .QRCodeImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .QRCodeLabel {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .QRCodeContainer {
+    justify-content: center;
+  }
+
+  .QRCodeSection {
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .QRCodeImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .QRCodeContainer h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Footer app store — title + buttons, always side-by-side */
+.FooterAppStoreRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 0 8px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+
+.FooterAppStoreRow .AppStoreButtons {
+  width: 100%;
+}

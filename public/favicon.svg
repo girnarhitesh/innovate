@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Innovate Securities">
+  <rect width="64" height="64" rx="12" fill="#002147" />
+  <path d="M20 16h8v32h-8zM36 16h8v32h-8z" fill="#ffffff" />
+  <path d="M24 22h16v6H24zM24 36h16v6H24z" fill="#8fb9ff" />
+</svg>

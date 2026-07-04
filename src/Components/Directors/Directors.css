@@ -1,0 +1,314 @@
+/* Directors Container */
+.directors-container {
+    margin-top: 60px;
+}
+
+.directors-row {
+    margin-bottom: 40px;
+}
+
+/* Director Card */
+.director-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0;
+}
+
+.director-card.card-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.director-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--brand-color, #002147);
+}
+
+/* Card Header */
+.card-header {
+    padding: 24px 24px 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.director-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--brand-color, #002147);
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 33, 71, 0.2);
+}
+
+.director-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.director-card:hover .director-image img {
+    transform: scale(1.1);
+}
+
+.director-info {
+    flex: 1;
+}
+
+.director-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brand-color, #002147);
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.director-position {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--brand-color, #002147) 0%, #4a90e2 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Card Body */
+.card-body {
+    padding: 20px 24px;
+    flex: 1;
+}
+
+.director-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Card Footer */
+.card-footer {
+    padding: 16px 24px 24px 24px;
+    border-top: 1px solid #f0f0f0;
+    background: #f8f9fa;
+}
+
+.director-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.badge-icon {
+    font-size: 16px;
+}
+
+.badge-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--brand-color, #002147);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Leadership Section */
+.leadership-section {
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+}
+
+.leadership-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.leadership-text {
+    flex: 1;
+}
+
+.leadership-text h3 {
+    color: var(--brand-color, #002147);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.leadership-text p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Leadership Stats */
+.leadership-stats {
+    display: flex;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+.stat-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--brand-color, #002147);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .directors-container{
+        display: flex;
+        justify-content: center;
+    }
+    .directors-row {
+        margin-bottom: 30px;
+    }
+    
+    .card-header {
+        padding: 20px 20px 16px 20px;
+    }
+    
+    .director-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .director-name {
+        font-size: 18px;
+    }
+    
+    .director-position {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+    
+    .card-body {
+        padding: 16px 20px;
+    }
+    
+    .director-description {
+        font-size: 13px;
+    }
+    
+    .leadership-section {
+        margin-top: 40px;
+        padding: 30px 20px;
+    }
+    
+    .leadership-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .leadership-stats {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 24px;
+    }
+    
+    .stat-label {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-header {
+        padding: 16px 16px 12px 16px;
+        gap: 12px;
+    }
+    
+    .director-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .director-name {
+        font-size: 16px;
+    }
+    
+    .director-position {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .card-body {
+        padding: 12px 16px;
+    }
+    
+    .director-description {
+        font-size: 12px;
+    }
+    
+    .card-footer {
+        padding: 12px 16px 16px 16px;
+    }
+    
+    .leadership-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .stat-item {
+        flex-direction: row;
+        gap: 12px;
+    }
+    
+    .stat-number {
+        font-size: 20px;
+    }
+    
+    .stat-label {
+        font-size: 10px;
+        text-align: left;
+    }
+}
