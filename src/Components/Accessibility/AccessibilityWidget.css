@@ -4,12 +4,13 @@ html {
   --a11y-cursor-y: 50vh;
 }
 
-.a11y-app-shell {
+.a11y-app-shell,
+.a11y-drawer-root .ant-drawer-content {
   filter: var(--a11y-visual-filter);
   transition: filter 0.25s ease;
 }
 
-.a11y-app-shell[data-a11y-dyslexia="true"]
+body[data-a11y-dyslexia="true"]
   :where(
     h1,
     h2,
@@ -36,7 +37,7 @@ html {
   font-family: "Atkinson Hyperlegible", Arial, sans-serif !important;
 }
 
-.a11y-app-shell[data-a11y-highlight-links="true"] a[href] {
+body[data-a11y-highlight-links="true"] a[href] {
   text-decoration: underline !important;
   text-decoration-thickness: 3px !important;
   text-underline-offset: 4px !important;
@@ -44,26 +45,37 @@ html {
   font-weight: 600 !important;
 }
 
-.a11y-app-shell[data-a11y-pause-animations="true"] *,
-.a11y-app-shell[data-a11y-adhd-mode="true"] * {
+body[data-a11y-pause-animations="true"] *,
+body[data-a11y-adhd-mode="true"] * {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
 
-.a11y-app-shell[data-a11y-hide-images="true"] :where(img, svg, video, picture, canvas) {
+body[data-a11y-hide-images="true"] :where(img, svg, video, picture, canvas) {
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
-.a11y-app-shell[data-a11y-hide-images="true"] * {
+body[data-a11y-hide-images="true"] * {
   background-image: none !important;
 }
 
-.a11y-app-shell[data-a11y-large-cursor="true"],
-.a11y-app-shell[data-a11y-large-cursor="true"] * {
+body[data-a11y-large-cursor="true"],
+body[data-a11y-large-cursor="true"] * {
   cursor: none !important;
+}
+
+.a11y-exempt,
+.a11y-exempt * {
+  animation-duration: revert !important;
+  animation-iteration-count: revert !important;
+  transition-duration: revert !important;
+  scroll-behavior: revert !important;
+  cursor: pointer !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .a11y-cursor-ring,
@@ -136,7 +148,7 @@ body[data-a11y-adhd-mode="true"] .a11y-focus-mask {
   opacity: 1;
 }
 
-.a11y-app-shell[data-a11y-adhd-mode="true"]
+body[data-a11y-adhd-mode="true"]
   :where(a, button, input, textarea, select, [tabindex]):focus-visible {
   outline: 3px solid #f4b400 !important;
   outline-offset: 4px;
@@ -146,19 +158,34 @@ body[data-a11y-adhd-mode="true"] .a11y-focus-mask {
   position: fixed;
   left: 24px;
   bottom: 24px;
-  z-index: 3500;
+  z-index: 500;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   min-width: 158px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--brand-color) 0%, #000047 100%);
-  color: #ffffff;
+  background-color: #000047 !important;
+  background-image: linear-gradient(135deg, var(--brand-color) 0%, #000047 100%) !important;
+  color: #ffffff !important;
   box-shadow: 0 10px 28px rgba(0, 33, 71, 0.24);
-  cursor: pointer;
+  cursor: pointer !important;
   padding: 9px 12px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  isolation: isolate;
+  opacity: 1 !important;
+}
+
+body[data-a11y-hide-images="true"] .a11y-floating-button {
+  background-color: #000047 !important;
+  background-image: linear-gradient(135deg, var(--brand-color) 0%, #000047 100%) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body[data-a11y-large-cursor="true"] .a11y-floating-button,
+body[data-a11y-large-cursor="true"] .a11y-floating-button * {
+  cursor: pointer !important;
 }
 
 .a11y-floating-button:hover {
@@ -174,7 +201,7 @@ body[data-a11y-adhd-mode="true"] .a11y-focus-mask {
   height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.24);
   background: rgba(255, 255, 255, 0.12);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Space Grotesk", sans-serif !important;
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
@@ -189,14 +216,14 @@ body[data-a11y-adhd-mode="true"] .a11y-focus-mask {
 }
 
 .a11y-floating-button-text strong {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", sans-serif !important;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.1;
 }
 
 .a11y-floating-button-text small {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
   font-size: 10px;
   line-height: 1.1;
   color: rgba(255, 255, 255, 0.8);

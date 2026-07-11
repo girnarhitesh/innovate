@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Drawer } from "antd";
 import { useAccessibility } from "../../context/AccessibilityContext";
 import "./AccessibilityWidget.css";
@@ -71,19 +72,6 @@ const AccessibilityWidget = () => {
 
   return (
     <>
-      <button
-        type="button"
-        className="a11y-floating-button"
-        onClick={openDrawer}
-        aria-label="Open accessibility options"
-      >
-        <span className="a11y-floating-button-mark">Aa</span>
-        <span className="a11y-floating-button-text">
-          <strong>Accessibility</strong>
-          <small>Ctrl+F2</small>
-        </span>
-      </button>
-
       <Drawer
         open={isDrawerOpen}
         onClose={closeDrawer}
@@ -186,6 +174,22 @@ const AccessibilityWidget = () => {
           </div>
         </div>
       </Drawer>
+
+      {createPortal(
+        <button
+          type="button"
+          className="a11y-floating-button a11y-exempt"
+          onClick={openDrawer}
+          aria-label="Open accessibility options"
+        >
+          <span className="a11y-floating-button-mark">Aa</span>
+          <span className="a11y-floating-button-text">
+            <strong>Accessibility</strong>
+            <small>Ctrl+F2</small>
+          </span>
+        </button>,
+        document.body,
+      )}
     </>
   );
 };

@@ -54,6 +54,7 @@ const INTERACTIVE_ELEMENTS_SELECTOR = [
 
 const FONT_SCALE_MAP = [1, 1.08, 1.16, 1.24, 1.32];
 const FOCUS_BAND_HALF_HEIGHT = 90;
+const EXEMPT_SELECTOR = ".a11y-exempt";
 
 const createDefaultSettings = () => ({
   fontSizeLevel: 0,
@@ -103,7 +104,11 @@ class AccessibilityDomManager {
   }
 
   getAppRoot() {
-    return document.querySelector(".a11y-app-shell") || document.body;
+    return document.body;
+  }
+
+  isExcludedFromAdjustments(element) {
+    return Boolean(element?.closest(EXEMPT_SELECTOR));
   }
 
   init() {
@@ -232,11 +237,17 @@ class AccessibilityDomManager {
 
     const elements = [];
 
-    if (root.matches?.(TEXT_ELEMENTS_SELECTOR)) {
+    if (root.matches?.(TEXT_ELEMENTS_SELECTOR) && !this.isExcludedFromAdjustments(root)) {
       elements.push(root);
     }
 
-    return [...elements, ...root.querySelectorAll(TEXT_ELEMENTS_SELECTOR)];
+    root.querySelectorAll(TEXT_ELEMENTS_SELECTOR).forEach((element) => {
+      if (!this.isExcludedFromAdjustments(element)) {
+        elements.push(element);
+      }
+    });
+
+    return elements;
   }
 
   cacheTextMetrics(root = this.getAppRoot()) {
@@ -357,9 +368,7 @@ class AccessibilityDomManager {
   }
 
   applyBodyState() {
-    const appRoot = this.getAppRoot();
-
-    if (!document.body || !appRoot) {
+    if (!document.body) {
       return;
     }
 
@@ -374,7 +383,6 @@ class AccessibilityDomManager {
 
     Object.entries(appState).forEach(([key, value]) => {
       document.body.dataset[key] = value;
-      appRoot.dataset[key] = value;
     });
   }
 
@@ -400,7 +408,7 @@ class AccessibilityDomManager {
       this.speechHandler = (event) => {
         const target = event.target?.closest(READABLE_ELEMENTS_SELECTOR);
 
-        if (!target || target.closest(".a11y-widget-root")) {
+        if (!target || target.closest(EXEMPT_SELECTOR)) {
           return;
         }
 
