@@ -64,7 +64,7 @@ function App() {
             <Footer />
           </HashRouter>
         </div>
-        <AccessibilityWidget />
+       <AccessibilityWidget />
       </>
     </AccessibilityProvider>
   )

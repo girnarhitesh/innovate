@@ -58,6 +58,7 @@ const EXEMPT_SELECTOR = ".a11y-exempt";
 const SPEECH_CHUNK_SIZE = 420;
 const NESTED_READABLE_SELECTOR = "p, h1, h2, h3, h4, h5, h6, li, td, th, blockquote, figcaption, label, button, a";
 
+const ONES = [
   "zero",
   "one",
   "two",
