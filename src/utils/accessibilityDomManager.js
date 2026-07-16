@@ -55,6 +55,448 @@ const INTERACTIVE_ELEMENTS_SELECTOR = [
 const FONT_SCALE_MAP = [1, 1.08, 1.16, 1.24, 1.32];
 const FOCUS_BAND_HALF_HEIGHT = 90;
 const EXEMPT_SELECTOR = ".a11y-exempt";
+const SPEECH_CHUNK_SIZE = 420;
+const NESTED_READABLE_SELECTOR = "p, h1, h2, h3, h4, h5, h6, li, td, th, blockquote, figcaption, label, button, a";
+
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "ten",
+  "eleven",
+  "twelve",
+  "thirteen",
+  "fourteen",
+  "fifteen",
+  "sixteen",
+  "seventeen",
+  "eighteen",
+  "nineteen",
+];
+
+const TENS = [
+  "",
+  "",
+  "twenty",
+  "thirty",
+  "forty",
+  "fifty",
+  "sixty",
+  "seventy",
+  "eighty",
+  "ninety",
+];
+
+const numberUnder100ToWords = (value) => {
+  if (value < 20) {
+    return ONES[value];
+  }
+
+  const tens = Math.floor(value / 10);
+  const ones = value % 10;
+
+  return ones ? `${TENS[tens]} ${ONES[ones]}` : TENS[tens];
+};
+
+const yearToSpeechWords = (yearText) => {
+  const year = Number(yearText);
+
+  if (!Number.isFinite(year) || year < 1000 || year > 9999) {
+    return yearText;
+  }
+
+  if (year % 1000 === 0) {
+    return `${ONES[Math.floor(year / 1000)]} thousand`;
+  }
+
+  const century = Math.floor(year / 100);
+  const remainder = year % 100;
+
+  if (remainder === 0) {
+    return `${numberUnder100ToWords(century)} hundred`;
+  }
+
+  if (remainder < 10) {
+    return `${numberUnder100ToWords(century)} oh ${ONES[remainder]}`;
+  }
+
+  return `${numberUnder100ToWords(century)} ${numberUnder100ToWords(remainder)}`;
+};
+
+const protectAbbreviations = (text) =>
+  text
+    .replace(/\bPvt\./gi, "Private")
+    .replace(/\bLtd\./gi, "Limited")
+    .replace(/\bInc\./gi, "Incorporated")
+    .replace(/\bCo\./gi, "Company")
+    .replace(/\bMr\./gi, "Mister")
+    .replace(/\bMrs\./gi, "Missus")
+    .replace(/\bMs\./gi, "Miss")
+    .replace(/\bDr\./gi, "Doctor")
+    .replace(/\bNo\./gi, "Number")
+    .replace(/\betc\./gi, "etcetera")
+    .replace(/\be\.g\./gi, "for example")
+    .replace(/\bi\.e\./gi, "that is")
+    .replace(/\bISPL\b/g, "I S P L")
+    .replace(/\bAMPI\b/g, "A M P I");
+
+const prepareSpeechText = (rawText) => {
+  let text = normalizeSpeechText(rawText);
+
+  if (!text) {
+    return "";
+  }
+
+  text = protectAbbreviations(text);
+
+  // Prefer English year pronunciation: 1993 -> "nineteen ninety three"
+  text = text.replace(/\b(19|20)\d{2}\b/g, (year) => yearToSpeechWords(year));
+
+  text = text
+    .replace(/&/g, " and ")
+    .replace(/\//g, " slash ")
+    .replace(/[_*#~`|]+/g, " ")
+    .replace(/\s*([,;:])\s*/g, "$1 ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return text;
+};
+
+const normalizeSpeechText = (text) => (text || "").replace(/\s+/g, " ").trim();
+
+const getElementSpeechText = (element) => {
+  const ariaLabel = element.getAttribute("aria-label")?.trim();
+
+  if (ariaLabel) {
+    return prepareSpeechText(ariaLabel);
+  }
+
+  // Prefer visible text, then fall back to full text content.
+  const visibleText = normalizeSpeechText(element.innerText || "");
+  const fullText = normalizeSpeechText(element.textContent || "");
+  const chosenText =
+    visibleText.length >= 2 && visibleText.length >= fullText.length * 0.6
+      ? visibleText
+      : fullText || visibleText;
+
+  return prepareSpeechText(chosenText);
+};
+
+const findSpeechTarget = (element) => {
+  if (!element?.closest) {
+    return null;
+  }
+
+  if (element.closest(EXEMPT_SELECTOR)) {
+    return null;
+  }
+
+  const readableTarget = element.closest(READABLE_ELEMENTS_SELECTOR);
+
+  if (readableTarget) {
+    return readableTarget;
+  }
+
+  let current =
+    element.nodeType === Node.TEXT_NODE ? element.parentElement : element;
+
+  while (current && current !== document.body) {
+    if (current.closest(EXEMPT_SELECTOR)) {
+      return null;
+    }
+
+    const tagName = current.tagName?.toLowerCase();
+    const text = normalizeSpeechText(current.textContent);
+    const nestedReadableCount =
+      current.querySelectorAll?.(NESTED_READABLE_SELECTOR).length || 0;
+
+    if (
+      text.length >= 2 &&
+      nestedReadableCount === 0 &&
+      ["div", "span", "section", "article"].includes(tagName)
+    ) {
+      return current;
+    }
+
+    current = current.parentElement;
+  }
+
+  return null;
+};
+
+const splitIntoSpeechSentences = (text) => {
+  const sentences = [];
+  let current = "";
+
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    current += char;
+
+    const isTerminator = char === "." || char === "!" || char === "?";
+    const nextChar = text[index + 1] || "";
+    const endsSentence =
+      isTerminator && (!nextChar || /\s/.test(nextChar)) && current.trim().length > 1;
+
+    if (endsSentence) {
+      sentences.push(current.trim());
+      current = "";
+    }
+  }
+
+  if (current.trim()) {
+    sentences.push(current.trim());
+  }
+
+  return sentences.length > 0 ? sentences : [text];
+};
+
+const chunkTextForSpeech = (text, maxChunkSize = SPEECH_CHUNK_SIZE) => {
+  const preparedText = prepareSpeechText(text);
+
+  if (!preparedText) {
+    return [];
+  }
+
+  if (preparedText.length <= maxChunkSize) {
+    return [preparedText];
+  }
+
+  const chunks = [];
+  const sentences = splitIntoSpeechSentences(preparedText);
+  let currentChunk = "";
+
+  const pushCurrentChunk = () => {
+    if (currentChunk) {
+      chunks.push(currentChunk);
+      currentChunk = "";
+    }
+  };
+
+  const splitLongSegment = (segment) => {
+    const words = segment.split(" ");
+    let segmentChunk = "";
+
+    words.forEach((word) => {
+      const candidate = segmentChunk ? `${segmentChunk} ${word}` : word;
+
+      if (candidate.length <= maxChunkSize) {
+        segmentChunk = candidate;
+        return;
+      }
+
+      if (segmentChunk) {
+        chunks.push(segmentChunk);
+      }
+
+      segmentChunk = word;
+    });
+
+    if (segmentChunk) {
+      chunks.push(segmentChunk);
+    }
+  };
+
+  sentences.forEach((sentence) => {
+    const trimmedSentence = sentence.trim();
+
+    if (!trimmedSentence) {
+      return;
+    }
+
+    const candidate = currentChunk
+      ? `${currentChunk} ${trimmedSentence}`
+      : trimmedSentence;
+
+    if (candidate.length <= maxChunkSize) {
+      currentChunk = candidate;
+      return;
+    }
+
+    pushCurrentChunk();
+
+    if (trimmedSentence.length <= maxChunkSize) {
+      currentChunk = trimmedSentence;
+      return;
+    }
+
+    splitLongSegment(trimmedSentence);
+  });
+
+  pushCurrentChunk();
+
+  return chunks.length > 0 ? chunks : [preparedText];
+};
+
+const INDIAN_ENGLISH_FEMALE_VOICE_NAMES = [
+  "neerja",
+  "heera",
+  "raveena",
+  "aditi",
+  "kajal",
+  "sonia",
+];
+
+const HINDI_VOICE_NAMES = [
+  "veena",
+  "lekha",
+  "हिन्दी",
+  "hindi",
+];
+
+const MALE_VOICE_NAMES = [
+  "ravi",
+  "prabhat",
+  "hemant",
+  "daniel",
+  "david",
+  "mark",
+  "fred",
+  "alex",
+  "tom",
+  "james",
+  "george",
+  "thomas",
+  "oliver",
+  "aaron",
+  "arthur",
+  "bruce",
+  "albert",
+  "reed",
+  "steffan",
+  "guy",
+  "male",
+];
+
+const ENGLISH_FEMALE_FALLBACK_NAMES = [
+  "google uk english female",
+  "microsoft zira",
+  "zira",
+  "susan",
+  "samantha",
+  "karen",
+  "moira",
+  "tessa",
+  "fiona",
+  "victoria",
+  "serena",
+  "catherine",
+  "hazel",
+  "martha",
+  "jenny",
+  "aria",
+  "emma",
+  "mia",
+  "ava",
+  "female",
+];
+
+const normalizeVoiceName = (name = "") => name.toLowerCase().trim();
+
+const isMaleVoice = (name = "") => {
+  const normalized = normalizeVoiceName(name);
+
+  if (normalized.includes("female") || normalized.includes("woman")) {
+    return false;
+  }
+
+  return MALE_VOICE_NAMES.some((maleName) => normalized.includes(maleName));
+};
+
+const isHindiVoice = (voice) => {
+  const name = normalizeVoiceName(voice.name);
+  const lang = (voice.lang || "").toLowerCase();
+
+  return (
+    lang.startsWith("hi") ||
+    HINDI_VOICE_NAMES.some((hindiName) => name.includes(hindiName))
+  );
+};
+
+const isIndianEnglishVoice = (voice) => {
+  const name = normalizeVoiceName(voice.name);
+  const lang = (voice.lang || "").toLowerCase();
+
+  return (
+    lang.startsWith("en-in") ||
+    (lang.startsWith("en") && name.includes("india"))
+  );
+};
+
+const isExplicitFemaleVoice = (name = "") => {
+  const normalized = normalizeVoiceName(name);
+
+  return (
+    normalized.includes("female") ||
+    normalized.includes("woman") ||
+    INDIAN_ENGLISH_FEMALE_VOICE_NAMES.some((femaleName) =>
+      normalized.includes(femaleName),
+    ) ||
+    ENGLISH_FEMALE_FALLBACK_NAMES.some((femaleName) =>
+      normalized.includes(femaleName),
+    )
+  );
+};
+
+const scorePreferredSpeechVoice = (voice) => {
+  const name = normalizeVoiceName(voice.name);
+  const lang = (voice.lang || "").toLowerCase();
+
+  if (isHindiVoice(voice) || isMaleVoice(name)) {
+    return 0;
+  }
+
+  // Only accept clearly female voices — never anonymous en-IN defaults (often male).
+  if (!isExplicitFemaleVoice(name)) {
+    return 0;
+  }
+
+  if (
+    INDIAN_ENGLISH_FEMALE_VOICE_NAMES.some((femaleName) =>
+      name.includes(femaleName),
+    )
+  ) {
+    return isIndianEnglishVoice(voice) ? 300 : 180;
+  }
+
+  if (isIndianEnglishVoice(voice)) {
+    return 250;
+  }
+
+  if (name.includes("google uk english female")) {
+    return 120;
+  }
+
+  if (lang.startsWith("en-gb")) {
+    return 90;
+  }
+
+  if (lang.startsWith("en-us") || lang.startsWith("en-au") || lang.startsWith("en")) {
+    return 70;
+  }
+
+  return 0;
+};
+
+const pickPreferredSpeechVoice = (voices = []) => {
+  if (!voices.length) {
+    return null;
+  }
+
+  return [...voices]
+    .map((voice) => ({
+      voice,
+      score: scorePreferredSpeechVoice(voice),
+    }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score)[0]?.voice || null;
+};
 
 const createDefaultSettings = () => ({
   fontSizeLevel: 0,
@@ -84,6 +526,13 @@ class AccessibilityDomManager {
     this.cursorDot = null;
     this.adhdTopMask = null;
     this.adhdBottomMask = null;
+    this.speechChunks = [];
+    this.speechChunkIndex = 0;
+    this.speechSessionId = 0;
+    this.speechKeepAliveTimer = null;
+    this.speechStartTimer = null;
+    this.preferredSpeechVoice = null;
+    this.voicesChangedHandler = null;
     this.lastPointer = {
       x: typeof window !== "undefined" ? window.innerWidth / 2 : 0,
       y: typeof window !== "undefined" ? window.innerHeight / 2 : 0,
@@ -405,27 +854,22 @@ class AccessibilityDomManager {
 
   applySpeechMode() {
     if (this.settings.textToSpeech && !this.speechHandler) {
-      this.speechHandler = (event) => {
-        const target = event.target?.closest(READABLE_ELEMENTS_SELECTOR);
+      this.ensureSpeechVoices();
 
-        if (!target || target.closest(EXEMPT_SELECTOR)) {
+      this.speechHandler = (event) => {
+        const target = findSpeechTarget(event.target);
+
+        if (!target) {
           return;
         }
 
-        const text = (target.getAttribute("aria-label") || target.innerText || "")
-          .replace(/\s+/g, " ")
-          .trim();
+        const text = getElementSpeechText(target);
 
         if (text.length < 2 || !window.speechSynthesis) {
           return;
         }
 
-        const utterance = new SpeechSynthesisUtterance(text.slice(0, 260));
-        utterance.rate = 1;
-        utterance.pitch = 1;
-
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utterance);
+        this.speakText(text);
       };
 
       document.addEventListener("click", this.speechHandler, true);
@@ -434,8 +878,168 @@ class AccessibilityDomManager {
     if (!this.settings.textToSpeech && this.speechHandler) {
       document.removeEventListener("click", this.speechHandler, true);
       this.speechHandler = null;
-      window.speechSynthesis?.cancel();
+      this.stopSpeech();
     }
+  }
+
+  ensureSpeechVoices() {
+    if (typeof window === "undefined" || !window.speechSynthesis) {
+      return;
+    }
+
+    const refreshPreferredVoice = () => {
+      this.preferredSpeechVoice = pickPreferredSpeechVoice(
+        window.speechSynthesis.getVoices(),
+      );
+    };
+
+    refreshPreferredVoice();
+
+    if (!this.voicesChangedHandler) {
+      this.voicesChangedHandler = () => {
+        refreshPreferredVoice();
+      };
+
+      window.speechSynthesis.addEventListener(
+        "voiceschanged",
+        this.voicesChangedHandler,
+      );
+    }
+
+    // Some browsers load voices asynchronously on first getVoices() call.
+    window.speechSynthesis.getVoices();
+  }
+
+  getSpeechVoice() {
+    this.ensureSpeechVoices();
+    return this.preferredSpeechVoice;
+  }
+
+  stopSpeech() {
+    this.speechSessionId += 1;
+    this.speechChunks = [];
+    this.speechChunkIndex = 0;
+
+    if (this.speechKeepAliveTimer) {
+      window.clearInterval(this.speechKeepAliveTimer);
+      this.speechKeepAliveTimer = null;
+    }
+
+    if (this.speechStartTimer) {
+      window.clearTimeout(this.speechStartTimer);
+      this.speechStartTimer = null;
+    }
+
+    window.speechSynthesis?.cancel();
+  }
+
+  startSpeechKeepAlive() {
+    if (this.speechKeepAliveTimer || !window.speechSynthesis) {
+      return;
+    }
+
+    // Chrome can silently pause mid-utterance; keep synthesis awake.
+    this.speechKeepAliveTimer = window.setInterval(() => {
+      if (!window.speechSynthesis.speaking) {
+        return;
+      }
+
+      window.speechSynthesis.pause();
+      window.speechSynthesis.resume();
+    }, 8000);
+  }
+
+  speakNextChunk(sessionId) {
+    if (
+      sessionId !== this.speechSessionId ||
+      !this.settings.textToSpeech ||
+      !window.speechSynthesis ||
+      this.speechChunkIndex >= this.speechChunks.length
+    ) {
+      if (sessionId === this.speechSessionId && this.speechKeepAliveTimer) {
+        window.clearInterval(this.speechKeepAliveTimer);
+        this.speechKeepAliveTimer = null;
+      }
+      return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(
+      this.speechChunks[this.speechChunkIndex],
+    );
+    const preferredVoice = this.getSpeechVoice();
+
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    if (preferredVoice) {
+      utterance.voice = preferredVoice;
+      utterance.lang = isIndianEnglishVoice(preferredVoice)
+        ? "en-IN"
+        : preferredVoice.lang || "en-GB";
+    } else {
+      utterance.lang = "en-GB";
+    }
+
+    utterance.onend = () => {
+      if (sessionId !== this.speechSessionId) {
+        return;
+      }
+
+      this.speechChunkIndex += 1;
+      this.speakNextChunk(sessionId);
+    };
+
+    utterance.onerror = (event) => {
+      if (sessionId !== this.speechSessionId) {
+        return;
+      }
+
+      // Ignore intentional cancels when starting a new click.
+      if (event.error === "interrupted" || event.error === "canceled") {
+        return;
+      }
+
+      this.speechChunkIndex += 1;
+      this.speakNextChunk(sessionId);
+    };
+
+    this.startSpeechKeepAlive();
+    window.speechSynthesis.speak(utterance);
+
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+    }
+  }
+
+  speakText(text) {
+    if (!window.speechSynthesis) {
+      return;
+    }
+
+    this.ensureSpeechVoices();
+    this.stopSpeech();
+
+    const chunks = chunkTextForSpeech(text);
+
+    if (!chunks.length) {
+      return;
+    }
+
+    const sessionId = this.speechSessionId;
+    this.speechChunks = chunks;
+    this.speechChunkIndex = 0;
+
+    // Avoid Chrome cancel()+speak() race that drops voice / first words.
+    this.speechStartTimer = window.setTimeout(() => {
+      this.speechStartTimer = null;
+
+      if (sessionId !== this.speechSessionId) {
+        return;
+      }
+
+      this.speakNextChunk(sessionId);
+    }, 60);
   }
 
   syncMediaPlayback() {
@@ -541,6 +1145,17 @@ class AccessibilityDomManager {
       document.removeEventListener("click", this.speechHandler, true);
       this.speechHandler = null;
     }
+
+    if (this.voicesChangedHandler && window.speechSynthesis) {
+      window.speechSynthesis.removeEventListener(
+        "voiceschanged",
+        this.voicesChangedHandler,
+      );
+      this.voicesChangedHandler = null;
+    }
+
+    this.stopSpeech();
+    this.preferredSpeechVoice = null;
 
     [this.cursorRing, this.cursorDot, this.adhdTopMask, this.adhdBottomMask].forEach(
       (element) => {
