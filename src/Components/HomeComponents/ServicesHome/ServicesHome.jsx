@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./ServicesHome.css";
 import ServicesData from "../../Services/ServicesData";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,6 +18,7 @@ const Services = () => {
     const swiperRef = useRef(null);
     const navigate = useNavigate();
     const { isReducedMotionEnabled } = useAccessibility();
+    const [isAutoplayPaused, setIsAutoplayPaused] = useState(false);
 
     useEffect(() => {
         const swiperInstance = swiperRef.current?.swiper;
@@ -26,13 +27,13 @@ const Services = () => {
             return;
         }
 
-        if (isReducedMotionEnabled) {
+        if (isReducedMotionEnabled || isAutoplayPaused) {
             swiperInstance.autoplay.stop();
             return;
         }
 
         swiperInstance.autoplay.start();
-    }, [isReducedMotionEnabled]);
+    }, [isReducedMotionEnabled, isAutoplayPaused]);
 
     const handlePrevSlide = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
@@ -46,14 +47,39 @@ const Services = () => {
         }
     };
 
+    const handleToggleAutoplay = () => {
+        if (isReducedMotionEnabled) {
+            return;
+        }
+
+        const swiperInstance = swiperRef.current?.swiper;
+
+        if (!swiperInstance?.autoplay) {
+            return;
+        }
+
+        if (isAutoplayPaused) {
+            swiperInstance.autoplay.start();
+            setIsAutoplayPaused(false);
+            return;
+        }
+
+        swiperInstance.autoplay.stop();
+        setIsAutoplayPaused(true);
+    };
+
     const handleMouseEnter = () => {
+        if (isAutoplayPaused || isReducedMotionEnabled) {
+            return;
+        }
+
         if (swiperRef.current && swiperRef.current.swiper && swiperRef.current.swiper.autoplay) {
             swiperRef.current.swiper.autoplay.pause();
         }
     };
 
     const handleMouseLeave = () => {
-        if (isReducedMotionEnabled) {
+        if (isAutoplayPaused || isReducedMotionEnabled) {
             return;
         }
 
@@ -61,6 +87,7 @@ const Services = () => {
             swiperRef.current.swiper.autoplay.resume();
         }
     };
+
     const handleServiceClick = (service) => {
         const serviceSlug = service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         navigate(`/services/${serviceSlug}`);
@@ -70,22 +97,27 @@ const Services = () => {
         <div className="MainContainer ServicesHomeContainer" >
             <div className="Container">
                 <div className="paddingSide">
-                    {/* <div className="SectionTagLabelContainer">
-                        <div>
-                            <div className="flexVertically">
-                                <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
-                            </div>
-                            <div>
-                                <p>Solutions We Provide</p>
-                            </div>
-                        </div>
-                    </div> */}
                     <div className='CommonHeader' style={{ margin: "unset" }}>
                         <div>
                             <h2>Guiding You to Smarter Investments</h2>
-                            {/* <p>Discover a wide array of tailored financial services—from equities and mutual funds to bonds and FDs—backed by 30+ years of market expertise. Whether you're a first-time investor or an institution, we help you make confident, goal-driven investment decisions.</p> */}
                             <div className='SwiperBtnContainer'>
                                 <button
+                                    type="button"
+                                    className={`swiper-btn swiper-btn-autoplay ${isAutoplayPaused ? "is-paused" : "is-playing"}`}
+                                    onClick={handleToggleAutoplay}
+                                    aria-label={isAutoplayPaused ? "Resume swiper animation" : "Pause swiper animation"}
+                                    aria-pressed={isAutoplayPaused}
+                                    title={isAutoplayPaused ? "Resume" : "Pause"}
+                                    disabled={isReducedMotionEnabled}
+                                >
+                                    {isAutoplayPaused ? (
+                                        <span className="swiper-autoplay-icon" aria-hidden="true">▶</span>
+                                    ) : (
+                                        <span className="swiper-autoplay-icon" aria-hidden="true">❚❚</span>
+                                    )}
+                                </button>
+                                <button
+                                    type="button"
                                     className="swiper-btn swiper-btn-prev"
                                     onClick={handlePrevSlide}
                                     aria-label="Previous slide"
@@ -93,6 +125,7 @@ const Services = () => {
                                     &#8249;
                                 </button>
                                 <button
+                                    type="button"
                                     className="swiper-btn swiper-btn-next"
                                     onClick={handleNextSlide}
                                     aria-label="Next slide"
@@ -113,9 +146,6 @@ const Services = () => {
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }}
-                            // pagination={{
-                            //     clickable: true,
-                            // }}
                             navigation={false}
                             modules={[Autoplay, FreeMode, Pagination, Navigation]}
                             className="mySwiper"
@@ -167,7 +197,6 @@ const Services = () => {
                                     );
                                 })
                             }
-                            {/* <SwiperSlide>Slide 1</SwiperSlide> */}
                         </Swiper>
                     </div>
                 </div>

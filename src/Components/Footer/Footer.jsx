@@ -98,13 +98,13 @@ const Footer = () => {
                     <ul>
                       {SocialMediaData.map((item, index) => (
                         <li key={index}>
-                          <Link
-                            to={item.link}
+                          <a
+                            href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             {item.icon} {item.name}
-                          </Link>
+                          </a>
                         </li>
                       ))}
                     </ul>

@@ -1,0 +1,70 @@
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Even spacing between each major home section */
+.HomePageSection {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.HomePageSection:last-child {
+  padding-bottom: 80px;
+}
+
+/* Keep hero splash (app download + hero video) as one unit */
+.HomePage > .HomeSplash {
+  margin: 0;
+  padding: 0;
+}
+
+/* Small breathing room between app download strip and hero video */
+.HomePage > .HomeSplash {
+  gap: 20px;
+}
+
+/* Avoid double spacing from older section-level margins */
+.HomePageSection .client-docs-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.HomePageSection .bank-details-container .paddingSide.marginTop {
+  margin-top: 0;
+}
+
+.HomePageSection .bank-details-wrapper {
+  padding-top: 0;
+}
+
+@media (max-width: 900px) {
+  .HomePageSection {
+    padding-top: 56px;
+  }
+
+  .HomePageSection:last-child {
+    padding-bottom: 56px;
+  }
+
+  .HomePage > .HomeSplash {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .HomePageSection {
+    padding-top: 44px;
+  }
+
+  .HomePageSection:last-child {
+    padding-bottom: 44px;
+  }
+
+  .HomePage > .HomeSplash {
+    gap: 12px;
+  }
+}

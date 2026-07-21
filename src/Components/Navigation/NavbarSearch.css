@@ -1,0 +1,242 @@
+.NavbarSearch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.NavbarSearch__toggle {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(0, 33, 71, 0.14);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--brand-color, #002147);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.NavbarSearch__toggle:hover {
+  border-color: rgba(0, 33, 71, 0.28);
+  background: rgba(0, 33, 71, 0.04);
+}
+
+.NavbarSearch.is-open .NavbarSearch__toggle {
+  background: var(--brand-color, #002147);
+  border-color: var(--brand-color, #002147);
+  color: #ffffff;
+}
+
+.NavbarSearch__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(360px, calc(100vw - 24px));
+  background: #ffffff;
+  border: 1px solid rgba(0, 33, 71, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 33, 71, 0.14);
+  z-index: 1200;
+  overflow: hidden;
+}
+
+.NavbarSearch__inputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0, 33, 71, 0.08);
+  background: #fafbfc;
+}
+
+.NavbarSearch__inputIcon {
+  color: rgba(0, 33, 71, 0.55);
+  font-size: 14px;
+}
+
+.NavbarSearch__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+  color: #111111;
+  line-height: 1.3;
+}
+
+.NavbarSearch__input::placeholder {
+  color: #8a8f98;
+}
+
+.NavbarSearch__clear {
+  border: none;
+  background: transparent;
+  color: var(--brand-color, #002147);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.NavbarSearch__results {
+  max-height: min(360px, 55vh);
+  overflow-y: auto;
+  padding: 8px 0 10px;
+}
+
+.NavbarSearch__sectionLabel {
+  margin: 0;
+  padding: 6px 12px 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 33, 71, 0.55);
+}
+
+.NavbarSearch__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavbarSearch__item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: background-color 0.15s ease;
+}
+
+.NavbarSearch__item:hover,
+.NavbarSearch__item.is-active {
+  background: rgba(0, 33, 71, 0.05);
+}
+
+.NavbarSearch__itemTitle {
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111111;
+  line-height: 1.3;
+}
+
+.NavbarSearch__itemMeta {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.3;
+}
+
+.NavbarSearch__group + .NavbarSearch__group {
+  margin-top: 4px;
+  border-top: 1px solid rgba(0, 33, 71, 0.06);
+  padding-top: 4px;
+}
+
+.NavbarSearch__groupHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-right: 8px;
+}
+
+.NavbarSearch__browse {
+  border: none;
+  background: transparent;
+  color: var(--brand-color, #002147);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 4px;
+  white-space: nowrap;
+}
+
+.NavbarSearch__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px 2px;
+}
+
+.NavbarSearch__categories button {
+  border: 1px solid rgba(0, 33, 71, 0.12);
+  background: #ffffff;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.NavbarSearch__categories button:hover {
+  border-color: var(--brand-color, #002147);
+  color: var(--brand-color, #002147);
+}
+
+.NavbarSearch__empty {
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.NavbarSearch__empty p {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.NavbarSearch__empty p + p {
+  margin-top: 4px;
+}
+
+/* Desktop: keep icon compact beside action buttons */
+.NavbarSearch.is-desktop {
+  margin-right: 4px;
+}
+
+/* Mobile: sit next to hamburger without stretching nav */
+.NavbarSearch.is-mobile .NavbarSearch__panel {
+  position: fixed;
+  top: 64px;
+  left: 12px;
+  right: 12px;
+  width: auto;
+  max-width: none;
+}
+
+@media (max-width: 1016px) {
+  .NavbarSearch__toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .NavbarSearch__results {
+    max-height: min(420px, calc(100vh - 140px));
+  }
+}
+
+@media (max-width: 480px) {
+  .NavbarSearch.is-mobile .NavbarSearch__panel {
+    top: 58px;
+    left: 8px;
+    right: 8px;
+  }
+
+  .NavbarSearch__itemTitle {
+    font-size: 12px;
+  }
+}

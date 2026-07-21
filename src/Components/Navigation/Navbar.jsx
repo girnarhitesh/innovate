@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Drawer, Button, Modal } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import Table from "../AboutUs/Table";
+import NavbarSearch from "./NavbarSearch";
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -396,8 +397,9 @@ const Navbar = () => {
                                             </div>
                                         ))}
                                     </div>
-                                    <div>
-                                        <div className="BtnContainer" style={{ display: 'flex', gap: 12 }}>
+                                    <div className="NavbarDesktopActions">
+                                        <NavbarSearch isMobile={false} />
+                                        <div className="BtnContainer" style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                                             <button type="button" onClick={openContactModal}>
                                                 Contact Us
                                             </button>
@@ -476,7 +478,11 @@ const Navbar = () => {
                             )}
 
                             {isMobile && (
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <div className="NavbarMobileActions">
+                                    <NavbarSearch
+                                        isMobile={true}
+                                        onNavigate={closeMobileDrawer}
+                                    />
                                     <Button
                                         type="text"
                                         icon={<MenuOutlined />}

@@ -435,6 +435,19 @@
   color: #000069;
 }
 
+.NavbarDesktopActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.NavbarMobileActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 @media (max-width: 1016px) {
   .NavigationContainer {
     padding: 10px 10px;

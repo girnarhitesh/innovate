@@ -41,8 +41,36 @@ body[data-a11y-highlight-links="true"] a[href] {
   text-decoration: underline !important;
   text-decoration-thickness: 3px !important;
   text-underline-offset: 4px !important;
-  box-shadow: inset 0 -0.35em 0 rgba(255, 221, 87, 0.45);
+  box-shadow: inset 0 -0.35em 0 rgba(255, 221, 87, 0.45) !important;
+  background-color: rgba(255, 221, 87, 0.28) !important;
   font-weight: 600 !important;
+}
+
+/* Footer Quick Links + Social Links: match site-wide link highlight */
+body[data-a11y-highlight-links="true"] .FooterMainContainer a[href],
+body[data-a11y-highlight-links="true"] .SocialLinkstAndAdress a[href],
+body[data-a11y-highlight-links="true"] .SocialMediaContainer a[href],
+body[data-a11y-highlight-links="true"] .CopyRightContainer a[href] {
+  text-decoration: underline !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 4px !important;
+  box-shadow: inset 0 -0.35em 0 rgba(255, 221, 87, 0.45) !important;
+  background-color: rgba(255, 221, 87, 0.28) !important;
+  font-weight: 600 !important;
+  color: #111111 !important;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+body[data-a11y-highlight-links="true"] .SocialLinkstAndAdress div ul li:hover {
+  transform: none;
+  padding-left: 0;
+}
+
+body[data-a11y-highlight-links="true"] .SocialLinkstAndAdress div ul li:hover::before,
+body[data-a11y-highlight-links="true"] .SocialLinkstAndAdress div ul li::before {
+  opacity: 0 !important;
+  width: 0 !important;
 }
 
 body[data-a11y-pause-animations="true"] *,

@@ -30,10 +30,21 @@
 }
 
 .SocialMediaContainer ul li a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: black;
+  color: #111111;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 33, 71, 0.35);
+  font-weight: 500;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease, background-color 0.25s ease;
+}
+
+.SocialMediaContainer ul li a:hover {
+  color: var(--brand-color);
+  text-decoration-color: var(--brand-color);
 }
 
 .SocialLinkstAndAdress > div ul {
@@ -51,7 +62,18 @@
 }
 
 .SocialLinkstAndAdress > div ul li a {
-  color: black;
+  color: #111111;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 33, 71, 0.35);
+  font-weight: 500;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease, background-color 0.25s ease;
+}
+
+.SocialLinkstAndAdress > div ul li a:hover {
+  color: var(--brand-color);
+  text-decoration-color: var(--brand-color);
 }
 
 .SocialLinkstAndAdress div ul li::before {
@@ -82,6 +104,33 @@
   top: 0;
   opacity: 1;
   transition: 0.5s;
+}
+
+/* Accessibility: Highlight Links — Quick Links + Social Links */
+body[data-a11y-highlight-links="true"] .FooterMainContainer .SocialLinkstAndAdress a,
+body[data-a11y-highlight-links="true"] .FooterMainContainer .SocialMediaContainer a,
+body[data-a11y-highlight-links="true"] .FooterMainContainer .CopyRightContainer a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 4px !important;
+  text-decoration-color: #111111 !important;
+  box-shadow: inset 0 -0.35em 0 rgba(255, 221, 87, 0.55) !important;
+  background-color: rgba(255, 221, 87, 0.4) !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+  padding: 1px 4px !important;
+  border-radius: 2px;
+}
+
+body[data-a11y-highlight-links="true"] .FooterMainContainer .SocialLinkstAndAdress div ul li:hover {
+  transform: none !important;
+  padding-left: 0 !important;
+}
+
+body[data-a11y-highlight-links="true"] .FooterMainContainer .SocialLinkstAndAdress div ul li::before,
+body[data-a11y-highlight-links="true"] .FooterMainContainer .SocialLinkstAndAdress div ul li:hover::before {
+  opacity: 0 !important;
+  width: 0 !important;
 }
 
 .CopyRightContainer {

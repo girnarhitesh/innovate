@@ -24,7 +24,7 @@ const BankDetails = () => {
   return (
     <div className="MainContainer bank-details-container">
       <div className="Container">
-        <div className="paddingSide marginTop marginBottom">
+        <div className="paddingSide marginBottom">
           <div className="bank-details-wrapper">
             <h2 className="bank-details-title">
               LIST OF UPSTREAM BANK A/C: INNOVATE SECURITIES PVT LTD USCNBA

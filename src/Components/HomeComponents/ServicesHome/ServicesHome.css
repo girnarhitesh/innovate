@@ -91,6 +91,36 @@
     transform: scale(0.95);
 }
 
+.SwiperBtnContainer .swiper-btn-autoplay {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.SwiperBtnContainer .swiper-btn-autoplay .swiper-autoplay-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.SwiperBtnContainer .swiper-btn-autoplay.is-paused {
+    background-color: var(--brand-color);
+    border-color: var(--brand-color);
+    color: #ffffff;
+}
+
+.SwiperBtnContainer .swiper-btn-autoplay.is-paused:hover {
+    background-color: #000047;
+    border-color: #000047;
+    color: #ffffff;
+}
+
+.SwiperBtnContainer .swiper-btn-autoplay:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
 @media (min-width: 1400px) and (max-width: 3000px) {
     .ServicesHomeContainer .CommonHeader {
         max-width: 1500px !important;
