@@ -1,4 +1,4 @@
-import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined, CloseOutlined } from "@ant-design/icons";
@@ -6,6 +6,7 @@ import {
   getSearchSuggestions,
   searchNavbarContent,
 } from "../../utils/navbarSearchIndex";
+import { announceStatus } from "../../utils/announceStatus";
 import "./NavbarSearch.css";
 
 const NavbarSearch = ({ isMobile = false, onNavigate }) => {
@@ -13,10 +14,18 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
   const rootRef = useRef(null);
   const inputRef = useRef(null);
   const panelRef = useRef(null);
+  const announceTimerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [panelStyle, setPanelStyle] = useState({});
+  const [panelStyle, setPanelStyle] = useState({
+    position: "fixed",
+    top: 72,
+    right: 12,
+    width: 360,
+    zIndex: 11000,
+  });
+  const [statusText, setStatusText] = useState("");
 
   const results = useMemo(() => searchNavbarContent(query), [query]);
   const suggestions = useMemo(() => getSearchSuggestions(8), []);
@@ -33,11 +42,14 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
     setIsOpen(false);
     setQuery("");
     setActiveIndex(-1);
+    setStatusText("");
   }, []);
 
   const openSearch = useCallback(() => {
     setIsOpen(true);
     setActiveIndex(-1);
+    setStatusText("Search opened. Type to find pages, services, and documents.");
+    announceStatus("Search opened. Type to find pages, services, and documents.");
   }, []);
 
   const updatePanelPosition = useCallback(() => {
@@ -56,9 +68,14 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
     let left = isMobile ? gutter : rect.right - width;
     left = Math.max(gutter, Math.min(left, window.innerWidth - width - gutter));
 
+    const top = Math.min(
+      Math.round(rect.bottom + 8),
+      Math.max(8, window.innerHeight - 120),
+    );
+
     setPanelStyle({
       position: "fixed",
-      top: Math.round(rect.bottom + 8),
+      top,
       left: Math.round(left),
       width: Math.round(width),
       zIndex: 11000,
@@ -89,6 +106,7 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
         closeSearch();
+        rootRef.current?.querySelector(".NavbarSearch__toggle")?.focus();
       }
     };
 
@@ -112,11 +130,47 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
     };
   }, [isOpen, closeSearch, updatePanelPosition]);
 
+  // Announce search result status without moving focus (WCAG 4.1.3)
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const trimmed = query.trim();
+
+    if (announceTimerRef.current) {
+      window.clearTimeout(announceTimerRef.current);
+    }
+
+    announceTimerRef.current = window.setTimeout(() => {
+      let message = "";
+
+      if (!trimmed) {
+        message = `${suggestions.length} search suggestions available.`;
+      } else if (results.total === 0) {
+        message = `No matches for ${trimmed}.`;
+      } else {
+        message = `${results.total} result${results.total === 1 ? "" : "s"} for ${trimmed}.`;
+      }
+
+      setStatusText(message);
+      announceStatus(message);
+    }, 350);
+
+    return () => {
+      if (announceTimerRef.current) {
+        window.clearTimeout(announceTimerRef.current);
+      }
+    };
+  }, [isOpen, query, results.total, suggestions.length]);
+
   const handleSelect = useCallback(
     (item) => {
       if (!item) {
         return;
       }
+
+      announceStatus(`Opening ${item.title}.`);
 
       if (typeof onNavigate === "function") {
         onNavigate();
@@ -136,6 +190,8 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
 
   const handleBrowseCategory = useCallback(
     (path) => {
+      announceStatus("Opening selected section.");
+
       if (typeof onNavigate === "function") {
         onNavigate();
       }
@@ -148,22 +204,26 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
 
   const handleKeyDown = (event) => {
     if (event.key === "Escape") {
+      event.preventDefault();
       closeSearch();
-      return;
-    }
-
-    if (!flatItems.length) {
+      rootRef.current?.querySelector(".NavbarSearch__toggle")?.focus();
       return;
     }
 
     if (event.key === "ArrowDown") {
       event.preventDefault();
+      if (!flatItems.length) {
+        return;
+      }
       setActiveIndex((current) => (current + 1) % flatItems.length);
       return;
     }
 
     if (event.key === "ArrowUp") {
       event.preventDefault();
+      if (!flatItems.length) {
+        return;
+      }
       setActiveIndex((current) =>
         current <= 0 ? flatItems.length - 1 : current - 1,
       );
@@ -172,6 +232,16 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
 
     if (event.key === "Enter") {
       event.preventDefault();
+
+      if (!flatItems.length) {
+        const message = query.trim()
+          ? `No matches for ${query.trim()}.`
+          : "Enter a search term to find content.";
+        setStatusText(message);
+        announceStatus(message, { assertive: true });
+        return;
+      }
+
       const index = activeIndex >= 0 ? activeIndex : 0;
       handleSelect(flatItems[index]);
     }
@@ -185,10 +255,11 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
     ? createPortal(
         <div
           ref={panelRef}
+          id="site-search-panel"
           className="NavbarSearch__panel"
           style={panelStyle}
-          role="dialog"
-          aria-label="Search"
+          role="search"
+          aria-label="Site search"
         >
           <div className="NavbarSearch__inputRow">
             <SearchOutlined className="NavbarSearch__inputIcon" aria-hidden="true" />
@@ -206,6 +277,10 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
               placeholder="Search pages, services, forms..."
               title="Search"
               aria-label="Search"
+              aria-controls="site-search-results"
+              aria-describedby="site-search-status"
+              aria-autocomplete="list"
+              aria-expanded={isOpen}
               autoComplete="off"
               name="search"
             />
@@ -217,6 +292,7 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
                   setQuery("");
                   setActiveIndex(-1);
                   inputRef.current?.focus();
+                  announceStatus("Search cleared.");
                 }}
                 aria-label="Clear search"
               >
@@ -225,15 +301,33 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
             ) : null}
           </div>
 
-          <div className="NavbarSearch__results">
+          <div
+            id="site-search-status"
+            className="NavbarSearch__status"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {statusText}
+          </div>
+
+          <div id="site-search-results" className="NavbarSearch__results">
             {!hasQuery ? (
               <>
-                <p className="NavbarSearch__sectionLabel">Suggestions</p>
-                <ul className="NavbarSearch__list">
+                <p className="NavbarSearch__sectionLabel" id="search-suggestions-label">
+                  Suggestions
+                </p>
+                <ul
+                  className="NavbarSearch__list"
+                  role="listbox"
+                  aria-labelledby="search-suggestions-label"
+                >
                   {suggestions.map((item, index) => (
-                    <li key={item.id}>
+                    <li key={item.id} role="presentation">
                       <button
                         type="button"
+                        role="option"
+                        aria-selected={activeIndex === index}
                         className={`NavbarSearch__item ${activeIndex === index ? "is-active" : ""}`}
                         onClick={() => handleSelect(item)}
                         onMouseEnter={() => setActiveIndex(index)}
@@ -278,7 +372,9 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
               panelItems.map((group) => (
                 <div key={group.id} className="NavbarSearch__group">
                   <div className="NavbarSearch__groupHead">
-                    <p className="NavbarSearch__sectionLabel">{group.label}</p>
+                    <p className="NavbarSearch__sectionLabel" id={`search-group-${group.id}`}>
+                      {group.label}
+                    </p>
                     <button
                       type="button"
                       className="NavbarSearch__browse"
@@ -287,16 +383,22 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
                       View all
                     </button>
                   </div>
-                  <ul className="NavbarSearch__list">
+                  <ul
+                    className="NavbarSearch__list"
+                    role="listbox"
+                    aria-labelledby={`search-group-${group.id}`}
+                  >
                     {group.items.map((item) => {
                       const flatIndex = flatItems.findIndex(
                         (entry) => entry.id === item.id,
                       );
 
                       return (
-                        <li key={item.id}>
+                        <li key={item.id} role="presentation">
                           <button
                             type="button"
+                            role="option"
+                            aria-selected={activeIndex === flatIndex}
                             className={`NavbarSearch__item ${activeIndex === flatIndex ? "is-active" : ""}`}
                             onClick={() => handleSelect(item)}
                             onMouseEnter={() => setActiveIndex(flatIndex)}
@@ -325,10 +427,18 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
       <button
         type="button"
         className="NavbarSearch__toggle"
-        onClick={() => (isOpen ? closeSearch() : openSearch())}
+        onClick={(event) => {
+          event.stopPropagation();
+          if (isOpen) {
+            closeSearch();
+            announceStatus("Search closed.");
+          } else {
+            openSearch();
+          }
+        }}
         aria-label={isOpen ? "Close Search" : "Search"}
         aria-expanded={isOpen}
-        aria-controls="site-search-input"
+        aria-controls={isOpen ? "site-search-panel" : undefined}
         title="Search"
       >
         {isOpen ? (

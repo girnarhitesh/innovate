@@ -2,13 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Services.css";
 import { Row, Col } from "antd";
 import ServicesData from "./ServicesData";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const toServiceSlug = (title = "") =>
+    title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
 
 const Services = () => {
-    const navigate = useNavigate();
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
-    const [hoveredCard, setHoveredCard] = useState(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -40,11 +44,6 @@ const Services = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const handleServiceClick = (service) => {
-        const serviceSlug = service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        navigate(`/services/${serviceSlug}`);
-    };
-
     return (
         <div className="MainContainer marginTop" ref={sectionRef}>
             <div className="Container">
@@ -73,52 +72,35 @@ const Services = () => {
                         <Row gutter={[24, 24]} className="services-cards-row">
                             {ServicesData.map((service, index) => (
                                 <Col lg={8} md={12} xs={24} key={service.id}>
-                                    <button
-                                        type="button"
+                                    <Link
+                                        to={`/services/${toServiceSlug(service.title)}`}
                                         className={`service-card ${isVisible ? 'card-visible' : ''}`}
                                         style={{ animationDelay: `${index * 0.1}s` }}
-                                        onMouseEnter={() => setHoveredCard(index)}
-                                        onMouseLeave={() => setHoveredCard(null)}
-                                        onClick={() => handleServiceClick(service)}
                                         aria-label={`${service.title}. View details`}
                                     >
-                                        {/* <div className="card-image-container">
-                                            <img 
-                                                src={service.image} 
-                                                alt={service.title}
-                                                className="card-image"
-                                            />
-                                            <div className="card-overlay">
-                                                <div className="overlay-content">
-                                                    <span className="view-more-text">View More</span>
-                                                    <span className="arrow-icon">→</span>
-                                                </div>
-                                            </div>
-                                        </div> */}
-
-                                        <div className="card-content">
-                                            <div className="service-icon">
+                                        <span className="card-content">
+                                            <span className="service-icon">
                                                 <img
                                                     src={service.iconImage}
                                                     alt=""
                                                     aria-hidden="true"
                                                     className="icon-image"
                                                 />
-                                            </div>
+                                            </span>
 
-                                            <h3 className="service-title">{service.title}</h3>
+                                            <span className="service-title">{service.title}</span>
 
-                                            <p className="service-description">
+                                            <span className="service-description">
                                                 {service.servicesCardText}
-                                            </p>
+                                            </span>
 
-                                            <div className="card-footer">
+                                            <span className="card-footer">
                                                 <span className="view-details-btn" aria-hidden="true">
                                                     View Details
                                                 </span>
-                                            </div>
-                                        </div>
-                                    </button>
+                                            </span>
+                                        </span>
+                                    </Link>
                                 </Col>
                             ))}
                         </Row>

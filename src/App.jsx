@@ -26,6 +26,7 @@ import ComplianceDataPage from './Components/HomeComponents/CompliancesAndForms/
 import { AccessibilityProvider } from './context/AccessibilityContext'
 import AccessibilityWidget from './Components/Accessibility/AccessibilityWidget'
 import Sitemap from './Components/Sitemap/Sitemap'
+import StatusLiveRegions from './Components/Accessibility/StatusLiveRegions'
 
 function App() {
   // Initialize global animations
@@ -59,6 +60,7 @@ function App() {
   return (
     <AccessibilityProvider>
       <>
+        <StatusLiveRegions />
         <a
           href="#main-content"
           className="skip-to-content"

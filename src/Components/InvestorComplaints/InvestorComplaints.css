@@ -97,8 +97,13 @@
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  display: inline-block;
-  padding-left: 25px ;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  box-sizing: border-box;
 }
 
 .download-link:hover {

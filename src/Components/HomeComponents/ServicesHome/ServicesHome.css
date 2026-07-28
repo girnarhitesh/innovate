@@ -60,14 +60,16 @@
 .SwiperBtnContainer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .SwiperBtnContainer .swiper-btn {
     background-color: white;
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 44px;
+    width: 44px;
+    min-height: 44px;
+    min-width: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +81,8 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 .SwiperBtnContainer .swiper-btn:hover {

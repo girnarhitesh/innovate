@@ -305,14 +305,22 @@ const Navbar = () => {
                     </div>
                 ))}
                 <div className="mobile-login-section">
-                    <div 
+                    <button
+                        type="button"
                         className="mobile-login-trigger"
                         onClick={() => handleMobileAccordionToggle(7)}
+                        aria-expanded={mobileAccordionOpen === 7}
+                        aria-controls="mobile-login-menu"
                     >
                         <span>Login</span>
-                    </div>
+                    </button>
                     {mobileAccordionOpen === 7 && (
-                        <div className="mobile-login-dropdown">
+                        <div
+                            id="mobile-login-menu"
+                            className="mobile-login-dropdown"
+                            role="menu"
+                            aria-label="Login options"
+                        >
                             <Link
                                 to="https://bo.innovatesec.com/Account/Login"
                                 onClick={() => handleMobileNavClick("https://bo.innovatesec.com/Account/Login")}
@@ -474,7 +482,7 @@ const Navbar = () => {
                                                     className="login-dropdown-trigger"
                                                     aria-expanded={activeDropdown === 7}
                                                     aria-haspopup="true"
-                                                    aria-controls="login-dropdown-menu"
+                                                    aria-controls={activeDropdown === 7 ? "login-dropdown-menu" : undefined}
                                                     onClick={toggleLoginDropdown}
                                                     onMouseEnter={() => handleDropdownMouseEnter(7)}
                                                     onMouseLeave={handleDropdownMouseLeave}

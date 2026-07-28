@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Drawer } from "antd";
 import { useAccessibility } from "../../context/AccessibilityContext";
+import { announceStatus } from "../../utils/announceStatus";
 import "./AccessibilityWidget.css";
 
 const toggleOptions = [
@@ -94,7 +95,10 @@ const AccessibilityWidget = () => {
               <button
                 type="button"
                 className="a11y-close-button"
-                onClick={closeDrawer}
+                onClick={() => {
+                  closeDrawer();
+                  announceStatus("Accessibility options closed.");
+                }}
                 aria-label="Close accessibility options"
               >
                 X
@@ -126,7 +130,12 @@ const AccessibilityWidget = () => {
                 label="Bigger Text"
                 active={settings.fontSizeLevel > 0}
                 disabled={settings.fontSizeLevel >= 4}
-                onClick={increaseFontSize}
+                onClick={() => {
+                  increaseFontSize();
+                  announceStatus(
+                    `Font size increased to level ${Math.min(settings.fontSizeLevel + 1, 4)} of 4.`,
+                  );
+                }}
                 helperText={`Level ${settings.fontSizeLevel}/4`}
               />
 
@@ -135,7 +144,14 @@ const AccessibilityWidget = () => {
                 label="Smaller Text"
                 active={settings.fontSizeLevel > 0}
                 disabled={settings.fontSizeLevel === 0}
-                onClick={decreaseFontSize}
+                onClick={() => {
+                  decreaseFontSize();
+                  announceStatus(
+                    settings.fontSizeLevel <= 1
+                      ? "Font size reset to default."
+                      : `Font size decreased to level ${settings.fontSizeLevel - 1} of 4.`,
+                  );
+                }}
                 helperText={settings.fontSizeLevel === 0 ? "Default" : "Step down"}
               />
             </div>
@@ -156,7 +172,13 @@ const AccessibilityWidget = () => {
                   badge={option.badge}
                   label={option.label}
                   active={settings[option.key]}
-                  onClick={() => toggleSetting(option.key)}
+                  onClick={() => {
+                    const nextActive = !settings[option.key];
+                    toggleSetting(option.key);
+                    announceStatus(
+                      `${option.label} ${nextActive ? "turned on" : "turned off"}.`,
+                    );
+                  }}
                 />
               ))}
             </div>
@@ -168,7 +190,10 @@ const AccessibilityWidget = () => {
             <button
               type="button"
               className="a11y-reset-button"
-              onClick={resetAllSettings}
+              onClick={() => {
+                resetAllSettings();
+                announceStatus("All accessibility settings have been reset.");
+              }}
             >
               Reset All Settings
             </button>
@@ -180,7 +205,10 @@ const AccessibilityWidget = () => {
         <button
           type="button"
           className="a11y-floating-button a11y-exempt"
-          onClick={openDrawer}
+          onClick={() => {
+            openDrawer();
+            announceStatus("Accessibility options opened.");
+          }}
           aria-label="Open accessibility options"
         >
           <span className="a11y-floating-button-mark">Aa</span>

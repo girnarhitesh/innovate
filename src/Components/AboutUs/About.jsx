@@ -81,13 +81,16 @@ const About = () => {
               <div className="marginTop escalation-matrix-container">
                 <div className="escalation-table-wrapper">
                   <table className="escalation-table">
+                    <caption className="sr-only">
+                      Compliance officers and key managerial personnel contact details
+                    </caption>
                     <thead>
                       <tr>
-                        <th>Sr. No.</th>
-                        <th>Name of the Individual</th>
-                        <th>Designation</th>
-                        <th>Mobile Number</th>
-                        <th>Email Id</th>
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Name of the Individual</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Mobile Number</th>
+                        <th scope="col">Email Id</th>
                       </tr>
                     </thead>
                     <tbody>

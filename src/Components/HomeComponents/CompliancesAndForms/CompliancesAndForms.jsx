@@ -3,7 +3,7 @@ import { Tabs } from "antd";
 import "./CompliancesAndForms.css";
 import { compliancesAndFormsData } from "./CompliancesAndFormsData";
 import { AnimationObserver, AnimationConfigs } from "../../../utils/animationObserver";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FileTextOutlined, SafetyOutlined, BookOutlined, BarChartOutlined } from "@ant-design/icons";
 import DocumentCard from "./DocumentCard";
 
@@ -39,8 +39,6 @@ const landingCards = [
 ]
 
 const CompliancesAndForms = () => {
-
-    const navigate = useNavigate()
     const [activeTab, setActiveTab] = useState("forms");
     
     // Refs for animation
@@ -156,17 +154,18 @@ const CompliancesAndForms = () => {
                     <div className="TabsContainer LandingCardsContainer" ref={tabsRef}>
                         <div className="LandingCardsGrid">
                             {landingCards.map((card) => (
-                                <button
-                                    type="button"
+                                <Link
                                     key={card.key}
+                                    to={card.route}
                                     className="LandingCard"
-                                    onClick={() => navigate(card.route)}
-                                    aria-label={`${card.label}. ${card.description}`}
+                                    aria-label={card.description ? `${card.label}. ${card.description}` : card.label}
                                 >
-                                    <div className="LandingCardIcon" aria-hidden="true">{card.icon}</div>
-                                    <h3 className="LandingCardTitle">{card.label}</h3>
-                                    <p className="LandingCardDesc">{card.description}</p>
-                                </button>
+                                    <span className="LandingCardIcon" aria-hidden="true">{card.icon}</span>
+                                    <span className="LandingCardTitle">{card.label}</span>
+                                    {card.description ? (
+                                        <span className="LandingCardDesc">{card.description}</span>
+                                    ) : null}
+                                </Link>
                             ))}
                         </div>
                     </div>

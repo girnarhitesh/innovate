@@ -75,10 +75,20 @@ const Modal = () => {
   if (showAdvisory) {
     return (
       <div className="modal-overlay" key="advisory-modal">
-        <div className="modal-content advisory-modal-content">
+        <div
+          className="modal-content advisory-modal-content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="advisory-modal-title"
+        >
           <div className="modal-header">
-            <h2>Advisory for Investors</h2>
-            <button className="modal-close" onClick={handleAdvisoryClose}>
+            <h2 id="advisory-modal-title">Advisory for Investors</h2>
+            <button
+              type="button"
+              className="modal-close"
+              onClick={handleAdvisoryClose}
+              aria-label="Close advisory for investors dialog"
+            >
               ×
             </button>
           </div>
@@ -86,7 +96,7 @@ const Modal = () => {
             <AdvisioryForInvestors />
           </div>
           <div className="modal-footer">
-            <button className="modal-button" onClick={handleAdvisoryClose}>
+            <button type="button" className="modal-button" onClick={handleAdvisoryClose}>
               Close
             </button>
           </div>
@@ -135,9 +145,14 @@ const Modal = () => {
 
     return (
       <div className="modal-overlay">
-        <div className="modal-content">
+        <div
+          className="modal-content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="trading-advisory-modal-title"
+        >
           <div className="modal-header">
-            <h2>
+            <h2 id="trading-advisory-modal-title">
               <span aria-hidden="true">📞 </span>
               Trading Call:{" "}
               <a href="tel:9376199199">93761 99199</a>
@@ -300,7 +315,7 @@ const Modal = () => {
           </div>
 
           <div className="modal-footer">
-            <button className="modal-button" onClick={handleModalClose}>
+            <button type="button" className="modal-button" onClick={handleModalClose}>
               I Understand
             </button>
           </div>

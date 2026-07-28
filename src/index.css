@@ -67,6 +67,57 @@ a{
   outline: none;
 }
 
+/* WCAG 2.5.8 Target Size (Minimum): interactive controls ≥ 24×24 CSS px */
+:where(
+  button,
+  [type="button"],
+  [type="submit"],
+  [type="reset"],
+  [role="button"],
+  [role="menuitem"],
+  [role="option"],
+  [role="tab"],
+  [role="switch"],
+  [role="checkbox"],
+  [role="radio"],
+  input:not([type="hidden"]),
+  select,
+  textarea,
+  summary
+) {
+  min-height: 24px;
+  min-width: 24px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+/* Standalone nav / chrome links (not inline body text) */
+.NavLinksContainer a,
+.NavbarDesktopActions a.dropdown-item,
+.SocialLinkstAndAdress a,
+.SocialMediaContainer a,
+.SitemapPage__section a,
+.mobile-nav-item,
+.mobile-login-item,
+.mobile-sublink-item,
+.mobile-accordion-header,
+.download-link,
+.NavbarSearch__item,
+.NavbarSearch__browse,
+.NavbarSearch__clear,
+.NavbarSearch__categories button {
+  min-height: 24px;
+  min-width: 24px;
+  box-sizing: border-box;
+}
+
 /* Skip-link target: no ring (programmatic focus), still scrollable */
 main#main-content:focus {
   outline: none;
@@ -130,7 +181,7 @@ main#main-content {
 }
 
 .Container {
-  max-width: 1200px;
+  max-width: 1300px;
   height: 100%;
   border-right: 1px solid var(--stroke-color);
   border-left: 1px solid var(--stroke-color);

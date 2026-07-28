@@ -7,6 +7,7 @@
 
 .NavbarSearch__toggle {
   min-height: 36px;
+  min-width: 44px;
   border: 1px solid rgba(0, 33, 71, 0.14);
   border-radius: 999px;
   background: #ffffff;
@@ -16,12 +17,13 @@
   justify-content: center;
   gap: 6px;
   cursor: pointer;
-  padding: 6px 12px;
+  padding: 8px 14px;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   font-family: "Work Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
+  box-sizing: border-box;
 }
 
 .NavbarSearch__toggleLabel {
@@ -84,6 +86,19 @@
   box-shadow: inset 0 0 0 1px #002147;
 }
 
+.NavbarSearch__status {
+  margin: 0;
+  padding: 6px 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #002147;
+  background: rgba(0, 33, 71, 0.04);
+  border-bottom: 1px solid rgba(0, 33, 71, 0.08);
+  min-height: 28px;
+}
+
 .NavbarSearch__input::placeholder {
   color: #3d3d3d;
 }
@@ -92,10 +107,15 @@
   border: none;
   background: transparent;
   color: var(--brand-color, #002147);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  padding: 0;
+  padding: 6px 8px;
+  min-height: 32px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .NavbarSearch__results {
@@ -126,12 +146,15 @@
   border: none;
   background: transparent;
   text-align: left;
-  padding: 8px 12px;
+  padding: 10px 12px;
+  min-height: 44px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2px;
   transition: background-color 0.15s ease;
+  box-sizing: border-box;
 }
 
 .NavbarSearch__item:hover,
@@ -172,17 +195,22 @@
   border: none;
   background: transparent;
   color: var(--brand-color, #002147);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  padding: 4px 4px;
+  padding: 6px 8px;
+  min-height: 32px;
+  min-width: 44px;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .NavbarSearch__categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   padding: 8px 12px 2px;
 }
 
@@ -190,11 +218,17 @@
   border: 1px solid rgba(0, 33, 71, 0.12);
   background: #ffffff;
   color: #111111;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  padding: 5px 8px;
+  padding: 8px 12px;
+  min-height: 32px;
+  min-width: 44px;
   cursor: pointer;
   border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .NavbarSearch__categories button:hover {

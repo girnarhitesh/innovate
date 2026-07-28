@@ -85,6 +85,16 @@
     transition: all 0.3s ease;
     white-space: nowrap;
     min-width: 120px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a.NewsletterButton {
+    color: white;
 }
 
 .NewsletterButton:hover {

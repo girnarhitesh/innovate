@@ -47,11 +47,14 @@
 .SitemapPage__section a {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2px;
-  padding: 8px 0;
+  padding: 10px 0;
+  min-height: 44px;
   color: var(--text-primary, #111111);
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
 }
 
 .SitemapPage__section a:hover .SitemapPage__linkTitle,

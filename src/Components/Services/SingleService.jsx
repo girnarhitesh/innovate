@@ -1,12 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Row, Col } from "antd";
 import ServicesData from "./ServicesData";
 import "./SingleService.css";
 import { Link } from "react-router-dom";
 const SingleService = () => {
     const { serviceName } = useParams();
-    const location = useLocation();
     const navigate = useNavigate();
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
@@ -43,6 +42,10 @@ const SingleService = () => {
         };
     }, [isVisible]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [serviceName]);
+
     if (!service) {
         return (
             <div className="MainContainer marginTop">
@@ -51,16 +54,14 @@ const SingleService = () => {
                         <div className="ServiceNotFound">
                             <h2>Service Not Found</h2>
                             <p>The requested service could not be found.</p>
-                            <button onClick={() => navigate('/services')}>Back to Services</button>
+                            <button type="button" onClick={() => navigate('/services')}>Back to Services</button>
                         </div>
                     </div>
                 </div>
             </div>
         );
     }
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
     return (
         <div className="MainContainer marginTop" ref={sectionRef}>
             <div className="Container">
@@ -103,8 +104,13 @@ const SingleService = () => {
                                         <div className="FlexContaienerservices">
                                             <h2>Service Overview</h2>
                                             <div className='BtnContainer'>
-                                                <Link to={service.buttonLink} target='_blank'>
-                                                    <button>{service.buttonText}</button>
+                                                <Link
+                                                    to={service.buttonLink}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="ServiceCtaLink"
+                                                >
+                                                    {service.buttonText}
                                                 </Link>
                                             </div>
                                         </div>

@@ -4,6 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlineCheckCircle } from "react-icons/hi";
 import { notification, Modal } from "antd";
 import { Link } from "react-router-dom";
+import { announceStatus } from "../../utils/announceStatus";
 const NewsLetters = () => {
     const [email, setEmail] = useState("");
     const [isValid, setIsValid] = useState(true);
@@ -147,16 +148,21 @@ const NewsLetters = () => {
                                         />
                                     </div> */}
                                     <button
+                                        type="button"
                                         className={`NewsletterButton ${isLoading ? 'loading' : ''}`}
-                                        onClick={openContactModal}
+                                        onClick={() => {
+                                            openContactModal();
+                                            announceStatus("Contact options opened.");
+                                        }}
                                         disabled={isLoading}
+                                        aria-busy={isLoading}
                                     >
                                         {isLoading ? "Please wait..." : "Contact Us"}
                                     </button>
                                 </div>
 
                                 {!isValid && email && (
-                                    <div className="ErrorMessage">
+                                    <div className="ErrorMessage" role="alert" aria-live="assertive">
                                         Please enter a valid email address
                                     </div>
                                 )}
@@ -178,21 +184,23 @@ const NewsLetters = () => {
                     <h3 style={{ margin: 0 }}>Get in touch</h3>
                     <p style={{ margin: 0, color: '#666' }}>Choose how you'd like to contact us:</p>
                     <div style={{ display: 'grid', gap: 10, marginTop: 8 }}>
-                        <a href="tel:07926474500" style={{ textDecoration: 'none' }}>
-                            <button className="NewsletterButton" style={{ width: '100%' }} onClick={closeContactModal}>
-                                Call now: 079-2647-4500
-                            </button>
+                        <a
+                            href="tel:07926474500"
+                            className="NewsletterButton"
+                            style={{ width: '100%', textAlign: 'center', textDecoration: 'none', boxSizing: 'border-box' }}
+                            onClick={closeContactModal}
+                        >
+                            Call now: 079-2647-4500
                         </a>
                         <a
                             href="mailto:innovate95@rediffmail.com?subject=Contact from Website&body=Hello,%0A%0AI would like to get in touch with Innovate Securities.%0A%0A"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ textDecoration: 'none', width: '100%' }}
+                            className="NewsletterButton secondary"
+                            style={{ width: '100%', textAlign: 'center', textDecoration: 'none', boxSizing: 'border-box' }}
                             onClick={closeContactModal}
                         >
-                            <button className="NewsletterButton secondary" style={{ width: '100%' }}>
-                                Email us: innovate95@rediffmail.com
-                            </button>
+                            Email us: innovate95@rediffmail.com
                         </a>
                     </div>
                 </div>
