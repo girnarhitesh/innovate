@@ -11,11 +11,12 @@ import { useAccessibility } from "../../../context/AccessibilityContext";
 
 const HeroHome = () => {
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isDisclosurePaused, setIsDisclosurePaused] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
   const [isTaglineVisible, setIsTaglineVisible] = useState(true);
   const videoRef = useRef(null);
-  const swiperRef = useRef(null);
+  const swiperInstanceRef = useRef(null);
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const { isReducedMotionEnabled } = useAccessibility();
@@ -29,9 +30,9 @@ const HeroHome = () => {
     "Securing Tomorrow's Prosperity Today",
   ];
 
-  // Tagline rotation effect
+  // Tagline rotation effect — pauses with video / reduced motion
   useEffect(() => {
-    if (isReducedMotionEnabled) {
+    if (isReducedMotionEnabled || !isPlaying) {
       setIsTaglineVisible(true);
       return undefined;
     }
@@ -46,14 +47,14 @@ const HeroHome = () => {
           (prevIndex) => (prevIndex + 1) % taglines.length,
         );
         setIsTaglineVisible(true);
-      }, 300); // Half of the transition time for smooth fade
+      }, 300);
     }, 3000);
 
     return () => {
       clearInterval(interval);
       window.clearTimeout(rotationTimeoutId);
     };
-  }, [isReducedMotionEnabled, taglines.length]);
+  }, [isReducedMotionEnabled, isPlaying, taglines.length]);
 
   useEffect(() => {
     let revealTimeoutId;
@@ -66,15 +67,14 @@ const HeroHome = () => {
             return;
           }
 
-          // Add 1 second delay before starting the animation
           revealTimeoutId = window.setTimeout(() => {
             setIsVisible(true);
           }, 500);
         }
       },
       {
-        threshold: 0.1, // Small threshold to detect early
-        rootMargin: "-30px 0px 0px 0px", // Trigger when user enters section by 30px
+        threshold: 0.1,
+        rootMargin: "-30px 0px 0px 0px",
       },
     );
 
@@ -91,10 +91,10 @@ const HeroHome = () => {
   }, [isReducedMotionEnabled]);
 
   useEffect(() => {
-    const swiperInstance = swiperRef.current?.swiper;
+    const swiperInstance = swiperInstanceRef.current;
 
     if (swiperInstance?.autoplay) {
-      if (isReducedMotionEnabled) {
+      if (isReducedMotionEnabled || isDisclosurePaused) {
         swiperInstance.autoplay.stop();
       } else {
         swiperInstance.autoplay.start();
@@ -102,9 +102,9 @@ const HeroHome = () => {
     }
 
     if (videoRef.current) {
-      if (isReducedMotionEnabled) {
+      if (isReducedMotionEnabled || !isPlaying) {
         videoRef.current.pause();
-      } else if (isPlaying) {
+      } else {
         const playPromise = videoRef.current.play();
 
         if (playPromise?.catch) {
@@ -112,18 +112,53 @@ const HeroHome = () => {
         }
       }
     }
-  }, [isPlaying, isReducedMotionEnabled]);
+  }, [isPlaying, isDisclosurePaused, isReducedMotionEnabled]);
 
-  const togglePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsPlaying(true);
-      }
+  const togglePlayPause = (event) => {
+    event?.stopPropagation?.();
+
+    if (isReducedMotionEnabled) {
+      return;
     }
+
+    setIsPlaying((prev) => {
+      const next = !prev;
+
+      if (videoRef.current) {
+        if (next) {
+          const playPromise = videoRef.current.play();
+          if (playPromise?.catch) {
+            playPromise.catch(() => {});
+          }
+        } else {
+          videoRef.current.pause();
+        }
+      }
+
+      return next;
+    });
+  };
+
+  const toggleDisclosureAutoplay = () => {
+    if (isReducedMotionEnabled) {
+      return;
+    }
+
+    const swiperInstance = swiperInstanceRef.current;
+
+    setIsDisclosurePaused((prev) => {
+      const next = !prev;
+
+      if (swiperInstance?.autoplay) {
+        if (next) {
+          swiperInstance.autoplay.stop();
+        } else {
+          swiperInstance.autoplay.start();
+        }
+      }
+
+      return next;
+    });
   };
 
   const handleMouseEnter = () => {
@@ -171,36 +206,23 @@ const HeroHome = () => {
     },
   ];
 
+  const isHeroMotionPaused = !isPlaying || isReducedMotionEnabled;
+  const isDisclosureMotionPaused =
+    isDisclosurePaused || isReducedMotionEnabled;
+
   return (
-    <div className="HeroHomeSection" ref={sectionRef}>
+    <section
+      className="HeroHomeSection"
+      ref={sectionRef}
+      aria-label="Homepage hero"
+    >
       <div className="MainContainer">
         <div className="Container">
           <div className="FlexContainer ">
-            {/* <div className="MaxWidthContainer">
-                            <div className="LeftSideContentContainer">
-                                <div className="SectionTagLabelContainer">
-                                    <div>
-                                        <div className="flexVertically">
-                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/RocketPng.png" alt="Financial Growth Rocket Icon - Empowering Investment Success" />
-                                        </div>
-                                        <div>
-                                            <p>Empowering Smarter Financial Futures</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h1>Your Trusted Partner in Financial Growth</h1>
-                                    <p>With over 30 years of experience in capital markets, Innovate Securities offers personalized investment solutions across shares, bonds, mutual funds, and more.</p>
-                                    <p>We serve individuals, corporates, and institutions with expertise, integrity, and long-term vision.</p>
-                                    <div className="BtnContainer">
-                                        <Link to="/about-us"> <button>About Innovate</button></Link>
-                                    </div>
-                                    <div className="BackgroundImage">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/S407.jpg" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
+            <h1 className="sr-only">
+              Innovate Securities Pvt. Ltd. — Your Trusted Partner in Financial
+              Growth
+            </h1>
             <div className={`LayerImage ${isVisible ? "reveal-image" : ""}`}>
               <div
                 className="VideoWrapper"
@@ -210,27 +232,36 @@ const HeroHome = () => {
                 <video
                   ref={videoRef}
                   src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a%2F682b74c0505f21d18c54d43f_4426377-uhd_3840_2160_25fps-transcode.mp4"
-                  autoPlay
+                  autoPlay={!isReducedMotionEnabled}
                   muted
                   loop
+                  playsInline
                   className="w-100"
+                  aria-label="Innovate Securities brand introduction video"
                 ></video>
 
-                {/* Taglines Overlay */}
-                <div className="TaglinesOverlay">
-                  <div
+                <div className="TaglinesOverlay" aria-live="polite">
+                  <p
                     className={`TaglineText ${isTaglineVisible ? "visible" : "hidden"}`}
                   >
                     {taglines[currentTaglineIndex]}
-                  </div>
+                  </p>
                 </div>
 
-                <div
-                  className={`PlayPauseButton ${showButton ? "visible" : ""} ${isPlaying ? "playing" : "paused"}`}
+                <button
+                  type="button"
+                  className={`PlayPauseButton ${showButton || isHeroMotionPaused ? "visible" : ""} ${isPlaying ? "playing" : "paused"}`}
                   onClick={togglePlayPause}
+                  aria-label={
+                    isPlaying
+                      ? "Pause hero video and rotating taglines"
+                      : "Play hero video and rotating taglines"
+                  }
+                  aria-pressed={!isPlaying}
+                  disabled={isReducedMotionEnabled}
                 >
-                  <div className="ButtonIcon">
-                    {isPlaying ? (
+                  <span className="ButtonIcon" aria-hidden="true">
+                    {isPlaying && !isReducedMotionEnabled ? (
                       <svg
                         width="24"
                         height="24"
@@ -254,13 +285,39 @@ const HeroHome = () => {
                         <polygon points="5,3 19,12 5,21"></polygon>
                       </svg>
                     )}
-                  </div>
-                </div>
+                  </span>
+                </button>
               </div>
             </div>
             <div className="VerticalSwiperContainer">
+              <div className="VerticalSwiperControls">
+                <button
+                  type="button"
+                  className={`disclosure-autoplay-btn ${isDisclosureMotionPaused ? "is-paused" : "is-playing"}`}
+                  onClick={toggleDisclosureAutoplay}
+                  aria-label={
+                    isDisclosureMotionPaused
+                      ? "Resume investor disclosures carousel"
+                      : "Pause investor disclosures carousel"
+                  }
+                  aria-pressed={isDisclosureMotionPaused}
+                  title={isDisclosureMotionPaused ? "Resume" : "Pause"}
+                  disabled={isReducedMotionEnabled}
+                >
+                  {isDisclosureMotionPaused ? (
+                    <span aria-hidden="true">▶</span>
+                  ) : (
+                    <span aria-hidden="true">❚❚</span>
+                  )}
+                </button>
+              </div>
               <Swiper
-                ref={swiperRef}
+                onSwiper={(swiper) => {
+                  swiperInstanceRef.current = swiper;
+                  if (isReducedMotionEnabled || isDisclosurePaused) {
+                    swiper.autoplay?.stop();
+                  }
+                }}
                 direction={"vertical"}
                 spaceBetween={0}
                 slidesPerView={1}
@@ -277,59 +334,17 @@ const HeroHome = () => {
                   return (
                     <SwiperSlide key={index}>
                       <div className="ContentContainerInThisSWiper">
-                        <h3> {item.title}</h3>
+                        <p>{item.title}</p>
                       </div>
                     </SwiperSlide>
                   );
                 })}
               </Swiper>
             </div>
-
-            {/* <div
-                            className="RightSideVideoContainer"
-                            style={{ width: `${videoWidth}%` }}
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <div className={`LayerImage ${isVisible ? 'reveal-image' : ''}`}>
-                                <div className="VideoWrapper">
-                                    <video
-                                        ref={videoRef}
-                                        src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a%2F682b74c0505f21d18c54d43f_4426377-uhd_3840_2160_25fps-transcode.mp4"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        className="w-100"
-
-                                    ></video>
-                                    <div
-                                        className={`PlayPauseButton ${showButton ? 'visible' : ''} ${isPlaying ? 'playing' : 'paused'}`}
-                                        onClick={togglePlayPause}
-                                    >
-                                        <div className="ButtonIcon">
-                                            {isPlaying ? (
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <rect x="6" y="4" width="4" height="16"></rect>
-                                                    <rect x="14" y="4" width="4" height="16"></rect>
-                                                </svg>
-                                            ) : (
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <polygon points="5,3 19,12 5,21"></polygon>
-                                                </svg>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
-
-            {/* <div className="AnimatedBannerImageContainer">
-                            <img src={AnimatedBannerImage} alt="Innovate Securities Financial Services Banner - Investment Solutions" />
-                        </div> */}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

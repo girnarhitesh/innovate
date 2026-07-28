@@ -156,15 +156,17 @@ const CompliancesAndForms = () => {
                     <div className="TabsContainer LandingCardsContainer" ref={tabsRef}>
                         <div className="LandingCardsGrid">
                             {landingCards.map((card) => (
-                                <div
+                                <button
+                                    type="button"
                                     key={card.key}
                                     className="LandingCard"
                                     onClick={() => navigate(card.route)}
+                                    aria-label={`${card.label}. ${card.description}`}
                                 >
-                                    <div className="LandingCardIcon">{card.icon}</div>
+                                    <div className="LandingCardIcon" aria-hidden="true">{card.icon}</div>
                                     <h3 className="LandingCardTitle">{card.label}</h3>
                                     <p className="LandingCardDesc">{card.description}</p>
-                                </div>
+                                </button>
                             ))}
                         </div>
                     </div>

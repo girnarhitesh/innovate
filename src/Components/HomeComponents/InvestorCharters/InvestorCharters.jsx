@@ -26,7 +26,7 @@ const InvestorCharters = () => {
                         <div className="SectionTagLabelContainer">
                             <div style={{ margin: "auto" }}>
                                 <div className="flexVertically">
-                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="Investment Confidence Icon - Trusted Financial Guidance" />
+                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" aria-hidden="true" />
                                 </div>
                                 <div>
                                     <p>Investor Charters</p>
@@ -46,7 +46,7 @@ const InvestorCharters = () => {
                                         className="InvestorChartersCardLink"
                                     >
                                         <div className="InvestorChartersCard">
-                                            <img src={item.image} alt={item.title} />
+                                            <img src={item.image} alt="" />
                                             <div className="TitleContainer">
                                                 <h3 className="white">{item.title}</h3>
                                             </div>

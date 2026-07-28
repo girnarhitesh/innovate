@@ -1,7 +1,13 @@
 import ServicesData from "../Components/Services/ServicesData";
 import { compliancesAndFormsData } from "../Components/HomeComponents/CompliancesAndForms/CompliancesAndFormsData";
+import { getAllSitePages } from "./siteMapData";
 
 const CATEGORY_META = {
+  pages: {
+    id: "pages",
+    label: "Pages",
+    browsePath: "/sitemap",
+  },
   services: {
     id: "services",
     label: "Services",
@@ -45,6 +51,21 @@ const normalizeSearchText = (value = "") =>
     .trim();
 
 const buildSearchIndex = () => {
+  const pages = getAllSitePages()
+    .filter((page) => page.path !== "/sitemap")
+    .map((page) => ({
+      id: `page-${page.path}`,
+      title: page.title,
+      category: CATEGORY_META.pages.id,
+      categoryLabel: CATEGORY_META.pages.label,
+      type: "route",
+      path: page.path,
+      keywords: normalizeSearchText(
+        `${page.title} ${page.description || ""} ${page.sectionTitle || ""} sitemap`,
+      ),
+      hint: page.sectionTitle || "Page",
+    }));
+
   const services = ServicesData.map((service) => {
     const title = (service.title || "").replace(/\u2060/g, "").trim();
 
@@ -89,7 +110,7 @@ const buildSearchIndex = () => {
     }));
   });
 
-  return [...services, ...documents];
+  return [...pages, ...services, ...documents];
 };
 
 const SEARCH_INDEX = buildSearchIndex();
@@ -133,21 +154,21 @@ const scoreItem = (item, query) => {
 };
 
 export const getSearchSuggestions = (limit = 8) => {
+  const featuredPages = SEARCH_INDEX.filter((item) =>
+    ["/", "/services", "/compliances", "/about-us"].includes(item.path),
+  );
   const featuredServiceIds = [1, 2, 3];
-  const featuredForms = SEARCH_INDEX.filter((item) => item.category === "forms").slice(0, 3);
+  const featuredForms = SEARCH_INDEX.filter((item) => item.category === "forms").slice(0, 2);
   const featuredServices = SEARCH_INDEX.filter(
     (item) =>
       item.category === "services" &&
       featuredServiceIds.some((id) => item.id === `service-${id}`),
-  );
-  const featuredPolicies = SEARCH_INDEX.filter(
-    (item) => item.category === "policies",
   ).slice(0, 2);
 
-  return [...featuredServices, ...featuredForms, ...featuredPolicies].slice(0, limit);
+  return [...featuredPages, ...featuredServices, ...featuredForms].slice(0, limit);
 };
 
-export const searchNavbarContent = (query, { limit = 12 } = {}) => {
+export const searchNavbarContent = (query, { limit = 16 } = {}) => {
   const normalizedQuery = normalizeSearchText(query);
 
   if (!normalizedQuery) {
@@ -168,6 +189,7 @@ export const searchNavbarContent = (query, { limit = 12 } = {}) => {
     .slice(0, limit);
 
   const groupOrder = [
+    "pages",
     "services",
     "forms",
     "policies",

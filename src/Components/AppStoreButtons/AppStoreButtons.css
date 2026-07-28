@@ -17,7 +17,7 @@
   padding: 12px 22px;
   border-radius: 14px;
   background: linear-gradient(135deg, #002f6c 0%, var(--brand-color) 100%);
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   flex: 0 0 auto;
   width: fit-content;
@@ -36,13 +36,13 @@
 .AppStoreButtons__btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(0, 33, 71, 0.28);
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .AppStoreButtons__icon {
   font-size: 24px;
   flex-shrink: 0;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .AppStoreButtons__text {
@@ -50,26 +50,27 @@
   flex-direction: column;
   line-height: 1.1;
   min-width: 0;
+  color: #ffffff !important;
 }
 
 .AppStoreButtons__sub {
   font-size: 9px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.9) !important;
   white-space: nowrap;
 }
 
 .AppStoreButtons__title {
   font-size: 14px;
   font-weight: 700;
-  color: #ffffff;
+  color: #ffffff !important;
   white-space: nowrap;
 }
 
 .AppStoreButtons__label {
   font-size: 14px;
   font-weight: 700;
-  color: #ffffff;
+  color: #ffffff !important;
   white-space: nowrap;
   line-height: 1;
   letter-spacing: 0.01em;

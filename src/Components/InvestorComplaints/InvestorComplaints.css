@@ -36,7 +36,8 @@
 }
 
 .year-dropdown:hover,
-.year-dropdown:focus {
+.year-dropdown:focus,
+.year-dropdown:focus-visible {
   border-color: #0066cc;
 }
 

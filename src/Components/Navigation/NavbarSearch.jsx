@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined, CloseOutlined } from "@ant-design/icons";
 import {
@@ -11,9 +12,11 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
   const navigate = useNavigate();
   const rootRef = useRef(null);
   const inputRef = useRef(null);
+  const panelRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [panelStyle, setPanelStyle] = useState({});
 
   const results = useMemo(() => searchNavbarContent(query), [query]);
   const suggestions = useMemo(() => getSearchSuggestions(8), []);
@@ -37,17 +40,48 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
     setActiveIndex(-1);
   }, []);
 
-  useEffect(() => {
+  const updatePanelPosition = useCallback(() => {
+    const anchor = rootRef.current;
+
+    if (!anchor) {
+      return;
+    }
+
+    const rect = anchor.getBoundingClientRect();
+    const gutter = 12;
+    const width = isMobile
+      ? Math.min(window.innerWidth - gutter * 2, 420)
+      : Math.min(380, window.innerWidth - gutter * 2);
+
+    let left = isMobile ? gutter : rect.right - width;
+    left = Math.max(gutter, Math.min(left, window.innerWidth - width - gutter));
+
+    setPanelStyle({
+      position: "fixed",
+      top: Math.round(rect.bottom + 8),
+      left: Math.round(left),
+      width: Math.round(width),
+      zIndex: 11000,
+    });
+  }, [isMobile]);
+
+  useLayoutEffect(() => {
     if (!isOpen) {
       return undefined;
     }
+
+    updatePanelPosition();
 
     const focusTimer = window.setTimeout(() => {
       inputRef.current?.focus();
     }, 30);
 
     const handlePointerDown = (event) => {
-      if (!rootRef.current?.contains(event.target)) {
+      const target = event.target;
+      const inRoot = rootRef.current?.contains(target);
+      const inPanel = panelRef.current?.contains(target);
+
+      if (!inRoot && !inPanel) {
         closeSearch();
       }
     };
@@ -58,17 +92,25 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
       }
     };
 
+    const handleReposition = () => {
+      updatePanelPosition();
+    };
+
     document.addEventListener("mousedown", handlePointerDown);
     document.addEventListener("touchstart", handlePointerDown);
     document.addEventListener("keydown", handleEscape);
+    window.addEventListener("resize", handleReposition);
+    window.addEventListener("scroll", handleReposition, true);
 
     return () => {
       window.clearTimeout(focusTimer);
       document.removeEventListener("mousedown", handlePointerDown);
       document.removeEventListener("touchstart", handlePointerDown);
       document.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("resize", handleReposition);
+      window.removeEventListener("scroll", handleReposition, true);
     };
-  }, [isOpen, closeSearch]);
+  }, [isOpen, closeSearch, updatePanelPosition]);
 
   const handleSelect = useCallback(
     (item) => {
@@ -105,10 +147,12 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
   );
 
   const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      closeSearch();
+      return;
+    }
+
     if (!flatItems.length) {
-      if (event.key === "Escape") {
-        closeSearch();
-      }
       return;
     }
 
@@ -126,9 +170,10 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
       return;
     }
 
-    if (event.key === "Enter" && activeIndex >= 0) {
+    if (event.key === "Enter") {
       event.preventDefault();
-      handleSelect(flatItems[activeIndex]);
+      const index = activeIndex >= 0 ? activeIndex : 0;
+      handleSelect(flatItems[index]);
     }
   };
 
@@ -136,27 +181,20 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
   const hasQuery = Boolean(query.trim());
   const panelItems = hasQuery ? results.groups : null;
 
-  return (
-    <div
-      className={`NavbarSearch ${isOpen ? "is-open" : ""} ${isMobile ? "is-mobile" : "is-desktop"}`}
-      ref={rootRef}
-    >
-      <button
-        type="button"
-        className="NavbarSearch__toggle"
-        onClick={() => (isOpen ? closeSearch() : openSearch())}
-        aria-label={isOpen ? "Close search" : "Open search"}
-        aria-expanded={isOpen}
-      >
-        {isOpen ? <CloseOutlined /> : <SearchOutlined />}
-      </button>
-
-      {showPanel ? (
-        <div className="NavbarSearch__panel" role="dialog" aria-label="Site search">
+  const panel = showPanel
+    ? createPortal(
+        <div
+          ref={panelRef}
+          className="NavbarSearch__panel"
+          style={panelStyle}
+          role="dialog"
+          aria-label="Search"
+        >
           <div className="NavbarSearch__inputRow">
-            <SearchOutlined className="NavbarSearch__inputIcon" />
+            <SearchOutlined className="NavbarSearch__inputIcon" aria-hidden="true" />
             <input
               ref={inputRef}
+              id="site-search-input"
               type="search"
               className="NavbarSearch__input"
               value={query}
@@ -165,9 +203,11 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
                 setActiveIndex(-1);
               }}
               onKeyDown={handleKeyDown}
-              placeholder="Search services, forms, policies..."
-              aria-label="Search services and documents"
+              placeholder="Search pages, services, forms..."
+              title="Search"
+              aria-label="Search"
               autoComplete="off"
+              name="search"
             />
             {query ? (
               <button
@@ -205,6 +245,9 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
                   ))}
                 </ul>
                 <div className="NavbarSearch__categories">
+                  <button type="button" onClick={() => handleBrowseCategory("/sitemap")}>
+                    Sitemap
+                  </button>
                   <button type="button" onClick={() => handleBrowseCategory("/services")}>
                     All Services
                   </button>
@@ -217,18 +260,19 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
                   >
                     Policies
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => handleBrowseCategory("/compliances")}
-                  >
-                    Documents & Forms
-                  </button>
                 </div>
               </>
             ) : results.total === 0 ? (
               <div className="NavbarSearch__empty">
                 <p>No matches for “{query.trim()}”.</p>
-                <p>Try a service name, form, or policy title.</p>
+                <p>Try a page name, service, form, or policy title.</p>
+                <button
+                  type="button"
+                  className="NavbarSearch__browse"
+                  onClick={() => handleBrowseCategory("/sitemap")}
+                >
+                  Browse sitemap
+                </button>
               </div>
             ) : (
               panelItems.map((group) => (
@@ -268,8 +312,38 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
               ))
             )}
           </div>
-        </div>
-      ) : null}
+        </div>,
+        document.body,
+      )
+    : null;
+
+  return (
+    <div
+      className={`NavbarSearch ${isOpen ? "is-open" : ""} ${isMobile ? "is-mobile" : "is-desktop"}`}
+      ref={rootRef}
+    >
+      <button
+        type="button"
+        className="NavbarSearch__toggle"
+        onClick={() => (isOpen ? closeSearch() : openSearch())}
+        aria-label={isOpen ? "Close Search" : "Search"}
+        aria-expanded={isOpen}
+        aria-controls="site-search-input"
+        title="Search"
+      >
+        {isOpen ? (
+          <>
+            <CloseOutlined aria-hidden="true" />
+            <span className="NavbarSearch__toggleLabel">Close</span>
+          </>
+        ) : (
+          <>
+            <SearchOutlined aria-hidden="true" />
+            <span className="NavbarSearch__toggleLabel">Search</span>
+          </>
+        )}
+      </button>
+      {panel}
     </div>
   );
 };

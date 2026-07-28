@@ -28,14 +28,14 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="MainContainer FooterMainContainer">
+    <footer className="MainContainer FooterMainContainer">
       <div className="Container ">
         <div className="paddingSide marginTop marginBottom marginAuto">
           <Row gutter={[16, 16]} className="w-100">
             <Col lg={6} md={8} sm={24} xs={24}>
               <div className="CompanyBrandingContainer paddingRight">
                 <div>
-                  <h3>Innovate Securities Pvt. Ltd.</h3>
+                  <h2 className="footer-heading">Innovate Securities Pvt. Ltd.</h2>
                   <p>
                     We are a team of experienced professionals who are dedicated
                     to providing the best possible service to our clients.
@@ -78,13 +78,14 @@ const Footer = () => {
             <Col lg={6} md={8} sm={24} xs={24}>
               <div className="SocialLinkstAndAdress">
                 <div>
-                  <h3>Quick Links</h3>
+                  <h2 className="footer-heading">Quick Links</h2>
                   <ul>
                     {NavData.map((item, index) => (
                       <li key={index}>
                         <Link to={item.path}>{item.name}</Link>
                       </li>
                     ))}
+                    <li><Link to="/sitemap">Sitemap</Link></li>
                     <li><Link to="/disclaimer">Disclaimer</Link></li>
                     <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                     <li><Link to="/advisiory-for-investors">Advisiory for Investors</Link></li>
@@ -94,7 +95,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="SocialMediaContainer">
-                    <h3>Social Links</h3>
+                    <h2 className="footer-heading">Social Links</h2>
                     <ul>
                       {SocialMediaData.map((item, index) => (
                         <li key={index}>
@@ -103,7 +104,8 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            {item.icon} {item.name}
+                            <span aria-hidden="true">{item.icon}</span>
+                            <span>{item.name}</span>
                           </a>
                         </li>
                       ))}
@@ -181,7 +183,7 @@ const Footer = () => {
                     <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/2371.jpg" alt="Innovate Securities Footer Background - Financial Services Excellence" />
                 </div> */}
       </div>
-    </div>
+    </footer>
   );
 };
 

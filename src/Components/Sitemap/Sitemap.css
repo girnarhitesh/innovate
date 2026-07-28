@@ -1,0 +1,85 @@
+.SitemapPage .CommonHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.SitemapPage__title {
+  margin: 16px 0 8px;
+  font-family: "Work Sans", sans-serif;
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: var(--brand-color, #002147);
+}
+
+.SitemapPage__intro {
+  margin: 0 auto;
+  max-width: 640px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-secondary, #333333);
+}
+
+.SitemapPage__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px 32px;
+  margin: 36px 0 48px;
+}
+
+.SitemapPage__section h2 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-color, #002147);
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 33, 71, 0.12);
+}
+
+.SitemapPage__section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.SitemapPage__section a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+  color: var(--text-primary, #111111);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.SitemapPage__section a:hover .SitemapPage__linkTitle,
+.SitemapPage__section a:focus-visible .SitemapPage__linkTitle {
+  color: var(--brand-color, #002147);
+  text-decoration: underline;
+}
+
+.SitemapPage__section a:focus-visible {
+  outline: 2px solid #f4b400;
+  outline-offset: 2px;
+}
+
+.SitemapPage__linkTitle {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.SitemapPage__linkDesc {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted, #3d3d3d);
+}
+
+@media (max-width: 600px) {
+  .SitemapPage__grid {
+    gap: 24px;
+    margin-top: 28px;
+  }
+}

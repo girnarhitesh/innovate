@@ -73,12 +73,14 @@ const Services = () => {
                         <Row gutter={[24, 24]} className="services-cards-row">
                             {ServicesData.map((service, index) => (
                                 <Col lg={8} md={12} xs={24} key={service.id}>
-                                    <div
+                                    <button
+                                        type="button"
                                         className={`service-card ${isVisible ? 'card-visible' : ''}`}
                                         style={{ animationDelay: `${index * 0.1}s` }}
                                         onMouseEnter={() => setHoveredCard(index)}
                                         onMouseLeave={() => setHoveredCard(null)}
                                         onClick={() => handleServiceClick(service)}
+                                        aria-label={`${service.title}. View details`}
                                     >
                                         {/* <div className="card-image-container">
                                             <img 
@@ -98,7 +100,8 @@ const Services = () => {
                                             <div className="service-icon">
                                                 <img
                                                     src={service.iconImage}
-                                                    alt={`${service.title} icon`}
+                                                    alt=""
+                                                    aria-hidden="true"
                                                     className="icon-image"
                                                 />
                                             </div>
@@ -110,18 +113,12 @@ const Services = () => {
                                             </p>
 
                                             <div className="card-footer">
-                                                <button
-                                                    className="view-details-btn"
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        handleServiceClick(service);
-                                                    }}
-                                                >
+                                                <span className="view-details-btn" aria-hidden="true">
                                                     View Details
-                                                </button>
+                                                </span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </button>
                                 </Col>
                             ))}
                         </Row>

@@ -190,6 +190,13 @@ const getElementSpeechText = (element) => {
   return prepareSpeechText(chosenText);
 };
 
+const isInteractiveSpeechTarget = (element) =>
+  Boolean(
+    element?.closest?.(
+      "a, button, input, textarea, select, summary, [role='button'], [role='link'], [role='menuitem'], [contenteditable='true']",
+    ),
+  );
+
 const findSpeechTarget = (element) => {
   if (!element?.closest) {
     return null;
@@ -199,34 +206,24 @@ const findSpeechTarget = (element) => {
     return null;
   }
 
-  const readableTarget = element.closest(READABLE_ELEMENTS_SELECTOR);
-
-  if (readableTarget) {
-    return readableTarget;
+  // Keep native control/link behavior for screen readers — do not speak them.
+  if (isInteractiveSpeechTarget(element)) {
+    return null;
   }
 
-  let current =
-    element.nodeType === Node.TEXT_NODE ? element.parentElement : element;
+  // Prefer the nearest semantic structure element so SR-style reading stays predictable.
+  const structuralTarget = element.closest(
+    "h1, h2, h3, h4, h5, h6, p, li, td, th, blockquote, figcaption, label, article, section",
+  );
 
-  while (current && current !== document.body) {
-    if (current.closest(EXEMPT_SELECTOR)) {
-      return null;
-    }
+  if (structuralTarget && !structuralTarget.closest(EXEMPT_SELECTOR)) {
+    return structuralTarget;
+  }
 
-    const tagName = current.tagName?.toLowerCase();
-    const text = normalizeSpeechText(current.textContent);
-    const nestedReadableCount =
-      current.querySelectorAll?.(NESTED_READABLE_SELECTOR).length || 0;
+  const readableTarget = element.closest(READABLE_ELEMENTS_SELECTOR);
 
-    if (
-      text.length >= 2 &&
-      nestedReadableCount === 0 &&
-      ["div", "span", "section", "article"].includes(tagName)
-    ) {
-      return current;
-    }
-
-    current = current.parentElement;
+  if (readableTarget && !isInteractiveSpeechTarget(readableTarget)) {
+    return readableTarget;
   }
 
   return null;
@@ -507,6 +504,7 @@ const createDefaultSettings = () => ({
   adhdMode: false,
   saturation: false,
   invertColors: false,
+  highContrast: false,
   highlightLinks: false,
   textToSpeech: false,
   cursor: false,
@@ -580,24 +578,32 @@ class AccessibilityDomManager {
     if (!this.cursorRing) {
       this.cursorRing = document.createElement("div");
       this.cursorRing.className = "a11y-cursor-ring";
+      this.cursorRing.setAttribute("aria-hidden", "true");
+      this.cursorRing.setAttribute("role", "presentation");
       document.body.appendChild(this.cursorRing);
     }
 
     if (!this.cursorDot) {
       this.cursorDot = document.createElement("div");
       this.cursorDot.className = "a11y-cursor-dot";
+      this.cursorDot.setAttribute("aria-hidden", "true");
+      this.cursorDot.setAttribute("role", "presentation");
       document.body.appendChild(this.cursorDot);
     }
 
     if (!this.adhdTopMask) {
       this.adhdTopMask = document.createElement("div");
       this.adhdTopMask.className = "a11y-focus-mask a11y-focus-mask-top";
+      this.adhdTopMask.setAttribute("aria-hidden", "true");
+      this.adhdTopMask.setAttribute("role", "presentation");
       document.body.appendChild(this.adhdTopMask);
     }
 
     if (!this.adhdBottomMask) {
       this.adhdBottomMask = document.createElement("div");
       this.adhdBottomMask.className = "a11y-focus-mask a11y-focus-mask-bottom";
+      this.adhdBottomMask.setAttribute("aria-hidden", "true");
+      this.adhdBottomMask.setAttribute("role", "presentation");
       document.body.appendChild(this.adhdBottomMask);
     }
   }
@@ -826,6 +832,7 @@ class AccessibilityDomManager {
       a11yDyslexia: this.settings.dyslexiaFriendly ? "true" : "false",
       a11yAdhdMode: this.settings.adhdMode ? "true" : "false",
       a11yHighlightLinks: this.settings.highlightLinks ? "true" : "false",
+      a11yHighContrast: this.settings.highContrast ? "true" : "false",
       a11yLargeCursor: this.settings.cursor ? "true" : "false",
       a11yPauseAnimations: this.settings.pauseAnimations ? "true" : "false",
       a11yHideImages: this.settings.hideImages ? "true" : "false",
@@ -844,7 +851,11 @@ class AccessibilityDomManager {
     }
 
     if (this.settings.saturation) {
-      filters.push("saturate(1.35)", "contrast(1.04)");
+      filters.push("saturate(1.35)", "contrast(1.12)");
+    }
+
+    if (this.settings.highContrast && !this.settings.invertColors) {
+      filters.push("contrast(1.15)");
     }
 
     document.documentElement.style.setProperty(
@@ -858,6 +869,16 @@ class AccessibilityDomManager {
       this.ensureSpeechVoices();
 
       this.speechHandler = (event) => {
+        // Ignore non-primary clicks and modified clicks used by assistive tech/browsers.
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey) {
+          return;
+        }
+
+        // Prefer not interrupting keyboard / screen-reader activation paths.
+        if (event.detail === 0) {
+          return;
+        }
+
         const target = findSpeechTarget(event.target);
 
         if (!target) {
@@ -939,15 +960,20 @@ class AccessibilityDomManager {
       return;
     }
 
-    // Chrome can silently pause mid-utterance; keep synthesis awake.
+    // Only nudge OUR active TTS session — never disturb screen-reader speech.
     this.speechKeepAliveTimer = window.setInterval(() => {
-      if (!window.speechSynthesis.speaking) {
+      if (
+        !this.settings.textToSpeech ||
+        !this.speechChunks.length ||
+        this.speechChunkIndex >= this.speechChunks.length ||
+        !window.speechSynthesis.speaking
+      ) {
         return;
       }
 
       window.speechSynthesis.pause();
       window.speechSynthesis.resume();
-    }, 8000);
+    }, 10000);
   }
 
   speakNextChunk(sessionId) {

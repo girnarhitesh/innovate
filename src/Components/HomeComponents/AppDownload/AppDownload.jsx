@@ -11,9 +11,10 @@ const AppDownload = () => (
     <div className="SectionTagLabelContainer AppDownload__label">
       <div>
         <div className="flexVertically">
-          <img
+                                    <img
             src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/RocketPng.png"
-            alt="Download App"
+            alt=""
+            aria-hidden="true"
           />
         </div>
         <p>Innovate Trading App</p>

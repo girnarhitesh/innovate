@@ -152,7 +152,7 @@
 
 .DocumentSize {
     font-size: 14px;
-    color: #6b7280;
+    color: #3d3d3d;
     margin: 0;
 }
 
@@ -228,9 +228,16 @@
     cursor: pointer;
     transition: all 0.25s ease;
     background: #fff;
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
 }
 
-.LandingCard:hover {
+.LandingCard:hover,
+.LandingCard:focus-visible {
     border-color: var(--brand-color);
     box-shadow: 0 6px 24px rgba(0, 53, 102, 0.12);
     transform: translateY(-4px);
@@ -251,7 +258,7 @@
 
 .LandingCardDesc {
     font-size: 13px;
-    color: #777;
+    color: #3d3d3d;
     line-height: 1.5;
 }
 

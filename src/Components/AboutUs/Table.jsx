@@ -6,13 +6,16 @@ const Table = () => {
     <div className="marginTop escalation-matrix-container">
                 <div className="escalation-table-wrapper">
                   <table className="escalation-table">
+                    <caption className="sr-only">
+                      Customer escalation matrix contact details
+                    </caption>
                     <thead>
                       <tr>
-                        <th>Details of</th>
-                        <th>Contact Person</th>
-                        <th>Address</th>
-                        <th>Contact No.</th>
-                        <th>Email Id</th>
+                        <th scope="col">Details of</th>
+                        <th scope="col">Contact Person</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Contact No.</th>
+                        <th scope="col">Email Id</th>
                       </tr>
                     </thead>
                     <tbody>

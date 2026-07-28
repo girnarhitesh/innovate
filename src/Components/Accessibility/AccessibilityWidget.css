@@ -46,6 +46,209 @@ body[data-a11y-highlight-links="true"] a[href] {
   font-weight: 600 !important;
 }
 
+/* High Contrast mode — WCAG-friendly text/background presentation */
+body[data-a11y-high-contrast="true"] {
+  --brand-color: #000047;
+  --stroke-color: #1a1a1a;
+  --a11y-text: #000000;
+  --a11y-muted-text: #1a1a1a;
+  --a11y-surface: #ffffff;
+  --a11y-link: #000066;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body[data-a11y-high-contrast="true"] .a11y-app-shell,
+body[data-a11y-high-contrast="true"] .a11y-drawer-root .ant-drawer-content,
+body[data-a11y-high-contrast="true"] .MainContainer,
+body[data-a11y-high-contrast="true"] .Container,
+body[data-a11y-high-contrast="true"] .FooterMainContainer .Container,
+body[data-a11y-high-contrast="true"] .NavigationbarContainer,
+body[data-a11y-high-contrast="true"] .ant-drawer-content,
+body[data-a11y-high-contrast="true"] .ant-modal-content {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body[data-a11y-high-contrast="true"]
+  :where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    label,
+    td,
+    th,
+    small,
+    strong,
+    em,
+    b,
+    figcaption,
+    blockquote,
+    .client-docs-para,
+    .AppDownload__subtitle,
+    .NavbarSearch__itemMeta,
+    .NavbarSearch__sectionLabel,
+    .a11y-option-helper,
+    .a11y-header-copy p,
+    .a11y-footer p
+  ):not(.a11y-exempt):not(.a11y-exempt *):not(.AppStoreButtons__btn *):not(.BtnContainer button *):not(.login-dropdown-trigger *):not(.white):not(.white *) {
+  color: #000000 !important;
+}
+
+body[data-a11y-high-contrast="true"] a[href]:not(.a11y-exempt):not(.a11y-exempt *):not(.AppStoreButtons__btn):not(.AppStoreButtons__btn *) {
+  color: #000066 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  font-weight: 700 !important;
+}
+
+body[data-a11y-high-contrast="true"]
+  :where(
+    .BtnContainer button,
+    .login-dropdown-trigger,
+    .a11y-reset-button,
+    .mobile-login-trigger,
+    .mobile-signup-trigger
+  ):not(.a11y-exempt) {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+body[data-a11y-high-contrast="true"]
+  :where(
+    .BtnContainer button,
+    .login-dropdown-trigger,
+    .a11y-reset-button,
+    .mobile-login-trigger,
+    .mobile-signup-trigger
+  ):not(.a11y-exempt)
+  * {
+  color: #ffffff !important;
+}
+
+/* Dark CTA buttons must keep white text for contrast */
+body[data-a11y-high-contrast="true"] .AppStoreButtons__btn,
+body[data-a11y-high-contrast="true"] .AppStoreButtons__btn:hover,
+body[data-a11y-high-contrast="true"] .AppStoreButtons__btn * {
+  color: #ffffff !important;
+  background-image: none;
+}
+
+body[data-a11y-high-contrast="true"] .AppStoreButtons__btn {
+  background: #000000 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+body[data-a11y-highlight-links="true"] .AppStoreButtons__btn,
+body[data-a11y-highlight-links="true"] .AppStoreButtons__btn * {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+body[data-a11y-highlight-links="true"] .AppStoreButtons__btn {
+  background: linear-gradient(135deg, #002f6c 0%, var(--brand-color) 100%) !important;
+  color: #ffffff !important;
+}
+
+body[data-a11y-high-contrast="true"] .white,
+body[data-a11y-high-contrast="true"] .white *,
+body[data-a11y-high-contrast="true"] .InvestorChartersCard .white,
+body[data-a11y-high-contrast="true"] .TitleContainer h3,
+body[data-a11y-high-contrast="true"] .TitleContainer h3 * {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+body[data-a11y-high-contrast="true"] .TaglineText,
+body[data-a11y-high-contrast="true"] .TaglineText * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  font-weight: 700 !important;
+}
+
+body[data-a11y-high-contrast="true"] h1:not(.sr-only),
+body[data-a11y-high-contrast="true"] h2,
+body[data-a11y-high-contrast="true"] h3,
+body[data-a11y-high-contrast="true"] h4 {
+  color: #000000 !important;
+}
+
+body[data-a11y-high-contrast="true"] .TitleContainer h3,
+body[data-a11y-high-contrast="true"] .TitleContainer h3 *,
+body[data-a11y-high-contrast="true"] .InvestorChartersCard h3.white,
+body[data-a11y-high-contrast="true"] .InvestorChartersCard .white,
+body[data-a11y-high-contrast="true"] .white {
+  color: #ffffff !important;
+}
+
+body[data-a11y-high-contrast="true"] .NavigationbarContainer,
+body[data-a11y-high-contrast="true"] .dropdown-menu > div,
+body[data-a11y-high-contrast="true"] .NavbarSearch__panel,
+body[data-a11y-high-contrast="true"] .ServicesContainerCard,
+body[data-a11y-high-contrast="true"] .AboutCardContainer,
+body[data-a11y-high-contrast="true"] .bank-details-container,
+body[data-a11y-high-contrast="true"] .bank-table,
+body[data-a11y-high-contrast="true"] .complaints-table,
+body[data-a11y-high-contrast="true"] .escalation-table,
+body[data-a11y-high-contrast="true"] .download-grid,
+body[data-a11y-high-contrast="true"] .a11y-panel-section,
+body[data-a11y-high-contrast="true"] .a11y-option-card {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body[data-a11y-high-contrast="true"] .bank-table th,
+body[data-a11y-high-contrast="true"] .complaints-table th,
+body[data-a11y-high-contrast="true"] .escalation-table th {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+body[data-a11y-high-contrast="true"] .bank-table td,
+body[data-a11y-high-contrast="true"] .complaints-table td,
+body[data-a11y-high-contrast="true"] .escalation-table td,
+body[data-a11y-high-contrast="true"] .bank-table th[scope="row"] {
+  color: #000000 !important;
+  border-color: #333333 !important;
+  background-color: #ffffff !important;
+}
+
+body[data-a11y-high-contrast="true"] .ContentContainerInThisSWiper p,
+body[data-a11y-high-contrast="true"] .ContentContainerInThisSWiper h3 {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+body[data-a11y-high-contrast="true"] .a11y-option-card.is-active {
+  background-color: #fff6bf !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body[data-a11y-high-contrast="true"] .a11y-option-helper,
+body[data-a11y-high-contrast="true"] .NavbarSearch__itemMeta,
+body[data-a11y-high-contrast="true"] .NavbarSearch__empty p,
+body[data-a11y-high-contrast="true"] .mobile-sublink-item {
+  color: #1a1a1a !important;
+}
+
+body[data-a11y-high-contrast="true"] .a11y-floating-button.a11y-exempt,
+body[data-a11y-high-contrast="true"] .a11y-floating-button.a11y-exempt * {
+  color: #ffffff !important;
+}
+
 /* Footer Quick Links + Social Links: match site-wide link highlight */
 body[data-a11y-highlight-links="true"] .FooterMainContainer a[href],
 body[data-a11y-highlight-links="true"] .SocialLinkstAndAdress a[href],
@@ -316,7 +519,7 @@ body[data-a11y-large-cursor="true"] .a11y-floating-button * {
   font-family: "Inter", sans-serif;
   font-size: 12px;
   line-height: 1.45;
-  color: #4d4d4d;
+  color: #333333;
 }
 
 .a11y-header-actions {
@@ -480,7 +683,7 @@ body[data-a11y-large-cursor="true"] .a11y-floating-button * {
 .a11y-option-helper {
   font-family: "Inter", sans-serif;
   font-size: 11px;
-  color: #5a6182;
+  color: #333333;
 }
 
 .a11y-option-check {
@@ -513,7 +716,7 @@ body[data-a11y-large-cursor="true"] .a11y-floating-button * {
   font-family: "Inter", sans-serif;
   font-size: 11px;
   line-height: 1.4;
-  color: #4d4d4d;
+  color: #333333;
 }
 
 .a11y-font-levels {

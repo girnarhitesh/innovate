@@ -16,21 +16,21 @@ const HomeComponents = () => {
                 <AppDownload />
                 <HeroHome />
             </div>
-            <div className="HomePageSection">
+            <section className="HomePageSection" aria-labelledby="home-services-heading">
                 <ServicesHome />
-            </div>
-            <div className="HomePageSection">
+            </section>
+            <section className="HomePageSection" aria-label="About Innovate Securities">
                 <HomeAbout />
-            </div>
-            <div className="HomePageSection">
+            </section>
+            <section className="HomePageSection" aria-label="Investor charters">
                 <InvestorCharters />
-            </div>
-            <div className="HomePageSection">
+            </section>
+            <section className="HomePageSection" aria-label="Client registration documents">
                 <ClientRegDocs />
-            </div>
-            <div className="HomePageSection">
+            </section>
+            <section className="HomePageSection" aria-label="Bank account details">
                 <BankDetails />
-            </div>
+            </section>
         </div>
     )
 }

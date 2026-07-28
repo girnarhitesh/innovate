@@ -52,7 +52,7 @@
   background: none;
   border: none;
   font-size: 28px;
-  color: #666;
+  color: #3d3d3d;
   cursor: pointer;
   padding: 0;
   width: 32px;
@@ -148,7 +148,7 @@
 .sebi-tagline p {
   margin: 0;
   font-size: 14px;
-  color: #666;
+  color: #3d3d3d;
   line-height: 1.4;
 }
 
@@ -174,11 +174,55 @@
   transform: translateY(-1px);
 }
 
-.sebi-image {
+.sebi-awareness-panel {
   margin: 16px 0;
-  text-align: center;
+  padding: 16px;
+  border: 1px solid #c5daf0;
+  background: linear-gradient(180deg, #f3f8fd 0%, #ffffff 100%);
+  border-radius: 12px;
 }
-css 
+
+.sebi-awareness-kicker {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #002147;
+}
+
+.sebi-awareness-list {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sebi-awareness-list li {
+  color: #333333;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.sebi-awareness-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  background: #002147;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.sebi-awareness-cta:hover {
+  background: #000047;
+  color: #ffffff !important;
+}
+
 /* Second Image Overlay */
 .image-loader-second {
   position: fixed;
@@ -207,18 +251,6 @@ css
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.sebi-banner {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.sebi-banner:hover {
-  transform: scale(1.02);
-}
-
 .main-message {
   text-align: center;
 }
@@ -233,7 +265,7 @@ css
 .subtitle {
   margin: 0;
   font-style: italic;
-  color: #666;
+  color: #3d3d3d;
   font-size: 14px;
 }
 

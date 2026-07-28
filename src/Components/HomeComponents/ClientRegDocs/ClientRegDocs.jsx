@@ -22,48 +22,49 @@ const languages = [
 
 const ClientRegDocs = () => {
   return (
-    <div className="MainContainer">
+    <section className="MainContainer" aria-labelledby="client-docs-heading">
       <div className="Container">
         <div className="paddingSide">
           <div className="client-docs-wrapper">
-            <h2 className="client-docs-title text-center">
+            <h2 id="client-docs-heading" className="client-docs-title text-center">
               Client Registration Documents
             </h2>
 
             <p className="client-docs-para">
               Download Client Registration Documents (Rights &amp; Obligations,
-              Risk Disclosure Document, Do's &amp; Don'ts) in Vernacular
+              Risk Disclosure Document, Do&apos;s &amp; Don&apos;ts) in Vernacular
               Language :
             </p>
 
-            <div className="download-grid">
+            <ul className="download-grid">
               {languages.map((lang) => (
-                <a
-                  key={lang.name}
-                  href={`/Image/ClientRegDocs/${lang.file}`}
-                  download={lang.file}
-                  className="download-item"
-                >
-                  <TbDownload className="icon" />
-                  <span>{lang.name}</span>
-                </a>
+                <li key={lang.name}>
+                  <a
+                    href={`/Image/ClientRegDocs/${lang.file}`}
+                    download={lang.file}
+                    className="download-item"
+                  >
+                    <TbDownload className="icon" aria-hidden="true" />
+                    <span>{lang.name}</span>
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
             <div className="note-section">
               <p>
                 <strong>Note:</strong>
                 <em>
-                  "This document is a translated version of the client
+                  &quot;This document is a translated version of the client
                   registration documents in English and is being provided in
                   vernacular language to facilitate better understanding by the
                   investors. In case of any ambiguity, the contents of the
-                  English version would prevail."
+                  English version would prevail.&quot;
                 </em>
               </p>
 
-              <p className="study-title">
+              <h3 className="study-title">
                 Study conducted by SEBI on Risk Disclosures
-              </p>
+              </h3>
 
               <a
                 href="https://www.sebi.gov.in/reports-and-statistics/research/jan-2023/study-analysis-of-profit-and-loss-of-individual-traders-dealing-in-equity-fando-segment_67525.html"
@@ -74,9 +75,9 @@ const ClientRegDocs = () => {
                 https://www.sebi.gov.in/reports-and-statistics/research/jan-2023/study-analysis-of-profit-and-loss-of-individual-traders-dealing-in-equity-fando-segment_67525.html
               </a>
 
-              <p className="study-title">
+              <h3 className="study-title">
                 SMART ODR - Securities Market Approach for Resolution Through ODR Portal
-              </p>
+              </h3>
 
               <a
                 href="https://smartodr.in/login"
@@ -90,7 +91,7 @@ const ClientRegDocs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

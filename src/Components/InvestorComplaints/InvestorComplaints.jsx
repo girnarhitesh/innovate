@@ -59,11 +59,14 @@ const InvestorComplaints = () => {
             <div className="complaints-content">
               <div className="complaints-table-wrapper">
                 <table className="complaints-table">
+                  <caption className="sr-only">
+                    Monthly investor complaints disclosure documents
+                  </caption>
                   <thead>
                     <tr>
-                      <th>Sr.No</th>
-                      <th>Month & Year</th>
-                      <th>Download</th>
+                      <th scope="col">Sr.No</th>
+                      <th scope="col">Month & Year</th>
+                      <th scope="col">Download</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -77,8 +80,9 @@ const InvestorComplaints = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="download-link"
+                            aria-label={`Download ${item.month} investor complaints PDF`}
                           >
-                            <FaFilePdf />
+                            <FaFilePdf aria-hidden="true" />
                           </a>
                         </td>
                       </tr>

@@ -7,6 +7,15 @@
   padding-top: 0px !important;
 }
 
+.FooterMainContainer .footer-heading {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #111111;
+  font-family: "Work Sans", sans-serif;
+}
+
 .SocialMediaContainer ul {
   list-style: none;
   padding: 0px;
@@ -37,14 +46,24 @@
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(0, 33, 71, 0.35);
-  font-weight: 500;
-  transition: color 0.25s ease, text-decoration-color 0.25s ease, background-color 0.25s ease;
+  text-decoration-color: rgba(0, 33, 71, 0.45);
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(255, 221, 87, 0.35);
+  box-shadow: inset 0 -0.28em 0 rgba(255, 221, 87, 0.55);
+  transition:
+    color 0.25s ease,
+    text-decoration-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .SocialMediaContainer ul li a:hover {
   color: var(--brand-color);
   text-decoration-color: var(--brand-color);
+  background-color: rgba(255, 221, 87, 0.55);
+  box-shadow: inset 0 -0.28em 0 rgba(255, 221, 87, 0.75);
 }
 
 .SocialLinkstAndAdress > div ul {
@@ -62,18 +81,29 @@
 }
 
 .SocialLinkstAndAdress > div ul li a {
+  display: inline-block;
   color: #111111;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(0, 33, 71, 0.35);
-  font-weight: 500;
-  transition: color 0.25s ease, text-decoration-color 0.25s ease, background-color 0.25s ease;
+  text-decoration-color: rgba(0, 33, 71, 0.45);
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(255, 221, 87, 0.35);
+  box-shadow: inset 0 -0.28em 0 rgba(255, 221, 87, 0.55);
+  transition:
+    color 0.25s ease,
+    text-decoration-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .SocialLinkstAndAdress > div ul li a:hover {
   color: var(--brand-color);
   text-decoration-color: var(--brand-color);
+  background-color: rgba(255, 221, 87, 0.55);
+  box-shadow: inset 0 -0.28em 0 rgba(255, 221, 87, 0.75);
 }
 
 .SocialLinkstAndAdress div ul li::before {
@@ -114,12 +144,12 @@ body[data-a11y-highlight-links="true"] .FooterMainContainer .CopyRightContainer 
   text-decoration-thickness: 3px !important;
   text-underline-offset: 4px !important;
   text-decoration-color: #111111 !important;
-  box-shadow: inset 0 -0.35em 0 rgba(255, 221, 87, 0.55) !important;
-  background-color: rgba(255, 221, 87, 0.4) !important;
+  box-shadow: inset 0 -0.35em 0 rgba(255, 221, 87, 0.7) !important;
+  background-color: rgba(255, 221, 87, 0.5) !important;
   font-weight: 700 !important;
   color: #111111 !important;
-  padding: 1px 4px !important;
-  border-radius: 2px;
+  padding: 4px 8px !important;
+  border-radius: 4px;
 }
 
 body[data-a11y-highlight-links="true"] .FooterMainContainer .SocialLinkstAndAdress div ul li:hover {

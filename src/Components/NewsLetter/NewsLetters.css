@@ -8,7 +8,7 @@
 
 /* Newsletter Subtitle */
 .NewsletterSubtitle {
-    /* color: #666; */
+    /* color: #3d3d3d; */
     font-size: 16px;
     margin: 0;
     line-height: 1.5;
@@ -52,9 +52,10 @@
     background: white;
 }
 
-.NewsletterInput:focus {
+.NewsletterInput:focus,
+.NewsletterInput:focus-visible {
     border-color: var(--brand-color);
-    box-shadow: 0 0 0 3px rgba(0, 33, 71, 0.1);
+    box-shadow: 0 0 0 3px rgba(244, 180, 0, 0.45);
 }
 
 .NewsletterInput.error {
@@ -114,7 +115,7 @@
 }
 
 .ExpertText {
-    /* color: #666; */
+    /* color: #3d3d3d; */
     font-size: 14px;
     margin: 0;
     white-space: nowrap;

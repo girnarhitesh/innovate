@@ -10,6 +10,7 @@ const toggleOptions = [
   { key: "lineHeight", label: "Line Height", badge: "LH" },
   { key: "dyslexiaFriendly", label: "Dyslexia Friendly", badge: "Df" },
   { key: "adhdMode", label: "ADHD Mode", badge: "AD" },
+  { key: "highContrast", label: "High Contrast", badge: "HC" },
   { key: "saturation", label: "Saturation", badge: "SAT" },
   { key: "invertColors", label: "Invert Colors", badge: "INV" },
   { key: "highlightLinks", label: "Highlight Links", badge: "LINK" },
@@ -86,7 +87,7 @@ const AccessibilityWidget = () => {
             <div className="a11y-header-copy">
               <span className="a11y-section-kicker">Innovate Securities</span>
               <h3>Accessibility options</h3>
-              <p>Adjust readability, motion, and visual comfort across the site.</p>
+              <p>Adjust readability, contrast, motion, and visual comfort across the site.</p>
             </div>
             <div className="a11y-header-actions">
               <span className="a11y-shortcut-pill">Ctrl+F2</span>

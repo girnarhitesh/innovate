@@ -15,36 +15,34 @@ import { Autoplay, FreeMode, Pagination, Navigation } from 'swiper/modules';
 import { useAccessibility } from '../../../context/AccessibilityContext';
 
 const Services = () => {
-    const swiperRef = useRef(null);
+    const swiperInstanceRef = useRef(null);
     const navigate = useNavigate();
     const { isReducedMotionEnabled } = useAccessibility();
     const [isAutoplayPaused, setIsAutoplayPaused] = useState(false);
 
-    useEffect(() => {
-        const swiperInstance = swiperRef.current?.swiper;
-
-        if (!swiperInstance?.autoplay) {
+    const syncAutoplay = (swiper = swiperInstanceRef.current) => {
+        if (!swiper?.autoplay) {
             return;
         }
 
         if (isReducedMotionEnabled || isAutoplayPaused) {
-            swiperInstance.autoplay.stop();
+            swiper.autoplay.stop();
             return;
         }
 
-        swiperInstance.autoplay.start();
+        swiper.autoplay.start();
+    };
+
+    useEffect(() => {
+        syncAutoplay();
     }, [isReducedMotionEnabled, isAutoplayPaused]);
 
     const handlePrevSlide = () => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slidePrev();
-        }
+        swiperInstanceRef.current?.slidePrev();
     };
 
     const handleNextSlide = () => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slideNext();
-        }
+        swiperInstanceRef.current?.slideNext();
     };
 
     const handleToggleAutoplay = () => {
@@ -52,20 +50,21 @@ const Services = () => {
             return;
         }
 
-        const swiperInstance = swiperRef.current?.swiper;
+        const swiper = swiperInstanceRef.current;
 
-        if (!swiperInstance?.autoplay) {
-            return;
-        }
+        setIsAutoplayPaused((prev) => {
+            const next = !prev;
 
-        if (isAutoplayPaused) {
-            swiperInstance.autoplay.start();
-            setIsAutoplayPaused(false);
-            return;
-        }
+            if (swiper?.autoplay) {
+                if (next) {
+                    swiper.autoplay.stop();
+                } else {
+                    swiper.autoplay.start();
+                }
+            }
 
-        swiperInstance.autoplay.stop();
-        setIsAutoplayPaused(true);
+            return next;
+        });
     };
 
     const handleMouseEnter = () => {
@@ -73,9 +72,7 @@ const Services = () => {
             return;
         }
 
-        if (swiperRef.current && swiperRef.current.swiper && swiperRef.current.swiper.autoplay) {
-            swiperRef.current.swiper.autoplay.pause();
-        }
+        swiperInstanceRef.current?.autoplay?.pause();
     };
 
     const handleMouseLeave = () => {
@@ -83,9 +80,7 @@ const Services = () => {
             return;
         }
 
-        if (swiperRef.current && swiperRef.current.swiper && swiperRef.current.swiper.autoplay) {
-            swiperRef.current.swiper.autoplay.resume();
-        }
+        swiperInstanceRef.current?.autoplay?.resume();
     };
 
     const handleServiceClick = (service) => {
@@ -99,13 +94,13 @@ const Services = () => {
                 <div className="paddingSide">
                     <div className='CommonHeader' style={{ margin: "unset" }}>
                         <div>
-                            <h2>Guiding You to Smarter Investments</h2>
+                            <h2 id="home-services-heading">Guiding You to Smarter Investments</h2>
                             <div className='SwiperBtnContainer'>
                                 <button
                                     type="button"
                                     className={`swiper-btn swiper-btn-autoplay ${isAutoplayPaused ? "is-paused" : "is-playing"}`}
                                     onClick={handleToggleAutoplay}
-                                    aria-label={isAutoplayPaused ? "Resume swiper animation" : "Pause swiper animation"}
+                                    aria-label={isAutoplayPaused ? "Resume services carousel" : "Pause services carousel"}
                                     aria-pressed={isAutoplayPaused}
                                     title={isAutoplayPaused ? "Resume" : "Pause"}
                                     disabled={isReducedMotionEnabled}
@@ -135,9 +130,18 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='SwiperContainer'>
+                    <div
+                        className='SwiperContainer'
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
                         <Swiper
-                            ref={swiperRef}
+                            onSwiper={(swiper) => {
+                                swiperInstanceRef.current = swiper;
+                                if (isReducedMotionEnabled || isAutoplayPaused) {
+                                    swiper.autoplay?.stop();
+                                }
+                            }}
                             spaceBetween={30}
                             slidesPerView={1}
                             loop={true}
@@ -145,12 +149,11 @@ const Services = () => {
                             autoplay={{
                                 delay: 2500,
                                 disableOnInteraction: false,
+                                pauseOnMouseEnter: false,
                             }}
                             navigation={false}
                             modules={[Autoplay, FreeMode, Pagination, Navigation]}
                             className="mySwiper"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
                             breakpoints={{
                                 640: {
                                     slidesPerView: 1,
@@ -174,7 +177,7 @@ const Services = () => {
                                                 <div>
                                                     <div className='IconsImageContainer'>
                                                         <div>
-                                                            <img src={item.iconImage} alt={item.title} />
+                                                            <img src={item.iconImage} alt="" aria-hidden="true" />
                                                         </div>
                                                     </div>
                                                     <div>
@@ -202,7 +205,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Services;

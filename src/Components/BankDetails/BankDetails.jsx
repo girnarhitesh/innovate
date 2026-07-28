@@ -32,19 +32,22 @@ const BankDetails = () => {
 
             <div className="bank-table-wrapper">
               <table className="bank-table">
+                <caption className="sr-only">
+                  Upstream bank accounts for Innovate Securities Pvt Ltd
+                </caption>
                 <thead>
                   <tr>
-                    <th>Segment</th>
-                    <th>Bank Name</th>
-                    <th>Branch</th>
-                    <th>Account No.</th>
-                    <th>IFSC Code</th>
+                    <th scope="col">Segment</th>
+                    <th scope="col">Bank Name</th>
+                    <th scope="col">Branch</th>
+                    <th scope="col">Account No.</th>
+                    <th scope="col">IFSC Code</th>
                   </tr>
                 </thead>
                 <tbody>
                   {bankData.map((item) => (
                     <tr key={item.id}>
-                      <td>{item.segment}</td>
+                      <th scope="row">{item.segment}</th>
                       <td>{item.bankName}</td>
                       <td>{item.branch}</td>
                       <td>{item.accountNo}</td>

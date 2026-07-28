@@ -137,8 +137,17 @@ const Modal = () => {
       <div className="modal-overlay">
         <div className="modal-content">
           <div className="modal-header">
-            <h2>📞 Trading Call: 93761 99199</h2>
-            <button className="modal-close" onClick={handleModalClose}>
+            <h2>
+              <span aria-hidden="true">📞 </span>
+              Trading Call:{" "}
+              <a href="tel:9376199199">93761 99199</a>
+            </h2>
+            <button
+              type="button"
+              className="modal-close"
+              onClick={handleModalClose}
+              aria-label="Close trading advisory dialog"
+            >
               ×
             </button>
           </div>
@@ -166,12 +175,22 @@ const Modal = () => {
                   </a>
                 </div>
 
-                <div className="sebi-image">
-                  <img
-                    src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/sebi_investor_awareness_website.jpg"
-                    alt="SEBI Investor Awareness Website"
-                    className="sebi-banner"
-                  />
+                <div className="sebi-awareness-panel" role="region" aria-label="SEBI investor awareness highlights">
+                  <p className="sebi-awareness-kicker">Investor Awareness</p>
+                  <ul className="sebi-awareness-list">
+                    <li>Learn personal finance basics with Money Matters</li>
+                    <li>Access educational resources on the securities market</li>
+                    <li>Use financial tools and calculators</li>
+                    <li>Check your financial health online</li>
+                  </ul>
+                  <a
+                    className="sebi-awareness-cta"
+                    href="https://investor.sebi.gov.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit SEBI Investor Website
+                  </a>
                 </div>
 
                 <div className="main-message">
@@ -186,28 +205,28 @@ const Modal = () => {
 
               <div className="features-section">
                 <div className="feature-item">
-                  <span className="feature-icon">💰</span>
+                  <span className="feature-icon" aria-hidden="true">💰</span>
                   <div className="feature-text">
                     <strong>Money Matters:</strong> Dive into Money Matters to
                     grasp Personal Finance concepts.
                   </div>
                 </div>
                 <div className="feature-item">
-                  <span className="feature-icon">📚</span>
+                  <span className="feature-icon" aria-hidden="true">📚</span>
                   <div className="feature-text">
                     <strong>Educational Resources:</strong> Related to
                     investments, including securities market.
                   </div>
                 </div>
                 <div className="feature-item">
-                  <span className="feature-icon">🧮</span>
+                  <span className="feature-icon" aria-hidden="true">🧮</span>
                   <div className="feature-text">
                     <strong>Financial Tools:</strong> Access a range of Financial
                     Tools and Calculators.
                   </div>
                 </div>
                 <div className="feature-item">
-                  <span className="feature-icon">❤️</span>
+                  <span className="feature-icon" aria-hidden="true">❤️</span>
                   <div className="feature-text">
                     <strong>Financial Health Check:</strong> Evaluate your
                     Financial Health with the easy check.
@@ -218,7 +237,10 @@ const Modal = () => {
 
             <div className="right-column">
               <div className="risk-disclosure">
-                <h4>⚠️ Risk Disclosures on Derivatives</h4>
+                <h4>
+                  <span aria-hidden="true">⚠️ </span>
+                  Risk Disclosures on Derivatives
+                </h4>
                 <ul>
                   <li>
                     9 out of 10 individual traders in equity Futures and Options
@@ -244,7 +266,10 @@ const Modal = () => {
               </div>
 
               <div className="advisory-section">
-                <h4>🚨 Advisory to Clients for Trading in Securities Market</h4>
+                <h4>
+                  <span aria-hidden="true">🚨 </span>
+                  Advisory to Clients for Trading in Securities Market
+                </h4>
                 <p>
                   <strong>Investors should avoid practices like:</strong>
                 </p>

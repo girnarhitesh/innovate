@@ -188,6 +188,59 @@ const Navbar = () => {
         }, 200); // Increased from 150ms for better UX
     }, []);
 
+    const toggleLoginDropdown = useCallback(() => {
+        if (dropdownTimeoutRef.current) {
+            clearTimeout(dropdownTimeoutRef.current);
+            dropdownTimeoutRef.current = null;
+        }
+
+        setActiveDropdown((current) => (current === 7 ? null : 7));
+    }, []);
+
+    const closeLoginDropdown = useCallback(() => {
+        if (dropdownTimeoutRef.current) {
+            clearTimeout(dropdownTimeoutRef.current);
+            dropdownTimeoutRef.current = null;
+        }
+
+        setActiveDropdown(null);
+    }, []);
+
+    useEffect(() => {
+        if (activeDropdown !== 7) {
+            return undefined;
+        }
+
+        const handleDocumentKeyDown = (event) => {
+            if (event.key === "Escape") {
+                closeLoginDropdown();
+            }
+        };
+
+        const handlePointerDown = (event) => {
+            const target = event.target;
+            const loginMenu = document.getElementById("login-dropdown-menu");
+            const loginTrigger = document.getElementById("login-dropdown-trigger");
+
+            if (
+                loginMenu?.contains(target) ||
+                loginTrigger?.contains(target)
+            ) {
+                return;
+            }
+
+            closeLoginDropdown();
+        };
+
+        document.addEventListener("keydown", handleDocumentKeyDown);
+        document.addEventListener("mousedown", handlePointerDown);
+
+        return () => {
+            document.removeEventListener("keydown", handleDocumentKeyDown);
+            document.removeEventListener("mousedown", handlePointerDown);
+        };
+    }, [activeDropdown, closeLoginDropdown]);
+
     const renderMobileDrawer = () => (
         <Drawer
             title={
@@ -209,6 +262,8 @@ const Navbar = () => {
             }}
             destroyOnClose={false}
             maskClosable={true}
+            id="mobile-navigation-drawer"
+            aria-label="Mobile navigation"
         >
             <div className="NavLinksContainerMobile">
                 {NavData.map((item) => (
@@ -337,17 +392,21 @@ const Navbar = () => {
 
     return (
         <div className={`NavigationbarContainer ${isVisible ? 'nav-visible' : 'nav-hidden'} ${hasScrolled ? 'nav-scrolled' : ''}`}>
-            <div className="MainContainer">
+            <nav className="MainContainer" aria-label="Primary">
                 <div className="Container">
                     <div>
                         <div className="NavigationContainer">
-                            <div className="NavigationLogoContainer" onClick={() => {
-                                window.scrollTo({
-                                    top: 0,
-                                    behavior: 'smooth'
-                                });
-                            }}>
-                                <Link to="/">
+                            <div className="NavigationLogoContainer">
+                                <Link
+                                    to="/"
+                                    aria-label="Innovate Securities home"
+                                    onClick={() => {
+                                        window.scrollTo({
+                                            top: 0,
+                                            behavior: "smooth",
+                                        });
+                                    }}
+                                >
                                     <img 
                                         src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/InnovateLogoAddSince.png" 
                                         alt="Innovate Securities Logo - Trusted Financial Services" 
@@ -411,7 +470,12 @@ const Navbar = () => {
                                             <div className="dropdown-container">
                                                 <button 
                                                     type="button"
+                                                    id="login-dropdown-trigger"
                                                     className="login-dropdown-trigger"
+                                                    aria-expanded={activeDropdown === 7}
+                                                    aria-haspopup="true"
+                                                    aria-controls="login-dropdown-menu"
+                                                    onClick={toggleLoginDropdown}
                                                     onMouseEnter={() => handleDropdownMouseEnter(7)}
                                                     onMouseLeave={handleDropdownMouseLeave}
                                                 >
@@ -419,7 +483,10 @@ const Navbar = () => {
                                                 </button>
                                                 {activeDropdown === 7 && (
                                                     <div 
+                                                        id="login-dropdown-menu"
                                                         className="dropdown-menu"
+                                                        role="menu"
+                                                        aria-label="Login options"
                                                         onMouseEnter={() => handleDropdownMouseEnter(7)}
                                                         onMouseLeave={handleDropdownMouseLeave}
                                                     >
@@ -427,6 +494,7 @@ const Navbar = () => {
                                                             <Link
                                                                 to="https://bo.innovatesec.com/Account/Login"
                                                                 className="dropdown-item"
+                                                                role="menuitem"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                             >
@@ -435,6 +503,7 @@ const Navbar = () => {
                                                             <Link
                                                                 to="https://wealthelite.in/client-login"
                                                                 className="dropdown-item"
+                                                                role="menuitem"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                             >
@@ -443,6 +512,7 @@ const Navbar = () => {
                                                             <Link
                                                                 to="https://evoting.cdslindia.com/Evoting/EvotingLogin"
                                                                 className="dropdown-item"
+                                                                role="menuitem"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                             >
@@ -451,18 +521,21 @@ const Navbar = () => {
                                                             <Link
                                                                 to="/services"
                                                                 className="dropdown-item"
+                                                                role="menuitem"
                                                             >
                                                                 NCD Investment Services
                                                             </Link>
                                                             <Link
                                                                 to="/services"
                                                                 className="dropdown-item"
+                                                                role="menuitem"
                                                             >
                                                                 Corporate Fixed Deposits
                                                             </Link>
                                                             <Link
                                                                 to="https://ipo.innovatesec.com/"
                                                                 className="dropdown-item"
+                                                                role="menuitem"
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                             >
@@ -487,6 +560,9 @@ const Navbar = () => {
                                         type="text"
                                         icon={<MenuOutlined />}
                                         onClick={() => setMobileDrawerOpen(true)}
+                                        aria-label="Open navigation menu"
+                                        aria-expanded={mobileDrawerOpen}
+                                        aria-controls="mobile-navigation-drawer"
                                         style={{
                                             fontSize: '30px',
                                             color: '#333',
@@ -500,7 +576,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
 
             {renderMobileDrawer()}
 
