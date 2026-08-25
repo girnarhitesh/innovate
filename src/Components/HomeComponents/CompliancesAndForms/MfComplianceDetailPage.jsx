@@ -16,9 +16,21 @@ import {
   CloseOutlined,
 } from "@ant-design/icons";
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { getMfCompliancePage } from "./mfComplianceData";
+import { getMfCompliancePage, MF_COMPLIANCE_CARDS } from "./mfComplianceData";
+import StructuredComplianceContent from "./StructuredComplianceContent";
 import "./CompliancesAndForms.css";
 import "./MfComplianceDetailPage.css";
+
+const EXTERNAL_SITE_PATHS = new Set(["/privacy-policy", "/disclaimer"]);
+
+const isComplianceLinkAvailable = (path) => {
+  if (EXTERNAL_SITE_PATHS.has(path)) return true;
+  const match = path.match(/^\/compliances\/mf-compliance\/([^/]+)$/);
+  if (!match) return false;
+  const slug = match[1];
+  if (getMfCompliancePage(slug)) return true;
+  return MF_COMPLIANCE_CARDS.some((card) => card.slug === slug && card.hasDetail);
+};
 
 const socialIcon = (type) => {
   switch (type) {
@@ -1168,6 +1180,456 @@ const InvestorGrievanceContent = ({ page }) => {
   );
 };
 
+const InvestorCharterContent = ({ page }) => {
+  const {
+    intro,
+    notice,
+    officialDocs,
+    visionMission,
+    services,
+    rights,
+    commitments,
+    dosDonts,
+    tat,
+    escalation,
+    compliancePages,
+    contactBanner,
+  } = page;
+
+  return (
+    <>
+      <section className="MfDetailSection" aria-labelledby="ic-intro-heading">
+        <h2 id="ic-intro-heading" className="MfDiscMainTitle">
+          {intro.heading}
+        </h2>
+        <p className="MfRegIntro__subtitle">{intro.subtitle}</p>
+        <p className="MfRegIntro__summary">{intro.summaryLine}</p>
+        <div className="MfDetailNote">
+          <p>{notice}</p>
+        </div>
+      </section>
+
+      <section className="MfIcDocs" aria-labelledby="ic-docs-heading">
+        <p className="MfIcDocs__badge">{officialDocs.badge}</p>
+        <h2 id="ic-docs-heading">{officialDocs.heading}</h2>
+        <p className="MfIcDocs__sub">{officialDocs.subtitle}</p>
+        <div className="MfIcDocs__grid">
+          {officialDocs.docs.map((doc) => (
+            <article key={doc.title} className="MfIcDocs__card">
+              <p className="MfIcDocs__label">{doc.label}</p>
+              <h3>{doc.title}</h3>
+              <a href={doc.url} target="_blank" rel="noopener noreferrer">
+                {doc.linkLabel} <ExportOutlined aria-hidden="true" />
+              </a>
+              <p>{doc.description}</p>
+            </article>
+          ))}
+        </div>
+        <div className="MfIcDocs__extra">
+          {officialDocs.extraLinks.map((doc) => (
+            <article key={doc.title} className="MfIcDocs__card">
+              <p className="MfIcDocs__label">{doc.label}</p>
+              <h3>{doc.title}</h3>
+              <a href={doc.url} target="_blank" rel="noopener noreferrer">
+                {doc.linkLabel} <ExportOutlined aria-hidden="true" />
+              </a>
+              <p>{doc.description}</p>
+            </article>
+          ))}
+        </div>
+        <p className="MfIcDocs__footer">{officialDocs.footerNote}</p>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-vm-heading">
+        <h2 id="ic-vm-heading" className="MfDetailSection__title">
+          {visionMission.heading}
+        </h2>
+        <div className="MfIcVmGrid">
+          {visionMission.cards.map((card) => (
+            <article key={card.title} className={`MfIcVmCard is-${card.tone}`}>
+              <h3>{card.title}</h3>
+              {card.body ? <p>{card.body}</p> : null}
+              {card.values ? (
+                <ul>
+                  {card.values.map((value) => (
+                    <li key={value}>{value}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-services-heading">
+        <h2 id="ic-services-heading" className="MfDetailSection__title">
+          {services.heading}
+        </h2>
+        <div className="MfIcServiceGrid">
+          {services.items.map((item) => (
+            <article key={item.title} className="MfIcServiceCard">
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-rights-heading">
+        <h2 id="ic-rights-heading" className="MfDetailSection__title">
+          {rights.heading}
+        </h2>
+        <ol className="MfIcRights">
+          {rights.items.map((item, index) => (
+            <li key={item.title}>
+              <span className="MfIcRights__num" aria-hidden="true">
+                {index + 1}
+              </span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-commit-heading">
+        <h2 id="ic-commit-heading" className="MfDetailSection__title">
+          {commitments.heading}
+        </h2>
+        <ul className="MfIcCommitList">
+          {commitments.items.map((item) => (
+            <li key={item}>
+              <CheckOutlined aria-hidden="true" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-dos-heading">
+        <h2 id="ic-dos-heading" className="MfDetailSection__title">
+          {dosDonts.heading}
+        </h2>
+        <div className="MfIcDosDonts">
+          <div className="MfIcDos">
+            <h3>
+              <CheckOutlined aria-hidden="true" /> {dosDonts.dos.heading}
+            </h3>
+            <ul>
+              {dosDonts.dos.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="MfIcDonts">
+            <h3>
+              <CloseOutlined aria-hidden="true" /> {dosDonts.donts.heading}
+            </h3>
+            <ul>
+              {dosDonts.donts.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-tat-heading">
+        <h2 id="ic-tat-heading" className="MfDetailSection__title">
+          {tat.heading}
+        </h2>
+        <div className="MfDetailTableWrap">
+          <table className="MfDetailTable">
+            <caption className="sr-only">Service and grievance turnaround times</caption>
+            <thead>
+              <tr>
+                <th scope="col">Service / Activity</th>
+                <th scope="col">Description</th>
+                <th scope="col">TAT</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tat.rows.map((row) => (
+                <tr key={row.service}>
+                  <td>
+                    <strong>{row.service}</strong>
+                  </td>
+                  <td>{row.description}</td>
+                  <td className="MfDetailTable__accent">{row.tat}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-escalation-heading">
+        <h2 id="ic-escalation-heading" className="MfDetailSection__title">
+          {escalation.heading}
+        </h2>
+        <ol className="MfDetailEscalation">
+          {escalation.steps.map((step) => (
+            <li
+              key={step.step}
+              className={`MfDetailEscalation__item is-${step.tone}`}
+            >
+              <span className="MfDetailEscalation__num" aria-hidden="true">
+                {step.step}
+              </span>
+              <p className="MfDetailEscalation__label">{step.label}</p>
+              <p className="MfDetailEscalation__detail">{step.detail}</p>
+              <p className="MfDetailEscalation__detail">{step.meta}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ic-infra-heading">
+        <h2 id="ic-infra-heading" className="MfDetailSection__title">
+          {compliancePages.heading}
+        </h2>
+        <p className="MfDiscSection__intro">{compliancePages.intro}</p>
+        <div className="MfIcInfraGrid">
+          {compliancePages.links.map((link) => {
+            const available = isComplianceLinkAvailable(link.path);
+
+            if (available) {
+              return (
+                <Link key={link.path} to={link.path} className="MfIcInfraCard">
+                  <strong>{link.title}</strong>
+                  <span>{link.path}</span>
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={link.path}
+                className="MfIcInfraCard MfIcInfraCard--disabled"
+                aria-disabled="true"
+              >
+                <strong>{link.title}</strong>
+                <span>Coming soon</span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="MfRegTransparency" aria-labelledby="ic-contact-heading">
+        <h2 id="ic-contact-heading">{contactBanner.heading}</h2>
+        <p>
+          {contactBanner.body}{" "}
+          <strong>{contactBanner.name}</strong> |{" "}
+          <a href={`mailto:${contactBanner.email}`}>{contactBanner.email}</a> |{" "}
+          <a href={`tel:${contactBanner.phone}`}>{contactBanner.phone}</a> |{" "}
+          <Link to={contactBanner.grievancePath}>{contactBanner.grievanceLabel}</Link>
+        </p>
+      </section>
+    </>
+  );
+};
+
+const RightsObligationsContent = ({ page }) => {
+  const { intro, rights, obligations, dosDonts, contacts, formalDeclaration } = page;
+
+  return (
+    <>
+      <section className="MfDetailSection" aria-labelledby="ro-intro-heading">
+        <h2 id="ro-intro-heading" className="MfDiscMainTitle">
+          {intro.heading}
+        </h2>
+        <p className="MfRegIntro__subtitle">{intro.subtitle}</p>
+        <p className="MfRegIntro__summary">{intro.summaryLine}</p>
+        <div className="MfDetailNote">
+          <p>{intro.notice}</p>
+        </div>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ro-rights-heading">
+        <h2 id="ro-rights-heading" className="MfDetailSection__title">
+          {rights.heading}
+        </h2>
+        {rights.items.map((item) => (
+          <article key={item.title} className="MfRoBlock">
+            <h3>{item.title}</h3>
+            {item.intro ? <p className="MfRoBlock__intro">{item.intro}</p> : null}
+            {item.bullets ? (
+              <ul className="MfDiscList">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            ) : null}
+            {item.groSummary ? (
+              <div className="MfRoGroBox">
+                <p>
+                  <strong>Grievance Redressal Officer:</strong> {item.groSummary.name} (
+                  {item.groSummary.designation})
+                </p>
+                <p>
+                  Email:{" "}
+                  <a href={`mailto:${item.groSummary.email}`}>{item.groSummary.email}</a> | Phone:{" "}
+                  <a href={`tel:${item.groSummary.phone}`}>{item.groSummary.phone}</a>
+                </p>
+                <p>
+                  {item.groSummary.ack} | {item.groSummary.resolution}
+                </p>
+              </div>
+            ) : null}
+            {item.escalationRows ? (
+              <div className="MfDetailTableWrap">
+                <table className="MfDetailTable">
+                  <caption className="sr-only">Grievance escalation levels</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Level</th>
+                      <th scope="col">Escalate To</th>
+                      <th scope="col">Contact</th>
+                      <th scope="col">Timeline</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {item.escalationRows.map((row) => (
+                      <tr key={row.level}>
+                        <td>{row.level}</td>
+                        <td>
+                          <strong>{row.escalateTo}</strong>
+                        </td>
+                        <td>{row.contact}</td>
+                        <td className="MfDetailTable__accent">{row.timeline}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
+          </article>
+        ))}
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ro-obligations-heading">
+        <h2 id="ro-obligations-heading" className="MfDetailSection__title">
+          {obligations.heading}
+        </h2>
+        {obligations.items.map((item) => (
+          <article key={item.title} className="MfRoBlock">
+            <h3>{item.title}</h3>
+            <ul className="MfDiscList">
+              {item.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ro-dos-heading">
+        <h2 id="ro-dos-heading" className="MfDetailSection__title">
+          {dosDonts.heading}
+        </h2>
+        <div className="MfIcDosDonts">
+          <div className="MfIcDos">
+            <h3>
+              <CheckOutlined aria-hidden="true" /> {dosDonts.dos.heading}
+            </h3>
+            <ul>
+              {dosDonts.dos.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="MfIcDonts">
+            <h3>
+              <CloseOutlined aria-hidden="true" /> {dosDonts.donts.heading}
+            </h3>
+            <ul>
+              {dosDonts.donts.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ro-contacts-heading">
+        <h2 id="ro-contacts-heading" className="MfDetailSection__title">
+          {contacts.heading}
+        </h2>
+        <div className="MfRoContacts">
+          {contacts.items.map((item) => (
+            <article key={item.title} className="MfRoContactCard">
+              <h3>{item.title}</h3>
+              {item.lines.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="MfDetailSection" aria-labelledby="ro-formal-heading">
+        <h2 id="ro-formal-heading" className="MfDetailSection__title">
+          {formalDeclaration.heading}
+        </h2>
+        <div className="MfRoVm">
+          <p>
+            <strong>Vision:</strong> {formalDeclaration.visionMission.vision}
+          </p>
+          <p>
+            <strong>Mission:</strong> {formalDeclaration.visionMission.mission}
+          </p>
+        </div>
+        <h3 className="MfRoSubHeading">{formalDeclaration.servicesHeading}</h3>
+        <div className="MfDetailTableWrap">
+          <table className="MfDetailTable">
+            <caption className="sr-only">Services and committed turnaround times</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Service</th>
+                <th scope="col">Committed Timeline</th>
+              </tr>
+            </thead>
+            <tbody>
+              {formalDeclaration.serviceRows.map((row) => (
+                <tr key={row.no}>
+                  <td>{row.no}</td>
+                  <td>{row.service}</td>
+                  <td className="MfDetailTable__accent">{row.timeline}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="MfRegTransparency" style={{ marginTop: 16 }}>
+          <h3>Pledge by Innovate Securities</h3>
+          <p>{formalDeclaration.pledge}</p>
+          <p>
+            <strong>Registered Address:</strong> {formalDeclaration.registeredAddress}
+          </p>
+          <p>
+            <strong>Jurisdiction:</strong> {formalDeclaration.jurisdiction}
+          </p>
+          <p>
+            <strong>Website:</strong>{" "}
+            <a
+              href={formalDeclaration.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {formalDeclaration.website}
+            </a>
+          </p>
+          <p>{formalDeclaration.lastUpdated}</p>
+        </div>
+      </section>
+    </>
+  );
+};
+
 const MfComplianceDetailPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -1208,6 +1670,12 @@ const MfComplianceDetailPage = () => {
     content = <CommissionDisclosureContent page={page} />;
   } else if (page.pageType === "investor-grievance-redressal") {
     content = <InvestorGrievanceContent page={page} />;
+  } else if (page.pageType === "investor-charter") {
+    content = <InvestorCharterContent page={page} />;
+  } else if (page.pageType === "rights-obligations") {
+    content = <RightsObligationsContent page={page} />;
+  } else if (page.pageType === "structured") {
+    content = <StructuredComplianceContent page={page} />;
   }
 
   return (

@@ -1,0 +1,436 @@
+{
+  "slug": "our-empanelments",
+  "pageType": "structured",
+  "title": "Our Empanelments",
+  "description": "List of AMCs and product partners.",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Compliance",
+      "path": "/compliances/mf-compliance"
+    },
+    {
+      "label": "Our Empanelments",
+      "path": null
+    }
+  ],
+  "intro": {
+    "heading": "Our Empanelments",
+    "subtitle": "Complete list of Mutual Fund AMCs empanelled with Innovate Securities — updated August 2026",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid until: 05-Apr-2027 | www.innovatesec.com",
+    "notice": "Empanelment means Innovate Securities has an active formal distribution arrangement enabling investor transactions in these companies’ Mutual Fund products. All listed AMCs are registered with SEBI / AMFI. Maintained as required under AMFI DDQ Section 4 and AMFI Master Circular."
+  },
+  "blocks": [
+    {
+      "type": "stats",
+      "items": [
+        {
+          "value": "56",
+          "label": "Mutual Fund AMCs"
+        },
+        {
+          "value": "—",
+          "label": "SIF Companies"
+        },
+        {
+          "value": "—",
+          "label": "PMS Companies"
+        },
+        {
+          "value": "—",
+          "label": "AIF Companies"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "Mutual Fund AMCs — 56 Empanelled (AMFI Registered)",
+      "columns": [
+        "#",
+        "AMC Full Name",
+        "SEBI MF Registration No.",
+        "Status"
+      ],
+      "rows": [
+        [
+          "1",
+          "360 ONE Mutual Fund",
+          "MF/067/11/02",
+          "Active"
+        ],
+        [
+          "2",
+          "Abakkus Mutual Fund",
+          "MF/088/25/14",
+          "Active"
+        ],
+        [
+          "3",
+          "Aditya Birla Sun Life Mutual Fund",
+          "MF/020/94/8",
+          "Active"
+        ],
+        [
+          "4",
+          "AlphaGrep Mutual Fund",
+          "MF/090/26/16",
+          "Active"
+        ],
+        [
+          "5",
+          "Angel One Mutual Fund",
+          "MF/083/24/09",
+          "Active"
+        ],
+        [
+          "6",
+          "ASK Mutual Fund",
+          "MF/089/26/15",
+          "Active"
+        ],
+        [
+          "7",
+          "Axis Mutual Fund",
+          "MF/061/09/02",
+          "Active"
+        ],
+        [
+          "8",
+          "Bajaj Finserv Mutual Fund",
+          "MF/078/23/04",
+          "Active"
+        ],
+        [
+          "9",
+          "Bandhan Mutual Fund",
+          "MF/042/00/3",
+          "Active"
+        ],
+        [
+          "10",
+          "Bank of India Mutual Fund",
+          "MF/056/08/01",
+          "Active"
+        ],
+        [
+          "11",
+          "Baroda BNP Paribas Mutual Fund",
+          "MF/018/94/02",
+          "Active"
+        ],
+        [
+          "12",
+          "Canara Robeco Mutual Fund",
+          "MF/004/93/4",
+          "Active"
+        ],
+        [
+          "13",
+          "Capitalmind Mutual Fund",
+          "MF/084/25/10",
+          "Active"
+        ],
+        [
+          "14",
+          "Choice Mutual Fund",
+          "MF/087/25/13",
+          "Active"
+        ],
+        [
+          "15",
+          "DSP Mutual Fund",
+          "MF/036/97/7",
+          "Active"
+        ],
+        [
+          "16",
+          "Edelweiss Mutual Fund",
+          "MF/057/08/02",
+          "Active"
+        ],
+        [
+          "17",
+          "Franklin Templeton Mutual Fund",
+          "MF/026/96/8",
+          "Active"
+        ],
+        [
+          "18",
+          "Groww Mutual Fund",
+          "MF/068/11/03",
+          "Active"
+        ],
+        [
+          "19",
+          "HDFC Mutual Fund",
+          "MF/044/00/6",
+          "Active"
+        ],
+        [
+          "20",
+          "Helios Mutual Fund",
+          "MF/079/23/05",
+          "Active"
+        ],
+        [
+          "21",
+          "HSBC Mutual Fund",
+          "MF/046/02/5",
+          "Active"
+        ],
+        [
+          "22",
+          "ICICI Prudential Mutual Fund",
+          "MF/003/93/6",
+          "Active"
+        ],
+        [
+          "23",
+          "IL&FS Mutual Fund (IDF)",
+          "MF/072/13/02",
+          "Active"
+        ],
+        [
+          "24",
+          "Invesco Mutual Fund",
+          "MF/052/06/01",
+          "Active"
+        ],
+        [
+          "25",
+          "ITI Mutual Fund",
+          "MF/073/18/01",
+          "Active"
+        ],
+        [
+          "26",
+          "Jio BlackRock Mutual Fund",
+          "MF/085/25/11",
+          "Active"
+        ],
+        [
+          "27",
+          "JM Financial Mutual Fund",
+          "MF/015/94/8",
+          "Active"
+        ],
+        [
+          "28",
+          "Kotak Mahindra Mutual Fund",
+          "MF/038/98/1",
+          "Active"
+        ],
+        [
+          "29",
+          "Lakshya Mutual Fund",
+          "MF/091/26/17",
+          "Active"
+        ],
+        [
+          "30",
+          "LIC Mutual Fund",
+          "MF/012/94/5",
+          "Active"
+        ],
+        [
+          "31",
+          "Mahindra Manulife Mutual Fund",
+          "MF/069/16/01",
+          "Active"
+        ],
+        [
+          "32",
+          "Mirae Asset Mutual Fund",
+          "MF/055/07/03",
+          "Active"
+        ],
+        [
+          "33",
+          "Monarch Mutual Fund",
+          "MF/092/26/18",
+          "Active"
+        ],
+        [
+          "34",
+          "Motilal Oswal Mutual Fund",
+          "MF/066/09/04",
+          "Active"
+        ],
+        [
+          "35",
+          "Navi Mutual Fund",
+          "MF/062/09/03",
+          "Active"
+        ],
+        [
+          "36",
+          "Nippon India Mutual Fund",
+          "MF/022/95/1",
+          "Active"
+        ],
+        [
+          "37",
+          "NJ Mutual Fund",
+          "MF/076/21/02",
+          "Active"
+        ],
+        [
+          "38",
+          "Nuvama Mutual Fund",
+          "—",
+          "Active"
+        ],
+        [
+          "39",
+          "Old Bridge Mutual Fund",
+          "MF/081/23/07",
+          "Active"
+        ],
+        [
+          "40",
+          "PGIM India Mutual Fund",
+          "MF/065/10/02",
+          "Active"
+        ],
+        [
+          "41",
+          "PPFAS Mutual Fund",
+          "MF/069/12/01",
+          "Active"
+        ],
+        [
+          "42",
+          "quant Mutual Fund",
+          "MF/028/96/4",
+          "Active"
+        ],
+        [
+          "43",
+          "Quantum Mutual Fund",
+          "MF/051/05/02",
+          "Active"
+        ],
+        [
+          "44",
+          "Samco Mutual Fund",
+          "MF/077/21/03",
+          "Active"
+        ],
+        [
+          "45",
+          "SBI Mutual Fund",
+          "MF/009/93/3",
+          "Active"
+        ],
+        [
+          "46",
+          "Shriram Mutual Fund",
+          "MF/017/94/4",
+          "Active"
+        ],
+        [
+          "47",
+          "Sundaram Mutual Fund",
+          "MF/034/97/2",
+          "Active"
+        ],
+        [
+          "48",
+          "Tata Mutual Fund",
+          "MF/023/95/9",
+          "Active"
+        ],
+        [
+          "49",
+          "Taurus Mutual Fund",
+          "MF/002/93",
+          "Active"
+        ],
+        [
+          "50",
+          "Trust Mutual Fund",
+          "MF/075/19/01",
+          "Active"
+        ],
+        [
+          "51",
+          "Unifi Mutual Fund",
+          "MF/082/24/08",
+          "Active"
+        ],
+        [
+          "52",
+          "Union Mutual Fund",
+          "MF/066/11/01",
+          "Active"
+        ],
+        [
+          "53",
+          "UTI Mutual Fund",
+          "MF/048/03/01",
+          "Active"
+        ],
+        [
+          "54",
+          "The Wealth Company Mutual Fund",
+          "MF/086/25/12",
+          "Active"
+        ],
+        [
+          "55",
+          "WhiteOak Capital Mutual Fund",
+          "MF/074/18/02",
+          "Active"
+        ],
+        [
+          "56",
+          "Zerodha Mutual Fund",
+          "MF/080/23/06",
+          "Active"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "body": "All AMCs above are registered with SEBI under the Securities and Exchange Board of India (Mutual Funds) Regulations 1996. Verify at sebi.gov.in → Mutual Funds or amfiindia.com."
+    },
+    {
+      "type": "links",
+      "heading": "Independently Verify All Empanelments",
+      "items": [
+        {
+          "label": "AMFI — Find MF Distributor",
+          "href": "https://www.amfiindia.com/find-mf-distributor"
+        },
+        {
+          "label": "AMFI — Registered AMCs",
+          "href": "https://www.amfiindia.com/research-information/other-data/registered-amc-with-contact-details"
+        },
+        {
+          "label": "SEBI — Mutual Funds",
+          "href": "https://www.sebi.gov.in/"
+        },
+        {
+          "label": "SEBI — Portfolio Managers",
+          "href": "https://www.sebi.gov.in/"
+        },
+        {
+          "label": "SEBI — Alternative Investment Funds",
+          "href": "https://www.sebi.gov.in/"
+        }
+      ]
+    },
+    {
+      "type": "alert",
+      "heading": "Important Note",
+      "body": "Empanelment does not mean Innovate Securities recommends all products of all empanelled companies. Every recommendation is based solely on the investor’s risk profile, goals, and suitability. For products not listed here, contact ispl@innovatesec.com."
+    },
+    {
+      "type": "note",
+      "body": "Last Updated: August 2026 | Innovate Securities Pvt. Ltd. | As per AMFI DDQ Section 4 | AMFI Master Circular"
+    }
+  ]
+}

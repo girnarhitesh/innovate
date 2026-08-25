@@ -1,0 +1,281 @@
+{
+  "slug": "terms-conditions",
+  "pageType": "structured",
+  "title": "Terms & Conditions",
+  "description": "Terms governing the use of this website.",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Compliance",
+      "path": "/compliances/mf-compliance"
+    },
+    {
+      "label": "Terms & Conditions",
+      "path": null
+    }
+  ],
+  "intro": {
+    "heading": "Terms & Conditions",
+    "subtitle": "Governing the use of www.innovatesec.com and all services provided by Innovate Securities Private Limited",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Effective: August 2026 | Last Updated: August 2026",
+    "notice": "Please read these Terms & Conditions carefully before using www.innovatesec.com or availing any services from Innovate Securities. By accessing our website or using our services, you agree to be bound by these Terms. If you do not agree, please do not use our website or services."
+  },
+  "blocks": [
+    {
+      "type": "alert",
+      "heading": "Important Disclosure — Please Read First",
+      "body": "Innovate Securities Private Limited is a SEBI-registered Stock Broker, CDSL Depository Participant, and AMFI-registered Mutual Fund Distributor (ARN-42505). We are NOT a SEBI-registered Investment Adviser (RIA). Information, tools, and content on this website are for educational and general information purposes only and do not constitute personalised investment advice."
+    },
+    {
+      "type": "table",
+      "heading": "1. Definitions",
+      "columns": [
+        "Term",
+        "Definition"
+      ],
+      "rows": [
+        [
+          "“Company” / “We” / “Us”",
+          "Innovate Securities Private Limited"
+        ],
+        [
+          "“Website”",
+          "www.innovatesec.com and all its pages / subdomains"
+        ],
+        [
+          "“User” / “You”",
+          "Any person who accesses our website or avails our services"
+        ],
+        [
+          "“Services”",
+          "Stock broking, depository, Mutual Fund distribution, bonds/FDs/NCDs facilitation and related services"
+        ],
+        [
+          "“Investor”",
+          "Any person who invests or trades through Innovate Securities"
+        ],
+        [
+          "“AMC”",
+          "Asset Management Company managing Mutual Fund schemes"
+        ],
+        [
+          "“SEBI”",
+          "Securities and Exchange Board of India"
+        ],
+        [
+          "“AMFI”",
+          "Association of Mutual Funds in India"
+        ]
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "2. Nature of Services — MFD / Broker, Not an Investment Adviser",
+      "intro": "Innovate Securities provides the following services as a licensed intermediary:",
+      "bullets": [
+        "Stock broking as a corporate member of NSE and BSE",
+        "Depository participant services with CDSL",
+        "Facilitating purchase, redemption, and switch of Mutual Fund units on behalf of investors",
+        "Facilitation / distribution of bonds, FDs, and NCDs",
+        "Providing general financial information and educational content for investor awareness",
+        "Providing financial calculators and planning tools for illustrative and educational purposes"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "What We Do NOT Do",
+      "bullets": [
+        "We do NOT provide personalised investment advice as defined under SEBI (Investment Advisers) Regulations 2013",
+        "We do NOT hold SEBI RIA registration and do NOT act as an Investment Adviser",
+        "We do NOT guarantee returns, minimum returns, or capital protection on any investment",
+        "We do NOT provide legal, tax, or accounting advice",
+        "We do NOT facilitate Direct Plan Mutual Fund investments — we deal in Regular Plans only"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "3. No Guaranteed Returns — Mandatory Risk Disclosure",
+      "bullets": [
+        "Mutual Fund / securities investments are subject to market risks — please read all scheme related documents carefully before investing",
+        "Past performance of any Mutual Fund scheme does not guarantee future returns",
+        "The NAV of Mutual Fund units / market prices may go up or down based on market conditions",
+        "There is no assurance that the investment objective of any scheme will be achieved",
+        "Innovate Securities does not guarantee any returns, minimum returns, or capital protection on any investment",
+        "Any projections or illustrations shown on this website, including calculator outputs, are hypothetical and illustrative only"
+      ],
+      "intro": "IMPORTANT: Mutual Fund and securities investments are subject to market risks."
+    },
+    {
+      "type": "section",
+      "heading": "4. Website Use — Permitted & Prohibited",
+      "intro": "You may use our website for the following purposes:",
+      "bullets": [
+        "Reading educational content, articles, and scheme information",
+        "Using financial calculators for personal planning purposes",
+        "Contacting us for information about our services",
+        "Downloading publicly available documents and disclosures"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Prohibited Uses",
+      "intro": "The following uses are strictly prohibited:",
+      "bullets": [
+        "Using the website for any unlawful or fraudulent purpose",
+        "Reproducing, copying, or redistributing our content without written permission",
+        "Attempting to gain unauthorized access to our systems or data",
+        "Using automated tools, bots, or scrapers to extract data from our website",
+        "Transmitting viruses, malware, or any harmful code through our website",
+        "Misrepresenting your identity or providing false information",
+        "Using our website content for commercial purposes without prior written permission"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "5. Calculators & Financial Tools — Disclaimer",
+      "intro": "The financial calculators and planning tools on our website are provided for educational and illustrative purposes only. All calculator outputs are based on the assumptions and inputs provided by you. Actual investment returns, growth rates, inflation rates, and outcomes may vary significantly from calculator projections. Calculator results do NOT constitute investment advice or a guarantee of returns. Please consult a financial professional for personalised financial planning."
+    },
+    {
+      "type": "section",
+      "heading": "6. Intellectual Property",
+      "bullets": [
+        "All content on this website including text, graphics, logos, icons, images, calculators, and software is the intellectual property of Innovate Securities or its licensors",
+        "You may not reproduce, duplicate, copy, sell, or exploit any portion of the website without express written permission from Innovate Securities",
+        "AMFI / SEBI / exchange registration details displayed on this website are proprietary disclosures of Innovate Securities",
+        "Third-party trademarks, including AMC logos and AMFI/SEBI/NSE/BSE/CDSL logos, are the property of their respective owners"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "7. Third-Party Links",
+      "intro": "Our website may contain links to third-party websites including AMC portals, AMFI, SEBI, CAMS, KFintech, and other regulatory portals. These links are provided for your convenience and information only.",
+      "bullets": [
+        "Innovate Securities does not endorse, control, or take responsibility for the content, privacy practices, or accuracy of any third-party website",
+        "Clicking on external links is at your own risk",
+        "We recommend reading the privacy policy and terms of any third-party website you visit"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "8. Limitation of Liability",
+      "bullets": [
+        "Innovate Securities shall not be liable for any direct, indirect, incidental, or consequential loss arising from your use of this website or our services beyond what is mandated by applicable law",
+        "We are not liable for any investment losses arising from market fluctuations or the performance of any financial product",
+        "We are not liable for any technical issues, website downtime, or data loss beyond our reasonable control",
+        "Our liability in any case shall be limited to the commission or fee directly earned from the specific transaction in question",
+        "This limitation does not apply to death or personal injury caused by our negligence, or to any liability that cannot be excluded by law"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "9. Investor Responsibilities",
+      "bullets": [
+        "You are responsible for providing accurate, complete, and up-to-date personal and financial information",
+        "You must read all scheme-related documents (SID, SAI, KIM) before investing in any Mutual Fund scheme",
+        "You must complete KYC formalities before any investment transaction",
+        "You are responsible for maintaining the confidentiality of your login credentials, OTPs, and transaction details",
+        "You must promptly inform Innovate Securities of any change in your financial situation, risk profile, or contact details",
+        "You are responsible for meeting your tax obligations arising from investments / trades made through Innovate Securities",
+        "You must not share your folio number, account details, or transaction history with unauthorized persons"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "10. Commission Disclosure",
+      "intro": "Innovate Securities receives trailing commission from AMCs on Regular Plan Mutual Fund investments. This commission is part of the Total Expense Ratio (TER) and is not an additional charge to investors.",
+      "bullets": [
+        "Commission details are disclosed on our Commission Disclosure page at /compliances/mf-compliance/commission-disclosure",
+        "The exact commission earned by Innovate Securities on your investments is visible in your Consolidated Account Statement (CAS)",
+        "Innovate Securities does not receive any non-cash benefits, gifts, or incentives from any AMC",
+        "All recommendations are based on investor suitability — never on commission rates"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "11. Privacy Policy",
+      "intro": "Your use of this website and our services is also governed by our Privacy Policy, which is incorporated into these Terms & Conditions by reference. Our Privacy Policy describes how we collect, use, store, and protect your personal data in compliance with the Digital Personal Data Protection Act 2023 (DPDPA 2023). Please read our Privacy Policy at /compliances/mf-compliance/privacy-policy."
+    },
+    {
+      "type": "section",
+      "heading": "12. Amendments to Terms",
+      "intro": "Innovate Securities reserves the right to modify these Terms & Conditions at any time. Changes will be effective immediately upon posting on the website with an updated “Last Updated” date. Material changes will be communicated to registered investors via email. Your continued use of our website or services after any changes constitutes acceptance of the updated Terms & Conditions."
+    },
+    {
+      "type": "section",
+      "heading": "13. Termination",
+      "intro": "Innovate Securities reserves the right to terminate or suspend your access to our website or services at any time, without notice, for conduct that we believe:",
+      "bullets": [
+        "Violates these Terms & Conditions or applicable law",
+        "Is harmful to other users, Innovate Securities, AMCs, or any third party",
+        "Involves fraudulent, abusive, or unlawful activities"
+      ]
+    },
+    {
+      "type": "note",
+      "body": "Termination does not affect your existing investment positions, which remain with the respective AMCs / exchanges independent of Innovate Securities."
+    },
+    {
+      "type": "section",
+      "heading": "14. Governing Law & Jurisdiction",
+      "intro": "These Terms & Conditions are governed by and construed in accordance with the laws of India. Any disputes arising out of or relating to these Terms or the use of our services shall be subject to the exclusive jurisdiction of the courts in Ahmedabad. For Mutual Fund grievances: Innovate Securities GRO → Concerned AMC → AMFI IGRC (1800-270-7000) → SEBI SCORES (scores.sebi.gov.in) → SMART ODR (smartodr.in)."
+    },
+    {
+      "type": "contactCard",
+      "heading": "15. Contact Us",
+      "fields": [
+        {
+          "label": "Firm Name",
+          "value": "Innovate Securities Private Limited"
+        },
+        {
+          "label": "ARN",
+          "value": "ARN-42505"
+        },
+        {
+          "label": "Contact Person",
+          "value": "Pimal K. Panchal"
+        },
+        {
+          "label": "Email",
+          "value": "ispl@innovatesec.com",
+          "href": "mailto:ispl@innovatesec.com"
+        },
+        {
+          "label": "Phone",
+          "value": "+91 98795 06993",
+          "href": "tel:+919879506993"
+        },
+        {
+          "label": "Address",
+          "value": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006"
+        },
+        {
+          "label": "Website",
+          "value": "www.innovatesec.com",
+          "href": "https://www.innovatesec.com/"
+        },
+        {
+          "label": "SEBI SCORES",
+          "value": "scores.sebi.gov.in",
+          "href": "https://scores.sebi.gov.in/"
+        },
+        {
+          "label": "SMART ODR",
+          "value": "smartodr.in",
+          "href": "https://smartodr.in/"
+        },
+        {
+          "label": "AMFI Helpline",
+          "value": "igrc@amfiindia.com | 1800-270-7000"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "body": "Effective Date: August 2026 | Last Updated: August 2026 | Innovate Securities Pvt. Ltd. | www.innovatesec.com"
+    }
+  ]
+}

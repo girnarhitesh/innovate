@@ -1,0 +1,214 @@
+{
+  "slug": "fund-selection-policy",
+  "pageType": "structured",
+  "title": "Fund Selection Policy",
+  "description": "How we select funds for recommendations.",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Compliance",
+      "path": "/compliances/mf-compliance"
+    },
+    {
+      "label": "Fund Selection Policy",
+      "path": null
+    }
+  ],
+  "intro": {
+    "heading": "Fund & Product Selection Policy",
+    "subtitle": "Per AMFI DDQ Section 2.6 | AMFI Master Circular | SEBI Guidelines on Suitability & Conflict of Interest",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid: 06-Apr-2024 to 05-Apr-2027 | Effective: August 2026",
+    "notice": "This Fund & Product Selection Policy describes the framework used by Innovate Securities to select, recommend, and review financial products for investors. This policy is prepared in accordance with AMFI DDQ Section 2.6, AMFI Master Circular January 2026, and applicable SEBI guidelines on investor suitability and conflict of interest management. We are committed to recommending only those products that are genuinely suitable for each investor based on their individual profile."
+  },
+  "blocks": [
+    {
+      "type": "alert",
+      "heading": "Core Principle — Suitability Above All",
+      "body": "Every product recommendation is based SOLELY on the investor’s risk profile, financial goals, investment horizon, and financial capacity. Commission rates, incentives, or commercial considerations from AMCs have NO influence on our recommendations. Investor suitability is non-negotiable."
+    },
+    {
+      "type": "steps",
+      "heading": "1. Our 4-Step Product Selection Process",
+      "items": [
+        {
+          "title": "Investor Profiling",
+          "body": "Structured risk assessment covering goals, horizon, income, liabilities, and risk tolerance"
+        },
+        {
+          "title": "Product Mapping",
+          "body": "Match investor profile to suitable product categories using SEBI Riskometer and asset allocation"
+        },
+        {
+          "title": "Scheme Evaluation",
+          "body": "Evaluate schemes using quantitative and qualitative criteria — performance, costs, AMC reputation"
+        },
+        {
+          "title": "Recommendation & Review",
+          "body": "Present suitable options. Final decision always with the investor. Periodic review at least annually."
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "2. Investor Risk Profiling",
+      "intro": "Before recommending any product, Innovate Securities conducts a structured investor risk profiling exercise covering:",
+      "bullets": [
+        "Age & Life Stage — Investment horizon typically decreases as investors approach retirement",
+        "Income & Surplus — Monthly investable surplus after expenses and emergency fund allocation",
+        "Existing Liabilities — Home loan, personal loan, education loan EMIs affecting investable capacity",
+        "Financial Goals — Short-term (less than 3 years), medium-term (3–7 years), long-term (7+ years)",
+        "Risk Tolerance — Emotional and financial capacity to absorb temporary portfolio losses",
+        "Investment Experience — First-time investor vs experienced investor — affects product complexity",
+        "Tax Bracket — Relevant for recommending tax-efficient investment options like ELSS",
+        "Liquidity Needs — Emergency fund adequacy, upcoming financial commitments in next 3 years"
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "3. Risk Profile Categories & Product Suitability Matrix",
+      "columns": [
+        "Risk Profile",
+        "Suitable Fund Categories",
+        "Suitable Products",
+        "Avoid",
+        "Recommended Horizon"
+      ],
+      "rows": [
+        [
+          "Conservative — Low risk tolerance, capital preservation priority",
+          "Liquid, Overnight, Ultra Short Duration, Money Market, Short Duration Debt, Conservative Hybrid",
+          "Debt MFs, Liquid MFs",
+          "Small Cap, Sector/Thematic, Long Duration Debt, High Yield Credit",
+          "Less than 3 years"
+        ],
+        [
+          "Moderate — Moderate risk, balanced growth",
+          "Balanced Advantage, Aggressive Hybrid, Large Cap, Multi Cap, Index Funds, Balanced Hybrid",
+          "Hybrid MFs, Large Cap MFs, Index Funds",
+          "Small Cap (primary), Sector Funds (primary), Long Duration Debt",
+          "3 to 7 years"
+        ],
+        [
+          "Aggressive — High risk tolerance, wealth creation focus",
+          "Flexi Cap, Mid Cap, Small Cap, ELSS, Thematic, Sectoral, International Funds",
+          "Diversified Equity MFs, ELSS",
+          "Liquid/Overnight for long-term goals, Capital Protection schemes",
+          "7+ years"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "body": "This matrix is indicative. Actual recommendations depend on the individual investor’s complete profile. A Moderate investor may hold some Aggressive products for long-term goals and vice versa, based on goal-based allocation."
+    },
+    {
+      "type": "rightsGrid",
+      "heading": "4. Scheme Evaluation Criteria",
+      "items": [
+        {
+          "title": "Performance Track Record",
+          "body": "3-year and 5-year returns vs benchmark and category average. Consistency of outperformance across market cycles."
+        },
+        {
+          "title": "Fund Manager Quality",
+          "body": "Fund manager’s experience, track record across market cycles, stability (low turnover), and investment philosophy."
+        },
+        {
+          "title": "AMC Reputation & Stability",
+          "body": "AMC’s AUM size, years of operation, parent company stability, regulatory compliance history, and overall franchise strength."
+        },
+        {
+          "title": "Expense Ratio (TER)",
+          "body": "Total Expense Ratio compared to category average. Lower TER (all else equal) means better net returns for investors."
+        },
+        {
+          "title": "Risk-Adjusted Returns",
+          "body": "Sharpe Ratio, Sortino Ratio, Standard Deviation — evaluating how much return is generated per unit of risk taken."
+        },
+        {
+          "title": "Liquidity & Portfolio Quality",
+          "body": "Portfolio concentration, liquidity of underlying securities, credit quality (for debt), sector/stock concentration risks."
+        },
+        {
+          "title": "Fund Size (AUM)",
+          "body": "Adequate AUM to ensure liquidity and operational efficiency. Avoid very small funds with closure risk and very large funds in mid/small cap categories."
+        },
+        {
+          "title": "Investment Style Consistency",
+          "body": "Does the fund follow its stated investment mandate? Style drift (e.g. large cap fund buying small caps) is a red flag."
+        }
+      ]
+    },
+    {
+      "type": "alert",
+      "heading": "5. Conflict of Interest Policy — Formal Declaration",
+      "body": "Innovate Securities formally declares that: Commission rates received from AMCs have NO influence on fund recommendations | We do not maintain any formal or informal “preferred AMC” list for commercial reasons | We do not participate in AMC-sponsored holidays, trips, or gifts that create conflict of interest | We do not receive any incentives, rebates, or benefits beyond the standard trail commission disclosed on our website | Scheme recommendations are documented with rationale before presentation to investors | We do not switch investors between schemes to generate additional commission (churning) | Direct Plans are always disclosed as an alternative, even though we do not facilitate them"
+    },
+    {
+      "type": "section",
+      "heading": "Practices We Strictly Prohibit (Conflict of Interest)",
+      "bullets": [
+        "Recommending schemes based on higher commission rates or incentives",
+        "Churning — unnecessary switching of investor portfolios to generate commissions",
+        "Accepting non-cash benefits, gifts above regulatory limits, or sponsored trips from AMCs",
+        "Recommending close-ended NFOs or illiquid products without full risk disclosure",
+        "Recommending products outside investor risk profile without written unsuitability declaration"
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "6. Unsuitability Declaration Process",
+      "items": [
+        {
+          "title": "Inform",
+          "body": "Clearly communicate in writing that the chosen product is outside the investor’s risk profile"
+        },
+        {
+          "title": "Explain Risks",
+          "body": "Detail volatility, liquidity, and downside potential of the product"
+        },
+        {
+          "title": "Formal Declaration",
+          "body": "Investor signs a formal Unsuitability Declaration acknowledging the risk mismatch"
+        },
+        {
+          "title": "Process Transaction",
+          "body": "Transaction processed only after receiving the signed declaration"
+        },
+        {
+          "title": "Record Keeping",
+          "body": "Unsuitability declarations retained for a minimum of 8 years"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "7. Portfolio Review Policy",
+      "bullets": [
+        "Annual Review: comprehensive portfolio review with every investor at least once a year",
+        "Triggered Review: additional reviews when there is a material change in investor’s financial situation, goals, or life stage",
+        "Market Event Review: during significant market events (15%+ correction or rally), investors are proactively communicated with",
+        "Fund Change Review: when a recommended scheme undergoes fundamental changes (fund manager change, mandate change, merger), investors are informed and alternatives reviewed",
+        "Rebalancing: recommended when actual asset allocation deviates significantly (more than 10%) from target allocation"
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "8. Record Keeping & Compliance",
+      "bullets": [
+        "All investor risk profiles, financial goal discussions, and recommendation rationale are documented and maintained",
+        "Records retained for minimum 8 years as per SEBI and AMFI requirements",
+        "All unsuitability declarations maintained as permanent client records",
+        "This Fund Selection Policy is reviewed and updated at least annually or when there are regulatory changes",
+        "Policy is available for inspection by AMFI, SEBI, or any regulatory authority on request"
+      ]
+    },
+    {
+      "type": "note",
+      "body": "Formal Declaration by Innovate Securities: This Fund & Product Selection Policy represents our genuine commitment to investor-first recommendations and is followed in letter and spirit in all client interactions. Any deviation may be reported to AMFI at igrc@amfiindia.com or to SEBI SCORES at scores.sebi.gov.in. Contact for policy queries: ispl@innovatesec.com | +91 98795 06993 | www.innovatesec.com. Regulatory Reference: AMFI DDQ Section 2.6 | AMFI Master Circular January 2026 | SEBI Master Circular for Mutual Funds | SEBI Circular on Suitability Assessment. Effective Date: August 2026 | Last Updated: August 2026 | Reviewed annually."
+    }
+  ]
+}

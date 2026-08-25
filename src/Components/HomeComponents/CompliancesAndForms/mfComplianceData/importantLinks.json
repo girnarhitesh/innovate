@@ -1,0 +1,406 @@
+{
+  "slug": "important-links",
+  "pageType": "structured",
+  "title": "Important Links",
+  "description": "SEBI SCORES, SMART ODR, MF Central & more.",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Compliance",
+      "path": "/compliances/mf-compliance"
+    },
+    {
+      "label": "Important Links",
+      "path": null
+    }
+  ],
+  "intro": {
+    "heading": "Important Links",
+    "subtitle": "A comprehensive directory of regulatory portals, investor tools, and resources for Mutual Fund investors",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | www.innovatesec.com | Last Updated: August 2026",
+    "notice": "This page is a curated directory of important links every investor should bookmark — from grievance portals to KYC agencies and portfolio tools. All links are periodically verified and updated."
+  },
+  "blocks": [
+    {
+      "type": "linkCards",
+      "heading": "Innovate Securities — Client Portals",
+      "items": [
+        {
+          "title": "Back Office Login",
+          "href": "https://bo.innovatesec.com/",
+          "body": "Login to view portfolio, transactions, and account statements"
+        },
+        {
+          "title": "WhatsApp Us",
+          "href": "https://wa.me/919879506993",
+          "body": "Chat with us on WhatsApp for queries, updates, and support"
+        },
+        {
+          "title": "Contact Email",
+          "href": "mailto:ispl@innovatesec.com",
+          "body": "ispl@innovatesec.com"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "Investor Grievance & Complaint Portals",
+      "columns": [
+        "Portal",
+        "Official Link",
+        "Purpose"
+      ],
+      "rows": [
+        [
+          "SEBI SCORES (Mandatory)",
+          "https://scores.sebi.gov.in",
+          "Lodge complaints against SEBI-registered entities; track status in real time"
+        ],
+        [
+          "SMART ODR (Mandatory)",
+          "https://smartodr.in",
+          "Online Dispute Resolution — Conciliation and Arbitration"
+        ],
+        [
+          "AMFI IGRC Helpline",
+          "igrc@amfiindia.com | 1800-270-7000",
+          "AMFI Investor Grievance Redressal Committee"
+        ],
+        [
+          "SEBI Investor Helpline",
+          "https://investor.sebi.gov.in",
+          "SEBI investor helpline and education | Toll Free: 1800-266-7575"
+        ],
+        [
+          "NSE IGRCS",
+          "https://igrcs.nse.com",
+          "NSE Investor Grievance and Complaint System"
+        ],
+        [
+          "BSE Investor Portal",
+          "https://investorhelpline.bseindia.com",
+          "BSE investor complaint and helpline portal"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "Regulatory Bodies",
+      "columns": [
+        "Regulator",
+        "Official Link",
+        "Role & Purpose"
+      ],
+      "rows": [
+        [
+          "SEBI",
+          "https://www.sebi.gov.in",
+          "Primary regulator for Mutual Funds and securities markets"
+        ],
+        [
+          "AMFI",
+          "https://www.amfiindia.com",
+          "MFD registration, ARN verification, investor education, NAV data"
+        ],
+        [
+          "RBI",
+          "https://www.rbi.org.in",
+          "Monetary policy, banking regulations, forex"
+        ],
+        [
+          "IRDAI",
+          "https://www.irdai.gov.in",
+          "Insurance regulations and grievances"
+        ],
+        [
+          "PFRDA",
+          "https://www.pfrda.org.in",
+          "NPS and pension regulations"
+        ],
+        [
+          "MCA",
+          "https://www.mca.gov.in",
+          "Company registration, CIN verification, ROC filings"
+        ],
+        [
+          "Income Tax India",
+          "https://www.incometax.gov.in",
+          "ITR filing, Form 26AS, AIS"
+        ],
+        [
+          "IRDAI Bima Bharosa",
+          "https://bimabharosa.irdai.gov.in",
+          "IRDAI insurance grievance portal"
+        ],
+        [
+          "Insurance Ombudsman",
+          "https://cioins.co.in",
+          "Council for Insurance Ombudsmen — insurance grievance escalation"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "Mutual Fund Portals & Transaction Platforms",
+      "columns": [
+        "Portal",
+        "Official Link",
+        "Purpose"
+      ],
+      "rows": [
+        [
+          "MF Central",
+          "https://www.mfcentral.com",
+          "One-stop portal for all MF folios — CAS, portfolio, transactions, KYC"
+        ],
+        [
+          "CAMS Online",
+          "https://www.camsonline.com",
+          "CAS, NAV, transactions for CAMS-serviced AMCs"
+        ],
+        [
+          "KFintech",
+          "https://mfs.kfintech.com",
+          "CAS, NAV, transactions for KFintech-serviced AMCs"
+        ],
+        [
+          "AMFI NAV",
+          "https://www.amfiindia.com/nav-history-download.html",
+          "Official daily NAV of all Mutual Fund schemes"
+        ],
+        [
+          "Mutual Funds Sahi Hai",
+          "https://www.mutualfundssahihai.com",
+          "AMFI investor education portal"
+        ],
+        [
+          "MITRA Portal",
+          "https://mitra.amfiindia.com",
+          "Trace inactive, dormant, or unclaimed MF investments"
+        ],
+        [
+          "MF Utility (MFU)",
+          "https://www.mfuindia.com",
+          "Common transaction platform across AMCs"
+        ],
+        [
+          "BSE Star MF",
+          "https://bsestarmf.in",
+          "BSE platform for Mutual Fund transactions"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "KYC Agencies & Identity Verification",
+      "columns": [
+        "Agency",
+        "Official Link",
+        "Purpose"
+      ],
+      "rows": [
+        [
+          "CAMS KRA",
+          "https://www.camskra.com",
+          "KYC registration, modification, status check"
+        ],
+        [
+          "CVL KRA",
+          "https://www.cvlkra.com",
+          "CVL KRA (CDSL Ventures) — KYC registration"
+        ],
+        [
+          "CKYC India",
+          "https://www.ckycindia.in",
+          "Central KYC Registry (CERSAI)"
+        ],
+        [
+          "NDML KRA",
+          "https://www.ndml.in",
+          "NSDL Database Management Limited — KRA"
+        ],
+        [
+          "NSDL PAN",
+          "https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html",
+          "PAN application, correction, status"
+        ],
+        [
+          "Aadhaar UIDAI",
+          "https://uidai.gov.in",
+          "Aadhaar download, update, verification"
+        ],
+        [
+          "UTIITSL PAN",
+          "https://www.utiitsl.com",
+          "UTI Infrastructure Technology and Services — PAN card services"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "Account Statements & Portfolio Tools",
+      "columns": [
+        "Portal",
+        "Official Link",
+        "Purpose"
+      ],
+      "rows": [
+        [
+          "MF Central CAS",
+          "https://www.mfcentral.com",
+          "Download Consolidated Account Statement across AMCs"
+        ],
+        [
+          "CAMS CAS",
+          "https://www.camsonline.com/Investors/Statements/ConsolidatedAccountStatement",
+          "CAS for CAMS-serviced AMC folios"
+        ],
+        [
+          "KFintech CAS",
+          "https://mfs.kfintech.com/investor/General/ConsolidatedAccountStatement",
+          "CAS for KFintech-serviced AMC folios"
+        ],
+        [
+          "Form 26AS / TDS",
+          "https://www.tdscpc.gov.in",
+          "Income tax Form 26AS — TDS and capital gains"
+        ],
+        [
+          "AIS / TIS Portal",
+          "https://www.incometax.gov.in",
+          "Annual Information Statement from Income Tax"
+        ],
+        [
+          "NSDL Portfolio",
+          "https://eservices.nsdl.com",
+          "NSDL demat holdings and transactions"
+        ],
+        [
+          "CDSL Easiest",
+          "https://web.cdslindia.com",
+          "CDSL demat account services"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "Verify Registrations & Check Credentials",
+      "columns": [
+        "Verification",
+        "Official Link",
+        "What You Can Verify"
+      ],
+      "rows": [
+        [
+          "Verify MFD / ARN",
+          "https://www.amfiindia.com/find-mf-distributor",
+          "Verify any MFD ARN registration status at AMFI"
+        ],
+        [
+          "SEBI Registered Entities",
+          "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognised=yes",
+          "Verify SEBI registration of brokers, advisers, PMs"
+        ],
+        [
+          "IRDAI Agent Verify",
+          "https://agencyportal.irdai.gov.in",
+          "Verify IRDAI agent and broker registration"
+        ],
+        [
+          "MCA Company Search",
+          "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html",
+          "Verify company CIN and directors"
+        ],
+        [
+          "CIBIL Credit Score",
+          "https://www.cibil.com",
+          "Check your credit score — CIBIL (TransUnion)"
+        ],
+        [
+          "RBI Ombudsman",
+          "https://cms.rbi.org.in",
+          "Banking and NBFC related complaints"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "Investor Education & Financial Literacy",
+      "columns": [
+        "Resource",
+        "Official Link",
+        "What You’ll Find"
+      ],
+      "rows": [
+        [
+          "SEBI Investor Education",
+          "https://investor.sebi.gov.in",
+          "Articles, videos, quizzes, calculators"
+        ],
+        [
+          "Mutual Funds Sahi Hai",
+          "https://www.mutualfundssahihai.com",
+          "MF basics, myth busters, SIP benefits"
+        ],
+        [
+          "NISM",
+          "https://www.nism.ac.in",
+          "NISM certifications and study material"
+        ],
+        [
+          "NSE India Education",
+          "https://www.nseindia.com/education",
+          "Market basics and trading concepts"
+        ],
+        [
+          "BSE Institute",
+          "https://www.bsebti.com",
+          "BSE Training Institute — capital markets education and certification"
+        ],
+        [
+          "IEPF",
+          "https://iepf.gov.in",
+          "Unclaimed dividends and shares recovery"
+        ],
+        [
+          "Cybercrime Portal",
+          "https://cybercrime.gov.in",
+          "Report financial fraud — Helpline: 1930"
+        ]
+      ]
+    },
+    {
+      "type": "stats",
+      "heading": "Important Helpline Numbers",
+      "items": [
+        {
+          "value": "1800-266-7575",
+          "label": "SEBI Helpline"
+        },
+        {
+          "value": "1800-270-7000",
+          "label": "AMFI Helpline"
+        },
+        {
+          "value": "1930",
+          "label": "Cyber Crime Helpline"
+        },
+        {
+          "value": "14440",
+          "label": "RBI Helpline"
+        },
+        {
+          "value": "155255 / 1800-4254-732",
+          "label": "IRDAI Helpline"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "body": "Disclaimer: Links above are official government and regulatory portals. Innovate Securities is not responsible for third-party content, accuracy, or availability. Links are for investor convenience only and do not constitute an endorsement. Last Updated: August 2026."
+    }
+  ]
+}

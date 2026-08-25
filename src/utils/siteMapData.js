@@ -71,6 +71,51 @@ export const SITE_MAP_SECTIONS = [
         path: "/compliances/mf-compliance/investor-grievance-redressal",
         description: "How to raise and escalate a complaint",
       },
+      {
+        title: "Investor Charter",
+        path: "/compliances/mf-compliance/investor-charter",
+        description: "Rights and responsibilities of investors",
+      },
+      {
+        title: "Rights & Obligations",
+        path: "/compliances/mf-compliance/rights-obligations",
+        description: "Rights and obligations of investors and distributor",
+      },
+      {
+        title: "Privacy Policy (MF)",
+        path: "/compliances/mf-compliance/privacy-policy",
+        description: "How your personal data is collected and used",
+      },
+      {
+        title: "Terms & Conditions (MF)",
+        path: "/compliances/mf-compliance/terms-conditions",
+        description: "Terms governing the use of this website",
+      },
+      {
+        title: "Fund Selection Policy",
+        path: "/compliances/mf-compliance/fund-selection-policy",
+        description: "Our process for recommending mutual fund schemes",
+      },
+      {
+        title: "AMFI Code of Conduct",
+        path: "/compliances/mf-compliance/amfi-code-of-conduct",
+        description: "Code of conduct for mutual fund distributors",
+      },
+      {
+        title: "Our Empanelments",
+        path: "/compliances/mf-compliance/our-empanelments",
+        description: "AMCs and partners we are empanelled with",
+      },
+      {
+        title: "Important Links",
+        path: "/compliances/mf-compliance/important-links",
+        description: "SEBI SCORES, SMART ODR, MF Central and more",
+      },
+      {
+        title: "SID / SAI / KIM",
+        path: "/compliances/mf-compliance/sid-sai-kim",
+        description: "Scheme documents for all mutual fund schemes",
+      },
     ],
   },
   {

@@ -1,0 +1,206 @@
+{
+  "slug": "amfi-code-of-conduct",
+  "pageType": "structured",
+  "title": "AMFI Code of Conduct",
+  "description": "Our commitment to AMFI standards.",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Compliance",
+      "path": "/compliances/mf-compliance"
+    },
+    {
+      "label": "AMFI Code of Conduct",
+      "path": null
+    }
+  ],
+  "intro": {
+    "heading": "AMFI Code of Conduct",
+    "subtitle": "Our Commitment to Ethical Mutual Fund Distribution | AMFI Code of Conduct for Intermediaries",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid: 06-Apr-2024 to 05-Apr-2027",
+    "notice": "Innovate Securities is a SEBI-regulated Stock Broker and AMFI-registered Mutual Fund Distributor. We conduct business in accordance with the AMFI Code of Conduct for Mutual Fund Intermediaries. The following 10 principles form the foundation of our professional practice."
+  },
+  "blocks": [
+    {
+      "type": "note",
+      "body": "Regulatory Basis: AMFI Master Circular (January 2026), SEBI Master Circular for Mutual Funds, and AMFI Code of Ethics and Conduct for Intermediaries. Verify ARN at amfiindia.com."
+    },
+    {
+      "type": "table",
+      "heading": "Our 10 Commitments — AMFI Code of Conduct",
+      "columns": [
+        "Principle",
+        "Our Commitment at Innovate Securities"
+      ],
+      "rows": [
+        [
+          "1. Integrity & Ethical Conduct",
+          "We maintain the highest standards of personal and professional ethics in all dealings with investors, Asset Management Companies, Registrar & Transfer Agents, and regulatory authorities at all times. We will never engage in fraudulent, deceptive, or manipulative practices of any nature. All investor communications are honest, accurate, and complete."
+        ],
+        [
+          "2. No Splitting of Investor Applications",
+          "We never split investor applications to earn higher transaction charges or commissions. Each investor transaction is processed accurately and as a single transaction reflecting the investor’s actual intention. Splitting of applications is a regulatory violation under AMFI guidelines and SEBI regulations."
+        ],
+        [
+          "3. Accurate KYC & Application Processing",
+          "All investor personal details, KYC information, and application forms are filled accurately and completely. We never tamper with, alter, or submit false documentation of any kind. We ensure that all application forms are filled by investors themselves or under their direct supervision. No pre-signed or blank forms are accepted."
+        ],
+        [
+          "4. Valid NISM Certification & EUIN",
+          "All personnel conducting Mutual Fund transactions hold valid NISM Series V-A Mutual Fund Distributor certifications and Employee Unique Identification Numbers (EUINs) as required by AMFI regulations. EUIN is recorded on every transaction. Certifications are renewed before expiry. No transactions are processed by uncertified staff."
+        ],
+        [
+          "5. KYD (Know Your Distributor) Compliance",
+          "We maintain full compliance with AMFI’s KYD (Know Your Distributor) norms at all times. ARN registration details, contact information, and business details are updated promptly at every renewal and whenever changes occur."
+        ],
+        [
+          "6. No Mis-Selling or Misrepresentation",
+          "We never mis-sell, conceal material risks, or misrepresent any Mutual Fund scheme or financial product to investors. Investor interest is always placed above our commercial considerations and commission income. Every recommendation is based on the investor’s documented risk profile, financial goals, and investment horizon — never on commission rates."
+        ],
+        [
+          "7. Anti-Money Laundering (AML) Compliance",
+          "We collect all required KYC documents and conduct AML checks as mandated under the Prevention of Money Laundering Act 2002 (PMLA) and SEBI / AMFI AML guidelines before processing any investor transaction. Suspicious transactions are reported as required. We maintain all KYC records for the minimum prescribed period of 8 years."
+        ],
+        [
+          "8. Full Regulatory Cooperation",
+          "We cooperate fully and promptly with AMCs, AMFI, SEBI, exchanges, and all other regulatory and statutory authorities at all times. All regulatory requests, queries, and inspections are responded to within prescribed timelines."
+        ],
+        [
+          "9. Commission Clawback Compliance",
+          "We promptly refund commissions to Asset Management Companies in all clawback situations as prescribed by SEBI and AMFI regulations. Commission clawbacks are processed without delay or dispute."
+        ],
+        [
+          "10. Investor Education & Awareness",
+          "We actively promote investor awareness and financial literacy. We encourage all investors to read scheme-related documents carefully before investing, understand the risks associated with their investments, and make informed investment decisions."
+        ]
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Practices We Strictly Prohibit",
+      "bullets": [
+        "Splitting of investor applications",
+        "Commission-driven recommendations",
+        "Mis-selling, misrepresentation, or concealment of material risks",
+        "Accepting non-cash benefits, gifts, or incentives from AMCs beyond norms",
+        "Processing transactions through uncertified staff without valid NISM / EUIN",
+        "Sharing investor data without consent",
+        "False, incomplete, or tampered KYC / application documents",
+        "Accepting signed blank forms or authorisation letters"
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "AMFI’s Expectations from Distributors",
+      "columns": [
+        "Expectation",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Act in Best Interest",
+          "Always prioritise investor welfare over commercial interest"
+        ],
+        [
+          "Full Disclosure",
+          "Disclose commission, conflicts, and scheme risks"
+        ],
+        [
+          "Suitability Assessment",
+          "Assess risk profile, goals, and horizon before recommendations"
+        ],
+        [
+          "Regular Review",
+          "Periodic portfolio reviews and rebalancing when required"
+        ],
+        [
+          "Complaint Handling",
+          "Handle complaints promptly, fairly, within timelines"
+        ],
+        [
+          "Records Maintenance",
+          "Maintain records for minimum 8 years"
+        ],
+        [
+          "Regulatory Updates",
+          "Implement SEBI/AMFI changes within prescribed timelines"
+        ],
+        [
+          "Professional Development",
+          "Maintain valid NISM certifications and upgrade skills"
+        ]
+      ]
+    },
+    {
+      "type": "alert",
+      "heading": "Formal Pledge — AMFI Code of Conduct",
+      "body": "Innovate Securities Private Limited hereby formally pledges to: Uphold all 10 principles of the AMFI Code of Conduct at all times | Place investor interest above all commercial considerations | Maintain the highest standards of professional ethics and integrity | Comply with all SEBI and AMFI regulations promptly and completely | Never engage in mis-selling, misrepresentation, or market manipulation | Treat every investor with fairness, transparency, and respect. This pledge is made voluntarily and unconditionally. Any violation of this Code of Conduct may be reported to AMFI at igrc@amfiindia.com or to SEBI at scores.sebi.gov.in."
+    },
+    {
+      "type": "contactCard",
+      "heading": "Registered Details",
+      "fields": [
+        {
+          "label": "Entity",
+          "value": "Innovate Securities Private Limited"
+        },
+        {
+          "label": "ARN",
+          "value": "ARN-42505"
+        },
+        {
+          "label": "Address",
+          "value": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad 380006"
+        },
+        {
+          "label": "Phone",
+          "value": "+91 98795 06993",
+          "href": "tel:+919879506993"
+        },
+        {
+          "label": "Email",
+          "value": "ispl@innovatesec.com",
+          "href": "mailto:ispl@innovatesec.com"
+        },
+        {
+          "label": "Website",
+          "value": "www.innovatesec.com",
+          "href": "https://www.innovatesec.com/"
+        }
+      ]
+    },
+    {
+      "type": "links",
+      "heading": "Official AMFI Documents & References",
+      "items": [
+        {
+          "label": "AMFI Code of Conduct for MFDs (Revised 2022)",
+          "href": "https://www.amfiindia.com/Themes/Theme1/downloads/circulars/ARNCircular22a-RevisedCodeofConductforMFDs2022.pdf"
+        },
+        {
+          "label": "AMFI Master Circular for MF Distributors (January 2026)",
+          "href": "https://www.amfiindia.com/uploads/AMFI_Master_Cicular_for_MF_Ds_3c7f5ee44f.pdf"
+        },
+        {
+          "label": "AMFI Distributor Corner",
+          "href": "https://www.amfiindia.com/distributor"
+        },
+        {
+          "label": "Verify MFD / ARN Registration",
+          "href": "https://www.amfiindia.com/find-mf-distributor"
+        },
+        {
+          "label": "SEBI Master Circular for Mutual Funds",
+          "href": "https://www.sebi.gov.in/legal/master-circulars/jun-2024/master-circular-for-mutual-funds_84266.html"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "body": "Last Updated: August 2026 | AMFI Code of Conduct for Intermediaries | Subject to revision as per AMFI/SEBI regulatory updates."
+    }
+  ]
+}

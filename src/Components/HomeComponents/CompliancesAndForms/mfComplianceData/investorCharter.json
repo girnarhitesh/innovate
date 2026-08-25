@@ -1,0 +1,373 @@
+{
+  "slug": "investor-charter",
+  "pageType": "investor-charter",
+  "title": "Investor Charter",
+  "description": "Rights and responsibilities of investors.",
+  "breadcrumbs": [
+    { "label": "Home", "path": "/" },
+    { "label": "Compliance", "path": "/compliances/mf-compliance" },
+    { "label": "Investor Charter", "path": null }
+  ],
+  "intro": {
+    "heading": "Investor Charter",
+    "subtitle": "Per SEBI Circular SEBI/HO/OIAE/IGRD/CIR/P/2021/583 dated June 11, 2021 | Mandatory for all SEBI-registered intermediaries",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | www.innovatesec.com | Effective: August 2026"
+  },
+  "notice": "This Investor Charter sets out the vision, mission, rights of investors, service standards, and grievance redressal framework of Innovate Securities Private Limited — a SEBI-registered Stock Broker, CDSL Depository Participant, and AMFI-registered Mutual Fund Distributor (ARN-42505). This charter is published in compliance with SEBI Circular dated June 11, 2021, which mandates all SEBI-registered intermediaries to publish an Investor Charter on their website.",
+  "officialDocs": {
+    "badge": "SEBI & AMFI Official Documents — Must Read",
+    "heading": "Access Official Investor Charter & Regulatory Documents",
+    "subtitle": "These are the official documents published by SEBI and AMFI that govern investor rights and intermediary obligations. Every investor should read these before investing.",
+    "docs": [
+      {
+        "label": "SEBI — Primary Regulator",
+        "title": "SEBI Investor Charter for Investment Advisers & Distributors",
+        "linkLabel": "sebi.gov.in → Investor Charter Circular",
+        "url": "https://www.sebi.gov.in/",
+        "description": "SEBI Circular SEBI/HO/OIAE/IGRD/CIR/P/2021/583 dated June 11, 2021 — the governing circular for this charter."
+      },
+      {
+        "label": "SEBI — Investor Education",
+        "title": "SEBI Investor Charter — Complete PDF Document",
+        "linkLabel": "investor.sebi.gov.in → Investor Charter",
+        "url": "https://investor.sebi.gov.in/",
+        "description": "SEBI’s official investor education portal — Investor Charter, rights, dos & don’ts, and complaint mechanism."
+      },
+      {
+        "label": "AMFI — Industry Body",
+        "title": "AMFI Investor Charter for Mutual Fund Distributors",
+        "linkLabel": "amfiindia.com → Investor Charter",
+        "url": "https://www.amfiindia.com/",
+        "description": "AMFI’s official Investor Charter specifically for Mutual Fund investors and distributors — mandatory compliance."
+      },
+      {
+        "label": "AMFI — Master Circular",
+        "title": "AMFI Master Circular for MFDs",
+        "linkLabel": "amfiindia.com → AMFI Circulars",
+        "url": "https://www.amfiindia.com/",
+        "description": "Comprehensive AMFI guidelines for MFDs covering compliance, conduct, and investor protection requirements."
+      }
+    ],
+    "extraLinks": [
+      {
+        "label": "SEBI SCORES — Grievance Portal",
+        "title": "SEBI Centralised Complaint System",
+        "linkLabel": "scores.sebi.gov.in",
+        "url": "https://scores.sebi.gov.in/",
+        "description": "Lodge and track complaints against SEBI-registered entities including MFDs — real-time status tracking."
+      },
+      {
+        "label": "SMART ODR — Dispute Resolution",
+        "title": "SEBI Online Dispute Resolution Platform",
+        "linkLabel": "smartodr.in",
+        "url": "https://smartodr.in/",
+        "description": "SEBI-mandated online conciliation and arbitration for investor disputes with market intermediaries."
+      }
+    ],
+    "footerNote": "All links above are official government / industry portals. Innovate Securities is not responsible for content on external websites."
+  },
+  "visionMission": {
+    "heading": "Vision, Mission & Core Values",
+    "cards": [
+      {
+        "tone": "vision",
+        "title": "Our Vision",
+        "body": "To be a trusted partner in financial growth — empowering investors with transparent, compliant, and investor-first access to capital markets for over three decades and beyond."
+      },
+      {
+        "tone": "mission",
+        "title": "Our Mission",
+        "body": "To deliver seamless investment services across equities, mutual funds, bonds, FDs, and NCDs — backed by SEBI and AMFI compliance, clear disclosures, and responsive grievance redressal — so every investor can make informed decisions with confidence."
+      },
+      {
+        "tone": "values",
+        "title": "Core Values",
+        "values": [
+          "Client First. Always.",
+          "Uncompromising Integrity",
+          "Transparency in Disclosures",
+          "Suitability Over Sales",
+          "Regulatory Compliance",
+          "Relationships Over Transactions"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "heading": "Part B — Services Provided to Investors",
+    "items": [
+      {
+        "title": "Mutual Fund Distribution",
+        "detail": "Purchase, Redemption, Switch, SIP, SWP"
+      },
+      {
+        "title": "Stock Broking & Depository",
+        "detail": "NSE & BSE trading · CDSL demat services"
+      },
+      {
+        "title": "KYC & Onboarding",
+        "detail": "eKYC, KYC modification, account opening"
+      },
+      {
+        "title": "Account Statements",
+        "detail": "CAS on demand, transaction confirmations"
+      },
+      {
+        "title": "Investor Education",
+        "detail": "Articles, tools, newsletters, disclosures"
+      },
+      {
+        "title": "Risk Profiling",
+        "detail": "Structured assessment before every recommendation"
+      },
+      {
+        "title": "Bonds, FDs & NCDs",
+        "detail": "Government & corporate bonds, FDs, NCDs"
+      },
+      {
+        "title": "Grievance Redressal",
+        "detail": "GRO contact, escalation support"
+      }
+    ]
+  },
+  "rights": {
+    "heading": "Part C — Rights of Investors",
+    "items": [
+      {
+        "title": "Right to Scheme Documents",
+        "body": "Receive SID, SAI, and KIM of any recommended scheme before investing — free of charge."
+      },
+      {
+        "title": "Right to Account Statement",
+        "body": "Receive Consolidated Account Statement (CAS) on request within 5 working days."
+      },
+      {
+        "title": "Right to Timely Proceeds",
+        "body": "Receive redemption proceeds within T+3 days and dividend within 30 days of record date."
+      },
+      {
+        "title": "Right to KYC Update",
+        "body": "Update KYC details (address, bank, nominee) at any time — processed within 30 days."
+      },
+      {
+        "title": "Right to Nomination",
+        "body": "Register, change, or cancel nomination for all folio holdings at any time."
+      },
+      {
+        "title": "Right to Grievance Redressal",
+        "body": "Receive complaint acknowledgement within 3 working days and resolution within 15 working days."
+      },
+      {
+        "title": "Right to Escalate",
+        "body": "Escalate unresolved complaints to AMFI IGRC, SEBI SCORES, and SMART ODR without restriction."
+      },
+      {
+        "title": "Right to Commission Info",
+        "body": "View trail commission paid to Innovate Securities on your investments in your monthly CAS statement."
+      },
+      {
+        "title": "Right to Vote",
+        "body": "Vote on fundamental attribute changes of any scheme you are invested in — SEBI mandated."
+      },
+      {
+        "title": "Right to Direct Plan Info",
+        "body": "Be informed about Direct Plans as an alternative — lower TER, no distributor commission."
+      }
+    ]
+  },
+  "commitments": {
+    "heading": "Part D — Our Commitments to Investors",
+    "items": [
+      "Conduct investor risk profiling before every first recommendation and annual review thereafter.",
+      "Recommend only products suitable to the investor’s risk profile, goals, and investment horizon.",
+      "Disclose all commissions and conflicts of interest proactively — never hide remuneration.",
+      "Never recommend unnecessary switches to generate additional commission (no churning).",
+      "Provide SID, SAI, and KIM free of charge before any investment decision.",
+      "Maintain complete records of all client interactions and recommendations for minimum 8 years.",
+      "Provide clear and accurate information — never mislead investors about returns or risks.",
+      "Acknowledge every complaint within 3 working days and resolve within 15 working days.",
+      "Facilitate escalation to AMFI, SEBI SCORES, or SMART ODR without any obstruction."
+    ]
+  },
+  "dosDonts": {
+    "heading": "Part E — Dos & Don’ts for Investors",
+    "dos": {
+      "heading": "DOs — Best Practices",
+      "items": [
+        "Always complete KYC before investing",
+        "Read SID, SAI, KIM before every investment",
+        "Invest based on your risk profile and goals",
+        "Verify ARN of your distributor at amfiindia.com",
+        "Check CAS monthly for portfolio and commissions",
+        "Update nominee details for all folios",
+        "Keep your bank and contact details updated",
+        "Invest for the long term — avoid panic redemptions"
+      ]
+    },
+    "donts": {
+      "heading": "DON’Ts — Avoid These",
+      "items": [
+        "Do not invest based on past returns alone",
+        "Do not share OTP, folio, or login with anyone",
+        "Do not invest in unregistered schemes or chit funds",
+        "Do not fall for guaranteed return promises",
+        "Do not sign blank forms or POA unnecessarily",
+        "Do not ignore scheme fundamental change notices",
+        "Do not make investments beyond your risk capacity",
+        "Do not delay KYC update after change in details"
+      ]
+    }
+  },
+  "tat": {
+    "heading": "Part F — Service & Grievance Turnaround Times (TAT)",
+    "rows": [
+      {
+        "service": "Complaint Acknowledgement",
+        "description": "Email acknowledgement with reference number",
+        "tat": "3 working days"
+      },
+      {
+        "service": "Complaint Resolution (Level 1)",
+        "description": "Full written resolution from Innovate Securities GRO",
+        "tat": "15 working days"
+      },
+      {
+        "service": "Account Statement (CAS)",
+        "description": "On-demand CAS via CAMS / KFintech / MF Central",
+        "tat": "T+5 working days"
+      },
+      {
+        "service": "Redemption Proceeds",
+        "description": "Credit to registered bank account",
+        "tat": "T+3 working days"
+      },
+      {
+        "service": "Dividend / IDCW Payment",
+        "description": "Credit to registered bank from AMC",
+        "tat": "30 calendar days"
+      },
+      {
+        "service": "KYC Modification",
+        "description": "Address, bank, nominee update processed by KRA",
+        "tat": "30 calendar days"
+      },
+      {
+        "service": "SIP Registration / Cancellation",
+        "description": "Effective from next SIP date after applicable notice",
+        "tat": "30 calendar days"
+      },
+      {
+        "service": "Transaction Confirmation",
+        "description": "Email / SMS confirmation from AMC / RTA",
+        "tat": "T+1 working day"
+      }
+    ]
+  },
+  "escalation": {
+    "heading": "Part G — Grievance Escalation Matrix",
+    "steps": [
+      {
+        "step": 1,
+        "label": "Innovate Securities GRO",
+        "detail": "Pimal K. Panchal · Innovate95@rediffmail.com",
+        "meta": "15 working days",
+        "tone": "orange"
+      },
+      {
+        "step": 2,
+        "label": "Concerned AMC",
+        "detail": "AMC Investor Relations",
+        "meta": "15 working days",
+        "tone": "brown"
+      },
+      {
+        "step": 3,
+        "label": "AMFI IGRC",
+        "detail": "igrc@amfiindia.com",
+        "meta": "1800-270-7000",
+        "tone": "purple"
+      },
+      {
+        "step": 4,
+        "label": "SEBI SCORES",
+        "detail": "scores.sebi.gov.in",
+        "meta": "1800-266-7575",
+        "tone": "blue"
+      },
+      {
+        "step": 5,
+        "label": "SMART ODR",
+        "detail": "smartodr.in",
+        "meta": "Conciliation / Arbitration",
+        "tone": "green"
+      }
+    ]
+  },
+  "compliancePages": {
+    "heading": "Part H — Our Complete Compliance Infrastructure",
+    "intro": "Innovate Securities maintains a full suite of compliance pages as required by SEBI and AMFI — all available on our website:",
+    "links": [
+      {
+        "title": "Disclaimer",
+        "path": "/compliances/mf-compliance/disclaimer"
+      },
+      {
+        "title": "Commission Disclosure",
+        "path": "/compliances/mf-compliance/commission-disclosure"
+      },
+      {
+        "title": "Investor Grievance Redressal",
+        "path": "/compliances/mf-compliance/investor-grievance-redressal"
+      },
+      {
+        "title": "Registered Details",
+        "path": "/compliances/mf-compliance/registered-details"
+      },
+      {
+        "title": "Regulatory Registrations",
+        "path": "/compliances/mf-compliance/regulatory-registrations"
+      },
+      {
+        "title": "Privacy Policy",
+        "path": "/compliances/mf-compliance/privacy-policy"
+      },
+      {
+        "title": "Terms & Conditions",
+        "path": "/compliances/mf-compliance/terms-conditions"
+      },
+      {
+        "title": "Fund Selection Policy",
+        "path": "/compliances/mf-compliance/fund-selection-policy"
+      },
+      {
+        "title": "Rights & Obligations",
+        "path": "/compliances/mf-compliance/rights-obligations"
+      },
+      {
+        "title": "Our Empanelments",
+        "path": "/compliances/mf-compliance/our-empanelments"
+      },
+      {
+        "title": "Important Links",
+        "path": "/compliances/mf-compliance/important-links"
+      },
+      {
+        "title": "SID / SAI / KIM",
+        "path": "/compliances/mf-compliance/sid-sai-kim"
+      },
+      {
+        "title": "AMFI Code of Conduct",
+        "path": "/compliances/mf-compliance/amfi-code-of-conduct"
+      }
+    ]
+  },
+  "contactBanner": {
+    "heading": "Contact for Charter-Related Queries",
+    "body": "For any queries about this Investor Charter, your rights as an investor, or to request any compliance document, contact our GRO:",
+    "name": "Pimal K. Panchal",
+    "email": "Innovate95@rediffmail.com",
+    "phone": "9429893549",
+    "grievancePath": "/compliances/mf-compliance/investor-grievance-redressal",
+    "grievanceLabel": "Investor Grievance Redressal"
+  }
+}

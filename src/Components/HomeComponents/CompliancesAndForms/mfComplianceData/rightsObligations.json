@@ -1,0 +1,318 @@
+{
+  "slug": "rights-obligations",
+  "pageType": "rights-obligations",
+  "title": "Rights & Obligations",
+  "description": "Rights and obligations of investors and distributor.",
+  "breadcrumbs": [
+    { "label": "Home", "path": "/" },
+    { "label": "Compliance", "path": "/compliances/mf-compliance" },
+    { "label": "Rights & Obligations", "path": null }
+  ],
+  "intro": {
+    "heading": "Investor Rights & Obligations",
+    "subtitle": "Per SEBI Investor Charter (October 2021) | AMFI Master Circular | SEBI Master Circular for Mutual Funds",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid Until: 05-Apr-2027",
+    "notice": "At Innovate Securities Private Limited, we believe every investor deserves to know their rights and understand their responsibilities. This page is prepared in accordance with the SEBI Investor Charter (October 2021), AMFI Master Circular, and applicable SEBI regulations. We are committed to ensuring every client is treated fairly, transparently, and with the highest professional standards."
+  },
+  "rights": {
+    "heading": "Part A — Your Rights as an Investor",
+    "items": [
+      {
+        "title": "Right 1 — Right to Information",
+        "intro": "You have the right to receive complete, accurate, and timely information about:",
+        "bullets": [
+          "All scheme-related documents — SID, SAI, and KIM — before making any investment",
+          "The risk profile of every Mutual Fund scheme including the SEBI Riskometer rating",
+          "Total Expense Ratio (TER) for both Direct and Regular Plans of every scheme",
+          "Exit load structure, lock-in periods, and redemption conditions for every scheme",
+          "Past performance of the scheme — though past performance does not guarantee future returns",
+          "All fees, commissions, and charges — whether paid by you directly or by the AMC on your behalf",
+          "Any material changes to the scheme, fund manager, or AMC that may affect your investment"
+        ]
+      },
+      {
+        "title": "Right 2 — Right to Know Commission & Charges",
+        "intro": "You have the right to know every rupee earned by your Mutual Fund Distributor:",
+        "bullets": [
+          "Innovate Securities receives trailing commission from AMCs on your Regular Plan investments as part of the Total Expense Ratio (TER) — this is not an additional charge to you",
+          "You can see the exact commission earned by Innovate Securities in your Consolidated Account Statement (CAS) from CAMS / KFintech / MF Central",
+          "You can compare expense ratios between Direct Plans and Regular Plans at amfiindia.com at any time",
+          "Innovate Securities will disclose commission details at the time of investment upon your request — no questions asked",
+          "Innovate Securities does NOT charge any additional fees, transaction charges, or advisory fees directly from you",
+          "You always have the right to invest in Direct Plans directly through AMC portals at lower expense ratios"
+        ]
+      },
+      {
+        "title": "Right 3 — Right to Choose & Switch",
+        "bullets": [
+          "You have the full right to choose any scheme, AMC, or investment platform without any pressure from Innovate Securities",
+          "You can switch your investments to another distributor at any time without any penalty from Innovate Securities",
+          "You can redeem your investments partially or fully at any time subject to the scheme’s exit load and lock-in conditions",
+          "You can request a change of distributor (ARN transfer) by submitting a written request to the concerned AMC"
+        ]
+      },
+      {
+        "title": "Right 4 — Right to Fair Treatment & No Mis-Selling",
+        "bullets": [
+          "You have the right to be protected from mis-selling, misrepresentation, and inappropriate product recommendations",
+          "No investment recommendation will be made without first understanding your financial goals, risk appetite, and investment horizon",
+          "Innovate Securities will never recommend a product based on commission rates received from AMCs",
+          "If any investment is outside your assessed risk profile, you will be informed in writing before the transaction",
+          "You will never be pressured, rushed, or intimidated into making any investment decision",
+          "Innovate Securities is a SEBI-registered Stock Broker and AMFI-registered Mutual Fund Distributor — and is NOT a SEBI-registered Investment Adviser (RIA)"
+        ]
+      },
+      {
+        "title": "Right 5 — Right to Grievance Redressal",
+        "intro": "You have the right to a fair, prompt, and effective grievance redressal at multiple levels:",
+        "groSummary": {
+          "name": "Pimal K. Panchal",
+          "designation": "Executive Director — Compliance Officer / GRO",
+          "email": "Innovate95@rediffmail.com",
+          "phone": "9429893549",
+          "ack": "Acknowledgement within 3 working days",
+          "resolution": "Resolution within 15 working days"
+        },
+        "escalationRows": [
+          {
+            "level": "Level 1",
+            "escalateTo": "Innovate Securities GRO",
+            "contact": "Pimal K. Panchal | Innovate95@rediffmail.com | 9429893549",
+            "timeline": "15 working days"
+          },
+          {
+            "level": "Level 2",
+            "escalateTo": "Concerned AMC",
+            "contact": "Contact AMC Investor Relations directly",
+            "timeline": "15 working days"
+          },
+          {
+            "level": "Level 3",
+            "escalateTo": "AMFI Helpline",
+            "contact": "igrc@amfiindia.com | 1800-270-7000 (Toll Free)",
+            "timeline": "30 days"
+          },
+          {
+            "level": "Level 4",
+            "escalateTo": "SEBI SCORES",
+            "contact": "scores.sebi.gov.in | 1800-266-7575",
+            "timeline": "Per SEBI timeline"
+          },
+          {
+            "level": "Level 5",
+            "escalateTo": "SMART ODR",
+            "contact": "smartodr.in — Conciliation & Arbitration",
+            "timeline": "Per ODR framework"
+          }
+        ]
+      },
+      {
+        "title": "Right 6 — Right to Account Statements & Records",
+        "bullets": [
+          "You will receive a transaction confirmation from the AMC within 2 working days of every transaction",
+          "You are entitled to receive a Consolidated Account Statement (CAS) every month if you have had a transaction, and half-yearly if your portfolio is active",
+          "Your CAS is available anytime at mfcentral.com, camsonline.com, and mfs.kfintech.com",
+          "You can request duplicate statements, account details, or transaction history from the AMC at any time — free of charge"
+        ]
+      },
+      {
+        "title": "Right 7 — Right to Data Privacy & Protection",
+        "bullets": [
+          "All personal data collected by Innovate Securities is protected under the Digital Personal Data Protection Act 2023 (DPDPA 2023)",
+          "Your data will never be sold, shared, or rented to any third party for marketing purposes",
+          "You have the right to access, correct, and request deletion of your personal data held by Innovate Securities",
+          "All transaction and investment data is retained for a minimum of 8 years as required by SEBI and PMLA 2002",
+          "Contact our Data Protection / Compliance Officer at Innovate95@rediffmail.com for any data privacy concerns"
+        ]
+      },
+      {
+        "title": "Right 8 — Right to Nomination",
+        "bullets": [
+          "You have the right to nominate a family member or person of your choice for all your Mutual Fund folios",
+          "You can add, change, or delete a nominee at any time by submitting a nomination form to the AMC",
+          "In the event of the investor’s demise, the nominee can claim investments through the AMC up to Rs. 15 Lakhs without legal proceedings (as per applicable AMC / regulatory process)"
+        ]
+      },
+      {
+        "title": "Right 9 — Right to Unclaimed Investments",
+        "bullets": [
+          "You can trace lost or inactive investments using the MITRA portal at mitra.amfiindia.com",
+          "Unclaimed redemption amounts and dividends can be reclaimed from the AMC at any time — there is no time limit"
+        ]
+      },
+      {
+        "title": "Right 10 — Right to Investor Education",
+        "bullets": [
+          "You have the right to access free investor education from AMFI at amfiindia.com and mutualfundssahihai.com",
+          "You can access NAV, fund performance, and expense ratios for all schemes free of charge at amfiindia.com",
+          "You can verify the ARN and registration of any Mutual Fund Distributor at amfiindia.com"
+        ]
+      }
+    ]
+  },
+  "obligations": {
+    "heading": "Part B — Your Obligations as an Investor",
+    "items": [
+      {
+        "title": "Obligation 1 — Provide Accurate Information",
+        "bullets": [
+          "Provide complete, accurate, and up-to-date personal and financial information at all times",
+          "Immediately inform Innovate Securities and the AMC / KRA of any change in name, address, mobile number, email, or bank details",
+          "Ensure your KYC is always current — outdated KYC can result in transactions being rejected",
+          "Never provide false or misleading information — this constitutes a regulatory violation"
+        ]
+      },
+      {
+        "title": "Obligation 2 — Complete KYC Before Investing",
+        "bullets": [
+          "KYC is mandatory for all investors before making any Mutual Fund investment",
+          "Ensure your KYC is registered with a SEBI-registered KRA (CAMS KRA, CVL KRA, CKYC India, or NDML KRA)",
+          "NRI investors must complete FATCA/CRS declarations and provide required documentation"
+        ]
+      },
+      {
+        "title": "Obligation 3 — Read All Scheme Documents",
+        "bullets": [
+          "Read the Key Information Memorandum (KIM) before investing in any new scheme",
+          "Understand the SEBI Riskometer for every scheme — do not invest in a risk category that does not match your profile",
+          "Review the exit load structure — especially for ELSS (3-year lock-in) and close-ended schemes",
+          "Do not invest based solely on past performance — past performance does not guarantee future returns"
+        ]
+      },
+      {
+        "title": "Obligation 4 — Maintain Confidentiality",
+        "bullets": [
+          "Never share your folio number, transaction PIN, OTP, or login credentials with anyone — including Innovate Securities staff",
+          "Innovate Securities will never ask for your password, PIN, or OTP — report immediately if anyone does",
+          "Be vigilant of phishing emails, fake portals, and fraudulent calls claiming to be from AMCs or SEBI",
+          "Never sign blank application forms, pre-signed authority letters, or blank transaction slips"
+        ]
+      },
+      {
+        "title": "Obligation 5 — Maintain Realistic Expectations",
+        "bullets": [
+          "Understand that Mutual Fund investments are subject to market risks — there are no guaranteed returns",
+          "Never invest borrowed money in equity Mutual Funds",
+          "Maintain a long-term perspective — avoid panic redemptions during market corrections",
+          "Review your portfolio periodically with Innovate Securities and rebalance based on your changing goals"
+        ]
+      },
+      {
+        "title": "Obligation 6 — Comply with Tax Obligations",
+        "bullets": [
+          "Report all Mutual Fund gains accurately in your Income Tax Return (ITR)",
+          "ELSS investments qualify for deduction under Section 80C up to Rs. 1.5 Lakhs per annum (as per applicable tax law)",
+          "Tax laws are subject to change — consult a qualified tax advisor for specific tax advice"
+        ]
+      }
+    ]
+  },
+  "dosDonts": {
+    "heading": "Part C — Do’s and Don’ts",
+    "dos": {
+      "heading": "DO’s — Best Practices",
+      "items": [
+        "Read SID / SAI / KIM before every investment",
+        "Complete KYC before any transaction",
+        "Verify distributor ARN at amfiindia.com",
+        "Check your CAS every month for accuracy",
+        "Nominate a family member for all folios",
+        "Keep contact details updated with AMC / KRA",
+        "Invest with a defined goal and time horizon",
+        "Use SEBI SCORES for unresolved complaints",
+        "Monitor your portfolio periodically",
+        "Ask for commission disclosure before investing",
+        "Use MITRA portal to trace lost investments",
+        "Keep copies of all transaction confirmations"
+      ]
+    },
+    "donts": {
+      "heading": "DON’Ts — Avoid These",
+      "items": [
+        "Don’t invest based on tips or social media posts",
+        "Don’t share your OTP, PIN, or password with anyone",
+        "Don’t sign blank application or authorisation forms",
+        "Don’t invest borrowed money in equity funds",
+        "Don’t panic-redeem during market corrections",
+        "Don’t invest without understanding the risk level",
+        "Don’t trust unsolicited calls promising high returns",
+        "Don’t delay KYC update — it can freeze your account",
+        "Don’t ignore emails or SMS from AMC about your folio",
+        "Don’t invest more than your risk appetite allows",
+        "Don’t fall for schemes promising guaranteed returns",
+        "Don’t deal with unregistered intermediaries"
+      ]
+    }
+  },
+  "contacts": {
+    "heading": "Part D — Important Contacts & Portals",
+    "items": [
+      {
+        "title": "Innovate Securities — GRO",
+        "lines": ["Pimal K. Panchal", "Innovate95@rediffmail.com", "9429893549"]
+      },
+      {
+        "title": "AMFI Helpline",
+        "lines": ["igrc@amfiindia.com", "1800-270-7000 (Toll Free)"]
+      },
+      {
+        "title": "SEBI SCORES",
+        "lines": ["scores.sebi.gov.in", "1800-266-7575"]
+      },
+      {
+        "title": "SMART ODR",
+        "lines": ["smartodr.in", "Online Dispute Resolution"]
+      },
+      {
+        "title": "MF Central",
+        "lines": ["mfcentral.com", "View all folios, download CAS"]
+      },
+      {
+        "title": "CAMS Online",
+        "lines": ["camsonline.com", "Statements & transactions"]
+      },
+      {
+        "title": "KFintech",
+        "lines": ["mfs.kfintech.com", "Statements & transactions"]
+      },
+      {
+        "title": "MITRA Portal",
+        "lines": ["mitra.amfiindia.com", "Trace unclaimed investments"]
+      },
+      {
+        "title": "AMFI Website",
+        "lines": ["amfiindia.com", "NAV, distributor verification"]
+      },
+      {
+        "title": "SEBI Investor Education",
+        "lines": ["investor.sebi.gov.in", "Free investor education"]
+      }
+    ]
+  },
+  "formalDeclaration": {
+    "heading": "Part E — SEBI Investor Charter — Formal Declaration",
+    "visionMission": {
+      "vision": "Investors across India are empowered with knowledge and tools to make informed investment decisions.",
+      "mission": "To provide an efficient, transparent, and investor-friendly environment for investing in Mutual Funds and securities markets."
+    },
+    "servicesHeading": "Services & Committed Turnaround Times",
+    "serviceRows": [
+      { "no": 1, "service": "KYC Registration Assistance", "timeline": "Same day — subject to KRA" },
+      { "no": 2, "service": "New Folio / Account Opening", "timeline": "Within 1–2 working days" },
+      { "no": 3, "service": "Transaction Processing", "timeline": "Same day if before 3 PM cut-off" },
+      { "no": 4, "service": "Transaction Confirmation", "timeline": "Within 2 working days from AMC" },
+      { "no": 5, "service": "Account Statement (CAS) on Request", "timeline": "Within 3 working days" },
+      { "no": 6, "service": "Nominee Addition / Change", "timeline": "Within 7 working days" },
+      { "no": 7, "service": "Bank Account Change", "timeline": "Within 7–10 working days" },
+      { "no": 8, "service": "Complaint Acknowledgement", "timeline": "Within 3 working days" },
+      { "no": 9, "service": "Complaint Resolution (Level 1)", "timeline": "Within 15 working days" },
+      { "no": 10, "service": "SID / KIM Document Provision", "timeline": "Within 24 hours on request" }
+    ],
+    "pledge": "We at Innovate Securities Private Limited pledge to uphold all investor rights listed on this page. Every investor who trusts us with their financial journey will be treated with complete transparency, honesty, and respect. Investor interest will always be placed above commercial considerations.",
+    "registeredAddress": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006",
+    "jurisdiction": "All disputes subject to courts in Ahmedabad",
+    "website": "www.innovatesec.com",
+    "websiteUrl": "https://www.innovatesec.com/",
+    "lastUpdated": "Last Updated: August 2026 | Subject to revision as per SEBI/AMFI regulatory updates."
+  }
+}

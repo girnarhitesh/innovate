@@ -1,0 +1,312 @@
+{
+  "slug": "privacy-policy",
+  "pageType": "structured",
+  "title": "Privacy Policy",
+  "description": "How your personal data is collected and used.",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Compliance",
+      "path": "/compliances/mf-compliance"
+    },
+    {
+      "label": "Privacy Policy",
+      "path": null
+    }
+  ],
+  "intro": {
+    "badge": "DPDPA 2023 Compliant",
+    "heading": "Privacy Policy",
+    "subtitle": "Prepared in accordance with the Digital Personal Data Protection Act 2023 (DPDPA 2023), Information Technology Act 2000, SEBI Regulations, and AMFI Guidelines",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Effective: August 2026 | Last Updated: August 2026",
+    "notice": "Innovate Securities Private Limited is a SEBI-registered Stock Broker, CDSL Depository Participant, and AMFI-registered Mutual Fund Distributor. We are committed to protecting the personal data of our investors, website visitors, and stakeholders. This Privacy Policy explains how we collect, use, store, protect, and share your personal information in compliance with DPDPA 2023 and applicable regulations. By using our services or visiting www.innovatesec.com, you agree to the terms of this Privacy Policy."
+  },
+  "blocks": [
+    {
+      "type": "note",
+      "body": "We collect personal data that is necessary to provide our financial services and comply with applicable regulations. Categories and specific data points are listed below."
+    },
+    {
+      "type": "table",
+      "heading": "1. Personal Data We Collect",
+      "columns": [
+        "Data Category",
+        "Specific Data Points Collected"
+      ],
+      "rows": [
+        [
+          "Identity Data",
+          "Full name, date of birth, gender, photograph, PAN card number, Aadhaar number (last 4 digits only), passport/voter ID"
+        ],
+        [
+          "Contact Data",
+          "Residential address, email address, mobile number, WhatsApp number"
+        ],
+        [
+          "Financial Data",
+          "Bank account details (account number, IFSC, bank name), net worth, income range, investment portfolio details, existing investments, liabilities"
+        ],
+        [
+          "KYC Data",
+          "KYC status, KRA registration details, FATCA/CRS declarations, PEP (Politically Exposed Person) status, AML/CFT related data"
+        ],
+        [
+          "Transaction Data",
+          "Investment / trading transactions, redemptions, switches, SIP details, folio numbers, NAV history, portfolio valuation"
+        ],
+        [
+          "Risk Profile Data",
+          "Risk tolerance assessment responses, investment goals, investment horizon, financial objectives"
+        ],
+        [
+          "Technical Data",
+          "IP address, browser type and version, device information, pages visited, time spent on website (via cookies)"
+        ],
+        [
+          "Communication Data",
+          "Records of correspondence, emails, phone calls (with consent), WhatsApp messages related to financial services"
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "body": "We collect only the minimum data necessary for providing services and meeting regulatory requirements. We do not collect sensitive personal data beyond what is mandated by SEBI, AMFI, or other applicable regulators."
+    },
+    {
+      "type": "table",
+      "heading": "2. How We Use Your Personal Data",
+      "columns": [
+        "Purpose",
+        "Details & Legal Basis"
+      ],
+      "rows": [
+        [
+          "Service Delivery",
+          "Processing your investment / trading transactions, portfolio management, account maintenance — Contractual necessity"
+        ],
+        [
+          "KYC & AML Compliance",
+          "Fulfilling Know Your Customer and Anti-Money Laundering requirements under PMLA 2002 and SEBI/AMFI regulations — Legal obligation"
+        ],
+        [
+          "Regulatory Reporting",
+          "Submitting mandatory reports to SEBI, AMFI, exchanges, Income Tax authorities as required — Legal obligation"
+        ],
+        [
+          "Account Statements",
+          "Generating and sending transaction confirmations, account statements, and CAS — Contractual necessity"
+        ],
+        [
+          "Risk Assessment",
+          "Assessing your risk profile and recommending suitable investment products — Legitimate interest"
+        ],
+        [
+          "Service Communication",
+          "Sending portfolio updates, regulatory notices, scheme information, market updates — Legitimate interest"
+        ],
+        [
+          "Grievance Redressal",
+          "Addressing and resolving your complaints and queries — Legal obligation and legitimate interest"
+        ],
+        [
+          "Fraud Prevention",
+          "Detecting and preventing fraud, unauthorized transactions, and suspicious activities — Legal obligation and legitimate interest"
+        ]
+      ]
+    },
+    {
+      "type": "alert",
+      "heading": "We will NEVER use your data for",
+      "body": "Selling to third parties for marketing | Sharing with advertisers | Profiling for non-financial purposes | Any purpose not listed above without your explicit consent."
+    },
+    {
+      "type": "section",
+      "heading": "3. Data Retention — Minimum 8 Years",
+      "intro": "All transaction records, investment documents, KYC data, and related personal data are retained for a minimum of 8 years from the end of the business relationship or the date of the last transaction — as mandated by SEBI, PMLA 2002, and AMFI Guidelines. After expiry, data is securely deleted or anonymised. Website/technical logs are retained for a maximum of 12 months."
+    },
+    {
+      "type": "table",
+      "heading": "Retention by data type",
+      "columns": [
+        "Data Type",
+        "Retention Period & Reason"
+      ],
+      "rows": [
+        [
+          "KYC Documents",
+          "8 years — PMLA 2002, SEBI KYC norms"
+        ],
+        [
+          "Transaction Records",
+          "8 years — SEBI Regulations, AMFI Guidelines"
+        ],
+        [
+          "Investment Documents",
+          "8 years — SEBI / AMFI compliance"
+        ],
+        [
+          "Correspondence Records",
+          "8 years — Regulatory and legal requirements"
+        ],
+        [
+          "Grievance Records",
+          "5 years — SEBI SCORES requirements"
+        ],
+        [
+          "Website / Technical Logs",
+          "12 months — Internal security purposes"
+        ]
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "4. Data Sharing & Third Parties",
+      "intro": "We share personal data only when necessary and only with authorised parties:",
+      "bullets": [
+        "Asset Management Companies (AMCs) — To process your investment transactions in the schemes you choose",
+        "Registrar & Transfer Agents (CAMS / KFintech) — For folio creation, transaction processing, and account statements",
+        "KYC Registration Agencies (KRAs) — For KYC verification, registration, and updates (CAMS KRA, CVL KRA, CKYC India, NDML)",
+        "MF Central — For consolidated portfolio management and CAS generation",
+        "Exchanges / Depositories (NSE, BSE, CDSL) — As required for stock broking and depository participant services",
+        "SEBI, AMFI, Income Tax, and other Regulators — As required by law for regulatory reporting and compliance",
+        "Technology Service Providers — Website hosting, email services (bound by strict confidentiality agreements)",
+        "Legal / Audit Professionals — For statutory audits and legal compliance (under confidentiality obligations)"
+      ]
+    },
+    {
+      "type": "alert",
+      "heading": "We do NOT share your data with",
+      "body": "Advertisers | Marketing companies | Data brokers | Social media platforms | Any unauthorised third party for commercial purposes."
+    },
+    {
+      "type": "section",
+      "heading": "5. Data Security Measures",
+      "bullets": [
+        "All digital data is stored in password-protected, encrypted systems with restricted access",
+        "Physical documents are stored in locked, secure premises with access limited to authorised personnel only",
+        "All staff with access to personal data are bound by strict confidentiality obligations",
+        "Website data transmission is protected by SSL/TLS encryption (HTTPS)",
+        "Regular security reviews are conducted to identify and address vulnerabilities",
+        "In the event of a data breach, affected individuals will be notified as required under DPDPA 2023"
+      ]
+    },
+    {
+      "type": "table",
+      "heading": "6. Cookies Policy",
+      "columns": [
+        "Cookie Type",
+        "Purpose & Details"
+      ],
+      "rows": [
+        [
+          "Essential Cookies",
+          "Required for website functionality — cannot be disabled. Include session management and security tokens."
+        ],
+        [
+          "Analytics Cookies",
+          "Help us understand how visitors use our website (pages visited, time spent). Data is anonymised. You can opt out via browser settings."
+        ],
+        [
+          "Preference Cookies",
+          "Remember your settings and preferences for a better experience on return visits."
+        ]
+      ]
+    },
+    {
+      "type": "note",
+      "body": "You can control cookies through browser settings. Disabling essential cookies may affect website functionality. We do not use cookies for advertising or cross-site tracking."
+    },
+    {
+      "type": "rightsGrid",
+      "heading": "7. Your Rights Under DPDPA 2023",
+      "items": [
+        {
+          "title": "Right to Access",
+          "body": "Request a copy of all personal data we hold about you at any time, free of charge."
+        },
+        {
+          "title": "Right to Correction",
+          "body": "Request correction of any inaccurate, incomplete, or outdated personal data we hold."
+        },
+        {
+          "title": "Right to Erasure",
+          "body": "Request deletion of your personal data, subject to mandatory regulatory retention requirements."
+        },
+        {
+          "title": "Right to Grievance Redressal",
+          "body": "Contact our Data Protection Officer for any data privacy concern — response within 15 working days."
+        },
+        {
+          "title": "Right to Withdraw Consent",
+          "body": "Withdraw consent for non-mandatory data processing (e.g. newsletter) at any time without affecting past processing."
+        },
+        {
+          "title": "Right to Nominate",
+          "body": "Under DPDPA 2023, nominate a person to exercise your data rights in case of death or incapacity."
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "body": "To exercise any of the above rights, contact our Data Protection Officer at Innovate95@rediffmail.com or 9429893549. We will respond within 15 working days. If not satisfied, you may approach the Data Protection Board of India."
+    },
+    {
+      "type": "contactCard",
+      "heading": "8. Data Protection Officer",
+      "fields": [
+        {
+          "label": "Name",
+          "value": "Pimal K. Panchal"
+        },
+        {
+          "label": "Designation",
+          "value": "Executive Director — Compliance Officer / DPO"
+        },
+        {
+          "label": "Email",
+          "value": "Innovate95@rediffmail.com",
+          "href": "mailto:Innovate95@rediffmail.com"
+        },
+        {
+          "label": "Phone",
+          "value": "9429893549",
+          "href": "tel:9429893549"
+        },
+        {
+          "label": "Address",
+          "value": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006"
+        },
+        {
+          "label": "Response Time",
+          "value": "Within 15 working days"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "9. Children's Privacy",
+      "intro": "Our services are not directed at children under 18. We do not knowingly collect personal data from minors. Minor investors can invest only through a natural guardian in accordance with SEBI / AMFI guidelines for minor folios."
+    },
+    {
+      "type": "section",
+      "heading": "10. Changes to This Privacy Policy",
+      "intro": "We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or business operations. When we make material changes, we will update the “Last Updated” date on this page and notify registered investors via email. Your continued use of our services after the effective date constitutes acceptance of the updated policy."
+    },
+    {
+      "type": "note",
+      "body": "Regulatory References: Digital Personal Data Protection Act 2023 (DPDPA 2023) | Information Technology Act 2000 | SEBI (KYC Registration Agency) Regulations 2011 | PMLA 2002 | AMFI Master Circular January 2026"
+    },
+    {
+      "type": "section",
+      "heading": "11. Governing Law & Jurisdiction",
+      "intro": "This Privacy Policy is governed by the laws of India. Disputes are subject to the exclusive jurisdiction of courts in Ahmedabad. For data protection grievances, you may also approach the Data Protection Board of India under DPDPA 2023."
+    },
+    {
+      "type": "note",
+      "body": "Effective Date: August 2026 | Last Updated: August 2026 | Version 1.0 | Innovate Securities Pvt. Ltd. | www.innovatesec.com"
+    }
+  ]
+}
