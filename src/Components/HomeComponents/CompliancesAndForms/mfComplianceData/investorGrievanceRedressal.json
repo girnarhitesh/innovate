@@ -1,0 +1,260 @@
+{
+  "slug": "investor-grievance-redressal",
+  "pageType": "investor-grievance-redressal",
+  "title": "Investor Grievance Redressal",
+  "description": "How to raise and escalate a complaint.",
+  "breadcrumbs": [
+    { "label": "Home", "path": "/" },
+    { "label": "Compliance", "path": "/compliances/mf-compliance" },
+    { "label": "Investor Grievance Redressal", "path": null }
+  ],
+  "intro": {
+    "heading": "Investor Grievance Redressal Policy",
+    "subtitle": "Per AMFI Code of Conduct | SEBI Master Circular | SEBI SCORES | SMART ODR Framework",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid Until: 05-Apr-2027 | Last Updated: August 2026"
+  },
+  "commitment": {
+    "heading": "Innovate Securities’ Commitment to Investor Grievance Redressal",
+    "body": "We are committed to fair, transparent, and time-bound handling of every investor grievance. Complaints are investigated impartially, acknowledged promptly, and resolved in writing — with a clear path to escalate if you are not satisfied."
+  },
+  "groCard": {
+    "heading": "Your First Point of Contact for All Grievances",
+    "fields": [
+      { "label": "GRO Name", "value": "Pimal K. Panchal" },
+      { "label": "Designation", "value": "Executive Director — Compliance Officer / GRO" },
+      {
+        "label": "Email",
+        "value": "Innovate95@rediffmail.com",
+        "href": "mailto:Innovate95@rediffmail.com"
+      },
+      { "label": "Phone", "value": "9429893549", "href": "tel:9429893549" },
+      { "label": "Working Hours", "value": "Monday to Saturday, 10:00 AM – 6:00 PM" },
+      {
+        "label": "Address",
+        "value": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006"
+      },
+      { "label": "Acknowledgement", "value": "Within 3 working days", "accent": true },
+      { "label": "Resolution", "value": "Within 15 working days", "accent": true }
+    ]
+  },
+  "submitSteps": {
+    "heading": "How to Submit a Complaint",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Write to GRO",
+        "detail": "Email Innovate95@rediffmail.com with subject: COMPLAINT — [Your Name] — [ARN/Folio No.]"
+      },
+      {
+        "step": "02",
+        "title": "Attach Documents",
+        "detail": "Include account statement, transaction slip, or any correspondence related to your complaint."
+      },
+      {
+        "step": "03",
+        "title": "Get Acknowledgement",
+        "detail": "You will receive a complaint acknowledgement with a reference number within 3 working days."
+      },
+      {
+        "step": "04",
+        "title": "Receive Resolution",
+        "detail": "Full resolution will be provided within 15 working days. If not satisfied, escalate to Level 2."
+      }
+    ]
+  },
+  "includeChecklist": {
+    "heading": "What to Include in Your Complaint",
+    "items": [
+      "Your Full Name as registered with the AMC or KRA",
+      "Contact Details — phone number and email address",
+      "Folio Number / ARN / Transaction Reference — the specific transaction or account in question",
+      "Nature of Complaint — clear description of the issue with date of occurrence",
+      "Amount Involved — if the complaint relates to a financial loss or transaction",
+      "Supporting Documents — account statement, transaction confirmation, email correspondence",
+      "Resolution Expected — what outcome you are seeking",
+      "Previous Correspondence — if you have already contacted us about this issue before"
+    ]
+  },
+  "complaintTypes": {
+    "heading": "Types of Complaints We Handle",
+    "rows": [
+      {
+        "type": "Transaction Issues",
+        "examples": "Delay in purchase/redemption, wrong amount invested, SIP not registered/cancelled",
+        "resolution": "3–7 working days"
+      },
+      {
+        "type": "Account Statement",
+        "examples": "CAS not received, incorrect holdings, missing transactions in statement",
+        "resolution": "3–5 working days"
+      },
+      {
+        "type": "KYC / Onboarding",
+        "examples": "KYC rejection, difficulty in updating KYC details, account not opened",
+        "resolution": "5–10 working days"
+      },
+      {
+        "type": "Mis-selling / Advice",
+        "examples": "Product not suitable for risk profile, incorrect information provided",
+        "resolution": "15 working days"
+      },
+      {
+        "type": "Commission / Charges",
+        "examples": "Dispute on exit load, expense ratio not disclosed, commission not visible in CAS",
+        "resolution": "7–10 working days"
+      },
+      {
+        "type": "Nomination Issues",
+        "examples": "Nominee not updated, nominee claim rejected, incorrect nominee details",
+        "resolution": "7–15 working days"
+      },
+      {
+        "type": "Dividend / Redemption",
+        "examples": "Dividend not received, redemption amount not credited, wrong bank account used",
+        "resolution": "5–10 working days"
+      },
+      {
+        "type": "Service Quality",
+        "examples": "Staff behaviour, delayed response, incorrect information given",
+        "resolution": "5 working days"
+      }
+    ]
+  },
+  "escalationMatrix": {
+    "heading": "5-Level Escalation Matrix",
+    "levels": [
+      {
+        "level": 1,
+        "tone": "orange",
+        "title": "Innovate Securities — Grievance Redressal Officer",
+        "contact": "Pimal K. Panchal | Innovate95@rediffmail.com | 9429893549",
+        "timeline": "Acknowledgement: 3 working days | Resolution: 15 working days",
+        "description": "First and primary point of contact. Most complaints are resolved at this level."
+      },
+      {
+        "level": 2,
+        "tone": "brown",
+        "title": "Concerned AMC — Investor Relations / Grievance Cell",
+        "contact": "Contact the AMC where your investment is held directly.",
+        "timeline": "15 working days",
+        "description": "For transaction-specific issues, AMC has direct authority to resolve. Find AMC contact on their website or amfiindia.com."
+      },
+      {
+        "level": 3,
+        "tone": "purple",
+        "title": "AMFI — Investor Grievance Redressal Committee (IGRC)",
+        "contact": "igrc@amfiindia.com | Toll Free: 1800-270-7000 | amfiindia.com",
+        "timeline": "30 days",
+        "description": "AMFI can take action against MFDs including cancellation of ARN for serious violations of Code of Conduct."
+      },
+      {
+        "level": 4,
+        "tone": "blue",
+        "title": "SEBI SCORES — Securities and Exchange Board of India",
+        "contact": "scores.sebi.gov.in | Toll Free: 1800-266-7575 | sebi@sebi.gov.in",
+        "timeline": "Per SEBI timeline",
+        "description": "SEBI Centralised Processing of Complaints System. Track your complaint status online in real time. SEBI has regulatory powers to investigate and take action."
+      },
+      {
+        "level": 5,
+        "tone": "green",
+        "title": "SMART ODR — Online Dispute Resolution",
+        "contact": "smartodr.in | Online Conciliation and Arbitration",
+        "timeline": "Per ODR framework",
+        "description": "SEBI-mandated Online Dispute Resolution platform. Provides conciliation and arbitration services for securities market disputes. Faster and more accessible than courts."
+      }
+    ]
+  },
+  "responseTimelines": {
+    "heading": "Committed Response Timelines",
+    "rows": [
+      {
+        "action": "Complaint Acknowledgement",
+        "details": "Email confirmation with complaint reference number",
+        "timeline": "3 working days"
+      },
+      {
+        "action": "Interim Response",
+        "details": "If complex investigation needed — progress update shared",
+        "timeline": "7 working days"
+      },
+      {
+        "action": "Final Resolution (Level 1)",
+        "details": "Complete resolution with explanation provided in writing",
+        "timeline": "15 working days"
+      },
+      {
+        "action": "Document Submission to AMC",
+        "details": "If AMC-level action needed — documents forwarded",
+        "timeline": "3 working days"
+      },
+      {
+        "action": "SEBI SCORES Response",
+        "details": "If escalated to SEBI SCORES — response by Innovate Securities",
+        "timeline": "Per SEBI mandate"
+      }
+    ]
+  },
+  "investorRights": {
+    "heading": "Your Rights as an Investor in the Grievance Process",
+    "items": [
+      "Right to receive a complaint acknowledgement with a unique reference number within 3 working days.",
+      "Right to a fair and impartial investigation of your complaint — no conflict of interest.",
+      "Right to receive the resolution in writing with clear explanation of findings.",
+      "Right to escalate to AMFI, SEBI SCORES, or SMART ODR if not satisfied with our resolution.",
+      "Right to approach consumer courts or civil courts for serious grievances not resolved through regulatory channels.",
+      "Right to report mis-selling or regulatory violations to SEBI at scores.sebi.gov.in.",
+      "Right to be treated with respect and professionalism throughout the grievance process.",
+      "Right to receive a refund of excess charges if any overcharging is confirmed."
+    ]
+  },
+  "contactsAtGlance": {
+    "heading": "All Important Grievance Contacts at a Glance",
+    "rows": [
+      {
+        "organisation": "Innovate Securities GRO",
+        "contact": "Pimal K. Panchal | Innovate95@rediffmail.com | 9429893549",
+        "timeline": "15 working days"
+      },
+      {
+        "organisation": "AMFI IGRC",
+        "contact": "igrc@amfiindia.com | 1800-270-7000",
+        "timeline": "30 days"
+      },
+      {
+        "organisation": "SEBI SCORES",
+        "contact": "scores.sebi.gov.in | 1800-266-7575",
+        "timeline": "Per SEBI"
+      },
+      {
+        "organisation": "SMART ODR",
+        "contact": "smartodr.in",
+        "timeline": "Per ODR"
+      },
+      {
+        "organisation": "MF Central",
+        "contact": "mfcentral.com | For CAS and folio queries",
+        "timeline": "Instant"
+      },
+      {
+        "organisation": "CAMS",
+        "contact": "camsonline.com | 1800-419-2267",
+        "timeline": "Per AMC"
+      },
+      {
+        "organisation": "KFintech",
+        "contact": "mfs.kfintech.com | 1800-222-299",
+        "timeline": "Per AMC"
+      },
+      {
+        "organisation": "Cyber Crime Helpline",
+        "contact": "cybercrime.gov.in | Helpline: 1930 | For investment fraud",
+        "timeline": "Emergency"
+      }
+    ]
+  },
+  "closingCommitment": {
+    "heading": "Our Commitment to You",
+    "body": "Innovate Securities treats every complaint as priority. We do not discriminate between large and small investors — every grievance receives the same level of attention and commitment. If you feel your complaint has not been handled fairly, please escalate without hesitation. We welcome external oversight and support SEBI’s investor protection mandate."
+  }
+}

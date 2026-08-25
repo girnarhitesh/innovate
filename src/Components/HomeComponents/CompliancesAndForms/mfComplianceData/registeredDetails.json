@@ -1,0 +1,216 @@
+{
+  "slug": "registered-details",
+  "pageType": "registered-details",
+  "title": "Registered Details",
+  "description": "Entity, AMFI ARN, SEBI/CDSL registrations & grievance officer.",
+  "breadcrumbs": [
+    { "label": "Home", "path": "/" },
+    { "label": "Compliance", "path": "/compliances/mf-compliance" },
+    { "label": "Registered Details", "path": null }
+  ],
+  "profile": {
+    "name": "Innovate Securities Private Limited",
+    "designation": "AMFI Registered Mutual Fund Distributor",
+    "subtitle": "SEBI Registered Stock Broker · CDSL Depository Participant",
+    "badge": "ARN-42505"
+  },
+  "entityInformation": {
+    "legalName": "Innovate Securities Private Limited",
+    "entityType": "Private Limited Company",
+    "registeredAddress": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006",
+    "contact": {
+      "phone": "+91 98795 06993",
+      "phoneHref": "+919879506993",
+      "email": "ispl@innovatesec.com"
+    },
+    "website": "www.innovatesec.com",
+    "websiteUrl": "https://www.innovatesec.com/"
+  },
+  "management": [
+    {
+      "role": "MANAGING DIRECTOR — CEO",
+      "name": "Amar M. Parikh"
+    },
+    {
+      "role": "EXECUTIVE DIRECTOR — COMPLIANCE OFFICER",
+      "name": "Pimal K. Panchal"
+    },
+    {
+      "role": "DIRECTOR — C.S.",
+      "name": "Kashyap R. Mehta"
+    },
+    {
+      "role": "DIRECTOR",
+      "name": "Amit P. Shah"
+    }
+  ],
+  "regulatoryRegistrations": [
+    {
+      "body": "AMFI — Mutual Fund Distributor",
+      "registrationNo": "ARN-42505",
+      "validity": "06-Apr-2024 to 05-Apr-2027"
+    },
+    {
+      "body": "SEBI — Stock Broker (NSE & BSE)",
+      "registrationNo": "INZ000224735",
+      "validity": "Ongoing"
+    },
+    {
+      "body": "CDSL — Depository Participant",
+      "registrationNo": "IN-DP-CDSL-594-2021",
+      "validity": "Ongoing"
+    },
+    {
+      "body": "NSE — Member ID",
+      "registrationNo": "07002",
+      "validity": "Ongoing"
+    },
+    {
+      "body": "BSE — Member ID",
+      "registrationNo": "6108",
+      "validity": "Ongoing"
+    }
+  ],
+  "importantNotes": [
+    "AMFI Registration (ARN-42505) was renewed vide AMFI letter dated 22-Dec-2023. Validity: 06-Apr-2024 to 05-Apr-2027.",
+    "ARN must be renewed before expiry to continue promoting / distributing mutual fund products and receiving commissions without a break.",
+    "Employees engaged in mutual fund distribution must clear the NISM Series V-A: Mutual Fund Distributors Certification Examination and obtain an Employee Unique Identification Number (EUIN) from AMFI.",
+    "EUINs must be renewed before expiry by clearing the NISM exam or attending a Continuing Professional Education (CPE) program, and must be mentioned / printed on mutual fund application forms along with the firm's ARN.",
+    "Innovate Securities complies with the AMFI Code of Conduct for Intermediaries (available at www.amfiindia.com)."
+  ],
+  "grievanceOfficer": {
+    "title": "Grievance Redressal Officer (GRO)",
+    "name": "Pimal K. Panchal",
+    "designation": "Executive Director — Compliance Officer",
+    "email": "Innovate95@rediffmail.com",
+    "phone": "9429893549",
+    "responseTime": "Within 15 working days"
+  },
+  "escalationSteps": [
+    { "step": 1, "label": "GRO", "detail": "Pimal K. Panchal", "tone": "orange" },
+    { "step": 2, "label": "AMC", "detail": "Investor Relations", "tone": "brown" },
+    { "step": 3, "label": "AMFI", "detail": "1800-270-7000", "tone": "purple" },
+    { "step": 4, "label": "SEBI", "detail": "scores.sebi.gov.in", "tone": "blue" },
+    { "step": 5, "label": "ODR", "detail": "smartodr.in", "tone": "green" }
+  ],
+  "empanelledAmcs": [
+    { "id": 1, "name": "360 ONE Mutual Fund", "registrationNo": "MF/067/11/02" },
+    { "id": 2, "name": "Abakkus Mutual Fund", "registrationNo": "MF/088/25/14" },
+    { "id": 3, "name": "Aditya Birla Sun Life Mutual Fund", "registrationNo": "MF/020/94/8" },
+    { "id": 4, "name": "AlphaGrep Mutual Fund", "registrationNo": "MF/090/26/16" },
+    { "id": 5, "name": "Angel One Mutual Fund", "registrationNo": "MF/083/24/09" },
+    { "id": 6, "name": "ASK Mutual Fund", "registrationNo": "MF/089/26/15" },
+    { "id": 7, "name": "Axis Mutual Fund", "registrationNo": "MF/061/09/02" },
+    { "id": 8, "name": "Bajaj Finserv Mutual Fund", "registrationNo": "MF/078/23/04" },
+    { "id": 9, "name": "Bandhan Mutual Fund", "registrationNo": "MF/042/00/3" },
+    { "id": 10, "name": "Bank of India Mutual Fund", "registrationNo": "MF/056/08/01" },
+    { "id": 11, "name": "Baroda BNP Paribas Mutual Fund", "registrationNo": "MF/018/94/02" },
+    { "id": 12, "name": "Canara Robeco Mutual Fund", "registrationNo": "MF/004/93/4" },
+    { "id": 13, "name": "Capitalmind Mutual Fund", "registrationNo": "MF/084/25/10" },
+    { "id": 14, "name": "Choice Mutual Fund", "registrationNo": "MF/087/25/13" },
+    { "id": 15, "name": "DSP Mutual Fund", "registrationNo": "MF/036/97/7" },
+    { "id": 16, "name": "Edelweiss Mutual Fund", "registrationNo": "MF/057/08/02" },
+    { "id": 17, "name": "Franklin Templeton Mutual Fund", "registrationNo": "MF/026/96/8" },
+    { "id": 18, "name": "Groww Mutual Fund", "registrationNo": "MF/068/11/03" },
+    { "id": 19, "name": "HDFC Mutual Fund", "registrationNo": "MF/044/00/6" },
+    { "id": 20, "name": "Helios Mutual Fund", "registrationNo": "MF/079/23/05" },
+    { "id": 21, "name": "HSBC Mutual Fund", "registrationNo": "MF/046/02/5" },
+    { "id": 22, "name": "ICICI Prudential Mutual Fund", "registrationNo": "MF/003/93/6" },
+    { "id": 23, "name": "IL&FS Mutual Fund (IDF)", "registrationNo": "MF/072/13/02" },
+    { "id": 24, "name": "Invesco Mutual Fund", "registrationNo": "MF/052/06/01" },
+    { "id": 25, "name": "ITI Mutual Fund", "registrationNo": "MF/073/18/01" },
+    { "id": 26, "name": "Jio BlackRock Mutual Fund", "registrationNo": "MF/085/25/11" },
+    { "id": 27, "name": "JM Financial Mutual Fund", "registrationNo": "MF/015/94/8" },
+    { "id": 28, "name": "Kotak Mahindra Mutual Fund", "registrationNo": "MF/038/98/1" },
+    { "id": 29, "name": "Lakshya Mutual Fund", "registrationNo": "MF/091/26/17" },
+    { "id": 30, "name": "LIC Mutual Fund", "registrationNo": "MF/012/94/5" },
+    { "id": 31, "name": "Mahindra Manulife Mutual Fund", "registrationNo": "MF/069/16/01" },
+    { "id": 32, "name": "Mirae Asset Mutual Fund", "registrationNo": "MF/055/07/03" },
+    { "id": 33, "name": "Monarch Mutual Fund", "registrationNo": "MF/092/26/18" },
+    { "id": 34, "name": "Motilal Oswal Mutual Fund", "registrationNo": "MF/066/09/04" },
+    { "id": 35, "name": "Navi Mutual Fund", "registrationNo": "MF/062/09/03" },
+    { "id": 36, "name": "Nippon India Mutual Fund", "registrationNo": "MF/022/95/1" },
+    { "id": 37, "name": "NJ Mutual Fund", "registrationNo": "MF/076/21/02" },
+    { "id": 38, "name": "Nuvama Mutual Fund", "registrationNo": "—" },
+    { "id": 39, "name": "Old Bridge Mutual Fund", "registrationNo": "MF/081/23/07" },
+    { "id": 40, "name": "PGIM India Mutual Fund", "registrationNo": "MF/065/10/02" },
+    { "id": 41, "name": "PPFAS Mutual Fund", "registrationNo": "MF/069/12/01" },
+    { "id": 42, "name": "quant Mutual Fund", "registrationNo": "MF/028/96/4" },
+    { "id": 43, "name": "Quantum Mutual Fund", "registrationNo": "MF/051/05/02" },
+    { "id": 44, "name": "Samco Mutual Fund", "registrationNo": "MF/077/21/03" },
+    { "id": 45, "name": "SBI Mutual Fund", "registrationNo": "MF/009/93/3" },
+    { "id": 46, "name": "Shriram Mutual Fund", "registrationNo": "MF/017/94/4" },
+    { "id": 47, "name": "Sundaram Mutual Fund", "registrationNo": "MF/034/97/2" },
+    { "id": 48, "name": "Tata Mutual Fund", "registrationNo": "MF/023/95/9" },
+    { "id": 49, "name": "Taurus Mutual Fund", "registrationNo": "MF/002/93" },
+    { "id": 50, "name": "Trust Mutual Fund", "registrationNo": "MF/075/19/01" },
+    { "id": 51, "name": "Unifi Mutual Fund", "registrationNo": "MF/082/24/08" },
+    { "id": 52, "name": "Union Mutual Fund", "registrationNo": "MF/066/11/01" },
+    { "id": 53, "name": "UTI Mutual Fund", "registrationNo": "MF/048/03/01" },
+    { "id": 54, "name": "The Wealth Company Mutual Fund", "registrationNo": "MF/086/25/12" },
+    { "id": 55, "name": "WhiteOak Capital Mutual Fund", "registrationNo": "MF/074/18/02" },
+    { "id": 56, "name": "Zerodha Mutual Fund", "registrationNo": "MF/080/23/06" }
+  ],
+  "amcVerificationNote": "Verify AMC registrations at amfiindia.com/registered-amc-with-contact-details and ARN at amfiindia.com/find-mf-distributor",
+  "amcVerificationLinks": [
+    {
+      "label": "amfiindia.com/registered-amc-with-contact-details",
+      "url": "https://www.amfiindia.com/registered-amc-with-contact-details"
+    },
+    {
+      "label": "amfiindia.com/find-mf-distributor",
+      "url": "https://www.amfiindia.com/find-mf-distributor"
+    }
+  ],
+  "socialPresence": {
+    "heading": "Our Social Media & Online Presence",
+    "links": [
+      {
+        "label": "Website",
+        "type": "website",
+        "url": "https://www.innovatesec.com/"
+      },
+      {
+        "label": "Facebook",
+        "type": "facebook",
+        "url": "https://www.facebook.com/profile.php?id=61577903109138"
+      },
+      {
+        "label": "Instagram",
+        "type": "instagram",
+        "url": "https://www.instagram.com/innovatesecurities/"
+      },
+      {
+        "label": "LinkedIn",
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/innovate-securities"
+      }
+    ],
+    "note": "Official social media profiles of Innovate Securities Pvt. Ltd. Verify our AMFI ARN (ARN-42505) independently on the AMFI website."
+  },
+  "independentVerification": {
+    "heading": "Verify Our Registrations Independently",
+    "links": [
+      {
+        "title": "AMFI ARN",
+        "subtitle": "Verify ARN-42505",
+        "url": "https://www.amfiindia.com/find-mf-distributor"
+      },
+      {
+        "title": "SEBI",
+        "subtitle": "Regulator Portal",
+        "url": "https://www.sebi.gov.in/"
+      },
+      {
+        "title": "SEBI SCORES",
+        "subtitle": "Investor Complaints",
+        "url": "https://scores.sebi.gov.in/"
+      },
+      {
+        "title": "SMART ODR",
+        "subtitle": "Dispute Resolution",
+        "url": "https://smartodr.in/"
+      }
+    ]
+  }
+}

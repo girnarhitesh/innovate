@@ -41,6 +41,36 @@ export const SITE_MAP_SECTIONS = [
         path: "/compliances/compliance-data",
         description: "Compliance disclosures and data",
       },
+      {
+        title: "MF Compliance",
+        path: "/compliances/mf-compliance",
+        description: "Mutual fund compliance documents",
+      },
+      {
+        title: "Registered Details",
+        path: "/compliances/mf-compliance/registered-details",
+        description: "Entity, AMFI ARN, SEBI/CDSL registrations & grievance officer",
+      },
+      {
+        title: "Regulatory Registrations",
+        path: "/compliances/mf-compliance/regulatory-registrations",
+        description: "AMFI, SEBI & CDSL registration numbers and validity",
+      },
+      {
+        title: "MF Disclaimer",
+        path: "/compliances/mf-compliance/disclaimer",
+        description: "Risk factors and important disclaimers for investors",
+      },
+      {
+        title: "Commission Disclosure",
+        path: "/compliances/mf-compliance/commission-disclosure",
+        description: "Trail commission ranges across fund categories and AMCs",
+      },
+      {
+        title: "Investor Grievance Redressal",
+        path: "/compliances/mf-compliance/investor-grievance-redressal",
+        description: "How to raise and escalate a complaint",
+      },
     ],
   },
   {

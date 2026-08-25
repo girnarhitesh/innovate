@@ -168,6 +168,8 @@
 
 .NavigationLogoContainer img {
   width: 280px;
+  max-width: min(280px, 58vw);
+  height: auto;
 }
 
 .NavLinksContainerMobile {
@@ -463,13 +465,25 @@
   flex-shrink: 0;
 }
 
-.NavbarMobileActions {
+.NavbarDesktopNav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 24px;
+  flex: 1;
+  justify-content: flex-end;
+  min-width: 0;
 }
 
-.NavbarMobileActions .ant-btn {
+.NavbarMobileActions {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.NavbarMobileActions .ant-btn,
+.NavbarHamburgerBtn {
   min-width: 44px !important;
   min-height: 44px !important;
   width: 44px;
@@ -478,11 +492,30 @@
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
+  font-size: 22px !important;
+  color: #333 !important;
+  border: none !important;
+  background: transparent !important;
+  cursor: pointer;
+}
+
+.NavbarHamburgerBtn:hover,
+.NavbarHamburgerBtn:focus-visible {
+  color: var(--brand-color, #002147) !important;
+  background: rgba(0, 33, 71, 0.06) !important;
 }
 
 @media (max-width: 1016px) {
   .NavigationContainer {
     padding: 10px 10px;
+  }
+
+  .NavbarDesktopNav {
+    display: none !important;
+  }
+
+  .NavbarMobileActions {
+    display: flex !important;
   }
 }
 

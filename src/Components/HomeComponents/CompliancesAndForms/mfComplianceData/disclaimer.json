@@ -1,0 +1,196 @@
+{
+  "slug": "disclaimer",
+  "pageType": "disclaimer",
+  "title": "Disclaimer",
+  "description": "Risk factors and important disclaimers for investors.",
+  "breadcrumbs": [
+    { "label": "Home", "path": "/" },
+    { "label": "Compliance", "path": "/compliances/mf-compliance" },
+    { "label": "Disclaimer", "path": null }
+  ],
+  "importantNotice": {
+    "heading": "Important — Please Read Before Proceeding",
+    "body": "Innovate Securities Private Limited (Innovate Securities Pvt. Ltd.) is a SEBI-registered Stock Broker and Depository Participant, and an AMFI-registered Mutual Fund Distributor (ARN-42505). We are NOT a SEBI-registered Investment Adviser (RIA). We facilitate securities and Mutual Fund transactions and distribute financial products. We do not provide personalised investment advice as defined under SEBI (Investment Advisers) Regulations, 2013. For personalised investment advice, please consult a SEBI-registered Investment Adviser."
+  },
+  "intro": {
+    "heading": "Disclaimer",
+    "subtitle": "This disclaimer governs the use of www.innovatesec.com and all services provided by Innovate Securities Private Limited",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid: 06-Apr-2024 to 05-Apr-2027"
+  },
+  "standardDisclaimer": {
+    "heading": "Standard Mutual Fund Disclaimer — Mandatory per SEBI / AMFI",
+    "body": "Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future results. The NAV of schemes may go up or down depending on market factors. There is no guarantee or assurance of returns. Investors are advised to consult their financial / tax advisors before making any investment decision."
+  },
+  "sections": [
+    {
+      "id": "nature",
+      "title": "1. Nature of Our Business",
+      "intro": "Innovate Securities Private Limited is a SEBI-registered Stock Broker (NSE & BSE), a CDSL Depository Participant, and an AMFI-registered Mutual Fund Distributor (ARN-42505) providing the following services:",
+      "bullets": [
+        "Facilitating purchase, redemption, switch, and SIP registration of Mutual Fund units on behalf of investors",
+        "Stock broking services as a corporate member of NSE and BSE",
+        "Depository participant services with CDSL",
+        "Distribution / facilitation of Government & Corporate Bonds, Fixed Deposits (FDs), and Non-Convertible Debentures (NCDs)",
+        "Providing investor education content, financial tools, and general financial information"
+      ],
+      "notDo": {
+        "heading": "What Innovate Securities does NOT do:",
+        "items": [
+          "We do NOT provide personalised investment advice",
+          "We are NOT a SEBI RIA",
+          "We do NOT guarantee returns",
+          "We do NOT provide tax, legal, or accounting advice",
+          "We do NOT facilitate Direct Plan Mutual Fund investments"
+        ]
+      }
+    },
+    {
+      "id": "risk",
+      "title": "2. Investment Risk Disclaimer",
+      "subsections": [
+        {
+          "heading": "Mutual Funds",
+          "bullets": [
+            "Mutual Fund investments are subject to market risks — NAV may rise or fall based on market conditions.",
+            "Past performance does not guarantee future returns — do not invest based on past performance alone.",
+            "There is no assurance that the investment objective of any scheme will be achieved.",
+            "Innovate Securities deals in Regular Plans only — trail commission is earned from AMCs as part of TER, which is not an additional charge to investors.",
+            "Direct Plans are available at lower expense ratios through AMC portals — Innovate Securities does not facilitate Direct Plan investments.",
+            "Please read the Scheme Information Document (SID), Statement of Additional Information (SAI), and Key Information Memorandum (KIM) carefully before investing."
+          ]
+        },
+        {
+          "heading": "Securities Market & Depository",
+          "callout": "Trading in securities is subject to market risks. Innovate Securities Pvt. Ltd. is registered with SEBI as a Stock Broker (Registration No. INZ000224735) and as a Depository Participant with CDSL (Registration No. IN-DP-CDSL-594-2021). Please read all relevant disclosures and risk documents carefully before investing or trading."
+        }
+      ]
+    },
+    {
+      "id": "website",
+      "title": "3. Website Content Disclaimer",
+      "bullets": [
+        "The content on www.innovatesec.com is for general information and educational purposes only — it does not constitute investment advice.",
+        "Information on this website is updated periodically but may not always reflect the most current market conditions or regulatory changes.",
+        "Innovate Securities does not warrant the accuracy, completeness, or timeliness of any information on this website.",
+        "Any views, opinions, or market commentary on this website are the general views of Innovate Securities and should not be construed as personalised advice.",
+        "Third-party links on this website are provided for convenience only — Innovate Securities is not responsible for third-party content."
+      ],
+      "callout": {
+        "heading": "Calculator Disclaimer",
+        "body": "All financial calculators on this website provide illustrative projections only. Results are based on assumptions provided by users and do not account for taxes, inflation, fund manager performance, or other variables. Calculator outputs do NOT constitute investment advice or a guarantee of returns."
+      }
+    },
+    {
+      "id": "commission",
+      "title": "4. Commission & Remuneration Disclosure",
+      "bullets": [
+        "Innovate Securities receives trailing commission from AMCs on Regular Plan Mutual Fund investments — this is part of the scheme’s TER and is not an additional charge to investors.",
+        "Exact commission details will be published on our Commission Disclosure page under MF Compliance.",
+        "Commission earned on your investments is visible in your Consolidated Account Statement (CAS) from CAMS, KFintech, or MF Central.",
+        "All product recommendations are based on investor suitability — never on commission rates received.",
+        "Innovate Securities does not receive any non-cash benefits, gifts, or incentives from AMCs that could create a conflict of interest."
+      ]
+    },
+    {
+      "id": "gro",
+      "title": "5. Grievance Redressal Officer (GRO)",
+      "fields": [
+        { "label": "GRO Name", "value": "Pimal K. Panchal" },
+        { "label": "Designation", "value": "Executive Director — Compliance Officer" },
+        { "label": "Email", "value": "Innovate95@rediffmail.com", "href": "mailto:Innovate95@rediffmail.com" },
+        { "label": "Phone", "value": "9429893549", "href": "tel:9429893549" },
+        {
+          "label": "Address",
+          "value": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006"
+        }
+      ]
+    },
+    {
+      "id": "escalation",
+      "title": "6. Grievance Escalation Matrix",
+      "steps": [
+        {
+          "step": 1,
+          "label": "GRO",
+          "detail": "Pimal K. Panchal",
+          "meta": "Innovate95@rediffmail.com · 9429893549",
+          "tone": "orange"
+        },
+        {
+          "step": 2,
+          "label": "AMC",
+          "detail": "Investor Relations",
+          "meta": "Contact the concerned AMC",
+          "tone": "brown"
+        },
+        {
+          "step": 3,
+          "label": "AMFI",
+          "detail": "1800-270-7000",
+          "meta": "amfiindia.com",
+          "tone": "purple"
+        },
+        {
+          "step": 4,
+          "label": "SEBI",
+          "detail": "scores.sebi.gov.in",
+          "meta": "SEBI SCORES",
+          "tone": "blue"
+        },
+        {
+          "step": 5,
+          "label": "ODR",
+          "detail": "smartodr.in",
+          "meta": "SMART ODR",
+          "tone": "green"
+        }
+      ]
+    },
+    {
+      "id": "registrations",
+      "title": "7. Regulatory Registration Details",
+      "rows": [
+        {
+          "type": "AMFI ARN — Mutual Fund Distributor",
+          "details": "ARN-42505 · Valid: 06-Apr-2024 to 05-Apr-2027"
+        },
+        {
+          "type": "SEBI — Stock Broker (NSE & BSE)",
+          "details": "INZ000224735 · NSE: 07002 · BSE: 6108"
+        },
+        {
+          "type": "CDSL — Depository Participant",
+          "details": "IN-DP-CDSL-594-2021"
+        }
+      ],
+      "note": "Verify our registrations independently on the official AMFI, SEBI, and CDSL portals linked from the Regulatory Registrations page."
+    },
+    {
+      "id": "privacy",
+      "title": "8. Data Privacy",
+      "body": "All personal data collected by Innovate Securities is handled in accordance with our Privacy Policy (available at www.innovatesec.com/#/privacy-policy) and applicable data protection laws including the Digital Personal Data Protection Act, 2023. We do not sell or share personal data with third parties except as required for service delivery or by law."
+    },
+    {
+      "id": "liability",
+      "title": "9. Limitation of Liability",
+      "bullets": [
+        "Innovate Securities shall not be liable for any investment losses arising from market fluctuations or scheme performance.",
+        "Innovate Securities shall not be liable for decisions made by investors based on general information or educational content on this website.",
+        "Our liability is limited to the specific service transaction in question, as permitted by applicable law.",
+        "This website and its content are provided \"as is\" without any warranty of any kind."
+      ]
+    },
+    {
+      "id": "ip",
+      "title": "10. Intellectual Property",
+      "body": "All content on www.innovatesec.com including text, graphics, logos, calculators, and design is the intellectual property of Innovate Securities Private Limited. Reproduction without written permission is prohibited. AMFI, SEBI, NSE, BSE, CDSL, and AMC logos used on this website are the property of their respective owners and are used for informational purposes only."
+    }
+  ],
+  "commitment": {
+    "heading": "Our Commitment",
+    "body": "Innovate Securities Private Limited is committed to ethical, transparent, and investor-first practices. If you believe any content on this website is misleading or any of our practices are non-compliant, please contact our GRO at Innovate95@rediffmail.com or report to SEBI SCORES at scores.sebi.gov.in.",
+    "email": "Innovate95@rediffmail.com",
+    "scoresUrl": "https://scores.sebi.gov.in/",
+    "scoresLabel": "scores.sebi.gov.in"
+  }
+}

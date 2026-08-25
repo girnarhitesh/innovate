@@ -9,7 +9,7 @@ import {
 import { announceStatus } from "../../utils/announceStatus";
 import "./NavbarSearch.css";
 
-const NavbarSearch = ({ isMobile = false, onNavigate }) => {
+const NavbarSearch = ({ isMobile = false, instanceId = "default", onNavigate }) => {
   const navigate = useNavigate();
   const rootRef = useRef(null);
   const inputRef = useRef(null);
@@ -250,12 +250,17 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
   const showPanel = isOpen;
   const hasQuery = Boolean(query.trim());
   const panelItems = hasQuery ? results.groups : null;
+  const panelId = `site-search-panel-${instanceId}`;
+  const inputId = `site-search-input-${instanceId}`;
+  const statusId = `site-search-status-${instanceId}`;
+  const resultsId = `site-search-results-${instanceId}`;
+  const suggestionsLabelId = `search-suggestions-label-${instanceId}`;
 
   const panel = showPanel
     ? createPortal(
         <div
           ref={panelRef}
-          id="site-search-panel"
+          id={panelId}
           className="NavbarSearch__panel"
           style={panelStyle}
           role="search"
@@ -265,7 +270,7 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
             <SearchOutlined className="NavbarSearch__inputIcon" aria-hidden="true" />
             <input
               ref={inputRef}
-              id="site-search-input"
+              id={inputId}
               type="search"
               className="NavbarSearch__input"
               value={query}
@@ -277,8 +282,8 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
               placeholder="Search pages, services, forms..."
               title="Search"
               aria-label="Search"
-              aria-controls="site-search-results"
-              aria-describedby="site-search-status"
+              aria-controls={resultsId}
+              aria-describedby={statusId}
               aria-autocomplete="list"
               aria-expanded={isOpen}
               autoComplete="off"
@@ -302,7 +307,7 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
           </div>
 
           <div
-            id="site-search-status"
+            id={statusId}
             className="NavbarSearch__status"
             role="status"
             aria-live="polite"
@@ -311,16 +316,16 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
             {statusText}
           </div>
 
-          <div id="site-search-results" className="NavbarSearch__results">
+          <div id={resultsId} className="NavbarSearch__results">
             {!hasQuery ? (
               <>
-                <p className="NavbarSearch__sectionLabel" id="search-suggestions-label">
+                <p className="NavbarSearch__sectionLabel" id={suggestionsLabelId}>
                   Suggestions
                 </p>
                 <ul
                   className="NavbarSearch__list"
                   role="listbox"
-                  aria-labelledby="search-suggestions-label"
+                  aria-labelledby={suggestionsLabelId}
                 >
                   {suggestions.map((item, index) => (
                     <li key={item.id} role="presentation">
@@ -372,7 +377,7 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
               panelItems.map((group) => (
                 <div key={group.id} className="NavbarSearch__group">
                   <div className="NavbarSearch__groupHead">
-                    <p className="NavbarSearch__sectionLabel" id={`search-group-${group.id}`}>
+                    <p className="NavbarSearch__sectionLabel" id={`search-group-${instanceId}-${group.id}`}>
                       {group.label}
                     </p>
                     <button
@@ -386,7 +391,7 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
                   <ul
                     className="NavbarSearch__list"
                     role="listbox"
-                    aria-labelledby={`search-group-${group.id}`}
+                    aria-labelledby={`search-group-${instanceId}-${group.id}`}
                   >
                     {group.items.map((item) => {
                       const flatIndex = flatItems.findIndex(
@@ -438,7 +443,7 @@ const NavbarSearch = ({ isMobile = false, onNavigate }) => {
         }}
         aria-label={isOpen ? "Close Search" : "Search"}
         aria-expanded={isOpen}
-        aria-controls={isOpen ? "site-search-panel" : undefined}
+        aria-controls={isOpen ? panelId : undefined}
         title="Search"
       >
         {isOpen ? (

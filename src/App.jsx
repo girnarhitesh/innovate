@@ -23,6 +23,8 @@ import FormsPage from './Components/HomeComponents/CompliancesAndForms/FormsPage
 import PoliciesPage from './Components/HomeComponents/CompliancesAndForms/PoliciesPage'
 import InvestorChartersPage from './Components/HomeComponents/CompliancesAndForms/InvestorChartersPage'
 import ComplianceDataPage from './Components/HomeComponents/CompliancesAndForms/ComplianceDataPage'
+import MfCompliancePage from './Components/HomeComponents/CompliancesAndForms/MfCompliancePage'
+import MfComplianceDetailPage from './Components/HomeComponents/CompliancesAndForms/MfComplianceDetailPage'
 import { AccessibilityProvider } from './context/AccessibilityContext'
 import AccessibilityWidget from './Components/Accessibility/AccessibilityWidget'
 import Sitemap from './Components/Sitemap/Sitemap'
@@ -87,6 +89,8 @@ function App() {
                 <Route path='/compliances/policies' element={<PoliciesPage />} />
                 <Route path='/compliances/investor-charters' element={<InvestorChartersPage />} />
                 <Route path='/compliances/compliance-data' element={<ComplianceDataPage />} />
+                <Route path='/compliances/mf-compliance' element={<MfCompliancePage />} />
+                <Route path='/compliances/mf-compliance/:slug' element={<MfComplianceDetailPage />} />
                 <Route path='/disclaimer' element={<Disclaimer />} />
                 <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                 <Route path='/advisiory-for-investors' element={<AdvisioryForInvestors />} />

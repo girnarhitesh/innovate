@@ -242,10 +242,10 @@ export const compliancesAndFormsData = {
     {
       id: 2,
       title:
-        "Investor Charter for Depositories and Depository Participants - June 2026",
+        "Investor Charter for Depositories and Depository Participants - July 2026",
       size: "543 KB",
       viewUrl:
-        "Image/InvestorCharter/INVESTOR_CHARTER_JUNE-2026.pdf",
+        "/Image/InvestorCharter/INVESTOR_CHARTER_JULY-2026.pdf",
     },
   ],
   compliance: [

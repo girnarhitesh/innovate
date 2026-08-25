@@ -4,7 +4,7 @@ import "./CompliancesAndForms.css";
 import { compliancesAndFormsData } from "./CompliancesAndFormsData";
 import { AnimationObserver, AnimationConfigs } from "../../../utils/animationObserver";
 import { Link } from "react-router-dom";
-import { FileTextOutlined, SafetyOutlined, BookOutlined, BarChartOutlined } from "@ant-design/icons";
+import { FileTextOutlined, SafetyOutlined, BookOutlined, BarChartOutlined, FundOutlined } from "@ant-design/icons";
 import DocumentCard from "./DocumentCard";
 
 const landingCards = [
@@ -35,6 +35,13 @@ const landingCards = [
         icon: <BarChartOutlined />,
         description: "",
         route: "/compliances/compliance-data"
+    },
+    {
+        key: "mfCompliance",
+        label: "MF Compliance",
+        icon: <FundOutlined />,
+        description: "",
+        route: "/compliances/mf-compliance"
     }
 ]
 

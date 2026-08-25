@@ -1,0 +1,144 @@
+{
+  "slug": "regulatory-registrations",
+  "pageType": "regulatory-registrations",
+  "title": "Regulatory Registrations",
+  "description": "AMFI, SEBI & CDSL registration numbers and validity.",
+  "breadcrumbs": [
+    { "label": "Home", "path": "/" },
+    { "label": "Compliance", "path": "/compliances/mf-compliance" },
+    { "label": "Regulatory Registrations", "path": null }
+  ],
+  "intro": {
+    "heading": "Registrations & Licences",
+    "subtitle": "Complete regulatory registration details of Innovate Securities Private Limited — verified and updated as of August 2026",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | www.innovatesec.com",
+    "notice": "The registrations below are published for investor transparency. Please verify each registration independently on the official regulator portals linked on this page before relying on any disclosure."
+  },
+  "entityCard": {
+    "heading": "Innovate Securities Private Limited — Legal Entity Information",
+    "fields": [
+      { "label": "Legal Name", "value": "Innovate Securities Private Limited" },
+      { "label": "Brand Name", "value": "Innovate Securities" },
+      { "label": "Entity Type", "value": "Private Limited Company" },
+      { "label": "AMFI ARN", "value": "ARN-42505" },
+      { "label": "Phone", "value": "+91 98795 06993", "href": "tel:+919879506993" },
+      { "label": "Email", "value": "ispl@innovatesec.com", "href": "mailto:ispl@innovatesec.com" },
+      { "label": "Website", "value": "www.innovatesec.com", "href": "https://www.innovatesec.com/" }
+    ],
+    "registeredAddress": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006"
+  },
+  "registrations": [
+    {
+      "type": "AMFI ARN — Mutual Fund Distributor",
+      "number": "ARN-42505",
+      "details": "Valid: 06-Apr-2024 to 05-Apr-2027 (renewed vide AMFI letter dated 22-Dec-2023)",
+      "verifyLabel": "amfiindia.com/find-mf-distributor",
+      "verifyUrl": "https://www.amfiindia.com/find-mf-distributor",
+      "status": "Active"
+    },
+    {
+      "type": "SEBI — Stock Broker (NSE & BSE)",
+      "number": "INZ000224735",
+      "details": "NSE Member ID: 07002 · BSE Member ID: 6108",
+      "verifyLabel": "sebi.gov.in",
+      "verifyUrl": "https://www.sebi.gov.in/",
+      "status": "Active"
+    },
+    {
+      "type": "CDSL — Depository Participant",
+      "number": "IN-DP-CDSL-594-2021",
+      "details": "Depository Participant with Central Depository Services (India) Ltd.",
+      "verifyLabel": "cdslindia.com",
+      "verifyUrl": "https://www.cdslindia.com/",
+      "status": "Active"
+    }
+  ],
+  "teamCertifications": {
+    "heading": "Team — Key Managerial Personnel",
+    "description": "Persons associated with Innovate Securities who oversee distribution and compliance. Employees engaged in mutual fund distribution must hold a valid NISM Series V-A certification and an AMFI EUIN, which is printed on mutual fund application forms alongside ARN-42505.",
+    "members": [
+      {
+        "name": "Amar M. Parikh",
+        "designation": "Managing Director — CEO",
+        "euin": "—",
+        "nism": "—",
+        "validUntil": "—",
+        "status": "Active"
+      },
+      {
+        "name": "Pimal K. Panchal",
+        "designation": "Executive Director — Compliance Officer",
+        "euin": "—",
+        "nism": "—",
+        "validUntil": "—",
+        "status": "Active"
+      },
+      {
+        "name": "Kashyap R. Mehta",
+        "designation": "Director — C.S.",
+        "euin": "—",
+        "nism": "—",
+        "validUntil": "—",
+        "status": "Active"
+      },
+      {
+        "name": "Amit P. Shah",
+        "designation": "Director",
+        "euin": "—",
+        "nism": "—",
+        "validUntil": "—",
+        "status": "Active"
+      }
+    ],
+    "note": "Verify EUIN details of any Mutual Fund Distributor employee at amfiindia.com/find-mf-distributor. Report misuse of EUIN to igrc@amfiindia.com."
+  },
+  "verificationHub": {
+    "heading": "Verify All Registrations Independently",
+    "subtitle": "We encourage investors to independently verify our registrations on official portals.",
+    "links": [
+      {
+        "title": "AMFI — ARN & EUIN Verify",
+        "label": "amfiindia.com/find-mf-distributor",
+        "url": "https://www.amfiindia.com/find-mf-distributor",
+        "description": "Verify ARN-42505, EUIN, and registration status of any MFD."
+      },
+      {
+        "title": "MCA — Company Verify",
+        "label": "mca.gov.in",
+        "url": "https://www.mca.gov.in/",
+        "description": "Verify company / CIN and director status on the MCA21 portal."
+      },
+      {
+        "title": "SEBI — Registered Entities",
+        "label": "sebi.gov.in",
+        "url": "https://www.sebi.gov.in/",
+        "description": "Verify SEBI-registered stock brokers and intermediaries."
+      },
+      {
+        "title": "NISM — Certification Verify",
+        "label": "nism.ac.in",
+        "url": "https://www.nism.ac.in/",
+        "description": "Verify NISM Series V-A and other certification details."
+      },
+      {
+        "title": "CDSL — Depository",
+        "label": "cdslindia.com",
+        "url": "https://www.cdslindia.com/",
+        "description": "Verify depository participant registration and related services."
+      },
+      {
+        "title": "SEBI SCORES",
+        "label": "scores.sebi.gov.in",
+        "url": "https://scores.sebi.gov.in/",
+        "description": "Lodge and track investor complaints with SEBI."
+      }
+    ]
+  },
+  "transparency": {
+    "heading": "Our Transparency Commitment",
+    "body": "Innovate Securities Private Limited is committed to full transparency in regulatory disclosures. If you find any discrepancy in the information published on this page, please write to us at",
+    "email": "ispl@innovatesec.com",
+    "phone": "+91 98795 06993",
+    "phoneHref": "+919879506993"
+  }
+}

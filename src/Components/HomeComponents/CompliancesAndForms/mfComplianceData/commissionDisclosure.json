@@ -1,0 +1,631 @@
+{
+  "slug": "commission-disclosure",
+  "pageType": "commission-disclosure",
+  "title": "Commission Disclosure",
+  "description": "Trail commission ranges across fund categories and AMCs.",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Compliance",
+      "path": "/compliances/mf-compliance"
+    },
+    {
+      "label": "Commission Disclosure",
+      "path": null
+    }
+  ],
+  "intro": {
+    "heading": "Commission Disclosure",
+    "subtitle": "Per AMFI Master Circular Chapter 4(c)(f) | Mandatory Disclosure for AMFI Registered Mutual Fund Distributors",
+    "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid: 06-Apr-2024 to 05-Apr-2027"
+  },
+  "transparencyNote": "At Innovate Securities, we believe every investor has the right to know how we are compensated. This page discloses the approximate trail commission ranges we receive from Asset Management Companies (AMCs) for distributing Regular Plan Mutual Fund schemes — as mandated by AMFI.",
+  "commissionModel": {
+    "heading": "Our Commission Model",
+    "body": "Trail Commission Only — We receive trailing commission from AMCs. No direct fees charged to investors."
+  },
+  "categoryOverview": {
+    "heading": "Commission Rate Overview — By Fund Category",
+    "note": "Important Note: The rates below are approximate ranges based on typical industry trail commissions. Actual rates vary by AMC, scheme, and AUM slab. Exact AMC-wise rates are available on demand — contact us at ispl@innovatesec.com or +91 98795 06993.",
+    "rows": [
+      {
+        "category": "Equity Funds",
+        "subCategories": "Large Cap, Mid Cap, Small Cap, Flexi Cap, Sectoral / Thematic, ELSS",
+        "risk": "High Risk",
+        "horizon": "5+ Years",
+        "rate": "0.30 – 1.50%",
+        "type": "Trail Only"
+      },
+      {
+        "category": "Hybrid Funds",
+        "subCategories": "Aggressive Hybrid, Conservative Hybrid, Balanced Advantage, Multi Asset",
+        "risk": "Moderate-High Risk",
+        "horizon": "3–5 Years",
+        "rate": "0.30 – 1.25%",
+        "type": "Trail Only"
+      },
+      {
+        "category": "Debt Funds",
+        "subCategories": "Corporate Bond, Banking & PSU, Gilt, Credit Risk, Dynamic Bond",
+        "risk": "Low-Moderate Risk",
+        "horizon": "1–3 Years",
+        "rate": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "category": "Liquid / Overnight",
+        "subCategories": "Liquid, Overnight, Ultra Short Duration",
+        "risk": "Low Risk",
+        "horizon": "Less than 1 Year",
+        "rate": "0.05 – 1.25%",
+        "type": "Trail Only"
+      },
+      {
+        "category": "Passive / Index Funds",
+        "subCategories": "Index Funds, ETFs",
+        "risk": "Market Risk",
+        "horizon": "3+ Years",
+        "rate": "0.05 – 0.60%",
+        "type": "Trail Only"
+      },
+      {
+        "category": "Solution Oriented Funds",
+        "subCategories": "Retirement, Children’s Funds",
+        "risk": "Moderate-High Risk",
+        "horizon": "5+ Years (Lock-in applies)",
+        "rate": "0.50 – 1.25%",
+        "type": "Trail Only"
+      }
+    ]
+  },
+  "investorMeaning": {
+    "heading": "What This Means for You as an Investor",
+    "body": "Commission rates shown above are part of the scheme’s Total Expense Ratio (TER) — they are deducted from the fund’s NAV and are NOT an additional charge billed to you separately. You would pay the same TER even if you invested through a different Regular Plan distributor. For exact TER details of any scheme, visit amfiindia.com."
+  },
+  "amcOverview": {
+    "heading": "Commission Rate Overview — AMC-Wise",
+    "note": "Important Note: The table below lists AMFI-registered Asset Management Companies (AMCs) with indicative trail commission ranges. Actual rates are set by each AMC and vary by scheme, option, and AUM slab. Exact scheme-wise rates are available on demand — contact us at ispl@innovatesec.com or +91 98795 06993.",
+    "rows": [
+      {
+        "id": 1,
+        "name": "360 ONE Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 2,
+        "name": "Abakkus Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 3,
+        "name": "Aditya Birla Sun Life Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 4,
+        "name": "AlphaGrep Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 5,
+        "name": "Angel One Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 6,
+        "name": "ASK Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 7,
+        "name": "Axis Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 8,
+        "name": "Bajaj Finserv Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 9,
+        "name": "Bandhan Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 10,
+        "name": "Bank of India Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 11,
+        "name": "Baroda BNP Paribas Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 12,
+        "name": "Canara Robeco Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 13,
+        "name": "Capitalmind Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 14,
+        "name": "Choice Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 15,
+        "name": "DSP Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 16,
+        "name": "Edelweiss Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 17,
+        "name": "Franklin Templeton Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 18,
+        "name": "Groww Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 19,
+        "name": "HDFC Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 20,
+        "name": "Helios Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 21,
+        "name": "HSBC Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 22,
+        "name": "ICICI Prudential Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 23,
+        "name": "IL&FS Mutual Fund (IDF)",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 24,
+        "name": "Invesco Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 25,
+        "name": "ITI Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 26,
+        "name": "Jio BlackRock Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 27,
+        "name": "JM Financial Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 28,
+        "name": "Kotak Mahindra Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 29,
+        "name": "Lakshya Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 30,
+        "name": "LIC Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 31,
+        "name": "Mahindra Manulife Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 32,
+        "name": "Mirae Asset Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 33,
+        "name": "Monarch Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 34,
+        "name": "Motilal Oswal Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 35,
+        "name": "Navi Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 36,
+        "name": "Nippon India Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 37,
+        "name": "NJ Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 38,
+        "name": "Nuvama Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 39,
+        "name": "Old Bridge Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 40,
+        "name": "PGIM India Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 41,
+        "name": "PPFAS Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 42,
+        "name": "quant Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 43,
+        "name": "Quantum Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 44,
+        "name": "Samco Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 45,
+        "name": "SBI Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 46,
+        "name": "Shriram Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 47,
+        "name": "Sundaram Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 48,
+        "name": "Tata Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 49,
+        "name": "Taurus Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 50,
+        "name": "Trust Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 51,
+        "name": "Unifi Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 52,
+        "name": "Union Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 53,
+        "name": "UTI Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 54,
+        "name": "The Wealth Company Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 55,
+        "name": "WhiteOak Capital Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      },
+      {
+        "id": 56,
+        "name": "Zerodha Mutual Fund",
+        "equity": "0.30 – 1.50%",
+        "hybrid": "0.30 – 1.25%",
+        "debt": "0.05 – 0.75%",
+        "type": "Trail Only"
+      }
+    ]
+  },
+  "policy": {
+    "heading": "Our Commission Policy",
+    "cards": [
+      {
+        "title": "Recommendations Based on Suitability",
+        "body": "All fund recommendations are based strictly on your risk profile, financial goals, and investment horizon — never on commission rates received from AMCs."
+      },
+      {
+        "title": "No Hidden Charges",
+        "body": "There are no hidden charges, transaction fees, or advisory fees charged to you beyond what is disclosed on this page. What you see is what you get."
+      },
+      {
+        "title": "No Non-Cash Benefits",
+        "body": "We do not receive any non-cash benefits, gifts, sponsored trips, or incentives from any AMC that could create a conflict of interest in our recommendations."
+      },
+      {
+        "title": "CAS Transparency",
+        "body": "The exact commission earned by Innovate Securities on your investments is visible in your Consolidated Account Statement (CAS) from CAMS, KFintech, or MF Central."
+      },
+      {
+        "title": "Direct Plan Option",
+        "body": "Direct Plans are available at lower expense ratios through AMC portals. Innovate Securities does not facilitate Direct Plan investments; you may invest in Direct Plans independently if you prefer."
+      },
+      {
+        "title": "Quarterly Updates",
+        "body": "This commission disclosure is reviewed and updated periodically to reflect current trail commission practices and regulatory requirements."
+      }
+    ]
+  },
+  "prohibited": {
+    "heading": "Practices We Strictly Prohibit",
+    "items": [
+      "Recommending schemes based on higher commission rates instead of investor suitability",
+      "Accepting upfront commissions or any form of commission that is not trail-based",
+      "Receiving non-cash benefits, gifts, or incentives from any AMC",
+      "Splitting investor applications to earn higher transaction charges",
+      "Concealing commission information from investors when asked"
+    ]
+  },
+  "verifyWhere": {
+    "heading": "Where to Verify Commission Information",
+    "rows": [
+      {
+        "resource": "Your CAS Statement",
+        "verify": "Exact commission earned by Innovate Securities on your investments",
+        "linkLabel": "mfcentral.com | camsonline.com",
+        "linkUrl": "https://www.mfcentral.com/"
+      },
+      {
+        "resource": "AMFI Website",
+        "verify": "TER and commission rates disclosed by each AMC",
+        "linkLabel": "amfiindia.com",
+        "linkUrl": "https://www.amfiindia.com/"
+      },
+      {
+        "resource": "Respective AMC Website",
+        "verify": "Scheme-wise TER and expense ratio",
+        "linkLabel": "Individual AMC websites",
+        "linkUrl": null
+      },
+      {
+        "resource": "SEBI SCORES",
+        "verify": "File complaint if commission not disclosed properly",
+        "linkLabel": "scores.sebi.gov.in",
+        "linkUrl": "https://scores.sebi.gov.in/"
+      }
+    ]
+  },
+  "onDemand": {
+    "heading": "Note: Full Commission Details Available on Demand",
+    "paragraphs": [
+      "This page provides a category-wise overview of approximate commission ranges for ease of understanding. The exact and complete AMC-wise commission rates, scheme-specific rates, and detailed fee structure are available on demand.",
+      "As an investor, you have the right to know the exact commission earned by Innovate Securities on any specific scheme before or after investing.",
+      "We will provide complete AMC-wise, scheme-wise commission details within 24 hours of your request — no questions asked."
+    ],
+    "highlight": "you have the right to know the exact commission earned by Innovate Securities on any specific scheme before or after investing.",
+    "contact": {
+      "email": "ispl@innovatesec.com",
+      "phone": "+91 98795 06993",
+      "phoneHref": "+919879506993",
+      "website": "www.innovatesec.com",
+      "websiteUrl": "https://www.innovatesec.com/"
+    }
+  },
+  "regulatoryReference": "Regulatory Reference: This disclosure is prepared as per AMFI Master Circular Chapter 4(c)(f) and SEBI guidelines on commission disclosure. AMFI Master Circular: amfiindia.com",
+  "regulatoryLink": {
+    "label": "amfiindia.com",
+    "url": "https://www.amfiindia.com/"
+  }
+}

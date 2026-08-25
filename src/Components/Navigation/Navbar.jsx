@@ -11,7 +11,11 @@ const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [hasScrolled, setHasScrolled] = useState(false);
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(() =>
+        typeof window !== "undefined"
+            ? window.matchMedia("(max-width: 1016px)").matches
+            : false,
+    );
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [mobileAccordionOpen, setMobileAccordionOpen] = useState(null);
@@ -51,24 +55,8 @@ const Navbar = () => {
         }, 300); // Wait for drawer close animation
     }, []);
 
-    // Debounced resize handler to prevent excessive calls
-    const handleResize = useCallback(() => {
-        if (resizeTimeoutRef.current) {
-            clearTimeout(resizeTimeoutRef.current);
-        }
-        
-        resizeTimeoutRef.current = setTimeout(() => {
-            const wasMobile = isMobile;
-            const nowMobile = window.innerWidth <= 1016;
-            
-            setIsMobile(nowMobile);
-            
-            // Close drawer if transitioning from mobile to desktop
-            if (wasMobile && !nowMobile && mobileDrawerOpen) {
-                closeMobileDrawer();
-            }
-        }, 150);
-    }, [isMobile, mobileDrawerOpen, closeMobileDrawer]);
+    // Debounced resize handler kept only for layout side-effects if needed later.
+    // Mobile/desktop switching uses matchMedia (fires reliably with DevTools device mode).
 
     // Optimized scroll handler using requestAnimationFrame
     const handleScroll = useCallback(() => {
@@ -100,21 +88,49 @@ const Navbar = () => {
         }
     }, [hasScrolled, isVisible]);
 
-    // Single useEffect for all event listeners
+    // Sync mobile breakpoint with matchMedia (works with Chrome device toolbar)
     useEffect(() => {
-        // Initial check
-        setIsMobile(window.innerWidth <= 1016);
-        lastScrollYRef.current = window.scrollY;
+        const mediaQuery = window.matchMedia("(max-width: 1016px)");
 
-        // Add listeners with passive flag for better performance
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        window.addEventListener('resize', handleResize, { passive: true });
+        const syncMobile = (event) => {
+            const nowMobile =
+                typeof event?.matches === "boolean"
+                    ? event.matches
+                    : mediaQuery.matches;
 
-        // Cleanup
+            setIsMobile(nowMobile);
+
+            if (!nowMobile) {
+                setMobileDrawerOpen(false);
+                setMobileAccordionOpen(null);
+            }
+        };
+
+        syncMobile();
+
+        if (typeof mediaQuery.addEventListener === "function") {
+            mediaQuery.addEventListener("change", syncMobile);
+        } else {
+            mediaQuery.addListener(syncMobile);
+        }
+
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleResize);
-            
+            if (typeof mediaQuery.removeEventListener === "function") {
+                mediaQuery.removeEventListener("change", syncMobile);
+            } else {
+                mediaQuery.removeListener(syncMobile);
+            }
+        };
+    }, []);
+
+    // Scroll listener
+    useEffect(() => {
+        lastScrollYRef.current = window.scrollY;
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+
             if (dropdownTimeoutRef.current) {
                 clearTimeout(dropdownTimeoutRef.current);
             }
@@ -125,7 +141,7 @@ const Navbar = () => {
                 ticking.current = false;
             }
         };
-    }, [handleScroll, handleResize]);
+    }, [handleScroll]);
 
     // Lock body scroll when drawer is open on mobile
     useEffect(() => {
@@ -422,8 +438,7 @@ const Navbar = () => {
                                 </Link>
                             </div>
 
-                            {!isMobile && (
-                                <>
+                            <div className="NavbarDesktopNav">
                                     <div className="NavLinksContainer">
                                         {NavData.map((item) => (
                                             <div key={item.id} className="nav-item">
@@ -465,7 +480,7 @@ const Navbar = () => {
                                         ))}
                                     </div>
                                     <div className="NavbarDesktopActions">
-                                        <NavbarSearch isMobile={false} />
+                                        <NavbarSearch isMobile={false} instanceId="desktop" />
                                         <div className="BtnContainer" style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                                             <button type="button" onClick={openContactModal}>
                                                 Contact Us
@@ -555,32 +570,24 @@ const Navbar = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </>
-                            )}
+                            </div>
 
-                            {isMobile && (
-                                <div className="NavbarMobileActions">
+                            <div className="NavbarMobileActions">
                                     <NavbarSearch
                                         isMobile={true}
+                                        instanceId="mobile"
                                         onNavigate={closeMobileDrawer}
                                     />
                                     <Button
                                         type="text"
+                                        className="NavbarHamburgerBtn"
                                         icon={<MenuOutlined />}
                                         onClick={() => setMobileDrawerOpen(true)}
                                         aria-label="Open navigation menu"
                                         aria-expanded={mobileDrawerOpen}
                                         aria-controls="mobile-navigation-drawer"
-                                        style={{
-                                            fontSize: '30px',
-                                            color: '#333',
-                                            border: 'none',
-                                            background: 'transparent',
-                                            padding: '8px'
-                                        }}
                                     />
-                                </div>
-                            )}
+                            </div>
                         </div>
                     </div>
                 </div>
