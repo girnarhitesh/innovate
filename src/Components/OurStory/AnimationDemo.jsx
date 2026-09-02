@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { AnimationObserver, AnimationConfigs } from "../../utils/animationObserver";
 
 const AnimationDemo = () => {

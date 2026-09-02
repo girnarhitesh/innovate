@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./InvestorComplaints.css";
 import { FaFilePdf } from "react-icons/fa";
 
@@ -49,6 +49,11 @@ const InvestorComplaints = () => {
       id: 14,
       month: "July 2026",
       pdfLink: "/InvestorComplaints/July-2026.pdf",
+    },
+    {
+      id: 15,
+      month: "August 2026",
+      pdfLink: "/InvestorComplaints/August-2026.pdf",
     },
   ];
 

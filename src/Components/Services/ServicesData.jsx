@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Row, Col } from 'antd';
 import EquityMarketIcon from '../../assets/servicesIcons/equity-market.png';
 const ServicesData = [

@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/((?!assets/|Image/|Images/|InvestorComplaints/|favicon\\.ico|robots\\.txt|sitemap\\.xml|site\\.webmanifest|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

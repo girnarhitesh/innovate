@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./HeroHome.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 

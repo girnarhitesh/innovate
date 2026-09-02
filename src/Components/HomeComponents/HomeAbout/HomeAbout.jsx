@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./HomeAbout.css";
 import { Row, Col } from "antd";
 import HomeAboutImage from "../../../assets/FinancialGrowth.jpg";

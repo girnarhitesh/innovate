@@ -1,4 +1,4 @@
-import React from "react";
+
 import { TbDownload } from "react-icons/tb";
 import "./ClientRegDoc.css";
 

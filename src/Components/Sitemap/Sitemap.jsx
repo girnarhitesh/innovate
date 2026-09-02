@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { SITE_MAP_SECTIONS } from "../../utils/siteMapData";
 import "./Sitemap.css";

@@ -1,42 +1,25 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "./Modal.css";
 import AdvisioryForInvestors from "../AdvisioryForInvestors/AdvisioryForInvestors";
 
 const Modal = () => {
   const location = useLocation();
-  const [isOpen, setIsOpen] = useState(true); // modal shows first
-  const [showSecondModal, setShowSecondModal] = useState(false);
-  const [showAdvisory, setShowAdvisory] = useState(false); // advisory shows second
-  const [showImage, setShowImage] = useState(false); // image shows third
+  const [isOpen, setIsOpen] = useState(true);
+  const [showAdvisory, setShowAdvisory] = useState(false);
   const [showScrollArrow, setShowScrollArrow] = useState(false);
   const modalBodyRef = useRef(null);
 
   const handleModalClose = () => {
     setIsOpen(false);
-      
-    // Only show advisory modal if not on the advisory page
+
     if (location.pathname !== '/advisiory-for-investors') {
       setShowAdvisory(true);
-    } else {
-      // On advisory page, skip advisory modal and go directly to image
-      setShowSecondModal(true);
     }
   };
 
-  const handleSecondModalClose = () => {
-  setShowSecondModal(false);
-
-};
-
-
   const handleAdvisoryClose = () => {
     setShowAdvisory(false);
-    setShowSecondModal(true);
-  };
-
-  const handleImageClose = () => {
-    setShowImage(false);
   };
 
 

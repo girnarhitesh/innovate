@@ -1,4 +1,3 @@
-import React from "react";
 
 const DocumentCard = ({ document, index }) => (
     <div className="DocumentCard" style={{ animationDelay: `${index * 0.1}s` }}>

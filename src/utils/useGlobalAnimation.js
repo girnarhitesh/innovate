@@ -6,8 +6,12 @@ const shouldReduceMotion = () =>
     document.body?.dataset.a11yAdhdMode === 'true';
 
 // React hook to ensure global animations work
-export function useGlobalAnimation() {
+export function useGlobalAnimation(isPrerender = false) {
     useEffect(() => {
+        if (isPrerender || typeof document === 'undefined') {
+            return undefined;
+        }
+
         // Initialize global animation observer
         globalAnimationObserver.init();
         
@@ -28,7 +32,7 @@ export function useGlobalAnimation() {
         return () => {
             // Cleanup if needed
         };
-    }, []);
+    }, [isPrerender]);
 }
 
 // Alternative hook for manual animation control

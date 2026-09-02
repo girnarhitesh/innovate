@@ -1,4 +1,3 @@
-import React from "react";
 
 const isHttpUrl = (value) => /^https?:\/\//i.test(String(value || "").trim());
 const isMailto = (value) => /^mailto:/i.test(String(value || "").trim());

@@ -1,11 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Tabs } from "antd";
+import { useEffect, useRef } from "react";
 import "./CompliancesAndForms.css";
-import { compliancesAndFormsData } from "./CompliancesAndFormsData";
 import { AnimationObserver, AnimationConfigs } from "../../../utils/animationObserver";
 import { Link } from "react-router-dom";
-import { FileTextOutlined, SafetyOutlined, BookOutlined, BarChartOutlined, FundOutlined } from "@ant-design/icons";
-import DocumentCard from "./DocumentCard";
+import { FileTextOutlined, SafetyOutlined, BookOutlined, BarChartOutlined } from "@ant-design/icons";
 
 const landingCards = [
     {
@@ -36,25 +33,18 @@ const landingCards = [
         description: "",
         route: "/compliances/compliance-data"
     },
-    {
-        key: "mfCompliance",
-        label: "MF Compliance",
-        icon: <FundOutlined />,
-        description: "",
-        route: "/compliances/mf-compliance"
-    }
+    // {
+    //     key: "mfCompliance",
+    //     label: "MF Compliance",
+    //     icon: <FundOutlined />,
+    //     description: "",
+    //     route: "/compliances/mf-compliance"
+    // }
 ]
 
 const CompliancesAndForms = () => {
-    const [activeTab, setActiveTab] = useState("forms");
-    
-    // Refs for animation
     const headerRef = useRef(null);
     const tabsRef = useRef(null);
-
-    const getTabData = (tabKey) => {
-        return compliancesAndFormsData[tabKey] || [];
-    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -68,12 +58,10 @@ const CompliancesAndForms = () => {
             animationDelay: 200
         });
 
-        // Animate header section
         if (headerRef.current) {
             observer.observe(headerRef.current, AnimationConfigs.BLUR_3D);
         }
 
-        // Animate tabs container
         if (tabsRef.current) {
             observer.observe(tabsRef.current, AnimationConfigs.SLIDE_3D);
         }
@@ -81,54 +69,7 @@ const CompliancesAndForms = () => {
         return () => {
             observer.destroy();
         };
-    }, []); // Only run once on mount
-
-    const tabItems = [
-        {
-            key: "forms",
-            label: "Forms",
-            children: (
-                <div className="DocumentsGrid">
-                    {getTabData("forms").map((document, index) => (
-                        <DocumentCard key={document.id} document={document} index={index} />
-                    ))}
-                </div>
-            )
-        },
-        {
-            key: "policies",
-            label: "Policies",
-            children: (
-                <div className="DocumentsGrid">
-                    {getTabData("policies").map((document, index) => (
-                        <DocumentCard key={document.id} document={document} index={index} />
-                    ))}
-                </div>
-            )
-        },
-        {
-            key: "investorCharters",
-            label: "Investor Charters",
-            children: (
-                <div className="DocumentsGrid">
-                    {getTabData("investorCharters").map((document, index) => (
-                        <DocumentCard key={document.id} document={document} index={index} />
-                    ))}
-                </div>
-            )
-        },
-        {
-            key: "compliance",
-            label: "Compliance Data",
-            children: (
-                <div className="DocumentsGrid">
-                    {getTabData("compliance").map((document, index) => (
-                        <DocumentCard key={document.id} document={document} index={index} />
-                    ))}
-                </div>
-            )
-        }
-    ];
+    }, []);
 
     return (
         <div className="MainContainer marginTop">

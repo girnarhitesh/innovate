@@ -121,12 +121,14 @@ export function setupAnimationObserver(selector, animationClass = 'animate-blur-
     return observer;
 }
 
+import { useEffect, useRef } from "react";
+
 // React Hook for easy integration
 export function useAnimationObserver(animationClass = 'animate-blur-3d', options = {}) {
-    const observerRef = React.useRef(null);
-    const elementRef = React.useRef(null);
+    const observerRef = useRef(null);
+    const elementRef = useRef(null);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (elementRef.current) {
             observerRef.current = new AnimationObserver(options);
             observerRef.current.observe(elementRef.current, animationClass);

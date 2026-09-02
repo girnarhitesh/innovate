@@ -1,4 +1,3 @@
-import React from "react";
 
 /**
  * Always-mounted live regions for status / alert announcements.

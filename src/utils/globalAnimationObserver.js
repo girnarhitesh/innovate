@@ -98,21 +98,24 @@ class GlobalAnimationObserver {
 // Create global instance
 const globalAnimationObserver = new GlobalAnimationObserver();
 
-// Initialize after a short delay to ensure React has rendered
-setTimeout(() => {
-    globalAnimationObserver.init();
-}, 100);
-
-// Also initialize on DOM content loaded as backup
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        globalAnimationObserver.init();
-    });
-} else {
-    // If DOM is already loaded, initialize after a short delay
+// Client-only bootstrap (skip during SSR / prerender)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    // Initialize after a short delay to ensure React has rendered
     setTimeout(() => {
         globalAnimationObserver.init();
     }, 100);
+
+    // Also initialize on DOM content loaded as backup
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            globalAnimationObserver.init();
+        });
+    } else {
+        // If DOM is already loaded, initialize after a short delay
+        setTimeout(() => {
+            globalAnimationObserver.init();
+        }, 100);
+    }
 }
 
 // Export for manual control if needed

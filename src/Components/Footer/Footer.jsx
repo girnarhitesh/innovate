@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Footer.css";
 import { Row, Col } from "antd";
 import NavData from "../Navigation/NavData";

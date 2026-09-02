@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./OnlineDesk.css";
 import { onlineDeskItems } from "./OnlineDeskData";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";

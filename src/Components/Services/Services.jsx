@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Services.css";
 import { Row, Col } from "antd";
 import ServicesData from "./ServicesData";

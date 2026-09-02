@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./ProgressReach.css"
 import { Row, Col } from "antd";
 const ProgressReach = () => {

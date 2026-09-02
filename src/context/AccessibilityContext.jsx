@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {
   createContext,
   useCallback,
@@ -34,7 +34,7 @@ const loadStoredSettings = () => {
       ...createDefaultSettings(),
       ...JSON.parse(rawSettings),
     };
-  } catch (error) {
+  } catch {
     return createDefaultSettings();
   }
 };
@@ -54,6 +54,10 @@ export function AccessibilityProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
     window.localStorage.setItem(
       ACCESSIBILITY_STORAGE_KEY,
       JSON.stringify(settings),

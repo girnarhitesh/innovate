@@ -1,108 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./NewsLetters.css";
-import { HiOutlineMail } from "react-icons/hi";
-import { HiOutlineCheckCircle } from "react-icons/hi";
 import { notification, Modal } from "antd";
-import { Link } from "react-router-dom";
 import { announceStatus } from "../../utils/announceStatus";
+
 const NewsLetters = () => {
-    const [email, setEmail] = useState("");
-    const [isValid, setIsValid] = useState(true);
-    const [isLoading, setIsLoading] = useState(false);
-    const [api, contextHolder] = notification.useNotification();
+    const [, contextHolder] = notification.useNotification();
     const [isContactOpen, setIsContactOpen] = useState(false);
 
     const openContactModal = () => setIsContactOpen(true);
     const closeContactModal = () => setIsContactOpen(false);
-
-    const handleEmailClick = () => {
-        const email = 'innovate95@rediffmail.com';
-        const subject = 'Contact from Website';
-        const body = 'Hello,\n\nI would like to get in touch with Innovate Securities.\n\n';
-
-        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        // Use window.open for better compatibility
-        const emailWindow = window.open(mailtoLink, '_self');
-
-        // If window.open fails, try direct navigation
-        if (!emailWindow) {
-            window.location.href = mailtoLink;
-        }
-
-        closeContactModal();
-    };
-
-    // Email validation function
-    const validateEmail = (email) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    };
-
-    // Handle email input change
-    const handleEmailChange = (e) => {
-        const value = e.target.value;
-        setEmail(value);
-
-        if (value === "") {
-            setIsValid(true); // Don't show error for empty field
-        } else {
-            setIsValid(validateEmail(value));
-        }
-    };
-
-    // Handle form submission
-    const handleSubmit = async () => {
-        if (!email.trim()) {
-            api.error({
-                message: "Email Required",
-                description: "Please enter your email address to subscribe.",
-                placement: "topRight",
-                duration: 4,
-            });
-            return;
-        }
-
-        if (!validateEmail(email)) {
-            api.error({
-                message: "Invalid Email",
-                description: "Please enter a valid email address.",
-                placement: "topRight",
-                duration: 4,
-            });
-            return;
-        }
-
-        setIsLoading(true);
-
-        // Simulate API call
-        setTimeout(() => {
-            setIsLoading(false);
-
-            api.success({
-                message: "Successfully Subscribed!",
-                description: `Thank you for subscribing to our newsletter. We've sent a confirmation email to ${email}.`,
-                placement: "topRight",
-                duration: 6,
-                icon: <HiOutlineCheckCircle style={{ color: 'var(--brand-color)', fontSize: '20px' }} />,
-                style: {
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-                },
-            });
-
-            // Reset form
-            setEmail("");
-            setIsValid(true);
-        }, 1500);
-    };
-
-    // Handle Enter key press
-    const handleKeyPress = (e) => {
-        if (e.key === "Enter") {
-            handleSubmit();
-        }
-    };
 
     return (
         <>
@@ -116,7 +22,6 @@ const NewsLetters = () => {
                                 <p className="text-center NewsletterSubtitle white">
                                     We're here to help you with your financial needs.
                                 </p>
-                                {/* <br /> */}
                                 <div className="ExpertSection">
                                     <p className="ExpertText white">Our experts are ready to help!</p>
                                     <div className="ExpertProfiles">
@@ -136,38 +41,17 @@ const NewsLetters = () => {
                                 </div>
                                 <br />
                                 <div className="NewsletterInputContainer">
-                                    {/* <div className="InputWrapper">
-                                        <HiOutlineMail className="EmailIcon" />
-                                        <input
-                                            type="email"
-                                            placeholder="Enter your email address"
-                                            className={`NewsletterInput ${!isValid ? 'error' : ''}`}
-                                            value={email}
-                                            onChange={handleEmailChange}
-                                            onKeyPress={handleKeyPress}
-                                        />
-                                    </div> */}
                                     <button
                                         type="button"
-                                        className={`NewsletterButton ${isLoading ? 'loading' : ''}`}
+                                        className="NewsletterButton"
                                         onClick={() => {
                                             openContactModal();
                                             announceStatus("Contact options opened.");
                                         }}
-                                        disabled={isLoading}
-                                        aria-busy={isLoading}
                                     >
-                                        {isLoading ? "Please wait..." : "Contact Us"}
+                                        Contact Us
                                     </button>
                                 </div>
-
-                                {!isValid && email && (
-                                    <div className="ErrorMessage" role="alert" aria-live="assertive">
-                                        Please enter a valid email address
-                                    </div>
-                                )}
-
-
                             </div>
                         </div>
                     </div>

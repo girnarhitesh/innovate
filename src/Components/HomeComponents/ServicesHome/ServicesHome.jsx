@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import "./ServicesHome.css";
 import ServicesData from "../../Services/ServicesData";
 import { Swiper, SwiperSlide } from 'swiper/react';

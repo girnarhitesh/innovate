@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./AppStoreButtons.css";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
 

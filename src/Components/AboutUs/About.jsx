@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import "./About.css";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 import { Row, Col } from "antd";
