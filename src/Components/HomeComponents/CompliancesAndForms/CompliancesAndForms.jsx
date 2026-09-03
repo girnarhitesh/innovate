@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./CompliancesAndForms.css";
 import { AnimationObserver, AnimationConfigs } from "../../../utils/animationObserver";
 import { Link } from "react-router-dom";
-import { FileTextOutlined, SafetyOutlined, BookOutlined, BarChartOutlined } from "@ant-design/icons";
+import { FileTextOutlined, SafetyOutlined, BookOutlined, BarChartOutlined, FundOutlined } from "@ant-design/icons";
 
 const landingCards = [
     {
@@ -33,13 +33,13 @@ const landingCards = [
         description: "",
         route: "/compliances/compliance-data"
     },
-    // {
-    //     key: "mfCompliance",
-    //     label: "MF Compliance",
-    //     icon: <FundOutlined />,
-    //     description: "",
-    //     route: "/compliances/mf-compliance"
-    // }
+    {
+        key: "mfCompliance",
+        label: "MF Compliance",
+        icon: "",
+        description: "",
+        route: "/compliances/mf-compliance"
+    }
 ]
 
 const CompliancesAndForms = () => {
