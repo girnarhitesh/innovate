@@ -61,20 +61,20 @@ export const compliancesAndFormsData = {
       viewUrl:
         "/Image/CompliencesAndFormsDocuments/Forms/off_market_reg_form.pdf",
     },
-    {
-      id: 10,
-      title: "Transmission Joint Holder Form",
-      size: "336 KB",
-      viewUrl:
-        "/Image/CompliencesAndFormsDocuments/Forms/TRANSMISSION_JOINT_HOLDER_FORM.pdf",
-    },
-    {
-      id: 11,
-      title: "Transmission Sole Holder Form",
-      size: "194 KB",
-      viewUrl:
-        "/Image/CompliencesAndFormsDocuments/Forms/TRANSMISSION_SOLE_HOLDER_FORM.pdf",
-    },
+    // {
+    //   id: 10,
+    //   title: "Transmission Joint Holder Form",
+    //   size: "336 KB",
+    //   viewUrl:
+    //     "/Image/CompliencesAndFormsDocuments/Forms/TRANSMISSION_JOINT_HOLDER_FORM.pdf",
+    // },
+    // {
+    //   id: 11,
+    //   title: "Transmission Sole Holder Form",
+    //   size: "194 KB",
+    //   viewUrl:
+    //     "/Image/CompliencesAndFormsDocuments/Forms/TRANSMISSION_SOLE_HOLDER_FORM.pdf",
+    // },
     {
       id: 12,
       title: "SARAL AOF",
