@@ -36,7 +36,7 @@ const landingCards = [
     {
         key: "mfCompliance",
         label: "MF Compliance",
-        icon: "",
+        icon: <FundOutlined />,
         description: "",
         route: "/compliances/mf-compliance"
     }
