@@ -33,13 +33,13 @@ const landingCards = [
         description: "",
         route: "/compliances/compliance-data"
     },
-    {
-        key: "mfCompliance",
-        label: "MF Compliance",
-        icon: <FundOutlined />,
-        description: "",
-        route: "/compliances/mf-compliance"
-    }
+    // {
+    //     key: "mfCompliance",
+    //     label: "MF Compliance",
+    //     icon: <FundOutlined />,
+    //     description: "",
+    //     route: "/compliances/mf-compliance"
+    // }
 ]
 
 const CompliancesAndForms = () => {

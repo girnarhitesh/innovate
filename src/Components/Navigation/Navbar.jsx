@@ -338,8 +338,8 @@ const Navbar = () => {
                             aria-label="Login options"
                         >
                             <Link
-                                to="http://117.206.152.74"
-                                onClick={() => handleMobileNavClick("http://117.206.152.74")}
+                                to="https://backoffice.innovatesec.com/Account/Login"
+                                onClick={() => handleMobileNavClick("https://backoffice.innovatesec.com/Account/Login")}
                                 className="mobile-login-item"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -515,7 +515,7 @@ const Navbar = () => {
                                                     >
                                                         <div>
                                                             <Link
-                                                                to="http://117.206.152.74"
+                                                                to="https://backoffice.innovatesec.com/Account/Login"
                                                                 className="dropdown-item"
                                                                 role="menuitem"
                                                                 target="_blank"

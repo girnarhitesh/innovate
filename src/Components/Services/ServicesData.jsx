@@ -8,7 +8,7 @@ const ServicesData = [
         iconImage: EquityMarketIcon,
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/EQUITY MARKET AND DERIVATIVES-min.jpg",
         servicesCardText: "At Innovate Securities, we offer efficient and reliable broking services for the Equity Market, enabling seamless buying and selling of shares across NSE and BSE",
-        buttonLink: "https://bo.innovatesec.com/Account/Login",
+        buttonLink: "https://backoffice.innovatesec.com/Account/Login",
         buttonText: "Equity and Derivatives",
         description: <>
             <p><b>Equity Market Overview</b></p>
