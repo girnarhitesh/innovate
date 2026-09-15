@@ -20,12 +20,12 @@
   "groCard": {
     "heading": "Your First Point of Contact for All Grievances",
     "fields": [
-      { "label": "GRO Name", "value": "Pimal K. Panchal" },
-      { "label": "Designation", "value": "Executive Director — Compliance Officer / GRO" },
+      { "label": "GRO Name", "value": "Amit shah" },
+      { "label": "Designation", "value": "Executive Director" },
       {
         "label": "Email",
-        "value": "Innovate95@rediffmail.com",
-        "href": "mailto:Innovate95@rediffmail.com"
+        "value": "Mfinnovate@gmail.com",
+        "href": "mailto:Mfinnovate@gmail.com"
       },
       { "label": "Phone", "value": "9429893549", "href": "tel:9429893549" },
       { "label": "Working Hours", "value": "Monday to Saturday, 10:00 AM – 6:00 PM" },
@@ -43,7 +43,7 @@
       {
         "step": "01",
         "title": "Write to GRO",
-        "detail": "Email Innovate95@rediffmail.com with subject: COMPLAINT — [Your Name] — [ARN/Folio No.]"
+        "detail": "Email Mfinnovate@gmail.com with subject: COMPLAINT — [Your Name] — [ARN/Folio No.]"
       },
       {
         "step": "02",
@@ -127,7 +127,7 @@
         "level": 1,
         "tone": "orange",
         "title": "Innovate Securities — Grievance Redressal Officer",
-        "contact": "Pimal K. Panchal | Innovate95@rediffmail.com | 9429893549",
+        "contact": "Pimal K. Panchal | Mfinnovate@gmail.com | 9429893549",
         "timeline": "Acknowledgement: 3 working days | Resolution: 15 working days",
         "description": "First and primary point of contact. Most complaints are resolved at this level."
       },
@@ -213,7 +213,7 @@
     "rows": [
       {
         "organisation": "Innovate Securities GRO",
-        "contact": "Pimal K. Panchal | Innovate95@rediffmail.com | 9429893549",
+        "contact": "Pimal K. Panchal | Mfinnovate@gmail.com | 9429893549",
         "timeline": "15 working days"
       },
       {

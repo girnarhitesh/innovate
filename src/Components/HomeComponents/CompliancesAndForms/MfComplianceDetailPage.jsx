@@ -15,13 +15,29 @@ import {
   CheckOutlined,
   CloseOutlined,
 } from "@ant-design/icons";
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaChartLine, FaBalanceScale, FaChartBar, FaTint, FaBullseye } from "react-icons/fa";
+import { FiTrendingDown } from "react-icons/fi";
 import { getMfCompliancePage, MF_COMPLIANCE_CARDS } from "./mfComplianceData";
 import StructuredComplianceContent from "./StructuredComplianceContent";
 import "./CompliancesAndForms.css";
 import "./MfComplianceDetailPage.css";
 
 const EXTERNAL_SITE_PATHS = new Set(["/privacy-policy", "/disclaimer"]);
+
+const COMM_CATEGORY_ICONS = {
+  equity: FaChartLine,
+  hybrid: FaBalanceScale,
+  debt: FaChartBar,
+  liquid: FaTint,
+  passive: FiTrendingDown,
+  solution: FaBullseye,
+};
+
+const getCommCategoryIcon = (iconKey) => {
+  const Icon = COMM_CATEGORY_ICONS[iconKey];
+  if (!Icon) return null;
+  return <Icon aria-hidden="true" />;
+};
 
 const isComplianceLinkAvailable = (path) => {
   if (EXTERNAL_SITE_PATHS.has(path)) return true;
@@ -786,6 +802,9 @@ const CommissionDisclosureContent = ({ page }) => {
             </caption>
             <thead>
               <tr>
+                <th scope="col" className="MfCommCatTable__iconHead">
+                  <span className="sr-only">Icon</span>
+                </th>
                 <th scope="col">Fund Category &amp; Sub-Category</th>
                 <th scope="col">Risk Level</th>
                 <th scope="col">Typical Horizon</th>
@@ -796,6 +815,11 @@ const CommissionDisclosureContent = ({ page }) => {
             <tbody>
               {categoryOverview.rows.map((row) => (
                 <tr key={row.category}>
+                  <td className="MfCommCatTable__iconCell">
+                    <span className="MfCommCatTable__icon" aria-hidden="true">
+                      {getCommCategoryIcon(row.icon)}
+                    </span>
+                  </td>
                   <td>
                     <p className="MfCommCatTable__name">{row.category}</p>
                     <p className="MfCommCatTable__sub">{row.subCategories}</p>

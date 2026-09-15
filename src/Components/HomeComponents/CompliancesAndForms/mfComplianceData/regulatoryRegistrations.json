@@ -22,7 +22,7 @@
       { "label": "Entity Type", "value": "Private Limited Company" },
       { "label": "AMFI ARN", "value": "ARN-42505" },
       { "label": "Phone", "value": "+91 98795 06993", "href": "tel:+919879506993" },
-      { "label": "Email", "value": "ispl@innovatesec.com", "href": "mailto:ispl@innovatesec.com" },
+      { "label": "Email", "value": "Mfinnovate@gmail.com", "href": "mailto:Mfinnovate@gmail.com" },
       { "label": "Website", "value": "www.innovatesec.com", "href": "https://www.innovatesec.com/" }
     ],
     "registeredAddress": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006"
@@ -137,7 +137,7 @@
   "transparency": {
     "heading": "Our Transparency Commitment",
     "body": "Innovate Securities Private Limited is committed to full transparency in regulatory disclosures. If you find any discrepancy in the information published on this page, please write to us at",
-    "email": "ispl@innovatesec.com",
+    "email": "Mfinnovate@gmail.com",
     "phone": "+91 98795 06993",
     "phoneHref": "+919879506993"
   }

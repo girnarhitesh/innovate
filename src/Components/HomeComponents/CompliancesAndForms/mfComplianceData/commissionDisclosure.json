@@ -19,7 +19,7 @@
   ],
   "intro": {
     "heading": "Commission Disclosure",
-    "subtitle": "Per AMFI Master Circular Chapter 4(c)(f) | Mandatory Disclosure for AMFI Registered Mutual Fund Distributors",
+    "subtitle": "Per AMFI Master Circular Chapter 4(c)(f) | Mandatory Disclosure for AMFI Registered Mutual Fund Distributor and SIF Distributor",
     "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid: 06-Apr-2024 to 05-Apr-2027"
   },
   "transparencyNote": "At Innovate Securities, we believe every investor has the right to know how we are compensated. This page discloses the approximate trail commission ranges we receive from Asset Management Companies (AMCs) for distributing Regular Plan Mutual Fund schemes — as mandated by AMFI.",
@@ -29,54 +29,60 @@
   },
   "categoryOverview": {
     "heading": "Commission Rate Overview — By Fund Category",
-    "note": "Important Note: The rates below are approximate ranges based on typical industry trail commissions. Actual rates vary by AMC, scheme, and AUM slab. Exact AMC-wise rates are available on demand — contact us at ispl@innovatesec.com or +91 98795 06993.",
+    "note": "Important Note: The rates below are approximate ranges based on typical industry trail commissions. Actual rates vary by AMC, scheme, and AUM slab. Exact AMC-wise rates are available on demand — contact us at Mfinnovate@gmail.com or +91 98795 06993.",
     "rows": [
       {
+        "icon": "equity",
         "category": "Equity Funds",
-        "subCategories": "Large Cap, Mid Cap, Small Cap, Flexi Cap, Sectoral / Thematic, ELSS",
+        "subCategories": "Large Cap, Mid Cap, Small Cap, Flexi Cap, ELSS, Thematic, Sectoral",
         "risk": "High Risk",
         "horizon": "5+ Years",
-        "rate": "0.30 – 1.50%",
+        "rate": "0.50% - 1.25%",
         "type": "Trail Only"
       },
       {
+        "icon": "hybrid",
         "category": "Hybrid Funds",
-        "subCategories": "Aggressive Hybrid, Conservative Hybrid, Balanced Advantage, Multi Asset",
+        "subCategories": "Aggressive Hybrid, Balanced Advantage, Conservative Hybrid, Arbitrage",
         "risk": "Moderate-High Risk",
-        "horizon": "3–5 Years",
-        "rate": "0.30 – 1.25%",
+        "horizon": "3-5 Years",
+        "rate": "0.40% - 1.00%",
         "type": "Trail Only"
       },
       {
+        "icon": "debt",
         "category": "Debt Funds",
-        "subCategories": "Corporate Bond, Banking & PSU, Gilt, Credit Risk, Dynamic Bond",
+        "subCategories": "Short Duration, Corporate Bond, Banking & PSU, Gilt, Credit Risk",
         "risk": "Low-Moderate Risk",
-        "horizon": "1–3 Years",
-        "rate": "0.05 – 0.75%",
+        "horizon": "1-3 Years",
+        "rate": "0.20% - 0.60%",
         "type": "Trail Only"
       },
       {
+        "icon": "liquid",
         "category": "Liquid / Overnight",
-        "subCategories": "Liquid, Overnight, Ultra Short Duration",
+        "subCategories": "Liquid, Overnight, Ultra Short Duration, Money Market",
         "risk": "Low Risk",
         "horizon": "Less than 1 Year",
-        "rate": "0.05 – 1.25%",
+        "rate": "0.05% - 0.15%",
         "type": "Trail Only"
       },
       {
+        "icon": "passive",
         "category": "Passive / Index Funds",
-        "subCategories": "Index Funds, ETFs",
+        "subCategories": "Index Funds, ETFs, Fund of Funds (Passive)",
         "risk": "Market Risk",
         "horizon": "3+ Years",
-        "rate": "0.05 – 0.60%",
+        "rate": "0.10% - 0.40%",
         "type": "Trail Only"
       },
       {
+        "icon": "solution",
         "category": "Solution Oriented Funds",
-        "subCategories": "Retirement, Children’s Funds",
+        "subCategories": "Retirement Fund, Children's Fund",
         "risk": "Moderate-High Risk",
         "horizon": "5+ Years (Lock-in applies)",
-        "rate": "0.50 – 1.25%",
+        "rate": "0.50% - 1.20%",
         "type": "Trail Only"
       }
     ]
@@ -87,7 +93,7 @@
   },
   "amcOverview": {
     "heading": "Commission Rate Overview — AMC-Wise",
-    "note": "Important Note: The table below lists AMFI-registered Asset Management Companies (AMCs) with indicative trail commission ranges. Actual rates are set by each AMC and vary by scheme, option, and AUM slab. Exact scheme-wise rates are available on demand — contact us at ispl@innovatesec.com or +91 98795 06993.",
+    "note": "Important Note: The table below lists AMFI-registered Asset Management Companies (AMCs) with indicative trail commission ranges. Actual rates are set by each AMC and vary by scheme, option, and AUM slab. Exact scheme-wise rates are available on demand — contact us at Mfinnovate@gmail.com or +91 98795 06993.",
     "rows": [
       {
         "id": 1,
@@ -616,7 +622,7 @@
     ],
     "highlight": "you have the right to know the exact commission earned by Innovate Securities on any specific scheme before or after investing.",
     "contact": {
-      "email": "ispl@innovatesec.com",
+      "email": "Mfinnovate@gmail.com",
       "phone": "+91 98795 06993",
       "phoneHref": "+919879506993",
       "website": "www.innovatesec.com",

@@ -95,9 +95,8 @@
       "id": "gro",
       "title": "5. Grievance Redressal Officer (GRO)",
       "fields": [
-        { "label": "GRO Name", "value": "Pimal K. Panchal" },
         { "label": "Designation", "value": "Executive Director — Compliance Officer" },
-        { "label": "Email", "value": "Innovate95@rediffmail.com", "href": "mailto:Innovate95@rediffmail.com" },
+        { "label": "Email", "value": "Mfinnovate@gmail.com", "href": "mailto:Mfinnovate@gmail.com" },
         { "label": "Phone", "value": "9429893549", "href": "tel:9429893549" },
         {
           "label": "Address",
@@ -113,7 +112,7 @@
           "step": 1,
           "label": "GRO",
           "detail": "Pimal K. Panchal",
-          "meta": "Innovate95@rediffmail.com · 9429893549",
+          "meta": "Mfinnovate@gmail.com · 9429893549",
           "tone": "orange"
         },
         {
@@ -188,8 +187,8 @@
   ],
   "commitment": {
     "heading": "Our Commitment",
-    "body": "Innovate Securities Private Limited is committed to ethical, transparent, and investor-first practices. If you believe any content on this website is misleading or any of our practices are non-compliant, please contact our GRO at Innovate95@rediffmail.com or report to SEBI SCORES at scores.sebi.gov.in.",
-    "email": "Innovate95@rediffmail.com",
+    "body": "Innovate Securities Private Limited is committed to ethical, transparent, and investor-first practices. If you believe any content on this website is misleading or any of our practices are non-compliant, please contact our GRO at Mfinnovate@gmail.com or report to SEBI SCORES at scores.sebi.gov.in.",
+    "email": "Mfinnovate@gmail.com",
     "scoresUrl": "https://scores.sebi.gov.in/",
     "scoresLabel": "scores.sebi.gov.in"
   }
