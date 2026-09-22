@@ -15,13 +15,13 @@
   },
   "commitment": {
     "heading": "Innovate Securities’ Commitment to Investor Grievance Redressal",
-    "body": "We are committed to fair, transparent, and time-bound handling of every investor grievance. Complaints are investigated impartially, acknowledged promptly, and resolved in writing — with a clear path to escalate if you are not satisfied."
+    "body": "We are committed to fair, transparent, and time-bound handling of every investor grievance. Complaints are investigated impartially, acknowledged promptly, and resolved in writing — with a clear path to escalate if you are not satisfied. The escalation structure below is the firm’s approved MF grievance process and is aligned across our website, internal procedure, and complaint register."
   },
   "groCard": {
     "heading": "Your First Point of Contact for All Grievances",
     "fields": [
-      { "label": "GRO Name", "value": "Amit shah" },
-      { "label": "Designation", "value": "Executive Director" },
+      { "label": "Name", "value": "Kartik Prajapati" },
+      { "label": "Role", "value": "Operational / Service Escalation" },
       {
         "label": "Email",
         "value": "Mfinnovate@gmail.com",
@@ -42,7 +42,7 @@
     "steps": [
       {
         "step": "01",
-        "title": "Write to GRO",
+        "title": "Write to Operational Contact",
         "detail": "Email Mfinnovate@gmail.com with subject: COMPLAINT — [Your Name] — [ARN/Folio No.]"
       },
       {
@@ -58,7 +58,7 @@
       {
         "step": "04",
         "title": "Receive Resolution",
-        "detail": "Full resolution will be provided within 15 working days. If not satisfied, escalate to Level 2."
+        "detail": "Full resolution will be provided within 15 working days. If not satisfied, escalate to the next level."
       }
     ]
   },
@@ -126,42 +126,42 @@
       {
         "level": 1,
         "tone": "orange",
-        "title": "Innovate Securities — Grievance Redressal Officer",
-        "contact": "Pimal K. Panchal | Mfinnovate@gmail.com | 9429893549",
+        "title": "Kartik Prajapati — Operational / Service Escalation",
+        "contact": "Kartik Prajapati | Mfinnovate@gmail.com | 9429893549",
         "timeline": "Acknowledgement: 3 working days | Resolution: 15 working days",
-        "description": "First and primary point of contact. Most complaints are resolved at this level."
+        "description": "First point of contact for all MF grievances. Operational and service issues are handled at this level."
       },
       {
         "level": 2,
         "tone": "brown",
-        "title": "Concerned AMC — Investor Relations / Grievance Cell",
-        "contact": "Contact the AMC where your investment is held directly.",
+        "title": "Amit P. Shah — MF Principal / Final Internal Escalation",
+        "contact": "Amit P. Shah | Mfinnovate@gmail.com | 9429893549",
         "timeline": "15 working days",
-        "description": "For transaction-specific issues, AMC has direct authority to resolve. Find AMC contact on their website or amfiindia.com."
+        "description": "Final internal escalation for mutual fund grievances within Innovate Securities before external escalation."
       },
       {
         "level": 3,
         "tone": "purple",
+        "title": "Concerned AMC / RTA",
+        "contact": "Contact the AMC or RTA where your investment is held.",
+        "timeline": "15 working days",
+        "description": "For transaction-specific issues, the AMC/RTA has direct authority to resolve. Find AMC contact on their website or amfiindia.com."
+      },
+      {
+        "level": 4,
+        "tone": "blue",
         "title": "AMFI — Investor Grievance Redressal Committee (IGRC)",
         "contact": "igrc@amfiindia.com | Toll Free: 1800-270-7000 | amfiindia.com",
         "timeline": "30 days",
         "description": "AMFI can take action against MFDs including cancellation of ARN for serious violations of Code of Conduct."
       },
       {
-        "level": 4,
-        "tone": "blue",
-        "title": "SEBI SCORES — Securities and Exchange Board of India",
-        "contact": "scores.sebi.gov.in | Toll Free: 1800-266-7575 | sebi@sebi.gov.in",
-        "timeline": "Per SEBI timeline",
-        "description": "SEBI Centralised Processing of Complaints System. Track your complaint status online in real time. SEBI has regulatory powers to investigate and take action."
-      },
-      {
         "level": 5,
         "tone": "green",
-        "title": "SMART ODR — Online Dispute Resolution",
-        "contact": "smartodr.in | Online Conciliation and Arbitration",
-        "timeline": "Per ODR framework",
-        "description": "SEBI-mandated Online Dispute Resolution platform. Provides conciliation and arbitration services for securities market disputes. Faster and more accessible than courts."
+        "title": "SEBI SCORES / SMART ODR",
+        "contact": "scores.sebi.gov.in | smartodr.in | Toll Free: 1800-266-7575",
+        "timeline": "Per SEBI / ODR framework",
+        "description": "Escalate to SEBI SCORES and, where applicable, SMART ODR for conciliation and arbitration of securities market disputes."
       }
     ]
   },
@@ -179,13 +179,13 @@
         "timeline": "7 working days"
       },
       {
-        "action": "Final Resolution (Level 1)",
+        "action": "Final Resolution (Internal)",
         "details": "Complete resolution with explanation provided in writing",
         "timeline": "15 working days"
       },
       {
-        "action": "Document Submission to AMC",
-        "details": "If AMC-level action needed — documents forwarded",
+        "action": "Document Submission to AMC / RTA",
+        "details": "If AMC/RTA-level action needed — documents forwarded",
         "timeline": "3 working days"
       },
       {
@@ -212,8 +212,13 @@
     "heading": "All Important Grievance Contacts at a Glance",
     "rows": [
       {
-        "organisation": "Innovate Securities GRO",
-        "contact": "Pimal K. Panchal | Mfinnovate@gmail.com | 9429893549",
+        "organisation": "Operational / Service Escalation",
+        "contact": "Kartik Prajapati | Mfinnovate@gmail.com | 9429893549",
+        "timeline": "15 working days"
+      },
+      {
+        "organisation": "MF Principal / Final Internal Escalation",
+        "contact": "Amit P. Shah | Mfinnovate@gmail.com | 9429893549",
         "timeline": "15 working days"
       },
       {

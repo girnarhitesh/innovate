@@ -54,43 +54,19 @@
     }
   ],
   "teamCertifications": {
-    "heading": "Team — Key Managerial Personnel",
-    "description": "Persons associated with Innovate Securities who oversee distribution and compliance. Employees engaged in mutual fund distribution must hold a valid NISM Series V-A certification and an AMFI EUIN, which is printed on mutual fund application forms alongside ARN-42505.",
+    "heading": "Mutual Fund Sales Personnel",
+    "description": "Persons associated with Innovate Securities who solicit, recommend, or sell mutual fund schemes. Only certified mutual fund sales personnel hold a valid NISM Series V-A certification and an AMFI EUIN, which is printed on mutual fund application forms alongside ARN-42505. Other directors who do not solicit, recommend, or sell MF schemes are not listed as MF sales personnel.",
     "members": [
       {
-        "name": "Amar M. Parikh",
-        "designation": "Managing Director — CEO",
-        "euin": "—",
-        "nism": "—",
-        "validUntil": "—",
-        "status": "Active"
-      },
-      {
-        "name": "Pimal K. Panchal",
-        "designation": "Executive Director — Compliance Officer",
-        "euin": "—",
-        "nism": "—",
-        "validUntil": "—",
-        "status": "Active"
-      },
-      {
-        "name": "Kashyap R. Mehta",
-        "designation": "Director — C.S.",
-        "euin": "—",
-        "nism": "—",
-        "validUntil": "—",
-        "status": "Active"
-      },
-      {
         "name": "Amit P. Shah",
-        "designation": "Director",
-        "euin": "—",
+        "designation": "Director and Mutual Fund Sales Person",
+        "euin": "E217247",
         "nism": "—",
         "validUntil": "—",
         "status": "Active"
       }
     ],
-    "note": "Verify EUIN details of any Mutual Fund Distributor employee at amfiindia.com/find-mf-distributor. Report misuse of EUIN to igrc@amfiindia.com."
+    "note": "NISM Series V-A and EUIN validity dates will be published only after certificate verification. Verify EUIN details of any Mutual Fund Distributor employee at amfiindia.com/find-mf-distributor. Report misuse of EUIN to igrc@amfiindia.com."
   },
   "verificationHub": {
     "heading": "Verify All Registrations Independently",

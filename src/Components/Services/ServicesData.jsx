@@ -1,5 +1,6 @@
 
 import { Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 import EquityMarketIcon from '../../assets/servicesIcons/equity-market.png';
 const ServicesData = [
     {
@@ -62,7 +63,26 @@ const ServicesData = [
         servicesCardText: "Access diversified investment portfolios managed by experienced fund managers across equity, debt, hybrid, and sectoral funds.",
         description: <>
             <p><b>Mutual Fund Distribution Services – Innovate Securities</b></p>
-            <p>Innovate Securities offers tailored mutual fund distribution services, helping clients build personalized portfolios aligned with their financial goals and risk profiles. We provide access to a broad range of top-rated funds from leading mutual fund houses across India. Our expert team works closely with clients to design portfolios suited for capital growth, wealth preservation, or income generation. Through our advanced digital platform, we ensure seamless transactions, real-time fund data, and transparent reporting.</p>
+            <p>Innovate Securities Private Limited is an AMFI-registered Mutual Fund Distributor, ARN-42505. We facilitate investments in Regular Plans of mutual fund schemes and receive trail commission from Asset Management Companies. Any recommendation or guidance provided is incidental to our mutual fund distribution activity and is based on the investor’s risk profile, financial objectives and investment horizon. We are not a SEBI-registered Investment Adviser and do not guarantee returns or capital protection.</p>
+            <div className="MfServiceComplianceLinks">
+                <p><b>Important Links</b></p>
+                <ul>
+                    <li><Link to="/compliances/mf-compliance/commission-disclosure">Commission Disclosure</Link></li>
+                    <li><Link to="/compliances/mf-compliance/disclaimer">MF Disclaimer</Link></li>
+                    <li><Link to="/compliances/mf-compliance/sid-sai-kim">SID/SAI/KIM</Link></li>
+                    <li><Link to="/compliances/mf-compliance/investor-grievance-redressal">Investor Grievance Redressal</Link></li>
+                    <li><Link to="/compliances/mf-compliance/fund-selection-policy">Fund Selection Policy</Link></li>
+                    <li>
+                        <a
+                            href="https://www.amfiindia.com/find-mf-distributor"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Verify ARN
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div className='marginTop'>
                 <h3 className='text-center marginBottom' style={{ color: "black" }}>Types of Mutual Funds</h3>
                 <div className='centerContainer'>
@@ -78,7 +98,7 @@ const ServicesData = [
                             <div className="FeatureCard">
                                 <div className="FeatureIcon">🛡️</div>
                                 <h3>Debt Funds</h3>
-                                <p>Offer stable returns with lower risk by investing in bonds and fixed-income securities. Perfect for conservative investors looking for regular income with capital preservation and lower volatility compared to equity markets.</p>
+                                <p>Invest primarily in bonds and other fixed-income securities. These funds may suit investors seeking regular income with relatively lower volatility compared to equity markets.</p>
                             </div>
                         </Col>
                         <Col lg={12} xs={24}>
@@ -105,8 +125,6 @@ const ServicesData = [
                     </Row>
                 </div>
             </div>
-            <br /><br />
-            <p>Partner with Innovate Securities for expert mutual fund guidance and build a diversified portfolio that aligns with your financial objectives. Our experienced advisors help you navigate the complex world of mutual funds to achieve your investment goals.</p>
 
         </>,
     },

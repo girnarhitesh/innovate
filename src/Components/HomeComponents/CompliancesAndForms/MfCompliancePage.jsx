@@ -6,7 +6,7 @@ import "./CompliancesAndForms.css";
 import "./MfCompliancePage.css";
 
 const STATUS_BADGES = [
-  "AMFI Registered Mutual Fund Distributor and SIF Distributor",
+  "AMFI Registered Mutual Fund Distributor",
   "ARN-42505",
   "ARN Valid Until 05-Apr-2027",
 ];

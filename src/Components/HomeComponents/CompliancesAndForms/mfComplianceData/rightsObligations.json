@@ -66,8 +66,8 @@
         "title": "Right 5 — Right to Grievance Redressal",
         "intro": "You have the right to a fair, prompt, and effective grievance redressal at multiple levels:",
         "groSummary": {
-          "name": "Pimal K. Panchal",
-          "designation": "Executive Director",
+          "name": "Kartik Prajapati",
+          "designation": "Operational / Service Escalation",
           "email": "Mfinnovate@gmail.com",
           "phone": "9429893549",
           "ack": "Acknowledgement within 3 working days",
@@ -76,33 +76,33 @@
         "escalationRows": [
           {
             "level": "Level 1",
-            "escalateTo": "Innovate Securities GRO",
-            "contact": "Pimal K. Panchal | Mfinnovate@gmail.com | 9429893549",
+            "escalateTo": "Operational / Service Escalation",
+            "contact": "Kartik Prajapati | Mfinnovate@gmail.com | 9429893549",
             "timeline": "15 working days"
           },
           {
             "level": "Level 2",
-            "escalateTo": "Concerned AMC",
-            "contact": "Contact AMC Investor Relations directly",
+            "escalateTo": "MF Principal / Final Internal Escalation",
+            "contact": "Amit P. Shah | Mfinnovate@gmail.com | 9429893549",
             "timeline": "15 working days"
           },
           {
             "level": "Level 3",
+            "escalateTo": "Concerned AMC / RTA",
+            "contact": "Contact AMC / RTA Investor Relations directly",
+            "timeline": "15 working days"
+          },
+          {
+            "level": "Level 4",
             "escalateTo": "AMFI Helpline",
             "contact": "igrc@amfiindia.com | 1800-270-7000 (Toll Free)",
             "timeline": "30 days"
           },
           {
-            "level": "Level 4",
-            "escalateTo": "SEBI SCORES",
-            "contact": "scores.sebi.gov.in | 1800-266-7575",
-            "timeline": "Per SEBI timeline"
-          },
-          {
             "level": "Level 5",
-            "escalateTo": "SMART ODR",
-            "contact": "smartodr.in — Conciliation & Arbitration",
-            "timeline": "Per ODR framework"
+            "escalateTo": "SEBI SCORES / SMART ODR",
+            "contact": "scores.sebi.gov.in | smartodr.in | 1800-266-7575",
+            "timeline": "Per SEBI / ODR framework"
           }
         ]
       },
@@ -248,8 +248,8 @@
     "heading": "Part D — Important Contacts & Portals",
     "items": [
       {
-        "title": "Innovate Securities — GRO",
-        "lines": ["Pimal K. Panchal", "Mfinnovate@gmail.com", "9429893549"]
+        "title": "Operational / Service Escalation",
+        "lines": ["Kartik Prajapati", "Mfinnovate@gmail.com", "9429893549"]
       },
       {
         "title": "AMFI Helpline",

@@ -519,8 +519,8 @@ const RegulatoryRegistrationsContent = ({ page }) => {
               <tr>
                 <th scope="col">Name &amp; Designation</th>
                 <th scope="col">EUIN</th>
-                <th scope="col">NISM Series V-A</th>
-                <th scope="col">Valid Until</th>
+                <th scope="col">NISM Series V-A Validity</th>
+                <th scope="col">EUIN Validity</th>
                 <th scope="col">Status</th>
               </tr>
             </thead>
@@ -762,7 +762,7 @@ const CommissionDisclosureContent = ({ page }) => {
     commissionModel,
     categoryOverview,
     investorMeaning,
-    amcOverview,
+    empanelledAmcs,
     policy,
     prohibited,
     verifyWhere,
@@ -779,6 +779,13 @@ const CommissionDisclosureContent = ({ page }) => {
         </h2>
         <p className="MfRegIntro__subtitle">{intro.subtitle}</p>
         <p className="MfRegIntro__summary">{intro.summaryLine}</p>
+        {(intro.effectiveFrom || intro.lastReviewedOn) ? (
+          <p className="MfRegIntro__summary">
+            {intro.effectiveFrom ? <>Effective from: <strong>{intro.effectiveFrom}</strong></> : null}
+            {intro.effectiveFrom && intro.lastReviewedOn ? " | " : null}
+            {intro.lastReviewedOn ? <>Last reviewed on: <strong>{intro.lastReviewedOn}</strong></> : null}
+          </p>
+        ) : null}
         <div className="MfDetailNote">
           <p>{transparencyNote}</p>
         </div>
@@ -841,41 +848,35 @@ const CommissionDisclosureContent = ({ page }) => {
         </div>
       </section>
 
-      <section className="MfDetailSection" aria-labelledby="amc-overview-heading">
-        <h2 id="amc-overview-heading" className="MfDetailSection__title">
-          {amcOverview.heading}
+      <section className="MfDetailSection" aria-labelledby="empanelled-amcs-heading">
+        <h2 id="empanelled-amcs-heading" className="MfDetailSection__title">
+          {empanelledAmcs.heading}
         </h2>
-        <div className="MfDetailNote MfCommInfoNote">
-          <p>{amcOverview.note}</p>
-        </div>
-        <div className="MfDetailTableWrap">
-          <table className="MfDetailTable MfCommAmcTable">
-            <caption className="sr-only">
-              AMC-wise indicative trail commission ranges
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Asset Management Company (AMC)</th>
-                <th scope="col">Equity Trail (p.a.)</th>
-                <th scope="col">Hybrid Trail (p.a.)</th>
-                <th scope="col">Debt Trail (p.a.)</th>
-                <th scope="col">Commission Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              {amcOverview.rows.map((row) => (
-                <tr key={row.id}>
-                  <td>{row.id}</td>
-                  <td className="MfCommAmcTable__name">{row.name}</td>
-                  <td>{row.equity}</td>
-                  <td>{row.hybrid}</td>
-                  <td>{row.debt}</td>
-                  <td>{row.type}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <p className="MfCommEmpanelled__subtitle">{empanelledAmcs.subtitle}</p>
+        {empanelledAmcs.note ? (
+          <div className="MfDetailNote MfCommInfoNote">
+            <p>{empanelledAmcs.note}</p>
+          </div>
+        ) : null}
+        <div className="MfCommEmpanelledGrid">
+          {empanelledAmcs.items.map((item) => (
+            <article key={item.pdfUrl} className="MfCommEmpanelledCard">
+              <div className="MfCommEmpanelledCard__body">
+                <h3>{item.name}</h3>
+                <p>
+                  Valid Period: <strong>{item.validPeriod}</strong>
+                </p>
+              </div>
+              <a
+                href={item.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="MfCommEmpanelledCard__pdf"
+              >
+                <FileTextOutlined aria-hidden="true" /> View PDF
+              </a>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -1490,7 +1491,7 @@ const RightsObligationsContent = ({ page }) => {
             {item.groSummary ? (
               <div className="MfRoGroBox">
                 <p>
-                  <strong>Grievance Redressal Officer:</strong> {item.groSummary.name} (
+                  <strong>Operational / Service Escalation:</strong> {item.groSummary.name} (
                   {item.groSummary.designation})
                 </p>
                 <p>

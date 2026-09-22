@@ -67,9 +67,9 @@ const Footer = () => {
                     </p>
                   </div>
                   <div>
-                    <p>AMFI Registered Number</p>
+                    <p>Innovate Securities Private Limited</p>
                     <p>
-                      <b>42505</b>
+                      <b>AMFI-registered Mutual Fund Distributor – ARN-42505</b>
                     </p>
                   </div>
                 </div>

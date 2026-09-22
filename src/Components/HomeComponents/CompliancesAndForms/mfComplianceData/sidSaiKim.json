@@ -19,59 +19,59 @@
   ],
   "intro": {
     "heading": "Understanding Scheme Documents — SID, SAI & KIM",
-    "subtitle": "A Complete Guide to Mutual Fund Offer Documents | Mandatory Reading Before Every Investment",
+    "subtitle": "A Guide to Mutual Fund Offer Documents | Read Before Investing",
     "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | www.innovatesec.com | Last Updated: August 2026",
-    "notice": "SEBI regulations mandate that every Mutual Fund scheme must have three offer documents — SID, SAI, and KIM. These contain risks, costs, objectives, and terms. Innovate Securities strongly encourages every investor to read these documents before investing. We will provide any of these documents on request within 24 hours — free of charge."
+    "notice": "SEBI regulations require Mutual Fund schemes to be accompanied by offer documents — typically the Scheme Information Document (SID) and Key Information Memorandum (KIM) for each scheme, together with the Statement of Additional Information (SAI), which is generally prepared at the Mutual Fund / AMC level and incorporated by reference into the SID. These documents contain risks, costs, objectives, and other material terms. Innovate Securities encourages investors to read the current documents for the relevant scheme and AMC before investing. Official copies are available from the AMC website, AMFI, and SEBI portals linked below."
   },
   "blocks": [
     {
       "type": "rightsGrid",
-      "heading": "The Three Mandatory Mutual Fund Documents",
+      "heading": "The Three Key Mutual Fund Documents",
       "items": [
         {
           "title": "SID — Scheme Information Document",
-          "body": "The most detailed document for a specific scheme — objectives, risks, costs, and fund manager details. Most Important."
+          "body": "The primary scheme-specific document covering investment objective, risks, costs, asset allocation, and other scheme particulars. Read in conjunction with the SAI."
         },
         {
           "title": "SAI — Statement of Additional Information",
-          "body": "General information about the AMC and Mutual Fund — legal, tax, and KYC information. AMC-level."
+          "body": "Generally an AMC / Mutual Fund–level document covering constitution, tax, legal, KYC, and other common information. It is typically not a separate scheme-by-scheme document and is incorporated by reference into the SID."
         },
         {
           "title": "KIM — Key Information Memorandum",
-          "body": "Concise 1–2 page summary of critical facts, attached to the application form. Quick reference."
+          "body": "A concise scheme-specific summary of critical facts, often attached to or accompanying the application form. Use it as a quick reference, not a substitute for the SID and SAI."
         }
       ]
     },
     {
       "type": "section",
       "heading": "1. Scheme Information Document (SID) — In Detail",
-      "intro": "The SID is the primary legal document for a Mutual Fund scheme. Every SID contains:",
+      "intro": "The SID is the primary legal document for a Mutual Fund scheme. A typical SID covers areas such as:",
       "bullets": [
-        "Investment Objective — growth, income, capital preservation, or a combination",
-        "Asset Allocation Pattern — equity, debt, derivatives, REITs, etc.",
-        "Risk Factors & SEBI Riskometer — market, credit, interest rate, liquidity risks",
-        "Total Expense Ratio (TER) — Direct Plan and Regular Plan",
-        "Exit Load Structure — charges on early redemption",
-        "Benchmark Index — e.g. Nifty 50, BSE Sensex, Nifty 500",
-        "Fund Manager Details — name, qualifications, experience",
-        "Historical NAV Performance — 1 / 3 / 5 year and since inception",
-        "Dividend / IDCW History",
-        "Minimum Investment Amounts — lumpsum, SIP, additional purchase",
-        "Redemption & Settlement — T+1 / T+2, cut-off times",
-        "Fundamental Attributes — core characteristics requiring investor consent to change"
+        "Investment Objective — for example growth, income, or a capital preservation objective, where specifically stated in the scheme documents, without assurance",
+        "Asset Allocation Pattern — equity, debt, derivatives, REITs, etc., as disclosed for the scheme",
+        "Risk Factors & SEBI Riskometer — market, credit, interest rate, liquidity and other disclosed risks; always check the scheme’s current Riskometer",
+        "Total Expense Ratio (TER) — Direct Plan and Regular Plan, as disclosed",
+        "Exit Load Structure — charges on early redemption, if applicable",
+        "Benchmark Index — as specified for the scheme",
+        "Fund Manager Details — as disclosed in the SID",
+        "Historical NAV / performance information — where disclosed",
+        "Dividend / IDCW information — where applicable",
+        "Minimum Investment Amounts — lumpsum, SIP, additional purchase, as disclosed",
+        "Redemption & Settlement — timelines and cut-off times, as disclosed",
+        "Fundamental Attributes — core characteristics that may require investor consent to change"
       ]
     },
     {
       "type": "section",
       "heading": "2. Statement of Additional Information (SAI) — In Detail",
-      "intro": "The SAI contains general information about the AMC and all its schemes:",
+      "intro": "The SAI generally contains Mutual Fund / AMC–level information that applies across schemes of that fund house. It is usually not issued as a separate document for every individual scheme. Typical SAI content includes:",
       "bullets": [
         "AMC & Trustee Company Details — CIN, address, board, key personnel",
         "Sponsor Information",
         "Rights of Unit Holders",
-        "Tax Treatment of MF Investments — STCG and LTCG",
-        "KYC Requirements — FATCA/CRS, NRI norms",
-        "Penalties & Pending Litigation against the AMC",
+        "Tax Treatment of MF Investments — as disclosed",
+        "KYC Requirements — FATCA/CRS, NRI norms, and related disclosures",
+        "Penalties & Pending Litigation against the AMC, where disclosed",
         "Investor Grievance Mechanism and SEBI SCORES details",
         "AML / KYC Policy of the AMC",
         "Associate Transactions — related-party disclosures"
@@ -80,17 +80,17 @@
     {
       "type": "section",
       "heading": "3. Key Information Memorandum (KIM) — In Detail",
-      "intro": "The KIM is a summarised document attached to every Mutual Fund application form:",
+      "intro": "The KIM is a scheme-specific summary document often attached to or used with the Mutual Fund application form. Typical KIM content includes:",
       "bullets": [
         "Investment Objective (summary)",
         "Asset Allocation Table",
-        "SEBI Riskometer — 6-level risk label",
-        "Current NAV — Direct and Regular Plans",
-        "Benchmark Index and Fund Manager Name",
-        "Exit Load and Minimum Investment Amounts",
+        "SEBI Riskometer — as currently disclosed for the scheme",
+        "NAV information — Direct and Regular Plans, where shown",
+        "Benchmark Index and Fund Manager Name, where disclosed",
+        "Exit Load and Minimum Investment Amounts, where applicable",
         "Plans Available — Direct Plan and Regular Plan",
-        "IDCW option details",
-        "Standard MF disclaimer"
+        "IDCW option details, where applicable",
+        "Standard Mutual Fund risk disclaimer"
       ]
     },
     {
@@ -106,103 +106,80 @@
         [
           "Level",
           "Scheme-specific",
-          "AMC-level (all schemes)",
+          "Generally Mutual Fund / AMC-level (not a separate document for every individual scheme)",
           "Scheme-specific"
         ],
         [
-          "Length",
-          "50–150 pages",
-          "30–80 pages",
-          "1–4 pages"
+          "Nature",
+          "Primary scheme offer document",
+          "Additional information incorporated by reference into the SID",
+          "Concise summary for quick reference"
         ],
         [
           "Difficulty",
           "Detailed — technical",
           "Legal & regulatory",
-          "Simple — easy to read"
+          "Simpler summary format"
         ],
         [
           "When to Read",
-          "Before every new investment",
-          "Once per AMC",
-          "Quick check before investing"
+          "Before investing in the scheme",
+          "Together with the SID for that AMC / Mutual Fund",
+          "As a quick check before investing; still read SID and SAI"
         ],
         [
           "Risk Info",
-          "Detailed",
-          "General",
-          "Riskometer"
+          "Detailed risk factors + scheme Riskometer",
+          "General / fund-level disclosures",
+          "Scheme Riskometer and key risk highlights"
         ],
         [
           "Cost Info",
-          "Full TER details",
-          "General expenses",
-          "Summary"
+          "TER and expense disclosures for the scheme",
+          "General expense / fund-level disclosures",
+          "Summary of key cost information"
         ],
         [
           "Fund Manager",
-          "Full profile",
-          "AMC team",
-          "Name only"
+          "As disclosed in the SID",
+          "AMC / team-level information, where disclosed",
+          "Summary details, where disclosed"
         ],
         [
-          "Updated",
-          "Quarterly / On change",
-          "Annually",
-          "Monthly / Quarterly"
-        ],
-        [
-          "From Innovate Securities",
-          "On request — Within 24 hours",
-          "On request — Within 24 hours",
-          "On request — Within 24 hours"
+          "Official Access",
+          "AMC website / AMFI / SEBI portals (links below)",
+          "AMC website / AMFI / SEBI portals (links below)",
+          "AMC website / application form / AMFI / SEBI portals (links below)"
         ]
       ]
     },
     {
-      "type": "rightsGrid",
+      "type": "section",
       "heading": "Understanding the SEBI Riskometer",
-      "items": [
-        {
-          "title": "Low",
-          "body": "Overnight / Liquid funds — very short duration, highly liquid, minimal risk"
-        },
-        {
-          "title": "Low to Moderate",
-          "body": "Ultra Short Duration, Money Market, Short Duration — low interest rate risk"
-        },
-        {
-          "title": "Moderate",
-          "body": "Balanced / Conservative Hybrid, Medium Duration — balanced risk"
-        },
-        {
-          "title": "Moderately High",
-          "body": "Large Cap, Flexi Cap, Aggressive Hybrid — equity with moderate-high risk"
-        },
-        {
-          "title": "High",
-          "body": "Mid Cap, Multi Cap, ELSS, Thematic — significant market risk"
-        },
-        {
-          "title": "Very High",
-          "body": "Small Cap, Sector/Thematic, International — highest market risk"
-        }
+      "intro": "SEBI requires Mutual Fund schemes to disclose a Riskometer label. Do not assume a fixed risk level for an entire category such as overnight, large-cap, or small-cap funds. Risk labels can differ between schemes in the same category and can change over time based on portfolio composition. Always check the current Riskometer of the specific scheme in its latest SID / KIM / AMC disclosure before investing.",
+      "bullets": [
+        "Low",
+        "Low to Moderate",
+        "Moderate",
+        "Moderately High",
+        "High",
+        "Very High"
       ]
     },
     {
       "type": "note",
-      "body": "The Riskometer is updated monthly by AMCs based on portfolio composition. Always check the current Riskometer before investing. Regulatory basis: SEBI Circular SEBI/HO/IMD/DF2/CIR/P/2020/253 dated December 31, 2020."
+      "body": "The Riskometer is updated by AMCs based on portfolio composition. Always verify the current Riskometer for the specific scheme before investing. Regulatory reference: SEBI circulars / guidelines on Mutual Fund Riskometer disclosures."
     },
     {
       "type": "links",
-      "heading": "Access SID, SAI & KIM Documents Officially",
+      "heading": "Direct Official Access to SID, SAI & KIM",
       "items": [
         {
-          "label": "SEBI — Mutual Funds / Offer Documents",
-          "href": "https://www.sebi.gov.in/"
+          "label": "AMFI Portal — Scheme / Offer Documents",
+          "href": "https://portal.amfiindia.com/"
         },
         {
-          "label": "AMFI — Scheme Documents",
+          "label": "AMFI India — Official Website",
           "href": "https://www.amfiindia.com/"
         },
         {
@@ -210,16 +187,20 @@
           "href": "https://www.amfiindia.com/nav-history-download.html"
         },
         {
+          "label": "SEBI — Mutual Funds / Regulatory Disclosures",
+          "href": "https://www.sebi.gov.in/"
+        },
+        {
           "label": "SEBI Master Circular for Mutual Funds",
           "href": "https://www.sebi.gov.in/legal/master-circulars/jun-2024/master-circular-for-mutual-funds_84266.html"
         },
         {
-          "label": "Mutual Funds Sahi Hai",
-          "href": "https://www.mutualfundssahihai.com"
-        },
-        {
           "label": "MF Central",
           "href": "https://www.mfcentral.com"
+        },
+        {
+          "label": "Mutual Funds Sahi Hai",
+          "href": "https://www.mutualfundssahihai.com"
         }
       ]
     },
@@ -227,12 +208,12 @@
       "type": "section",
       "heading": "Where to Get These Documents",
       "bullets": [
-        "AMC Official Website — Downloads / Investor Corner → Scheme Documents",
-        "SEBI Portal — sebi.gov.in → Mutual Funds",
-        "AMFI Portal — amfiindia.com → Scheme Documents",
-        "MF Central — mfcentral.com",
-        "From Innovate Securities on request — within 24 hours, free of charge (email Mfinnovate@gmail.com or call +91 98795 06993)",
-        "With Application Form — KIM is attached to the physical application form"
+        "AMC Official Website — Investor / Downloads / Scheme Documents / SID-SAI-KIM section for the specific scheme and fund house",
+        "AMFI Portal — portal.amfiindia.com for scheme and related offer documents",
+        "SEBI Website — sebi.gov.in for Mutual Fund regulatory disclosures and guidance",
+        "MF Central — mfcentral.com for investor account and related services",
+        "Application Form — KIM is often attached to or accompanied by the physical / digital application form",
+        "Innovate Securities can also help you locate the current official SID / SAI / KIM for a scheme — email Mfinnovate@gmail.com or call +91 98795 06993. Prefer downloading from the AMC / AMFI / SEBI sources above so you always use the latest version."
       ]
     },
     {
@@ -241,38 +222,38 @@
       "items": [
         {
           "title": "Know Your Risks",
-          "body": "The Riskometer and risk factors section tell you exactly what risks you are taking. Never invest without understanding them."
+          "body": "Review the scheme’s risk factors and current Riskometer. Do not rely on category assumptions — check the specific scheme documents."
         },
         {
           "title": "Know Your Costs",
-          "body": "TER, exit load, and transaction charges are clearly disclosed. Higher costs reduce your net returns significantly over time."
+          "body": "TER, exit load, and other charges are disclosed in the scheme documents. Higher costs can reduce net returns over time."
         },
         {
           "title": "Check Suitability",
-          "body": "The investment objective tells you if the scheme matches your financial goal — wealth creation, income, or capital preservation."
+          "body": "The investment objective indicates whether the scheme is intended for goals such as wealth creation, income, or a capital preservation objective, where specifically stated in the scheme documents, without assurance."
         },
         {
           "title": "Understand Lock-in",
-          "body": "ELSS has 3-year lock-in. Close-ended funds have fixed maturity. Know before you invest — liquidity matters."
+          "body": "Some schemes have lock-in or fixed-maturity features (for example ELSS or certain close-ended schemes). Confirm liquidity terms in the scheme documents before investing."
         },
         {
           "title": "Verify Fund Manager",
-          "body": "Fund manager changes significantly impact performance. Check who manages the fund and their track record in the SID."
+          "body": "Fund manager details and changes are disclosed in scheme documents. Review the SID for current information."
         },
         {
           "title": "Compare Options",
-          "body": "Reading KIMs of similar schemes helps you compare TER, exit load, and performance across options before deciding."
+          "body": "Reading KIMs and SIDs of similar schemes can help you compare TER, exit load, Riskometer, and other disclosed features before deciding."
         }
       ]
     },
     {
       "type": "alert",
-      "heading": "Innovate Securities’ Commitment",
-      "body": "We will always share the relevant SID, SAI, or KIM for any scheme we recommend — before you invest, not after. If you have already invested and have not received these documents, contact Mfinnovate@gmail.com or +91 98795 06993 and we will provide them within 24 hours."
+      "heading": "Innovate Securities’ Approach",
+      "body": "Innovate Securities has adopted a process to help investors access the current official SID, SAI, and KIM for schemes under consideration, primarily through the AMC, AMFI, and SEBI portals linked on this page. If you need help locating a document, contact Mfinnovate@gmail.com or +91 98795 06993. Always rely on the latest official AMC / AMFI / SEBI version."
     },
     {
       "type": "note",
-      "body": "Last Updated: August 2026 | Innovate Securities Pvt. Ltd. | Regulatory basis: SEBI (MF) Regulations 1996 | AMFI Master Circular Jan 2026"
+      "body": "Last Updated: August 2026 | Innovate Securities Pvt. Ltd. | Regulatory basis: SEBI (Mutual Funds) Regulations, 1996 and applicable SEBI / AMFI circulars"
     }
   ]
 }

@@ -228,7 +228,7 @@
       },
       {
         "service": "Complaint Resolution (Level 1)",
-        "description": "Full written resolution from Innovate Securities GRO",
+        "description": "Full written resolution from Innovate Securities internal escalation",
         "tat": "15 working days"
       },
       {
@@ -268,37 +268,37 @@
     "steps": [
       {
         "step": 1,
-        "label": "Innovate Securities GRO",
-        "detail": "Pimal K. Panchal · Mfinnovate@gmail.com",
+        "label": "Operational / Service Escalation",
+        "detail": "Kartik Prajapati · Mfinnovate@gmail.com",
         "meta": "15 working days",
         "tone": "orange"
       },
       {
         "step": 2,
-        "label": "Concerned AMC",
-        "detail": "AMC Investor Relations",
+        "label": "MF Principal / Final Internal Escalation",
+        "detail": "Amit P. Shah · Mfinnovate@gmail.com",
         "meta": "15 working days",
         "tone": "brown"
       },
       {
         "step": 3,
-        "label": "AMFI IGRC",
-        "detail": "igrc@amfiindia.com",
-        "meta": "1800-270-7000",
+        "label": "Concerned AMC / RTA",
+        "detail": "AMC / RTA Investor Relations",
+        "meta": "15 working days",
         "tone": "purple"
       },
       {
         "step": 4,
-        "label": "SEBI SCORES",
-        "detail": "scores.sebi.gov.in",
-        "meta": "1800-266-7575",
+        "label": "AMFI IGRC",
+        "detail": "igrc@amfiindia.com",
+        "meta": "1800-270-7000",
         "tone": "blue"
       },
       {
         "step": 5,
-        "label": "SMART ODR",
-        "detail": "smartodr.in",
-        "meta": "Conciliation / Arbitration",
+        "label": "SEBI SCORES / SMART ODR",
+        "detail": "scores.sebi.gov.in / smartodr.in",
+        "meta": "1800-266-7575",
         "tone": "green"
       }
     ]
@@ -363,8 +363,8 @@
   },
   "contactBanner": {
     "heading": "Contact for Charter-Related Queries",
-    "body": "For any queries about this Investor Charter, your rights as an investor, or to request any compliance document, contact our GRO:",
-    "name": "Pimal K. Panchal",
+    "body": "For any queries about this Investor Charter, your rights as an investor, or to request any compliance document, contact our operational grievance desk:",
+    "name": "Kartik Prajapati",
     "email": "Mfinnovate@gmail.com",
     "phone": "9429893549",
     "grievancePath": "/compliances/mf-compliance/investor-grievance-redressal",

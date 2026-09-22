@@ -93,9 +93,10 @@
     },
     {
       "id": "gro",
-      "title": "5. Grievance Redressal Officer (GRO)",
+      "title": "5. Mutual Fund Grievance Contacts",
       "fields": [
-        { "label": "Designation", "value": "Executive Director — Compliance Officer" },
+        { "label": "Operational / Service Escalation", "value": "Kartik Prajapati" },
+        { "label": "MF Principal / Final Internal Escalation", "value": "Amit P. Shah" },
         { "label": "Email", "value": "Mfinnovate@gmail.com", "href": "mailto:Mfinnovate@gmail.com" },
         { "label": "Phone", "value": "9429893549", "href": "tel:9429893549" },
         {
@@ -110,37 +111,37 @@
       "steps": [
         {
           "step": 1,
-          "label": "GRO",
-          "detail": "Pimal K. Panchal",
+          "label": "Operational",
+          "detail": "Kartik Prajapati",
           "meta": "Mfinnovate@gmail.com · 9429893549",
           "tone": "orange"
         },
         {
           "step": 2,
-          "label": "AMC",
-          "detail": "Investor Relations",
-          "meta": "Contact the concerned AMC",
+          "label": "MF Principal",
+          "detail": "Amit P. Shah",
+          "meta": "Final internal escalation",
           "tone": "brown"
         },
         {
           "step": 3,
-          "label": "AMFI",
-          "detail": "1800-270-7000",
-          "meta": "amfiindia.com",
+          "label": "AMC / RTA",
+          "detail": "Investor Relations",
+          "meta": "Contact the concerned AMC / RTA",
           "tone": "purple"
         },
         {
           "step": 4,
-          "label": "SEBI",
-          "detail": "scores.sebi.gov.in",
-          "meta": "SEBI SCORES",
+          "label": "AMFI",
+          "detail": "1800-270-7000",
+          "meta": "amfiindia.com",
           "tone": "blue"
         },
         {
           "step": 5,
-          "label": "ODR",
-          "detail": "smartodr.in",
-          "meta": "SMART ODR",
+          "label": "SEBI / ODR",
+          "detail": "scores.sebi.gov.in / smartodr.in",
+          "meta": "SEBI SCORES / SMART ODR",
           "tone": "green"
         }
       ]
