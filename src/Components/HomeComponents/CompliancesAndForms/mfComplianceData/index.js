@@ -50,12 +50,6 @@ export const MF_COMPLIANCE_CARDS = [
     hasDetail: true,
   },
   {
-    slug: "disclaimer",
-    title: "Disclaimer",
-    description: "Risk factors and important disclaimers for investors.",
-    hasDetail: true,
-  },
-  {
     slug: "commission-disclosure",
     title: "Commission Disclosure",
     description: "Trail commission ranges across fund categories and AMCs.",
@@ -119,6 +113,12 @@ export const MF_COMPLIANCE_CARDS = [
     slug: "sid-sai-kim",
     title: "SID / SAI / KIM",
     description: "Scheme documents for all mutual fund schemes.",
+    hasDetail: true,
+  },
+  {
+    slug: "disclaimer",
+    title: "Disclaimer",
+    description: "Risk factors and important disclaimers for investors.",
     hasDetail: true,
   },
 ];
