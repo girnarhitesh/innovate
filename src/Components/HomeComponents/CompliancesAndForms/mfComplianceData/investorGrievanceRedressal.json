@@ -27,7 +27,7 @@
         "value": "Mfinnovate@gmail.com",
         "href": "mailto:Mfinnovate@gmail.com"
       },
-      { "label": "Phone", "value": "9429893549", "href": "tel:9429893549" },
+      { "label": "Phone", "value": "8128473405", "href": "tel:8128473405" },
       { "label": "Working Hours", "value": "Monday to Saturday, 10:00 AM – 6:00 PM" },
       {
         "label": "Address",
@@ -127,15 +127,15 @@
         "level": 1,
         "tone": "orange",
         "title": "Kartik Prajapati — Operational / Service Escalation",
-        "contact": "Kartik Prajapati | Mfinnovate@gmail.com | 9429893549",
+        "contact": "Kartik Prajapati | Mfinnovate@gmail.com | 8128473405",
         "timeline": "Acknowledgement: 3 working days | Resolution: 15 working days",
         "description": "First point of contact for all MF grievances. Operational and service issues are handled at this level."
       },
       {
         "level": 2,
         "tone": "brown",
-        "title": "Amit P. Shah — MF Principal / Final Internal Escalation",
-        "contact": "Amit P. Shah | Mfinnovate@gmail.com | 9429893549",
+        "title": "Amit Shah — MF Principal / Final Internal Escalation",
+        "contact": "Amit Shah | Mfinnovate@gmail.com | +91 98795 06993",
         "timeline": "15 working days",
         "description": "Final internal escalation for mutual fund grievances within Innovate Securities before external escalation."
       },
@@ -213,12 +213,12 @@
     "rows": [
       {
         "organisation": "Operational / Service Escalation",
-        "contact": "Kartik Prajapati | Mfinnovate@gmail.com | 9429893549",
+        "contact": "Kartik Prajapati | Mfinnovate@gmail.com | 8128473405",
         "timeline": "15 working days"
       },
       {
         "organisation": "MF Principal / Final Internal Escalation",
-        "contact": "Amit P. Shah | Mfinnovate@gmail.com | 9429893549",
+        "contact": "Amit Shah | Mfinnovate@gmail.com | +91 98795 06993",
         "timeline": "15 working days"
       },
       {

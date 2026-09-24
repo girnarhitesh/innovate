@@ -96,9 +96,9 @@
       "title": "5. Mutual Fund Grievance Contacts",
       "fields": [
         { "label": "Operational / Service Escalation", "value": "Kartik Prajapati" },
-        { "label": "MF Principal / Final Internal Escalation", "value": "Amit P. Shah" },
+        { "label": "MF Principal / Final Internal Escalation", "value": "Amit Shah" },
         { "label": "Email", "value": "Mfinnovate@gmail.com", "href": "mailto:Mfinnovate@gmail.com" },
-        { "label": "Phone", "value": "9429893549", "href": "tel:9429893549" },
+        { "label": "Phone", "value": "8128473405", "href": "tel:8128473405" },
         {
           "label": "Address",
           "value": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380009"
@@ -113,14 +113,14 @@
           "step": 1,
           "label": "Operational",
           "detail": "Kartik Prajapati",
-          "meta": "Mfinnovate@gmail.com · 9429893549",
+          "meta": "Mfinnovate@gmail.com · 8128473405",
           "tone": "orange"
         },
         {
           "step": 2,
           "label": "MF Principal",
-          "detail": "Amit P. Shah",
-          "meta": "Final internal escalation",
+          "detail": "Amit Shah",
+          "meta": "Mfinnovate@gmail.com · +91 98795 06993",
           "tone": "brown"
         },
         {

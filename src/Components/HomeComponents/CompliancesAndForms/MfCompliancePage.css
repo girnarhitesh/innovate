@@ -4,6 +4,15 @@
   background: #f5f6f8;
 }
 
+.MfCompliancePage h1,
+.MfCompliancePage h2,
+.MfCompliancePage h3 {
+  letter-spacing: normal;
+  font-family: "Work Sans", "Space Grotesk", sans-serif;
+  filter: none;
+  transform: none;
+}
+
 .MfCompliancePage .Container.MfComplianceLayout {
   display: grid;
   grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.7fr);

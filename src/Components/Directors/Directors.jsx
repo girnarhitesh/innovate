@@ -23,7 +23,7 @@ const Directors = () => {
         },
         {
             id: 3,
-            name: "Amit P Shah",
+            name: "Amit Shah",
             position: "Executive Director",
             description: "Managing day-to-day operations and implementing strategic initiatives. Amit's leadership ensures seamless execution of our business objectives and maintains operational excellence.",
             image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/director-3.jpg"

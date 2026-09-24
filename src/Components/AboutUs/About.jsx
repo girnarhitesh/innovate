@@ -135,7 +135,7 @@ const About = () => {
                       </tr>
                       <tr>
                         <td>4</td>
-                        <td>Amit P. Shah</td>
+                        <td>Amit Shah</td>
                         <td>Director</td>
                         <td>
                           <a href="tel:9879506993">9879506993</a>

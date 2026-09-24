@@ -58,15 +58,15 @@
     "description": "Persons associated with Innovate Securities who solicit, recommend, or sell mutual fund schemes. Only certified mutual fund sales personnel hold a valid NISM Series V-A certification and an AMFI EUIN, which is printed on mutual fund application forms alongside ARN-42505. Other directors who do not solicit, recommend, or sell MF schemes are not listed as MF sales personnel.",
     "members": [
       {
-        "name": "Amit P. Shah",
+        "name": "Amit Shah",
         "designation": "Director and Mutual Fund Sales Person",
         "euin": "E217247",
-        "nism": "—",
-        "validUntil": "—",
+        "nism": "30th June 2029",
+        "validUntil": "30th June 2029",
         "status": "Active"
       }
     ],
-    "note": "NISM Series V-A and EUIN validity dates will be published only after certificate verification. Verify EUIN details of any Mutual Fund Distributor employee at amfiindia.com/find-mf-distributor. Report misuse of EUIN to igrc@amfiindia.com."
+    "note": "Verify EUIN details of any Mutual Fund Distributor employee at amfiindia.com/find-mf-distributor. Report misuse of EUIN to igrc@amfiindia.com."
   },
   "verificationHub": {
     "heading": "Verify All Registrations Independently",

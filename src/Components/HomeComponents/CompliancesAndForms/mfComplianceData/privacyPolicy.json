@@ -123,11 +123,6 @@
       "body": "Selling to third parties for marketing | Sharing with advertisers | Profiling for non-financial purposes | Any purpose not listed above without your explicit consent."
     },
     {
-      "type": "section",
-      "heading": "3. Data Retention — Minimum 8 Years",
-      "intro": "All transaction records, investment documents, KYC data, and related personal data are retained for a minimum of 8 years from the end of the business relationship or the date of the last transaction — as mandated by SEBI, PMLA 2002, and AMFI Guidelines. After expiry, data is securely deleted or anonymised. Website/technical logs are retained for a maximum of 12 months."
-    },
-    {
       "type": "table",
       "heading": "Retention by data type",
       "columns": [

@@ -269,14 +269,14 @@
       {
         "step": 1,
         "label": "Operational / Service Escalation",
-        "detail": "Kartik Prajapati · Mfinnovate@gmail.com",
+        "detail": "Kartik Prajapati · Mfinnovate@gmail.com · 8128473405",
         "meta": "15 working days",
         "tone": "orange"
       },
       {
         "step": 2,
         "label": "MF Principal / Final Internal Escalation",
-        "detail": "Amit P. Shah · Mfinnovate@gmail.com",
+        "detail": "Amit Shah · Mfinnovate@gmail.com · +91 98795 06993",
         "meta": "15 working days",
         "tone": "brown"
       },
@@ -366,7 +366,7 @@
     "body": "For any queries about this Investor Charter, your rights as an investor, or to request any compliance document, contact our operational grievance desk:",
     "name": "Kartik Prajapati",
     "email": "Mfinnovate@gmail.com",
-    "phone": "9429893549",
+    "phone": "8128473405",
     "grievancePath": "/compliances/mf-compliance/investor-grievance-redressal",
     "grievanceLabel": "Investor Grievance Redressal"
   }

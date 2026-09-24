@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { notification } from "antd";
 import HomeComponents from "./Components/HomeComponents/HomeComponents";
 import Navbar from "./Components/Navigation/Navbar";
@@ -32,6 +32,8 @@ import StatusLiveRegions from "./Components/Accessibility/StatusLiveRegions";
 
 function App({ isPrerender = false }) {
   useGlobalAnimation(isPrerender);
+  const { pathname } = useLocation();
+  const isHomePage = pathname === "/";
 
   const [, contextHolder] = notification.useNotification();
 
@@ -111,9 +113,9 @@ function App({ isPrerender = false }) {
               <Route path="/sitemap" element={<Sitemap />} />
             </Routes>
 
-            <NewsLetters />
+            {isHomePage ? <NewsLetters /> : null}
           </main>
-          <Footer />
+          {isHomePage ? <Footer /> : null}
         </div>
         {!isPrerender ? <AccessibilityWidget /> : null}
       </>

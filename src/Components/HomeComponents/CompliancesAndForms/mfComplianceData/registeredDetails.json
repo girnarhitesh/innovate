@@ -41,7 +41,7 @@
     },
     {
       "role": "DIRECTOR",
-      "name": "Amit P. Shah"
+      "name": "Amit Shah"
     }
   ],
   "regulatoryRegistrations": [
@@ -63,12 +63,12 @@
     "name": "Kartik Prajapati",
     "designation": "Operational / Service Escalation",
     "email": "Mfinnovate@gmail.com",
-    "phone": "9429893549",
+    "phone": "8128473405",
     "responseTime": "Within 15 working days"
   },
   "escalationSteps": [
     { "step": 1, "label": "Operational", "detail": "Kartik Prajapati", "tone": "orange" },
-    { "step": 2, "label": "MF Principal", "detail": "Amit P. Shah", "tone": "brown" },
+    { "step": 2, "label": "MF Principal", "detail": "Amit Shah", "tone": "brown" },
     { "step": 3, "label": "AMC / RTA", "detail": "Investor Relations", "tone": "purple" },
     { "step": 4, "label": "AMFI", "detail": "1800-270-7000", "tone": "blue" },
     { "step": 5, "label": "SEBI / ODR", "detail": "scores.sebi.gov.in / smartodr.in", "tone": "green" }
