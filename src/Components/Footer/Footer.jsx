@@ -118,7 +118,7 @@ const Footer = () => {
               <div className="MapContainer">
                 <p>
                   1st Floor, DEVASHISH 39, Sardar Patel Nagar Opp. ABC-III, Nr.
-                  Hotel Regency Navrangpura Ahmedabad - 380006
+                  Hotel Regency Navrangpura Ahmedabad - 380009
                 </p>
                 <br />
                 <iframe

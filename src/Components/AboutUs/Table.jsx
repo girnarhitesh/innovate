@@ -24,7 +24,7 @@ const Table = () => {
                         <td>Meet V. Panchal</td>
                         <td>
                           1st Floor, DEVASHISH, 39, Sardar Patel Nagar, Near
-                          Opp. ABC-III, Navrangpura, Ahmedabad - 380 009
+                          Opp. ABC-III, Navrangpura, Ahmedabad - 380009
                         </td>
                         <td>
                           <a href="tel:07926421314">079-26421314</a>
@@ -40,7 +40,7 @@ const Table = () => {
                         <td>Hiten Shah</td>
                         <td>
                           1st Floor, DEVASHISH, 39, Sardar Patel Nagar, Near
-                          Opp. ABC-III, Navrangpura, Ahmedabad - 380 009
+                          Opp. ABC-III, Navrangpura, Ahmedabad - 380009
                         </td>
                         <td>
                           <a href="tel:07926474514">079-26474514</a>
@@ -56,7 +56,7 @@ const Table = () => {
                         <td>Pimal K. Panchal</td>
                         <td>
                           1st Floor, DEVASHISH, 39, Sardar Patel Nagar, Near
-                          Opp. ABC-III, Navrangpura, Ahmedabad - 380 009
+                          Opp. ABC-III, Navrangpura, Ahmedabad - 380009
                         </td>
                         <td>
                           <a href="tel:07926474522">079-26474522</a>
@@ -72,7 +72,7 @@ const Table = () => {
                         <td>Mitesh N. Shah</td>
                         <td>
                           1st Floor, DEVASHISH, 39, Sardar Patel Nagar, Near
-                          Opp. ABC-III, Navrangpura, Ahmedabad - 380 009
+                          Opp. ABC-III, Navrangpura, Ahmedabad - 380009
                         </td>
                         <td>
                           <a href="tel:07926474513">079-26474513</a>
@@ -88,7 +88,7 @@ const Table = () => {
                         <td>Amar M. Parikh</td>
                         <td>
                           1st Floor, DEVASHISH, 39, Sardar Patel Nagar, Near
-                          Opp. ABC-III, Navrangpura, Ahmedabad - 380 009
+                          Opp. ABC-III, Navrangpura, Ahmedabad - 380009
                         </td>
                         <td>
                           <a href="tel:07926561106">079-26561106</a>

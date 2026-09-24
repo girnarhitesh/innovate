@@ -17,7 +17,7 @@
   "entityInformation": {
     "legalName": "Innovate Securities Private Limited",
     "entityType": "Private Limited Company",
-    "registeredAddress": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380006",
+    "registeredAddress": "Devashish, 1st Floor, 39, Sardar Patel Nagar Road, Nr. Nest Hotel, Ellisbridge, Ahmedabad, Gujarat (India) 380009",
     "contact": {
       "phone": "+91 98795 06993",
       "phoneHref": "+919879506993",
@@ -49,26 +49,6 @@
       "body": "AMFI — Mutual Fund Distributor",
       "registrationNo": "ARN-42505",
       "validity": "06-Apr-2024 to 05-Apr-2027"
-    },
-    {
-      "body": "SEBI — Stock Broker (NSE & BSE)",
-      "registrationNo": "INZ000224735",
-      "validity": "Ongoing"
-    },
-    {
-      "body": "CDSL — Depository Participant",
-      "registrationNo": "IN-DP-CDSL-594-2021",
-      "validity": "Ongoing"
-    },
-    {
-      "body": "NSE — Member ID",
-      "registrationNo": "07002",
-      "validity": "Ongoing"
-    },
-    {
-      "body": "BSE — Member ID",
-      "registrationNo": "6108",
-      "validity": "Ongoing"
     }
   ],
   "importantNotes": [

@@ -110,7 +110,6 @@ const RegisteredDetailsContent = ({ page }) => {
   const {
     profile,
     entityInformation,
-    management,
     regulatoryRegistrations,
     importantNotes = [],
     grievanceOfficer,
@@ -192,34 +191,6 @@ const RegisteredDetailsContent = ({ page }) => {
             </dd>
           </div>
         </dl>
-      </section>
-
-      <section className="MfDetailSection" aria-labelledby="management-heading">
-        <h2 id="management-heading" className="MfDetailSection__title">
-          Directors / Partners / Proprietors
-        </h2>
-        <div className="MfDetailPeople">
-          {management.map((person) => (
-            <article key={`${person.role}-${person.name}`} className="MfDetailPersonCard">
-              <p className="MfDetailPersonCard__role">{person.role}</p>
-              <h3>{person.name}</h3>
-              {person.education ? (
-                <p className="MfDetailPersonCard__meta">{person.education}</p>
-              ) : null}
-              {person.euin || person.nismNumber ? (
-                <div className="MfDetailPersonCard__creds">
-                  {person.euin ? <span>EUIN: {person.euin}</span> : null}
-                  {person.nismNumber ? (
-                    <span>
-                      NISM: {person.nismNumber}
-                      {person.validity ? ` · Valid: ${person.validity}` : ""}
-                    </span>
-                  ) : null}
-                </div>
-              ) : null}
-            </article>
-          ))}
-        </div>
       </section>
 
       <section className="MfDetailSection" aria-labelledby="regulatory-heading">
