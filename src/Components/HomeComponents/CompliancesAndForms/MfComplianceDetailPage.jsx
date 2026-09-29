@@ -830,24 +830,32 @@ const CommissionDisclosureContent = ({ page }) => {
           </div>
         ) : null}
         <div className="MfCommEmpanelledGrid">
-          {empanelledAmcs.items.map((item) => (
-            <article key={item.pdfUrl} className="MfCommEmpanelledCard">
-              <div className="MfCommEmpanelledCard__body">
-                <h3>{item.name}</h3>
-                <p>
-                  Valid Period: <strong>{item.validPeriod}</strong>
-                </p>
-              </div>
-              <a
-                href={item.pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="MfCommEmpanelledCard__pdf"
-              >
-                <FileTextOutlined aria-hidden="true" /> View PDF
-              </a>
-            </article>
-          ))}
+          {empanelledAmcs.items.map((item) => {
+            const fileAction = /\.xlsx?$/i.test(item.pdfUrl)
+              ? "View Sheet"
+              : /\.jpe?g$/i.test(item.pdfUrl)
+                ? "View Image"
+                : "View PDF";
+
+            return (
+              <article key={item.pdfUrl} className="MfCommEmpanelledCard">
+                <div className="MfCommEmpanelledCard__body">
+                  <h3>{item.name}</h3>
+                  <p>
+                    Valid Period: <strong>{item.validPeriod}</strong>
+                  </p>
+                </div>
+                <a
+                  href={item.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="MfCommEmpanelledCard__pdf"
+                >
+                  <FileTextOutlined aria-hidden="true" /> {fileAction}
+                </a>
+              </article>
+            );
+          })}
         </div>
       </section>
 

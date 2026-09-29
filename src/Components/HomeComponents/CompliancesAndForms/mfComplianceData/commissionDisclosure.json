@@ -98,127 +98,202 @@
     "subtitle": "AMC brokerage / commission disclosure sheets retained for Innovate’s currently disclosed empanelments. Updated on a rolling basis aligned with the Financial Year cycle (Apr–Jul | Aug–Nov | Dec–Mar). Effective from: 01-Aug-2026 | Last reviewed on: 22-Sep-2026. Only AMCs with supporting disclosure documents are listed here.",
     "items": [
       {
+        "name": "360 ONE Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/360%20One%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "Abakkus Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Abacus%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
         "name": "Aditya Birla Sun Life Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788084626_b75d1a8c.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Aditya%20Birla%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "AlphaGrep Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/ALPHA%20Grep%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Axis Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788084720_d51fe0eb.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/AXIS%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Bajaj Finserv Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788084701_403f384e.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/BAJAJ%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Bandhan Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788084748_f84a4f6a.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Bandhan%20%20Brokerage_structure_July-September_2026%20PW%20ARN42505.pdf"
+      },
+      {
+        "name": "Baroda BNP Paribas Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/BNP%20Paribas%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Canara Robeco Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788084771_1c62a737.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/CANARA%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "DSP Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085114_514a4646.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/DSP%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Edelweiss Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788176040_65a3d69a.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Edelweiss%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Franklin Templeton Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788175234_59dc2aa5.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Franklin%20Brokerage_structure_July-September_2026%20-%201.pdf"
+      },
+      {
+        "name": "Groww Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Groww%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "HDFC Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085165_1e2641e0.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/HDFC%20Brokerage_structure_July-September_2026%20-%201.pdf"
       },
       {
-        "name": "HSBC",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085188_3a680312.pdf"
+        "name": "Helios Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/HELIOS%20%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "HSBC Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/HSBC%20Brokerage_structure_July-September_2026%20(PW%20ARN42505).pdf"
       },
       {
         "name": "ICICI Prudential Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085212_6e3400ef.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/ICICI%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Invesco Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788175570_c3af487a.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Invesco%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "ITI Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/ITI%20Brokerage_structure_July-September_2026%20-%201.pdf"
+      },
+      {
+        "name": "JM Financial Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/JM%20Brokerage_structure_July-September_2026%20-%201.pdf"
       },
       {
         "name": "Kotak Mahindra Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085239_4ee3d9a4.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/KOTAK%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "LIC Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/LIC%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Mahindra Manulife Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085260_09c5efa8.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/MAhindra%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Mirae Asset Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085282_bbd4e401.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/MIRAE%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Motilal Oswal Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085300_ced2afe7.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/MOTILAL%20OSWAL%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "Navi Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/NAVI%20Brokerage_structure_July-September_2026%20-%201.pdf"
       },
       {
         "name": "Nippon India Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085322_84aebfa1.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Nippon%20Brokerage_structure_July-September_2026%20-%201.pdf"
       },
       {
-        "name": "PGIM India Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788175971_47f2d1cb.pdf"
+        "name": "Old Bridge Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/OLD%20bridge%20Brokerage_structure_July-September_2026%20-%201.pdf"
       },
       {
         "name": "PPFAS Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788174421_c86e7062.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Parag%20Parikh%20July%20to%20Sep%202026.jpg"
       },
       {
         "name": "quant Mutual Fund",
-        "validPeriod": "Sep 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788258690_57131616.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/QUANT%20Brokerage_structure_July-September_2026.pdf"
       },
       {
-        "name": "Sbi",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085370_c873857b.pdf"
+        "name": "Quantum Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Quantum%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "Samco Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Samco%20brokerage%20%20July%20to%20Sep%202026.xlsx"
+      },
+      {
+        "name": "SBI Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/SBI%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Sundaram Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085397_a34ec144.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/SUNDARAM%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "Tata Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085417_42267aa0.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/TATA%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "The Wealth Company Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/The%20Wealth%20Company%20Brokerage_structure_July-September_2026.pdf"
+      },
+      {
+        "name": "Union Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/UNION%20Brokerage_structure_July-September_2026.pdf"
       },
       {
         "name": "UTI Mutual Fund",
-        "validPeriod": "Aug 2026",
-        "pdfUrl": "/Image/CompliencesAndFormsDocuments/CommissionDisclosures/disclosure_1788085436_1367c679.pdf"
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/UTI%20Brokerage_structure_July-September_2026%20(%20PW%20AAACI4767R).pdf"
+      },
+      {
+        "name": "WhiteOak Capital Mutual Fund",
+        "validPeriod": "Jul–Sep 2026",
+        "pdfUrl": "/Image/July%20to%20September%202026/Whiteoak%20Brokerage_structure_July-September_2026.pdf"
       }
     ],
-    "note": "Each PDF is the supporting brokerage sheet for that AMC. These documents contain the actual category / scheme-level trail commission structures used for public disclosure on this page."
+    "note": "Each file is the supporting brokerage sheet for that AMC. These documents contain the actual category / scheme-level trail commission structures used for public disclosure on this page."
   },
   "policy": {
     "heading": "Our Commission Policy",
