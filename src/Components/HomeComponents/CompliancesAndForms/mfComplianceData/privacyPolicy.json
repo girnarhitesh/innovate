@@ -123,40 +123,6 @@
       "body": "Selling to third parties for marketing | Sharing with advertisers | Profiling for non-financial purposes | Any purpose not listed above without your explicit consent."
     },
     {
-      "type": "table",
-      "heading": "Retention by data type",
-      "columns": [
-        "Data Type",
-        "Retention Period & Reason"
-      ],
-      "rows": [
-        [
-          "KYC Documents",
-          "8 years — PMLA 2002, SEBI KYC norms"
-        ],
-        [
-          "Transaction Records",
-          "8 years — SEBI Regulations, AMFI Guidelines"
-        ],
-        [
-          "Investment Documents",
-          "8 years — SEBI / AMFI compliance"
-        ],
-        [
-          "Correspondence Records",
-          "8 years — Regulatory and legal requirements"
-        ],
-        [
-          "Grievance Records",
-          "5 years — SEBI SCORES requirements"
-        ],
-        [
-          "Website / Technical Logs",
-          "12 months — Internal security purposes"
-        ]
-      ]
-    },
-    {
       "type": "section",
       "heading": "4. Data Sharing & Third Parties",
       "intro": "We share personal data only when necessary and only with authorised parties:",
@@ -246,7 +212,7 @@
     },
     {
       "type": "note",
-      "body": "To exercise any of the above rights, contact our Data Protection Officer at Mfinnovate@gmail.com or 9429893549. We will respond within 15 working days. If not satisfied, you may approach the Data Protection Board of India."
+      "body": "To exercise any of the above rights, contact our Data Protection Officer at Mfinnovate@gmail.com or +91 98795 06993. We will respond within 15 working days. If not satisfied, you may approach the Data Protection Board of India."
     },
     {
       "type": "contactCard",
@@ -258,7 +224,7 @@
         },
         {
           "label": "Designation",
-          "value": "Executive Director"
+          "value": "Director"
         },
         {
           "label": "Email",
@@ -267,8 +233,8 @@
         },
         {
           "label": "Phone",
-          "value": "9429893549",
-          "href": "tel:9429893549"
+          "value": "+91 98795 06993",
+          "href": "tel:+919879506993"
         },
         {
           "label": "Address",

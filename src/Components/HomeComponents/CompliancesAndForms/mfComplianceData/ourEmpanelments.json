@@ -28,7 +28,7 @@
       "type": "stats",
       "items": [
         {
-          "value": "56",
+          "value": "46",
           "label": "Mutual Fund AMCs"
         },
         {
@@ -47,7 +47,7 @@
     },
     {
       "type": "table",
-      "heading": "Mutual Fund AMCs — 56 Empanelled (AMFI Registered)",
+      "heading": "Mutual Fund AMCs — 46 Empanelled (AMFI Registered)",
       "columns": [
         "#",
         "AMC Full Name",
@@ -81,314 +81,254 @@
         ],
         [
           "5",
-          "Angel One Mutual Fund",
-          "MF/083/24/09",
-          "Active"
-        ],
-        [
-          "6",
-          "ASK Mutual Fund",
-          "MF/089/26/15",
-          "Active"
-        ],
-        [
-          "7",
           "Axis Mutual Fund",
           "MF/061/09/02",
           "Active"
         ],
         [
-          "8",
+          "6",
           "Bajaj Finserv Mutual Fund",
           "MF/078/23/04",
           "Active"
         ],
         [
-          "9",
+          "7",
           "Bandhan Mutual Fund",
           "MF/042/00/3",
           "Active"
         ],
         [
-          "10",
-          "Bank of India Mutual Fund",
-          "MF/056/08/01",
-          "Active"
-        ],
-        [
-          "11",
+          "8",
           "Baroda BNP Paribas Mutual Fund",
           "MF/018/94/02",
           "Active"
         ],
         [
-          "12",
+          "9",
           "Canara Robeco Mutual Fund",
           "MF/004/93/4",
           "Active"
         ],
         [
-          "13",
-          "Capitalmind Mutual Fund",
-          "MF/084/25/10",
-          "Active"
-        ],
-        [
-          "14",
+          "10",
           "Choice Mutual Fund",
           "MF/087/25/13",
           "Active"
         ],
         [
-          "15",
+          "11",
           "DSP Mutual Fund",
           "MF/036/97/7",
           "Active"
         ],
         [
-          "16",
+          "12",
           "Edelweiss Mutual Fund",
           "MF/057/08/02",
           "Active"
         ],
         [
-          "17",
+          "13",
           "Franklin Templeton Mutual Fund",
           "MF/026/96/8",
           "Active"
         ],
         [
-          "18",
+          "14",
           "Groww Mutual Fund",
           "MF/068/11/03",
           "Active"
         ],
         [
-          "19",
+          "15",
           "HDFC Mutual Fund",
           "MF/044/00/6",
           "Active"
         ],
         [
-          "20",
+          "16",
           "Helios Mutual Fund",
           "MF/079/23/05",
           "Active"
         ],
         [
-          "21",
+          "17",
           "HSBC Mutual Fund",
           "MF/046/02/5",
           "Active"
         ],
         [
-          "22",
+          "18",
           "ICICI Prudential Mutual Fund",
           "MF/003/93/6",
           "Active"
         ],
         [
-          "23",
+          "19",
           "IL&FS Mutual Fund (IDF)",
           "MF/072/13/02",
           "Active"
         ],
         [
-          "24",
+          "20",
           "Invesco Mutual Fund",
           "MF/052/06/01",
           "Active"
         ],
         [
-          "25",
+          "21",
           "ITI Mutual Fund",
           "MF/073/18/01",
           "Active"
         ],
         [
-          "26",
+          "22",
           "Jio BlackRock Mutual Fund",
           "MF/085/25/11",
           "Active"
         ],
         [
-          "27",
+          "23",
           "JM Financial Mutual Fund",
           "MF/015/94/8",
           "Active"
         ],
         [
-          "28",
+          "24",
           "Kotak Mahindra Mutual Fund",
           "MF/038/98/1",
           "Active"
         ],
         [
-          "29",
-          "Lakshya Mutual Fund",
-          "MF/091/26/17",
-          "Active"
-        ],
-        [
-          "30",
+          "25",
           "LIC Mutual Fund",
           "MF/012/94/5",
           "Active"
         ],
         [
-          "31",
+          "26",
           "Mahindra Manulife Mutual Fund",
           "MF/069/16/01",
           "Active"
         ],
         [
-          "32",
+          "27",
           "Mirae Asset Mutual Fund",
           "MF/055/07/03",
           "Active"
         ],
         [
-          "33",
+          "28",
           "Monarch Mutual Fund",
           "MF/092/26/18",
           "Active"
         ],
         [
-          "34",
+          "29",
           "Motilal Oswal Mutual Fund",
           "MF/066/09/04",
           "Active"
         ],
         [
-          "35",
+          "30",
           "Navi Mutual Fund",
           "MF/062/09/03",
           "Active"
         ],
         [
-          "36",
+          "31",
           "Nippon India Mutual Fund",
           "MF/022/95/1",
           "Active"
         ],
         [
-          "37",
+          "32",
           "NJ Mutual Fund",
           "MF/076/21/02",
           "Active"
         ],
         [
-          "38",
-          "Nuvama Mutual Fund",
-          "—",
-          "Active"
-        ],
-        [
-          "39",
+          "33",
           "Old Bridge Mutual Fund",
           "MF/081/23/07",
           "Active"
         ],
         [
-          "40",
+          "34",
           "PGIM India Mutual Fund",
           "MF/065/10/02",
           "Active"
         ],
         [
-          "41",
+          "35",
           "PPFAS Mutual Fund",
           "MF/069/12/01",
           "Active"
         ],
         [
-          "42",
+          "36",
           "quant Mutual Fund",
           "MF/028/96/4",
           "Active"
         ],
         [
-          "43",
+          "37",
           "Quantum Mutual Fund",
           "MF/051/05/02",
           "Active"
         ],
         [
-          "44",
+          "38",
           "Samco Mutual Fund",
           "MF/077/21/03",
           "Active"
         ],
         [
-          "45",
+          "39",
           "SBI Mutual Fund",
           "MF/009/93/3",
           "Active"
         ],
         [
-          "46",
+          "40",
           "Shriram Mutual Fund",
           "MF/017/94/4",
           "Active"
         ],
         [
-          "47",
+          "41",
           "Sundaram Mutual Fund",
           "MF/034/97/2",
           "Active"
         ],
         [
-          "48",
+          "42",
           "Tata Mutual Fund",
           "MF/023/95/9",
           "Active"
         ],
         [
-          "49",
-          "Taurus Mutual Fund",
-          "MF/002/93",
-          "Active"
-        ],
-        [
-          "50",
-          "Trust Mutual Fund",
-          "MF/075/19/01",
-          "Active"
-        ],
-        [
-          "51",
-          "Unifi Mutual Fund",
-          "MF/082/24/08",
-          "Active"
-        ],
-        [
-          "52",
+          "43",
           "Union Mutual Fund",
           "MF/066/11/01",
           "Active"
         ],
         [
-          "53",
+          "44",
           "UTI Mutual Fund",
           "MF/048/03/01",
           "Active"
         ],
         [
-          "54",
+          "45",
           "The Wealth Company Mutual Fund",
           "MF/086/25/12",
           "Active"
         ],
         [
-          "55",
+          "46",
           "WhiteOak Capital Mutual Fund",
           "MF/074/18/02",
-          "Active"
-        ],
-        [
-          "56",
-          "Zerodha Mutual Fund",
-          "MF/080/23/06",
           "Active"
         ]
       ]
