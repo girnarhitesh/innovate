@@ -11,6 +11,7 @@ import { useAccessibility } from "../../../context/AccessibilityContext";
 
 const HeroHome = () => {
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
   const [isDisclosurePaused, setIsDisclosurePaused] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [currentTaglineIndex, setCurrentTaglineIndex] = useState(0);
@@ -102,6 +103,8 @@ const HeroHome = () => {
     }
 
     if (videoRef.current) {
+      videoRef.current.muted = isMuted;
+
       if (isReducedMotionEnabled || !isPlaying) {
         videoRef.current.pause();
       } else {
@@ -112,7 +115,7 @@ const HeroHome = () => {
         }
       }
     }
-  }, [isPlaying, isDisclosurePaused, isReducedMotionEnabled]);
+  }, [isPlaying, isMuted, isDisclosurePaused, isReducedMotionEnabled]);
 
   const togglePlayPause = (event) => {
     event?.stopPropagation?.();
@@ -132,6 +135,23 @@ const HeroHome = () => {
           }
         } else {
           videoRef.current.pause();
+        }
+      }
+
+      return next;
+    });
+  };
+
+  const toggleMute = (event) => {
+    event?.stopPropagation?.();
+
+    setIsMuted((prev) => {
+      const next = !prev;
+
+      if (videoRef.current) {
+        videoRef.current.muted = next;
+        if (!next) {
+          videoRef.current.volume = 1;
         }
       }
 
@@ -231,9 +251,9 @@ const HeroHome = () => {
               >
                 <video
                   ref={videoRef}
-                  src="https://cdn.prod.website-files.com/67df2c20360768e358fdd20a%2F682b74c0505f21d18c54d43f_4426377-uhd_3840_2160_25fps-transcode.mp4"
+                  src="/Image/InnovateExplainationVideo.mp4"
                   autoPlay={!isReducedMotionEnabled}
-                  muted
+                  muted={isMuted}
                   loop
                   playsInline
                   className="w-100"
@@ -250,7 +270,7 @@ const HeroHome = () => {
 
                 <button
                   type="button"
-                  className={`PlayPauseButton ${showButton || isHeroMotionPaused ? "visible" : ""} ${isPlaying ? "playing" : "paused"}`}
+                  className={`PlayPauseButton ${showButton ? "visible" : ""} ${isPlaying ? "playing" : "paused"}`}
                   onClick={togglePlayPause}
                   aria-label={
                     isPlaying
@@ -283,6 +303,48 @@ const HeroHome = () => {
                         strokeWidth="2"
                       >
                         <polygon points="5,3 19,12 5,21"></polygon>
+                      </svg>
+                    )}
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  className={`SoundToggleButton ${isMuted ? "muted" : "unmuted"}`}
+                  onClick={toggleMute}
+                  aria-label={isMuted ? "Turn video sound on" : "Turn video sound off"}
+                  aria-pressed={!isMuted}
+                >
+                  <span className="ButtonIcon" aria-hidden="true">
+                    {isMuted ? (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                      </svg>
+                    ) : (
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
                       </svg>
                     )}
                   </span>
