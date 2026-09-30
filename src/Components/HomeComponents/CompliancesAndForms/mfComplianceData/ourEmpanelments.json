@@ -21,7 +21,7 @@
     "heading": "Our Empanelments",
     "subtitle": "Complete list of Mutual Fund AMCs empanelled with Innovate Securities — updated August 2026",
     "summaryLine": "Innovate Securities Pvt. Ltd. | ARN-42505 | Valid until: 05-Apr-2027 | www.innovatesec.com",
-    "notice": "Empanelment means Innovate Securities has an active formal distribution arrangement enabling investor transactions in these companies’ Mutual Fund products. All listed AMCs are registered with SEBI / AMFI. Maintained as required under AMFI DDQ Section 4 and AMFI Master Circular."
+    "notice": "Empanelment means Innovate Securities has an active formal distribution arrangement enabling investor transactions in these companies’ Mutual Fund products. All listed AMCs are registered with SEBI / AMFI. Maintained as required under the AMFI Master Circular."
   },
   "blocks": [
     {
@@ -370,7 +370,7 @@
     },
     {
       "type": "note",
-      "body": "Last Updated: August 2026 | Innovate Securities Pvt. Ltd. | As per AMFI DDQ Section 4 | AMFI Master Circular"
+      "body": "Last Updated: August 2026 | Innovate Securities Pvt. Ltd. | AMFI Master Circular"
     }
   ]
 }
