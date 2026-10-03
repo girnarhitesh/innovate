@@ -260,14 +260,6 @@ const HeroHome = () => {
                   aria-label="Innovate Securities brand introduction video"
                 ></video>
 
-                <div className="TaglinesOverlay" aria-live="polite">
-                  <p
-                    className={`TaglineText ${isTaglineVisible ? "visible" : "hidden"}`}
-                  >
-                    {taglines[currentTaglineIndex]}
-                  </p>
-                </div>
-
                 <button
                   type="button"
                   className={`PlayPauseButton ${showButton ? "visible" : ""} ${isPlaying ? "playing" : "paused"}`}
@@ -349,6 +341,14 @@ const HeroHome = () => {
                     )}
                   </span>
                 </button>
+              </div>
+
+              <div className="TaglinesOverlay" aria-live="polite">
+                <p
+                  className={`TaglineText ${isTaglineVisible ? "visible" : "hidden"}`}
+                >
+                  {taglines[currentTaglineIndex]}
+                </p>
               </div>
             </div>
             <div className="VerticalSwiperContainer">

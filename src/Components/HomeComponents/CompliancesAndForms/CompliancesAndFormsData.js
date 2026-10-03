@@ -31,8 +31,9 @@ export const compliancesAndFormsData = {
     {
       id: 5,
       title: "Nomination Form",
-      size: "378.125 KB",
-      viewUrl: "/Image/CompliencesAndFormsDocuments/Forms/Nomination_Form.pdf",
+      size: "2.29 MB",
+      viewUrl:
+        "/Image/CompliencesAndFormsDocuments/Forms/Nominee%20Form%20Latest%20-%2001092026%20(1).pdf",
     },
     {
       id: 6,
@@ -242,10 +243,10 @@ export const compliancesAndFormsData = {
     {
       id: 2,
       title:
-        "Investor Charter for Depositories and Depository Participants - August 2026",
-      size: "543 KB",
+        "Investor Charter for Depositories and Depository Participants - September 2026",
+      size: "542 KB",
       viewUrl:
-        "/Image/InvestorCharter/INVESTOR_CHARTER_AUGUST-2026.pdf",
+        "/InvestorComplaints/INVESTOR%20CHARTER%20SEPTEMBER-2026.pdf",
     },
   ],
   compliance: [

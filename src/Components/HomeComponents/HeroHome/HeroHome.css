@@ -5,12 +5,10 @@
 }
 
 .FlexContainer {
-  /* height: 1400px; */
-  /* background-color: red; */
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 16px;
 }
 
 /* .LeftSideContentContainer {
@@ -38,12 +36,12 @@
 
 .VideoWrapper {
   position: relative;
-  width: 100%;
-  /* height: 100%; */
-  height: 400px;
+  width: min(100%, 860px);
+  margin-inline: auto;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: 42vh;
   overflow: hidden;
-  max-height: 500px;
-  /* border-radius: 12px; */
 }
 
 .VideoWrapper::after {
@@ -68,8 +66,9 @@
 .VideoWrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  min-height: 400px;
+  object-fit: contain;
+  min-height: 0;
+  background: #ffffff;
 }
 
 /* .VideoWrapper:hover .PlayPauseButton {
@@ -187,33 +186,35 @@
   z-index: -1;
 }
 
-/* Taglines Overlay Styles */
-.TaglinesOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90%;
+.LayerImage {
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.TaglinesOverlay {
+  position: relative;
+  width: min(100%, 860px);
+  display: flex;
+  align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 1;
   pointer-events: none;
 }
 
 .TaglineText {
-  color: white;
-  font-size: 2.5rem;
+  color: #ffffff;
+  font-size: 1.6rem;
   font-weight: 600;
   text-align: center;
-  max-width: 80%;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.6s ease-in-out;
+  width: 100%;
+  margin: 0;
+  padding: 14px 20px;
+  background: #6b7280;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: opacity 0.6s ease-in-out, filter 0.6s ease-in-out, transform 0.6s ease-in-out;
   transform: translateY(0);
   opacity: 1;
   filter: blur(0);
@@ -343,17 +344,15 @@
   }
 
   .TaglineText {
-    font-size: 1.8rem;
-    max-width: 90%;
-    padding: 15px;
+    font-size: 1.25rem;
+    padding: 12px 16px;
   }
 }
 
 @media (max-width: 480px) {
   .TaglineText {
-    font-size: 1.4rem;
-    max-width: 95%;
-    padding: 12px;
+    font-size: 1.05rem;
+    padding: 10px 12px;
   }
 }
 
