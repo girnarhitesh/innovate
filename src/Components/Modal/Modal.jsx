@@ -175,11 +175,37 @@ const Modal = () => {
 
                 <div className="sebi-awareness-panel" role="region" aria-label="SEBI investor awareness highlights">
                   <p className="sebi-awareness-kicker">Investor Awareness</p>
+                  <p className="sebi-awareness-intro">
+                    SEBI presents Samajh Se Investing Simple:
+                    <span className="sebi-awareness-hi" lang="hi">
+                      सेबी प्रस्तुत करता है — समझ से निवेश आसान
+                    </span>
+                  </p>
                   <ul className="sebi-awareness-list">
-                    <li>Learn personal finance basics with Money Matters</li>
-                    <li>Access educational resources on the securities market</li>
-                    <li>Use financial tools and calculators</li>
-                    <li>Check your financial health online</li>
+                    <li>
+                      Understand Before You Invest
+                      <span className="sebi-awareness-hi" lang="hi">
+                        निवेश करने से पहले पूरी जानकारी समझें
+                      </span>
+                    </li>
+                    <li>
+                      Choose Regulated Investment Products
+                      <span className="sebi-awareness-hi" lang="hi">
+                        नियंत्रित एवं विनियमित निवेश उत्पादों को चुनें
+                      </span>
+                    </li>
+                    <li>
+                      Start Early, Stay Invested
+                      <span className="sebi-awareness-hi" lang="hi">
+                        जल्दी शुरुआत करें, निवेश बनाए रखें
+                      </span>
+                    </li>
+                    <li>
+                      Beware of Investment Frauds
+                      <span className="sebi-awareness-hi" lang="hi">
+                        निवेश संबंधी धोखाधड़ी से सावधान रहें
+                      </span>
+                    </li>
                   </ul>
                   <a
                     className="sebi-awareness-cta"
@@ -198,37 +224,6 @@ const Modal = () => {
                   <p className="subtitle">
                     Empower yourself in the world of investing
                   </p>
-                </div>
-              </div>
-
-              <div className="features-section">
-                <div className="feature-item">
-                  <span className="feature-icon" aria-hidden="true">💰</span>
-                  <div className="feature-text">
-                    <strong>Money Matters:</strong> Dive into Money Matters to
-                    grasp Personal Finance concepts.
-                  </div>
-                </div>
-                <div className="feature-item">
-                  <span className="feature-icon" aria-hidden="true">📚</span>
-                  <div className="feature-text">
-                    <strong>Educational Resources:</strong> Related to
-                    investments, including securities market.
-                  </div>
-                </div>
-                <div className="feature-item">
-                  <span className="feature-icon" aria-hidden="true">🧮</span>
-                  <div className="feature-text">
-                    <strong>Financial Tools:</strong> Access a range of Financial
-                    Tools and Calculators.
-                  </div>
-                </div>
-                <div className="feature-item">
-                  <span className="feature-icon" aria-hidden="true">❤️</span>
-                  <div className="feature-text">
-                    <strong>Financial Health Check:</strong> Evaluate your
-                    Financial Health with the easy check.
-                  </div>
                 </div>
               </div>
             </div>

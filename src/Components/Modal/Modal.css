@@ -194,6 +194,14 @@
   color: #002147;
 }
 
+.sebi-awareness-intro {
+  margin: 0 0 10px;
+  color: #002147;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .sebi-awareness-list {
   margin: 0 0 14px;
   padding-left: 18px;
@@ -206,6 +214,15 @@
   color: #333333;
   font-size: 14px;
   line-height: 1.45;
+}
+
+.sebi-awareness-hi {
+  display: block;
+  margin-top: 2px;
+  color: #3d4f66;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .sebi-awareness-cta {
