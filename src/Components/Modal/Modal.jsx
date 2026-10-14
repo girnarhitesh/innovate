@@ -225,7 +225,7 @@ const Modal = () => {
                     <span className="logo-text">SEBI</span>
                   </div>
                   <div className="sebi-tagline">
-                    <p>हर निवेशक की ताकत</p>
+                    <p lang="hi">हर निवेशक की ताकत</p>
                     <p>The strength of every investor</p>
                   </div>
                 </div>
