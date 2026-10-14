@@ -165,6 +165,7 @@ a.NewsletterButton {
 
 .NewsLetterMainContainer .Container {
     min-height: 100% !important;
+    background-color: #000000;
     background-image: url("https://plus.unsplash.com/premium_photo-1679923813998-6603ee2466c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     padding: 80px 0px;
     background-attachment: fixed;

@@ -41,3 +41,13 @@
     width: 70%;
     z-index: 2;
 }
+
+.TitleContainer h3 {
+    margin: 0;
+    display: inline-block;
+    max-width: 100%;
+    padding: 6px 10px;
+    background-color: #002147;
+    color: #ffffff;
+    box-sizing: border-box;
+}

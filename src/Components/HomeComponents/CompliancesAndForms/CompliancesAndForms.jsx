@@ -78,7 +78,7 @@ const CompliancesAndForms = () => {
                         <div className="SectionTagLabelContainer">
                             <div style={{ margin: "auto" }}>
                                 <div className="flexVertically">
-                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="Forms Icon" />
+                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
                                 </div>
                                 <div>
                                     <p>Compliances</p>

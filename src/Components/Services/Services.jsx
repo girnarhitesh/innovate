@@ -52,7 +52,7 @@ const Services = () => {
                         <div className="SectionTagLabelContainer" style={{ margin: "auto" }}>
                             <div>
                                 <div className="flexVertically">
-                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="Financial Services Icon - Investment Solutions" />
+                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
                                 </div>
                                 <div>
                                     <p>OUR SERVICES</p>
@@ -64,7 +64,7 @@ const Services = () => {
 
                     <div className="marginTop ServicesBannerImage">
                         <div className={`LayerImage ${isVisible ? 'reveal-image' : ''}`}>
-                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/service.jpg" alt="" className="w-100" />
+                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/service.jpg" alt="Two people in dark suits shaking hands in front of a night-time city skyline, with a blue network graphic across the handshake" className="w-100" />
                         </div>
                     </div>
 
@@ -111,7 +111,7 @@ const Services = () => {
                             <div className="additional-image">
                                 <img
                                     src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/SquareSmall.jpg"
-                                    alt="Professional Financial Advisory Team - Innovate Securities"
+                                    alt="Three colleagues talking beside an office window, one holding a folder, with a pie chart on the table"
                                 />
                             </div>
                             <div className="additional-text">

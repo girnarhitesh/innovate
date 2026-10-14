@@ -263,7 +263,7 @@ const Navbar = () => {
                 <div className="mobile-drawer-header">
                     <img
                         src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/InnovateLogoAddSince.png"
-                        alt="Innovate Securities Logo"
+                        alt="Innovate Securities Pvt. Ltd. Since 1993"
                         style={{ width: '160px' }}
                     />
                 </div>
@@ -281,9 +281,9 @@ const Navbar = () => {
             id="mobile-navigation-drawer"
             aria-label="Mobile navigation"
         >
-            <div className="NavLinksContainerMobile">
+            <ul className="NavLinksContainerMobile">
                 {NavData.map((item) => (
-                    <div key={item.id}>
+                    <li key={item.id}>
                         {item.hasDropdown ? (
                             <div>
                                 <div
@@ -293,20 +293,21 @@ const Navbar = () => {
                                     <span>{item.name}</span>
                                 </div>
                                 {mobileAccordionOpen === item.id && (
-                                    <div className="mobile-sublinks">
+                                    <ul className="mobile-sublinks">
                                         {item.sublinks.map((sublink) => (
-                                            <Link
-                                                key={sublink.id}
-                                                to={sublink.path}
-                                                onClick={() => handleMobileNavClick(sublink.path)}
-                                                className="mobile-sublink-item"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                {sublink.name}
-                                            </Link>
+                                            <li key={sublink.id}>
+                                                <Link
+                                                    to={sublink.path}
+                                                    onClick={() => handleMobileNavClick(sublink.path)}
+                                                    className="mobile-sublink-item"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {sublink.name}
+                                                </Link>
+                                            </li>
                                         ))}
-                                    </div>
+                                    </ul>
                                 )}
                             </div>
                         ) : (
@@ -318,9 +319,9 @@ const Navbar = () => {
                                 {item.name}
                             </Link>
                         )}
-                    </div>
+                    </li>
                 ))}
-                <div className="mobile-login-section">
+                <li className="mobile-login-section">
                     <button
                         type="button"
                         className="mobile-login-trigger"
@@ -331,77 +332,97 @@ const Navbar = () => {
                         <span>Login</span>
                     </button>
                     {mobileAccordionOpen === 7 && (
-                        <div
+                        <ul
                             id="mobile-login-menu"
                             className="mobile-login-dropdown"
                             role="menu"
                             aria-label="Login options"
                         >
-                            <Link
-                                to="https://backoffice.innovatesec.com/Account/Login"
-                                onClick={() => handleMobileNavClick("https://backoffice.innovatesec.com/Account/Login")}
-                                className="mobile-login-item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Equity Market and Derivatives
-                            </Link>
-                            <Link
-                                to="https://wealthelite.in/client-login"
-                                onClick={() => handleMobileNavClick("https://wealthelite.in/client-login")}
-                                className="mobile-login-item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Mutual Funds and Bonds
-                            </Link>
-                            <Link
-                                to="https://evoting.cdslindia.com/Evoting/EvotingLogin"
-                                onClick={() => handleMobileNavClick("https://evoting.cdslindia.com/Evoting/EvotingLogin")}
-                                className="mobile-login-item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Depository Services
-                            </Link>
-                            <Link
-                                to="/services"
-                                onClick={() => handleMobileNavClick("/services")}
-                                className="mobile-login-item"
-                            >
-                                NCD Investment Services
-                            </Link>
-                            <Link
-                                to="/services"
-                                onClick={() => handleMobileNavClick("/services")}
-                                className="mobile-login-item"
-                            >
-                                Corporate Fixed Deposits
-                            </Link>
-                            <Link
-                                to="https://ipo.innovatesec.com/"
-                                onClick={() => handleMobileNavClick("https://ipo.innovatesec.com/")}
-                                className="mobile-login-item"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                IPO Submission Services
-                            </Link>
-                        </div>
+                            <li role="none">
+                                <Link
+                                    to="https://backoffice.innovatesec.com/Account/Login"
+                                    onClick={() => handleMobileNavClick("https://backoffice.innovatesec.com/Account/Login")}
+                                    className="mobile-login-item"
+                                    role="menuitem"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Equity Market and Derivatives
+                                </Link>
+                            </li>
+                            <li role="none">
+                                <Link
+                                    to="https://wealthelite.in/client-login"
+                                    onClick={() => handleMobileNavClick("https://wealthelite.in/client-login")}
+                                    className="mobile-login-item"
+                                    role="menuitem"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Mutual Funds and Bonds
+                                </Link>
+                            </li>
+                            <li role="none">
+                                <Link
+                                    to="https://evoting.cdslindia.com/Evoting/EvotingLogin"
+                                    onClick={() => handleMobileNavClick("https://evoting.cdslindia.com/Evoting/EvotingLogin")}
+                                    className="mobile-login-item"
+                                    role="menuitem"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Depository Services
+                                </Link>
+                            </li>
+                            <li role="none">
+                                <Link
+                                    to="/services"
+                                    onClick={() => handleMobileNavClick("/services")}
+                                    className="mobile-login-item"
+                                    role="menuitem"
+                                >
+                                    NCD Investment Services
+                                </Link>
+                            </li>
+                            <li role="none">
+                                <Link
+                                    to="/services"
+                                    onClick={() => handleMobileNavClick("/services")}
+                                    className="mobile-login-item"
+                                    role="menuitem"
+                                >
+                                    Corporate Fixed Deposits
+                                </Link>
+                            </li>
+                            <li role="none">
+                                <Link
+                                    to="https://ipo.innovatesec.com/"
+                                    onClick={() => handleMobileNavClick("https://ipo.innovatesec.com/")}
+                                    className="mobile-login-item"
+                                    role="menuitem"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    IPO Submission Services
+                                </Link>
+                            </li>
+                        </ul>
                     )}
-                </div>
+                </li>
 
-                <Link
-                    to={SIGN_UP_URL}
-                    onClick={() => handleMobileNavClick(SIGN_UP_URL)}
-                    className="mobile-login-trigger mobile-signup-trigger"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <span>Sign Up</span>
-                </Link>
+                <li>
+                    <Link
+                        to={SIGN_UP_URL}
+                        onClick={() => handleMobileNavClick(SIGN_UP_URL)}
+                        className="mobile-login-trigger mobile-signup-trigger"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>Sign Up</span>
+                    </Link>
+                </li>
 
-                <div className="BtnContainer">
+                <li className="BtnContainer">
                     <button
                         type="button"
                         onClick={openContactModal}
@@ -409,13 +430,13 @@ const Navbar = () => {
                     >
                         Contact Us
                     </button>
-                </div>
-            </div>
+                </li>
+            </ul>
         </Drawer>
     );
 
     return (
-        <div className={`NavigationbarContainer ${isVisible ? 'nav-visible' : 'nav-hidden'} ${hasScrolled ? 'nav-scrolled' : ''}`}>
+        <header className={`NavigationbarContainer ${isVisible ? 'nav-visible' : 'nav-hidden'} ${hasScrolled ? 'nav-scrolled' : ''}`}>
             <nav className="MainContainer" aria-label="Primary">
                 <div className="Container">
                     <div>
@@ -423,7 +444,6 @@ const Navbar = () => {
                             <div className="NavigationLogoContainer">
                                 <Link
                                     to="/"
-                                    aria-label="Innovate Securities home"
                                     onClick={() => {
                                         window.scrollTo({
                                             top: 0,
@@ -433,15 +453,15 @@ const Navbar = () => {
                                 >
                                     <img 
                                         src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/InnovateLogoAddSince.png" 
-                                        alt="Innovate Securities Logo - Trusted Financial Services" 
+                                        alt="Innovate Securities Pvt. Ltd. Since 1993" 
                                     />
                                 </Link>
                             </div>
 
                             <div className="NavbarDesktopNav">
-                                    <div className="NavLinksContainer">
+                                    <ul className="NavLinksContainer">
                                         {NavData.map((item) => (
-                                            <div key={item.id} className="nav-item">
+                                            <li key={item.id} className="nav-item">
                                                 {item.hasDropdown ? (
                                                     <div
                                                         className="dropdown-container"
@@ -457,28 +477,29 @@ const Navbar = () => {
                                                                 onMouseEnter={() => handleDropdownMouseEnter(item.id)}
                                                                 onMouseLeave={handleDropdownMouseLeave}
                                                             >
-                                                                <div>
+                                                                <ul>
                                                                     {item.sublinks.map((sublink) => (
-                                                                        <Link
-                                                                            key={sublink.id}
-                                                                            to={sublink.path}
-                                                                            className="dropdown-item"
-                                                                            target="_blank"
-                                                                            rel="noopener noreferrer"
-                                                                        >
-                                                                            {sublink.name}
-                                                                        </Link>
+                                                                        <li key={sublink.id}>
+                                                                            <Link
+                                                                                to={sublink.path}
+                                                                                className="dropdown-item"
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                            >
+                                                                                {sublink.name}
+                                                                            </Link>
+                                                                        </li>
                                                                     ))}
-                                                                </div>
+                                                                </ul>
                                                             </div>
                                                         )}
                                                     </div>
                                                 ) : (
                                                     <Link to={item.path}>{item.name}</Link>
                                                 )}
-                                            </div>
+                                            </li>
                                         ))}
-                                    </div>
+                                    </ul>
                                     <div className="NavbarDesktopActions">
                                         <NavbarSearch isMobile={false} instanceId="desktop" />
                                         <div className="BtnContainer" style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
@@ -508,63 +529,73 @@ const Navbar = () => {
                                                     <div 
                                                         id="login-dropdown-menu"
                                                         className="dropdown-menu"
-                                                        role="menu"
-                                                        aria-label="Login options"
                                                         onMouseEnter={() => handleDropdownMouseEnter(7)}
                                                         onMouseLeave={handleDropdownMouseLeave}
                                                     >
-                                                        <div>
-                                                            <Link
-                                                                to="https://backoffice.innovatesec.com/Account/Login"
-                                                                className="dropdown-item"
-                                                                role="menuitem"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            >
-                                                                Equity Market and Derivatives
-                                                            </Link>
-                                                            <Link
-                                                                to="https://wealthelite.in/client-login"
-                                                                className="dropdown-item"
-                                                                role="menuitem"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            >
-                                                                Mutual Funds and Bonds
-                                                            </Link>
-                                                            <Link
-                                                                to="https://evoting.cdslindia.com/Evoting/EvotingLogin"
-                                                                className="dropdown-item"
-                                                                role="menuitem"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            >
-                                                                Depository Services
-                                                            </Link>
-                                                            <Link
-                                                                to="/services"
-                                                                className="dropdown-item"
-                                                                role="menuitem"
-                                                            >
-                                                                NCD Investment Services
-                                                            </Link>
-                                                            <Link
-                                                                to="/services"
-                                                                className="dropdown-item"
-                                                                role="menuitem"
-                                                            >
-                                                                Corporate Fixed Deposits
-                                                            </Link>
-                                                            <Link
-                                                                to="https://ipo.innovatesec.com/"
-                                                                className="dropdown-item"
-                                                                role="menuitem"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            >
-                                                                IPO Submission Services
-                                                            </Link>
-                                                        </div>
+                                                        <ul role="menu" aria-label="Login options">
+                                                            <li role="none">
+                                                                <Link
+                                                                    to="https://backoffice.innovatesec.com/Account/Login"
+                                                                    className="dropdown-item"
+                                                                    role="menuitem"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    Equity Market and Derivatives
+                                                                </Link>
+                                                            </li>
+                                                            <li role="none">
+                                                                <Link
+                                                                    to="https://wealthelite.in/client-login"
+                                                                    className="dropdown-item"
+                                                                    role="menuitem"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    Mutual Funds and Bonds
+                                                                </Link>
+                                                            </li>
+                                                            <li role="none">
+                                                                <Link
+                                                                    to="https://evoting.cdslindia.com/Evoting/EvotingLogin"
+                                                                    className="dropdown-item"
+                                                                    role="menuitem"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    Depository Services
+                                                                </Link>
+                                                            </li>
+                                                            <li role="none">
+                                                                <Link
+                                                                    to="/services"
+                                                                    className="dropdown-item"
+                                                                    role="menuitem"
+                                                                >
+                                                                    NCD Investment Services
+                                                                </Link>
+                                                            </li>
+                                                            <li role="none">
+                                                                <Link
+                                                                    to="/services"
+                                                                    className="dropdown-item"
+                                                                    role="menuitem"
+                                                                >
+                                                                    Corporate Fixed Deposits
+                                                                </Link>
+                                                            </li>
+                                                            <li role="none">
+                                                                <Link
+                                                                    to="https://ipo.innovatesec.com/"
+                                                                    className="dropdown-item"
+                                                                    role="menuitem"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    IPO Submission Services
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 )}
                                             </div>
@@ -581,7 +612,7 @@ const Navbar = () => {
                                     <Button
                                         type="text"
                                         className="NavbarHamburgerBtn"
-                                        icon={<MenuOutlined />}
+                                        icon={<MenuOutlined aria-hidden="true" />}
                                         onClick={() => setMobileDrawerOpen(true)}
                                         aria-label="Open navigation menu"
                                         aria-expanded={mobileDrawerOpen}
@@ -607,7 +638,7 @@ const Navbar = () => {
             >
                 <Table />
             </Modal>
-        </div>
+        </header>
     )
 }
 

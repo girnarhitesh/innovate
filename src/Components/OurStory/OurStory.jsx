@@ -2,6 +2,79 @@ import { useRef, useState, useEffect } from "react";
 import "./OurStory.css";
 import { Row, Col } from "antd";
 
+const timelineEvents = [
+    {
+        year: "1986",
+        dateTime: "1986",
+        title: "The Foundation",
+        description:
+            "Bhushan Shah, along with Piyush Parikh & Amar Parikh started out as AMPI Investments as a proprietor firm. Started broking business. Worked as a Sub Broker.",
+    },
+    {
+        year: "1992",
+        dateTime: "1992",
+        title: "Ahmedabad Stock Exchange Membership",
+        description:
+            "Acquired Ahmedabad Stock Exchange Membership, expanding our presence in the regional market.",
+    },
+    {
+        year: "1993",
+        dateTime: "1993",
+        title: "Birth of Innovate Securities",
+        description:
+            "Amar Parikh and Piyush Parikh launched Innovate Securities Pvt. Ltd. (ISPL) as a Private Corporate Firm, marking a significant milestone in our journey.",
+    },
+    {
+        year: "15th Aug 1994",
+        dateTime: "1994-08-15",
+        title: "Ahmedabad Office Inauguration",
+        description:
+            "Inaugurated Ahmedabad Office (current headquarters), establishing our central hub for operations.",
+    },
+    {
+        year: "1995",
+        dateTime: "1995",
+        title: "NSE Membership",
+        description:
+            "Acquired NSE Card (4th in Gujarat; one of the first members), expanding our reach to the National Stock Exchange.",
+    },
+    {
+        year: "2004",
+        dateTime: "2004",
+        title: "Depository Participant",
+        description:
+            "Became a Depository Participant (DP) with CDSL (Central Depository Services Ltd.), enhancing our service offerings.",
+    },
+    {
+        year: "2010",
+        dateTime: "2010",
+        title: "BSE Card Acquisition",
+        description:
+            "Acquired BSE Card, strengthening our position in the Bombay Stock Exchange.",
+    },
+    {
+        year: "2018",
+        dateTime: "2018",
+        title: "Mutual Fund Distribution",
+        description:
+            "Launched Mutual Fund Distribution with Amit Shah, diversifying our financial services portfolio.",
+    },
+    {
+        year: "2025",
+        dateTime: "2025",
+        title: "Innovate is Innovating",
+        description:
+            "Continuing our legacy of innovation, we're constantly evolving to meet the changing needs of modern investors. Through cutting-edge technology, personalized service, and forward-thinking strategies, we're not just keeping pace with the industry—we're setting new standards and redefining what it means to be a trusted financial partner in the digital age.",
+    },
+    {
+        year: "2010",
+        dateTime: "2010",
+        title: "BSE Card Acquisition",
+        description:
+            "Acquired BSE Card, strengthening our position in the Bombay Stock Exchange.",
+    },
+];
+
 const OurStory = () => {
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
@@ -38,30 +111,30 @@ const OurStory = () => {
 
     const BackgroundImage = "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/OverlayBack.jpg"
     return (
-        <div className="OurStoryContainer" ref={sectionRef}>
+        <section className="OurStoryContainer" ref={sectionRef} aria-labelledby="our-story-heading">
             <div className="MainContainer marginTop">
                 <div className="Container">
                     <div className="paddingSide">
-                        <div className="CommonHeader">
+                        <header className="CommonHeader">
                             <div className="SectionTagLabelContainer" style={{ margin: "auto" }}>
                                 <div>
                                     <div className="flexVertically">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="Innovate Securities Journey Icon - 40+ Years of Financial Excellence" />
+                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
                                     </div>
                                     <div>
                                         <p>Our Journey Since 1986</p>
                                     </div>
                                 </div>
                             </div>
-                            <h2 className="text-center">From Humble Beginnings to Trusted Excellence</h2>
-
-                        </div>
+                            <h1 className="sr-only">Our Story</h1>
+                            <h2 id="our-story-heading" className="text-center">From Humble Beginnings to Trusted Excellence</h2>
+                        </header>
 
                         <div className="marginTop centerContainer">
                             <Row gutter={[16, 16]}>
                                 <Col lg={24} md={24} xs={24}>
                                     <div className={`StoryImageContainer LayerImage ${isVisible ? 'reveal-image' : ''}`}>
-                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/OurStory.jpg" alt="Innovate Securities Success Story - Financial Growth and Investment Excellence" />
+                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/OurStory.jpg" alt="Illustration of city buildings on a platform, circled by dollar-sign icons, above a dotted world map" />
                                     </div>
                                 </Col>
                                 <Col lg={24} md={24} xs={24}>
@@ -90,92 +163,28 @@ const OurStory = () => {
                             </Row>
                         </div>
 
-                        <div className="StackImageAnimation">
+                        <section className="StackImageAnimation" aria-labelledby="our-story-timeline-heading">
+                            <h2 id="our-story-timeline-heading" className="sr-only">Milestones</h2>
                             <div className="marginTop">
-                                <div className={`StoryTimelineContainer ${isVisible ? 'animate-timeline' : ''}`}>
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">1986</div>
-                                        <div className="TimelineContent">
-                                            <h3>The Foundation</h3>
-                                            <p>Bhushan Shah, along with Piyush Parikh & Amar Parikh started out as AMPI Investments as a proprietor firm. Started broking business. Worked as a Sub Broker.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">1992</div>
-                                        <div className="TimelineContent">
-                                            <h3>Ahmedabad Stock Exchange Membership</h3>
-                                            <p>Acquired Ahmedabad Stock Exchange Membership, expanding our presence in the regional market.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">1993</div>
-                                        <div className="TimelineContent">
-                                            <h3>Birth of Innovate Securities</h3>
-                                            <p>Amar Parikh and Piyush Parikh launched Innovate Securities Pvt. Ltd. (ISPL) as a Private Corporate Firm, marking a significant milestone in our journey.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">15th Aug 1994</div>
-                                        <div className="TimelineContent">
-                                            <h3>Ahmedabad Office Inauguration</h3>
-                                            <p>Inaugurated Ahmedabad Office (current headquarters), establishing our central hub for operations.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">1995</div>
-                                        <div className="TimelineContent">
-                                            <h3>NSE Membership</h3>
-                                            <p>Acquired NSE Card (4th in Gujarat; one of the first members), expanding our reach to the National Stock Exchange.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">2004</div>
-                                        <div className="TimelineContent">
-                                            <h3>Depository Participant</h3>
-                                            <p>Became a Depository Participant (DP) with CDSL (Central Depository Services Ltd.), enhancing our service offerings.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">2010</div>
-                                        <div className="TimelineContent">
-                                            <h3>BSE Card Acquisition</h3>
-                                            <p>Acquired BSE Card, strengthening our position in the Bombay Stock Exchange.</p>
-                                        </div>
-                                    </div>
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">2018</div>
-                                        <div className="TimelineContent">
-                                            <h3>Mutual Fund Distribution</h3>
-                                            <p>Launched Mutual Fund Distribution with Amit Shah, diversifying our financial services portfolio.</p>
-                                        </div>
-                                    </div>
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">2025</div>
-                                        <div className="TimelineContent">
-                                            <h3>Innovate is Innovating</h3>
-                                            <p>Continuing our legacy of innovation, we're constantly evolving to meet the changing needs of modern investors. Through cutting-edge technology, personalized service, and forward-thinking strategies, we're not just keeping pace with the industry—we're setting new standards and redefining what it means to be a trusted financial partner in the digital age.</p>
-                                        </div>
-                                    </div>
-                                    <div className="TimelineItem">
-                                        <div className="TimelineYear">2010</div>
-                                        <div className="TimelineContent">
-                                            <h3>BSE Card Acquisition</h3>
-                                            <p>Acquired BSE Card, strengthening our position in the Bombay Stock Exchange.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ol className={`StoryTimelineContainer ${isVisible ? 'animate-timeline' : ''}`}>
+                                    {timelineEvents.map((event, index) => (
+                                        <li className="TimelineItem" key={`${event.dateTime}-${event.title}-${index}`}>
+                                            <div className="TimelineSide">
+                                                <time className="TimelineYear" dateTime={event.dateTime}>{event.year}</time>
+                                                <div className="TimelineContent">
+                                                    <h3>{event.title}</h3>
+                                                    <p>{event.description}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ol>
                             </div>
-                        </div>
+                        </section>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

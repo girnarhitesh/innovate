@@ -118,7 +118,7 @@ const Footer = () => {
               <div className="MapContainer">
                 <p>
                   1st Floor, DEVASHISH 39, Sardar Patel Nagar Opp. ABC-III, Nr.
-                  Hotel Regency Navrangpura Ahmedabad - 380009
+                  Hotel Regency Navrangpura Ahmedabad - 380006
                 </p>
                 <br />
                 <iframe
@@ -139,7 +139,7 @@ const Footer = () => {
                   <div className="QRCodeItem">
                     <img
                       src={BrokingQrCode}
-                      alt="Broking UPI QR Code"
+                      alt="UPI QR code for broking payments to innovate.brk@validhdfc"
                       className="QRCodeImage"
                     />
                     <p className="QRCodeLabel">Broking</p>
@@ -147,7 +147,7 @@ const Footer = () => {
                   <div className="QRCodeItem">
                     <img
                       src={DpQrCode}
-                      alt="DP UPI QR Code"
+                      alt="UPI QR code for depository participant payments to innovate.dp@validhdfc"
                       className="QRCodeImage"
                     />
                     <p className="QRCodeLabel">DP</p>

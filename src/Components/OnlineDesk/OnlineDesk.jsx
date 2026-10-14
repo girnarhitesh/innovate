@@ -18,13 +18,13 @@ const ScoresDisclosureContent = ({ disclosure }) => (
 const DeskCardTop = ({ item }) => (
     <>
         <div className="DeskLogoWrap">
-            <img src={item.logo} alt={item.title} />
+            <img src={item.logo} alt={item.logoAlt} />
         </div>
         <br />
         <div className="DeskContent">
             <p>{item.title}</p>
             <span className="DeskLink">
-                {item.cta} <LuSquareArrowOutUpRight />
+                {item.cta} <LuSquareArrowOutUpRight aria-hidden="true" />
             </span>
         </div>
     </>
@@ -68,7 +68,7 @@ const OnlineDesk = () => {
                                 <div className="flexVertically">
                                     <img
                                         src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png"
-                                        alt="Online Desk Icon"
+                                        alt=""
                                     />
                                 </div>
                                 <div>

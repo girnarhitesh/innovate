@@ -999,9 +999,19 @@
 
 .MfDiscNotDo__items {
   margin: 0;
+  padding: 0;
   font-size: 13px;
   line-height: 1.55;
   color: #6b1a1a;
+  list-style: none;
+}
+
+.MfDiscNotDo__items li {
+  display: inline;
+}
+
+.MfDiscNotDo__items li:not(:last-child)::after {
+  content: " | ";
 }
 
 .MfDiscSub {

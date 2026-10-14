@@ -49,7 +49,7 @@ const About = () => {
                   <div className="flexVertically">
                     <img
                       src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutBrand.png"
-                      alt="About Innovate Securities Brand Icon - Trusted Financial Services"
+                      alt=""
                     />
                   </div>
                   <div>

@@ -26,16 +26,16 @@ const NewsLetters = () => {
                                     <p className="ExpertText white">Our experts are ready to help!</p>
                                     <div className="ExpertProfiles">
                                         <div className="ExpertProfile">
-                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="Innovate Securities Financial Expert - Investment Advisory Specialist" />
+                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="" />
                                         </div>
                                         <div className="ExpertProfile">
-                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="Innovate Securities Portfolio Manager - Wealth Management Expert" />
+                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="" />
                                         </div>
                                         <div className="ExpertProfile">
-                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="Innovate Securities Market Analyst - Financial Planning Specialist" />
+                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="" />
                                         </div>
                                         <div className="ExpertProfile">
-                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="Innovate Securities Investment Advisor - Financial Services Expert" />
+                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/UserIcon.png" alt="" />
                                         </div>
                                     </div>
                                 </div>

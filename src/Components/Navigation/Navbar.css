@@ -49,6 +49,9 @@
   display: flex;
   align-items: center;
   gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .NavLinksContainer a {
@@ -119,7 +122,10 @@
   animation: dropdownFadeIn 0.3s ease;
 }
 
-.dropdown-menu > div {
+.dropdown-menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   background-color: white;
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -157,7 +163,7 @@
   padding-left: 20px;
 }
 
-.dropdown-item:last-child {
+.dropdown-menu li:last-child .dropdown-item {
   border-bottom: none;
 }
 
@@ -177,6 +183,8 @@
   flex-direction: column;
   gap: 20px;
   padding: 0px 20px;
+  margin: 0;
+  list-style: none;
 }
 
 /* Desktop navbar action buttons — shared typography (Contact Us, Sign Up, Login) */
@@ -239,6 +247,8 @@
 }
 
 .mobile-sublinks {
+  list-style: none;
+  margin: 0;
   padding-left: 20px;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -329,6 +339,9 @@
 }
 
 .mobile-login-dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   background: white;
   border: 1px solid #e0e0e0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -359,7 +372,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.mobile-login-item:last-child {
+.mobile-login-dropdown > li:last-child .mobile-login-item {
   border-bottom: none;
 }
 

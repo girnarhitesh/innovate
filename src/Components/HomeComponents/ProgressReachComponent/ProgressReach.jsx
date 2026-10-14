@@ -60,16 +60,16 @@ const ProgressReach = () => {
                                         <Col lg={12} md={12} xs={24}>
                                             <div>
                                                 <div className={`LayerImage ${isVisible ? 'reveal-image' : ''}`}>
-                                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/digitalstrategy1.jpg" alt="Financial Planning and Investment Strategy - Professional Wealth Management" />
+                                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/digitalstrategy1.jpg" alt="Tablet showing a three-dimensional bar chart, line graphs, and circular charts" />
                                                 </div>
                                                 <div className={`LayerImage ${isVisible ? 'reveal-image' : ''}`}>
-                                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/digitalStrategy2.jpg" alt="Business Growth and Investment Success - Corporate Financial Services" />
+                                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/digitalStrategy2.jpg" alt="Hands pointing at a tablet with bar charts labeled January, February, March, and April, next to a calculator and printed charts" />
                                                 </div>
                                             </div>
                                         </Col>
                                         <Col lg={12} md={12} xs={24}>
                                             <div className={`LayerImage ${isVisible ? 'reveal-image' : ''}`}>
-                                                <img src="https://images.unsplash.com/photo-1726066012698-bb7a3abce786?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Investment Portfolio Management - Financial Advisory Services" />
+                                                <img src="https://images.unsplash.com/photo-1726066012698-bb7a3abce786?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Person holding a phone that shows zero rupees while using a laptop open to a Google search page" />
                                             </div>
                                         </Col>
                                     </Row>

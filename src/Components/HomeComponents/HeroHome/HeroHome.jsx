@@ -9,6 +9,34 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import { useAccessibility } from "../../../context/AccessibilityContext";
 
+const syncVisibleSlides = (swiper) => {
+  if (!swiper?.el || !swiper.slides) {
+    return;
+  }
+
+  const root = swiper.el.getBoundingClientRect();
+
+  swiper.slides.forEach((slide) => {
+    const rect = slide.getBoundingClientRect();
+    const visible =
+      rect.width > 1 &&
+      rect.height > 1 &&
+      rect.bottom > root.top + 1 &&
+      rect.top < root.bottom - 1 &&
+      rect.right > root.left + 1 &&
+      rect.left < root.right - 1;
+
+    if (visible) {
+      slide.removeAttribute("aria-hidden");
+      slide.inert = false;
+      return;
+    }
+
+    slide.setAttribute("aria-hidden", "true");
+    slide.inert = true;
+  });
+};
+
 const HeroHome = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
@@ -379,6 +407,11 @@ const HeroHome = () => {
                   if (isReducedMotionEnabled || isDisclosurePaused) {
                     swiper.autoplay?.stop();
                   }
+                  const updateSlides = () => syncVisibleSlides(swiper);
+                  swiper.on("slideChangeTransitionEnd", updateSlides);
+                  swiper.on("resize", updateSlides);
+                  swiper.on("transitionEnd", updateSlides);
+                  requestAnimationFrame(updateSlides);
                 }}
                 direction={"vertical"}
                 spaceBetween={0}

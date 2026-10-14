@@ -14,6 +14,34 @@ import 'swiper/css/navigation';
 import { Autoplay, FreeMode, Pagination, Navigation } from 'swiper/modules';
 import { useAccessibility } from '../../../context/AccessibilityContext';
 
+const syncVisibleSlides = (swiper) => {
+    if (!swiper?.el || !swiper.slides) {
+        return;
+    }
+
+    const root = swiper.el.getBoundingClientRect();
+
+    swiper.slides.forEach((slide) => {
+        const rect = slide.getBoundingClientRect();
+        const visible =
+            rect.width > 1 &&
+            rect.height > 1 &&
+            rect.bottom > root.top + 1 &&
+            rect.top < root.bottom - 1 &&
+            rect.right > root.left + 1 &&
+            rect.left < root.right - 1;
+
+        if (visible) {
+            slide.removeAttribute("aria-hidden");
+            slide.inert = false;
+            return;
+        }
+
+        slide.setAttribute("aria-hidden", "true");
+        slide.inert = true;
+    });
+};
+
 const Services = () => {
     const swiperInstanceRef = useRef(null);
     const navigate = useNavigate();
@@ -141,6 +169,12 @@ const Services = () => {
                                 if (isReducedMotionEnabled || isAutoplayPaused) {
                                     swiper.autoplay?.stop();
                                 }
+                                const updateSlides = () => syncVisibleSlides(swiper);
+                                swiper.on("slideChangeTransitionEnd", updateSlides);
+                                swiper.on("resize", updateSlides);
+                                swiper.on("breakpoint", updateSlides);
+                                swiper.on("transitionEnd", updateSlides);
+                                requestAnimationFrame(updateSlides);
                             }}
                             spaceBetween={30}
                             slidesPerView={1}

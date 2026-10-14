@@ -268,6 +268,9 @@ const NavbarSearch = ({ isMobile = false, instanceId = "default", onNavigate }) 
         >
           <div className="NavbarSearch__inputRow">
             <SearchOutlined className="NavbarSearch__inputIcon" aria-hidden="true" />
+            <label className="sr-only" htmlFor={inputId}>
+              Search
+            </label>
             <input
               ref={inputRef}
               id={inputId}
@@ -280,8 +283,6 @@ const NavbarSearch = ({ isMobile = false, instanceId = "default", onNavigate }) 
               }}
               onKeyDown={handleKeyDown}
               placeholder="Search pages, services, forms..."
-              title="Search"
-              aria-label="Search"
               aria-controls={resultsId}
               aria-describedby={statusId}
               aria-autocomplete="list"

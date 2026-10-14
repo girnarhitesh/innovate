@@ -606,7 +606,11 @@ const DisclaimerContent = ({ page }) => {
           {section.notDo ? (
             <div className="MfDiscNotDo">
               <p className="MfDiscNotDo__heading">{section.notDo.heading}</p>
-              <p className="MfDiscNotDo__items">{section.notDo.items.join(" | ")}</p>
+              <ul className="MfDiscNotDo__items">
+                {section.notDo.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
           ) : null}
 

@@ -78,7 +78,7 @@ const SingleService = () => {
                         <div className="SectionTagLabelContainer" style={{ margin: "auto" }}>
                             <div>
                                 <div className="flexVertically">
-                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="Financial Services Icon" />
+                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
                                 </div>
                                 <div>
                                     <p>DETAILED SERVICE</p>
@@ -96,7 +96,7 @@ const SingleService = () => {
                                     <div className={`ServiceHeroImage LayerImage ${isVisible ? 'reveal-image' : ''}`}>
                                         <img
                                             src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/CommonService.jpg"
-                                            alt={`${service.title} - Innovate Securities`}
+                                            alt="Person in a blue suit using a laptop and a tablet, with overlaid business icons including a target, a bank, and a globe"
                                         />
                                     </div>
 
@@ -158,7 +158,7 @@ const SingleService = () => {
                                                         <div className="OtherServiceImage">
                                                             <img
                                                                 src={otherService.iconImage}
-                                                                alt={`${otherService.title} - Innovate Securities`}
+                                                                alt=""
                                                             />
                                                         </div>
                                                         <div className="OtherServiceContent BtnContainer">

@@ -27,122 +27,142 @@ export const onlineDeskItems = [
         title: "Open Your Account Online",
         cta: "Go to the website",
         href: "https://bo.innovatesec.com/EKYC/EKYCAccountOpening?RefID=61D9845E0AD647798D6755D9E2B4CB8B",
-        logo: InnovateLogo
+        logo: InnovateLogo,
+        logoAlt: "Innovate Securities Pvt. Ltd."
     },
     {
         title: "Client Registration Documents (Rights & Obligations, Risk Disclosure Document, Do's & Don'ts) in Vernacular Language",
         cta: "Go to the website",
         href: "https://www.nseindia.com/trade/members-client-registration-documents",
-        logo: InnovateLogo
+        logo: InnovateLogo,
+        logoAlt: "Innovate Securities Pvt. Ltd."
     },
     {
         title: "Securities and Exchange Board of India",
         cta: "Go to the website",
         href: "https://www.sebi.gov.in/",
-        logo: InnovateDesk2
+        logo: InnovateDesk2,
+        logoAlt: ""
     },
     {
         title: "SCORES - SEBI Complaints Redress System",
         cta: "Go to the website",
         href: "https://scores.sebi.gov.in/",
         logo: InnovateDesk2,
+        logoAlt: "SEBI",
         disclosure: scoresDisclosure,
     },
     {
         title: "SEBI Investor Awareness Website",
         cta: "Go to the website",
         href: "https://investor.sebi.gov.in/",
-        logo: InnovateDesk2
+        logo: InnovateDesk2,
+        logoAlt: ""
     },
     {
         title: "CDSL Ventures Ltd.",
         cta: "Go to the website",
         href: "https://www.cvlkra.com/",
-        logo: CDSLVentures
+        logo: CDSLVentures,
+        logoAlt: ""
     },
     {
         title: "NSE - National Stock Exchange of India Ltd.",
         cta: "Go to the website",
         href: "https://www.nseindia.com/",
-        logo: NationalStockExchangeOfIndia
+        logo: NationalStockExchangeOfIndia,
+        logoAlt: ""
     },
     {
         title: "BSE - Bombay Stock Exchange of India Ltd.",
         cta: "Go to the website",
         href: "https://www.bseindia.com/",
-        logo: BombayStockExchangeOfIndia
+        logo: BombayStockExchangeOfIndia,
+        logoAlt: ""
     },
     {
         title: "CDSL - Central Depository Services (India) Ltd.",
         cta: "Go to the website",
         href: "https://www.cdslindia.com/",
-        logo: CentralDepositoryServicesIndia
+        logo: CentralDepositoryServicesIndia,
+        logoAlt: ""
     },
     {
         title: "NSDL - National Securities Depository Ltd.",
         cta: "Go to the website",
         href: "https://nsdl.co.in/",
-        logo: NationalSecuritiesDepository
+        logo: NationalSecuritiesDepository,
+        logoAlt: ""
     },
     {
         title: "SMART ODR - Securities Market Approach for Resolution Through ODR Portal",
         cta: "Go to the website",
         href: "https://smartodr.in/login",
-        logo: SecuritiesMarketApproach
+        logo: SecuritiesMarketApproach,
+        logoAlt: ""
     },
     {
         title: "Unique Identification Authority of India",
         cta: "Go to the website",
         href: "https://uidai.gov.in/",
-        logo: UniqueIdentificationAuthorityOfIndia
+        logo: UniqueIdentificationAuthorityOfIndia,
+        logoAlt: "Aadhaar"
     },
     {
         title: "e-Aadhaar - Electronic copy of Aadhaar",
         cta: "Go to the website",
         href: "https://eaadhaar.uidai.gov.in/",
-        logo: UniqueIdentificationAuthorityOfIndia
+        logo: UniqueIdentificationAuthorityOfIndia,
+        logoAlt: ""
     },
     {
         title: "Income Tax Department of India",
         cta: "Go to the website",
         href: "https://www.incometax.gov.in/iec/foportal/",
-        logo: IncomeTaxDepartmentOfIndia
+        logo: IncomeTaxDepartmentOfIndia,
+        logoAlt: ""
     },
     {
         title: "Online PAN Application",
         cta: "Go to the website",
         href: "https://onlineservices.proteantech.in/paam/endUserRegisterContact.html",
-        logo: OnlinePanApplication
+        logo: OnlinePanApplication,
+        logoAlt: ""
     },
     {
         title: "Link PAN to Aadhaar",
         cta: "Go to the website",
         href: "https://eportal.incometax.gov.in/iec/foservices/#/pre-login/bl-link-aadhaar",
-        logo: IncomeTaxDepartmentOfIndia
+        logo: IncomeTaxDepartmentOfIndia,
+        logoAlt: "Income Tax Department"
     },
     {
         title: "GST - Goods and Services Tax",
         cta: "Go to the website",
         href: "https://www.gst.gov.in/",
-        logo: OnlinePanApplication
+        logo: OnlinePanApplication,
+        logoAlt: ""
     },
     {
         title: "Reserve Bank of India",
         cta: "Go to the website",
         href: "https://www.rbi.org.in/",
-        logo: ReserveBankOfIndia
+        logo: ReserveBankOfIndia,
+        logoAlt: ""
     },
     {
         title: "NCDEX - National Commodity & Derivatives Exchange Ltd.",
         cta: "Go to the website",
         href: "https://www.ncdex.com/",
-        logo: NationalCommodity
+        logo: NationalCommodity,
+        logoAlt: ""
     },
     {
         title: "MCX - Multi Commodity Exchange of India Ltd.",
         cta: "Go to the website",
         href: "https://www.mcxindia.com/",
-        logo: MultiCommodityExchangeOfIndia
+        logo: MultiCommodityExchangeOfIndia,
+        logoAlt: ""
     },
     // {
     //     title: "old website",
@@ -154,6 +174,7 @@ export const onlineDeskItems = [
         title: "e-Voting to Shareholders",
         cta: "Go to the website",
         href: "https://evoting.cdslindia.com/Evoting/EvotingLogin",
-        logo: InnovateLogo
+        logo: InnovateLogo,
+        logoAlt: "Innovate Securities Pvt. Ltd."
     }
 ];

@@ -43,7 +43,7 @@ const HomeAbout = () => {
                             <div className="SectionTagLabelContainer">
                                 <div>
                                     <div className="flexVertically">
-                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="Investment Confidence Icon - Trusted Financial Guidance" />
+                                        <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
                                     </div>
                                     <div>
                                         <p>Invest with Confidence and Clarity</p>
@@ -68,7 +68,7 @@ const HomeAbout = () => {
                                 </Col>
                                 <Col lg={12} md={12} xs={24}>
                                     <div className={`AboutImageContainerHome LayerImage ${isVisible ? 'reveal-image' : ''}`}>
-                                        <img src={HomeAboutImage} alt="Professional Financial Services Team - Innovate Securities Investment Experts" />
+                                        <img src={HomeAboutImage} alt="Open hand holding a rising bar chart made of hedges above a city skyline" />
                                     </div>
                                 </Col>
                             </Row>

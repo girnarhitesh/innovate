@@ -15,7 +15,7 @@
 .OurStoryContainer {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     position: relative;
-    overflow: hidden;
+    overflow-x: clip;
     transition: all 0.3s ease-out;
 }
 
@@ -135,6 +135,8 @@
     position: relative;
     padding: 40px 0;
     margin-top: 30px;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 .StoryTimelineContainer::before {
@@ -150,7 +152,8 @@
 
 /* Timeline Items */
 .TimelineItem {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
     align-items: center;
     margin-bottom: 50px;
     position: relative;
@@ -159,19 +162,29 @@
     transition: .5s;
 }
 
-.TimelineItem:nth-child(odd) {
-    flex-direction: row;
+.TimelineSide {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.TimelineItem:nth-child(odd) .TimelineSide {
+    grid-column: 1;
+    justify-self: end;
     text-align: right;
 }
 
-.TimelineItem:nth-child(even) {
+.TimelineItem:nth-child(even) .TimelineSide {
+    grid-column: 3;
+    justify-self: start;
     flex-direction: row-reverse;
     text-align: left;
 }
 
 .TimelineYear {
-    max-width: 200px;
-    min-width: 120px;
+    max-width: 100%;
     font-size: 18px;
     font-weight: 700;
     color: var(--brand-color);
@@ -184,18 +197,25 @@
     box-shadow: 0 4px 15px rgba(0, 33, 71, 0.1);
     display: flex;
     justify-content: center;
+    flex: 0 1 auto;
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .TimelineContent {
-    flex: 1;
-    max-width: 300px;
+    flex: 1 1 180px;
+    width: min(300px, 100%);
+    max-width: 100%;
+    min-width: 0;
     padding: 25px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 33, 71, 0.08);
     border: 1px solid #f0f0f0;
     position: relative;
-    margin: 0 30px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
 }
 
 .TimelineContent::before {
@@ -225,6 +245,7 @@
     color: var(--brand-color);
     font-size: 18px;
     font-weight: 600;
+    overflow-wrap: anywhere;
 }
 
 .TimelineContent p {
@@ -232,6 +253,7 @@
     line-height: 1.6;
     color: #3d3d3d;
     margin: 0;
+    overflow-wrap: anywhere;
 }
 
 /* Timeline Animation */
@@ -308,15 +330,7 @@
 
 @media (min-width: 1500px) and (max-width: 2000px) {
     .TimelineContent {
-        flex: 1;
-        max-width: 430px;
-        padding: 25px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 33, 71, 0.08);
-        border: 1px solid #f0f0f0;
-        position: relative;
-        margin: 0 30px;
+        width: min(430px, 100%);
     }
 }
 
@@ -337,31 +351,38 @@
     }
 
     .StoryTimelineContainer::before {
-        left: 30px;
+        left: 16px;
     }
 
     .TimelineItem {
-        flex-direction: column !important;
+        display: block;
         text-align: left !important;
-        padding-left: 60px;
+        padding-left: 48px;
+    }
+
+    .TimelineSide {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 12px;
+        max-width: 100%;
     }
 
     .TimelineItem::after {
-        left: 30px;
+        left: 16px;
+        top: 28px;
     }
 
     .TimelineYear {
-        position: absolute;
-        left: 0;
-        top: 0;
-        flex: none;
+        position: static;
         font-size: 14px;
         padding: 8px 12px;
     }
 
     .TimelineContent {
         margin: 0;
-        margin-top: 50px;
+        width: 100%;
         max-width: none;
     }
 

@@ -46,7 +46,7 @@ const Disclaimer = () => {
                 <div className="flexVertically">
                   <img
                     src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutBrand.png"
-                    alt="Disclaimer - Innovate Securities"
+                    alt=""
                   />
                 </div>
                 <div>
@@ -136,7 +136,7 @@ const Disclaimer = () => {
                   <br />
                   Opp. ABC-III, Navrangpura
                   <br />
-                  Ahmedabad - 380009
+                  Ahmedabad - 380006
                   <br />
                   Email:{" "}
                   <a href="mailto:ispl@innovatesec.com">ispl@innovatesec.com</a>

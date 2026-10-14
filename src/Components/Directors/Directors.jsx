@@ -75,7 +75,7 @@ const Directors = () => {
                         <div className="SectionTagLabelContainer" style={{ margin: "auto" }}>
                             <div>
                                 <div className="flexVertically">
-                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="Financial Services Icon - Investment Solutions" />
+                                    <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
                                 </div>
                                 <div>
                                     <p>INNOVATE DIRECTORS</p>
@@ -118,7 +118,7 @@ const Directors = () => {
 
                                         <div className="card-footer">
                                             <div className="director-badge">
-                                                <span className="badge-icon">👔</span>
+                                                <span className="badge-icon" aria-hidden="true">👔</span>
                                                 <span className="badge-text">Leadership</span>
                                             </div>
                                         </div>
