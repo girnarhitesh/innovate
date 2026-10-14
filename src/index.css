@@ -118,17 +118,14 @@ input[type="radio"] {
   box-sizing: border-box;
 }
 
-/* Skip-link target: no ring (programmatic focus), still scrollable */
+/* Skip-link target: visible ring so the move past the menu is obvious */
 main#main-content:focus {
-  outline: none;
-}
-
-main#main-content:focus-visible {
-  outline: none;
+  outline: 3px solid #f4b400 !important;
+  outline-offset: 4px;
 }
 
 .skip-to-content {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100000;

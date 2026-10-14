@@ -122,7 +122,7 @@ const OurStory = () => {
                                         <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/AboutHome.png" alt="" />
                                     </div>
                                     <div>
-                                        <p>Our Journey Since 1986</p>
+                                        <p>Our Story Since 1986</p>
                                     </div>
                                 </div>
                             </div>

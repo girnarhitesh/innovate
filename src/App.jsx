@@ -46,15 +46,12 @@ function App({ isPrerender = false }) {
       return;
     }
 
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    if (!main.hasAttribute("tabindex")) {
+      main.tabIndex = -1;
+    }
 
-    main.focus({ preventScroll: true });
-    main.scrollIntoView({
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-      block: "start",
-    });
+    main.focus({ preventScroll: true, focusVisible: true });
+    main.scrollIntoView({ behavior: "auto", block: "start" });
   }, []);
 
   return (
@@ -72,7 +69,7 @@ function App({ isPrerender = false }) {
           {contextHolder}
           {!isPrerender ? <Modal /> : null}
           <Navbar />
-          <main id="main-content" tabIndex={-1}>
+          <main id="main-content" tabIndex={-1} aria-label="Main content">
             <Routes>
               <Route path="/" element={<HomeComponents />} />
               <Route path="/our-story" element={<OurStory />} />

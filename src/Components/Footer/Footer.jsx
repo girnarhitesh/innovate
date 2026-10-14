@@ -137,20 +137,26 @@ const Footer = () => {
               <div className="QRCodeContainer">
                 <div className="QRCodeSection">
                   <div className="QRCodeItem">
-                    <img
-                      src={BrokingQrCode}
-                      alt="UPI QR code for broking payments to innovate.brk@validhdfc"
-                      className="QRCodeImage"
-                    />
+                    <div className="QRCodeFrame">
+                      <img
+                        src={BrokingQrCode}
+                        alt="Broking payment QR code"
+                        className="QRCodeImage"
+                      />
+                    </div>
                     <p className="QRCodeLabel">Broking</p>
+                    <p className="QRCodeId">innovate.brk@validhdfc</p>
                   </div>
                   <div className="QRCodeItem">
-                    <img
-                      src={DpQrCode}
-                      alt="UPI QR code for depository participant payments to innovate.dp@validhdfc"
-                      className="QRCodeImage"
-                    />
+                    <div className="QRCodeFrame">
+                      <img
+                        src={DpQrCode}
+                        alt="Depository participant payment QR code"
+                        className="QRCodeImage"
+                      />
+                    </div>
                     <p className="QRCodeLabel">DP</p>
+                    <p className="QRCodeId">innovate.dp@validhdfc</p>
                   </div>
                 </div>
               </div>
